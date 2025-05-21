@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+  <h1>{{ article.title }}</h1>
+  <div class="article-body">{{ article.text | safe }}</div>
+<section id="comments-section">
+  <h2>Comments</h2>
+  <select id="sort-method">
+    <option value="timestamp">By Time</option>
+    <!-- other sort options -->
+  </select>
+  <ul id="comments-list">
+    {% for c in article.comments %}
+      <li data-timestamp="{{ c.timestamp }}">
+        <strong>{{ c.author }}</strong>: {{ c.text }}
+        <div class="meta">👍 {{ c.num_agrees }} | 👎 {{ c.num_disagrees }}</div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<div id="right-explanation">
+  <h3>Comment Ordering</h3>
+  <p>This section explains how the comment ordering works.</p>
+</div>
+
+{% endblock %}
+

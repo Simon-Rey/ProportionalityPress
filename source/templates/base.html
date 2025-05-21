@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ config.site_name }} – {% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ config.static_url }}css/style.css" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Anton&family=Germania+One&family=Gloock&family=IM+Fell+English+SC&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="body-content-wrap">
+    <header>
+      <div class="logo">
+        <span class="logo-main">Proportionality</span>
+        <span class="logo-sub">Press</span>
+      </div>
+    </header>
+
+    <div id="below-header-wrap">
+      <aside id="left-nav">
+        <h3>Read more</h3>
+
+        <ul id="left-nav-links">
+          {% for article in all_articles %}
+            <li><a href="{{ article.link }}">{{ article.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </aside>
+
+      <div id="content-wrap">
+        <main>
+          {% block content %}{% endblock %}
+        </main>
+        <footer>Simon Rey 2025</footer>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

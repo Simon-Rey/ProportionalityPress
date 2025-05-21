@@ -1,0 +1,5 @@
+{% macro render_comment(comment) %}
+  <li data-timestamp="{{ comment.timestamp }}">
+    <strong>{{ comment.author }}</strong>: {{ comment.text }}
+  </li>
+{% endmacro %}
