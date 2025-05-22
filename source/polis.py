@@ -3,8 +3,11 @@ from __future__ import annotations
 import csv
 import os
 from collections.abc import Iterable
+from datetime import datetime
 
-from source.models import Article, Comment
+import markdown
+
+from article import Article, Comment
 
 
 class PolisComment:
@@ -109,7 +112,7 @@ def read_polis_participants(file_path: str, comment_ids: list[str]) -> Iterable[
     return all_participants
 
 def read_polis_poll(dir_path: str) -> PolisPoll:
-    print("Reading polis poll data from: " + dir_path)
+    print("Reading polis poll raw_data from: " + dir_path)
     summary_path = os.path.join(dir_path, "summary.csv")
     poll = read_polis_summary(summary_path)
 
@@ -121,30 +124,55 @@ def read_polis_poll(dir_path: str) -> PolisPoll:
     poll.participants = read_polis_participants(participants_path, comment_ids)
     return poll
 
-def polis_poll_to_models(poll: PolisPoll) -> Article:
+def polis_poll_to_article(poll: PolisPoll, ignore_not_seen: bool = True) -> Article:
     article_title = poll.name or "Untitled Polis Poll"
-    article_body = '<p>This article summarizes the discussion from a Polis poll'
     if poll.description:
-        article_body += ' with the following prompt:</p>'
-        article_body += f'<p class="polis-poll-prompt">{poll.description}</p>'
+        article_body = f'<p>{markdown.markdown(poll.description)}</p>'
     else:
-        article_body += ".</p>"
-    article_body += f'<p><strong>Original poll link:</strong> <a href="{poll.url}" target="_blank">{poll.url}</a></p>'
+        article_body = '<p>This article has been automatically fetched from a Polis poll that did not include a description.</p>'
 
-    comments = []
-    for pc in poll.comments:
-        c = Comment(
-            text=pc.comment,
-            timestamp=pc.timestamp,
-            author=pc.author_id,
-            num_agrees=pc.num_agrees,
-            num_disagrees=pc.num_disagrees
-        )
-        comments.append(c)
+    article_sources = f'<p><strong>Original poll:</strong> <a href="{poll.url}" target="_blank">{poll.url}</a></p>'
 
     article = Article(
         title=article_title,
         text=article_body,
-        comments=comments
+        source=article_sources,
+        participant_ids=[pp.participant_id for pp in poll.participants],
     )
+
+    for pc in poll.comments:
+        dt = datetime.fromtimestamp(int(pc.timestamp) / 1000)  # It is probably Unix Epoch in ms
+        formatted_dt = dt.strftime("%Y-%m-%d %H:%M")
+
+        # Retrieving the votes of the participants for the comment
+        agreeing_ids = []
+        disagreeing_ids = []
+        passed_ids = []
+        not_seen_ids = []
+        for pp in poll.participants:
+            vote = pp.votes.get(pc.comment_id)
+            if vote is None and not ignore_not_seen:
+                not_seen_ids.append(pp.participant_id)
+            elif vote == 0:
+                passed_ids.append(pp.participant_id)
+            elif vote == 1:
+                agreeing_ids.append(pp.participant_id)
+            elif vote == -1:
+                disagreeing_ids.append(pp.participant_id)
+
+        # Registering the comment
+        article.comments.append(
+            Comment(
+                comment_id=pc.comment_id,
+                text=pc.comment,
+                timestamp=pc.timestamp,
+                author="Anonymous",
+                agreeing_ids=agreeing_ids,
+                disagreeing_ids=disagreeing_ids,
+                passed_ids=passed_ids,
+                not_seen_ids=not_seen_ids,
+                beautified_timestamp=formatted_dt
+            )
+        )
+    article.comments.sort(key=lambda c: c.timestamp, reverse=True)
     return article

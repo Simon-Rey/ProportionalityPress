@@ -4,27 +4,100 @@
 
 {% block content %}
   <h1>{{ article.title }}</h1>
-  <div class="article-body">{{ article.text | safe }}</div>
-<section id="comments-section">
-  <h2>Comments</h2>
-  <select id="sort-method">
-    <option value="timestamp">By Time</option>
-    <!-- other sort options -->
-  </select>
-  <ul id="comments-list">
-    {% for c in article.comments %}
-      <li data-timestamp="{{ c.timestamp }}">
-        <strong>{{ c.author }}</strong>: {{ c.text }}
-        <div class="meta">👍 {{ c.num_agrees }} | 👎 {{ c.num_disagrees }}</div>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
 
-<div id="right-explanation">
-  <h3>Comment Ordering</h3>
-  <p>This section explains how the comment ordering works.</p>
-</div>
+  <div id="article-content-wrap">
+    <div id="article-body">{{ article.text | safe }}</div>
+    <div id="article-source">{{ article.source | safe }}</div>
+
+    {% if article.representative_comments %}
+      <section class="article-comments-wrap">
+        <h2>Representative Comments</h2>
+
+        <div id="representative-comments-controls">
+          <label for="rule-select">Selection Method:</label>
+          <select id="rule-select">
+            {% for rule in article.representative_comments.keys() %}
+              <option value="{{ rule }}">{{ rule }}</option>
+            {% endfor %}
+          </select>
+
+          <label for="size-select">Number of Representative Comments:</label>
+          <select id="size-select">
+            {% set first_rule = article.representative_comments|first %}
+            {% for size in article.representative_comments[first_rule].keys() %}
+              <option value="{{ size }}">{{ size }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <div id="representative-comments-list" class="article-comments-list">
+          <!-- JS will populate this based on selections -->
+        </div>
+      </section>
+    {% endif %}
+
+    <section class="article-comments-wrap">
+      <h2 class="next-collapsible">All Comments</h2>
+
+      <div class="article-comments-list collapsed-content hidden">
+        {% for c in article.comments %}
+          {% include "includes/article_comment.html" %}
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const nextCollapsibles = document.querySelectorAll(".next-collapsible");
+
+    nextCollapsibles.forEach(function (e) {
+        e.addEventListener("click", function () {
+            this.nextElementSibling.classList.toggle("hidden");
+        });
+    });
+
+    const repCommentsData = {{ article.representative_comments | tojson }};
+
+    const ruleSelect = document.getElementById('rule-select');
+    const sizeSelect = document.getElementById('size-select');
+    const repCommentList = document.getElementById('representative-comments-list');
+
+    function updateRepresentativeComments() {
+      if (!ruleSelect || !sizeSelect || !repCommentList) {
+        return;  // required elements missing, safely bail out
+      }
+
+      const rule = ruleSelect.value;
+      const size = sizeSelect.value;
+
+      // Use optional chaining and fallback to empty array
+      const commentIds = repCommentsData?.[rule]?.[size] || [];
+
+      // Clear current list
+      repCommentList.innerHTML = '';
+
+      commentIds.forEach(cid => {
+        const original = document.querySelector(`.article-comment[data-comment-id="${cid}"]`);
+        if (original) {
+          const clone = original.cloneNode(true);
+          repCommentList.appendChild(clone);
+        }
+      });
+    }
+
+    // Only add event listeners if selects exist
+    if (ruleSelect && sizeSelect) {
+      ruleSelect.addEventListener('change', updateRepresentativeComments);
+      sizeSelect.addEventListener('change', updateRepresentativeComments);
+    }
+
+    // Initial update only if all elements exist
+    if (ruleSelect && sizeSelect && repCommentList) {
+      updateRepresentativeComments();
+    }
+
+});
+</script>
 
 {% endblock %}
-

@@ -3,7 +3,7 @@ import shutil
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from source.models import Article, SiteConfig
+from article import Article, SiteConfig
 
 def copy_static(static_dir: str, output_dir: str):
     dst = os.path.join(output_dir, "static")
@@ -30,6 +30,7 @@ def generate_site(config: SiteConfig, articles: list[Article]):
     # Write each article
     for article in articles:
         print(f"Writing article {article.title}")
+        article.sanitize_representative_comments()
         html = article_template.render(
             article=article,
             all_articles=articles,

@@ -1,0 +1,15 @@
+<div class="article-comment" data-timestamp="{{ c.timestamp }}" data-agrees="{{ c.num_agrees }}" data-disagrees="{{ c.num_disagrees }}" data-comment-id="{{ c.comment_id }}">
+  <div class="article-comment-content-wrap">
+    <div class="article-comment-details">
+      <span><strong>{{ c.author }}</strong></span>
+      <span class="comment-timestamp">[{{ c.render_timestamp }}]</span>
+    </div>
+    <div class="article-comment-text">
+      {{ c.text }}
+    </div>
+    <div class="article-agreement-box">
+      <span class="article-num-agrees">👍{{ c.num_agrees }}</span>
+      <span class="article-num-disagree">👎{{ c.num_disagrees }}</span>
+    </div>
+  </div>
+</div>
