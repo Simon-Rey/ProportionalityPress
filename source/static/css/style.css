@@ -112,6 +112,12 @@ a {
     margin-right: auto;
 }
 
+.proportionality-press {
+  font-family: "Anton", sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
 /* =======
 Base Style
 ======= */
@@ -140,9 +146,6 @@ header {
 }
 
 .logo {
-  font-family: "Anton", sans-serif;
-  font-weight: 400;
-  font-style: normal;
   text-align: center;
   padding: 0.2vh;
   border-bottom: 2px solid black;
@@ -155,15 +158,13 @@ header {
 
 .logo-main {
   font-size: 5vh;
-  font-weight: bold;
-  text-transform: uppercase;
   line-height: 1;
+  font-weight: bold;
 }
 
 .logo-sub {
   font-size: 3vh;
   color: var(--color-background-very-very-dark);
-  text-transform: uppercase;
   line-height: 1;
   margin-bottom: 1vh;
 }
@@ -274,6 +275,13 @@ h1 {
   background: var(--color-background);
   padding: 0.5vh 0.5vw;
   margin: 0;
+}
+
+#representative-comments-controls {
+  margin: 0 0.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .article-comments-list {

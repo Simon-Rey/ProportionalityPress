@@ -14,20 +14,23 @@
         <h2>Representative Comments</h2>
 
         <div id="representative-comments-controls">
-          <label for="rule-select">Selection Method:</label>
-          <select id="rule-select">
-            {% for rule in article.representative_comments.keys() %}
-              <option value="{{ rule }}">{{ rule }}</option>
-            {% endfor %}
-          </select>
-
-          <label for="size-select">Number of Representative Comments:</label>
-          <select id="size-select">
-            {% set first_rule = article.representative_comments|first %}
-            {% for size in article.representative_comments[first_rule].keys() %}
-              <option value="{{ size }}">{{ size }}</option>
-            {% endfor %}
-          </select>
+          <div>
+            <label for="rule-select">Selection Method:</label>
+            <select id="rule-select">
+              {% for rule in article.representative_comments.keys() %}
+                <option value="{{ rule }}">{{ rule }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div>
+            <label for="size-select">Number of Representative Comments:</label>
+            <select id="size-select">
+              {% set first_rule = article.representative_comments|first %}
+              {% for size in article.representative_comments[first_rule].keys() %}
+                <option value="{{ size }}">{{ size }}</option>
+              {% endfor %}
+            </select>
+          </div>
         </div>
 
         <div id="representative-comments-list" class="article-comments-list">
@@ -37,7 +40,7 @@
     {% endif %}
 
     <section class="article-comments-wrap">
-      <h2 class="next-collapsible">All Comments</h2>
+      <h2 class="next-collapsible">See All {{ article.num_comments }} Comments</h2>
 
       <div class="article-comments-list collapsed-content hidden">
         {% for c in article.comments %}

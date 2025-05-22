@@ -50,7 +50,7 @@ def compute_and_write_all_rules():
 
 def main():
     # all_polis_to_json()
-    compute_and_write_all_rules()
+    # compute_and_write_all_rules()
     generate_all_polis()
 
     # source_dir_path = os.path.dirname(os.path.realpath(__file__))

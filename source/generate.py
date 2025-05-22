@@ -25,20 +25,29 @@ def generate_site(config: SiteConfig, articles: list[Article]):
         loader=FileSystemLoader(template_dir_path),
         autoescape=select_autoescape(['html', 'xml'])
     )
-    article_template = env.get_template("article.html")
+
+    # Write index page
+    index_template = env.get_template("index.html")
+    index_html = index_template.render(
+        all_articles=articles,
+        config=config
+    )
+    with open(os.path.join(output_dir_path, "index.html"), "w", encoding="utf-8") as f:
+        f.write(index_html)
 
     # Write each article
+    article_template = env.get_template("article.html")
     for article in articles:
         print(f"Writing article {article.title}")
         article.sanitize_representative_comments()
-        html = article_template.render(
+        article_html = article_template.render(
             article=article,
             all_articles=articles,
             config=config
         )
 
         with open(os.path.join(output_dir_path, article.link), "w", encoding="utf-8") as f:
-            f.write(html)
+            f.write(article_html)
 
     # Copy the static files to the output folder
     static_dir_path = os.path.join(base_path, config.static_dir)
