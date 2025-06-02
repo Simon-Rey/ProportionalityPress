@@ -3,7 +3,7 @@
 {% block title %}{{ article.title }}{% endblock %}
 
 {% block content %}
-  <h1>{{ article.title }}</h1>
+  <h1 class="standard-padded-container">{{ article.title }}</h1>
 
   <div id="article-content-wrap">
     <div id="article-body">{{ article.text | safe }}</div>
@@ -13,7 +13,9 @@
       <section class="article-comments-wrap">
         <h2>Selected Comments</h2>
 
-        <button id="show-advanced-controls">Show Advanced Controls</button>
+        <p class="center-align">
+          <span id="show-advanced-controls" class="button">Show Advanced Controls</span>
+        </p>
 
         <div id="size-selection-wrap">
           <label for="size-select">Number of Representative Comments:</label>
@@ -25,7 +27,7 @@
           </select>
         </div>
 
-        <div id="representative-comments-wrap">
+        <div id="representative-comments-wrap" class="standard-padded-container">
           {% for default_rule, default_rule_title in default_rules %}
             <div class="representative-comments-block">
               <h3 class="representative-comments-block-title">{{ default_rule_title }}</h3>
@@ -33,7 +35,7 @@
                 <label for="rule-select-{{ default_rule }}">Selection Method:</label>
                 <select id="rule-select-{{ default_rule }}" class="rule-select">
                   {% for rule in article.representative_comments.keys() %}
-                    <option value="{{ rule }}"{% if rule == default_rule %} selected="selected"{% endif %}>{{ rule }}</option>
+                    <option value="{{ rule }}"{% if rule == default_rule %} selected="selected"{% endif %}>{{ rule_name_mapping[rule] }}</option>
                   {% endfor %}
                 </select>
               </div>
@@ -47,7 +49,7 @@
       </section>
     {% endif %}
 
-    <section class="article-comments-wrap">
+    <section id="article-all-comments-section" class="article-comments-wrap">
       <h2 class="next-collapsible">See All {{ article.num_comments }} Comments</h2>
 
       <div class="article-comments-list collapsed-content hidden">
@@ -65,8 +67,7 @@
     nextCollapsibles.forEach(function (e) {
         e.addEventListener("click", function () {
             this.nextElementSibling.classList.toggle("hidden");
-            this.scrollIntoView();
-            window.scrollBy(0,100);
+            this.scrollIntoView({ behavior: "smooth" });
         });
     });
 

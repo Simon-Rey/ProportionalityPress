@@ -3,7 +3,9 @@
 {% block title %}Proportionality Press{% endblock %}
 
 {% block content %}
-  <h1>Welcome to the <span class="proportionality-press">Proportionality Press</span></h1>
+<h1 class="standard-padded-container">Welcome to the <span class="proportionality-press">Proportionality Press</span></h1>
+
+<div class="standard-sides-padded-container">
   <p>
     The <strong>Proportionality Press</strong> is a website developed to demonstrate how the principle of proportionality can be applied to improve collective decision-making.
   </p>
@@ -20,4 +22,5 @@
       <li><a href="{{ article.link }}">{{ article.title }}</a></li>
     {% endfor %}
   </ul>
+</div>
 {% endblock %}

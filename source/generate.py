@@ -5,6 +5,20 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from article import Article, SiteConfig
 
+RULE_NAME_MAPPING = {
+    "av": "Approval Voting",
+    "sav": "Satisfaction Approval Voting",
+    "pav": "Proportional Approval Voting",
+    "cc": "Chamberlin–Courant",
+    "seqpav": "Sequential Proportional Approval Voting",
+    "seqphragmen": "Phragmén's Sequential Rule",
+    "equal-shares": "Method of Equal Shares",
+    "equal-shares-with-av-completion": "Method of Equal Shares with Approval Voting Completion",
+    "equal-shares-with-increment-completion": "Method of Equal Shares with Increment Completion",
+    "phragmen-enestroem": "Eneström–Phragmén",
+    "consensus-rule": "Consensus Rule",
+}
+
 def copy_static(static_dir: str, output_dir: str):
     dst = os.path.join(output_dir, "static")
     if os.path.exists(dst):
@@ -46,7 +60,8 @@ def generate_site(config: SiteConfig, articles: list[Article]):
             article=article,
             all_articles=articles,
             config=config,
-            default_rules=(("av", "Most popular comments"), ("equal-shares-with-increment-completion", "Representative selection of comments"), ("cc", "Diverse selection of comments"))
+            default_rules=(("av", "Most popular comments"), ("equal-shares-with-increment-completion", "Representative selection of comments"), ("cc", "Diverse selection of comments")),
+            rule_name_mapping=RULE_NAME_MAPPING,
         )
 
         with open(os.path.join(output_dir_path, article.link), "w", encoding="utf-8") as f:
