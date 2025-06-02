@@ -11,30 +11,38 @@
 
     {% if article.representative_comments %}
       <section class="article-comments-wrap">
-        <h2>Representative Comments</h2>
+        <h2>Selected Comments</h2>
 
-        <div id="representative-comments-controls">
-          <div>
-            <label for="rule-select">Selection Method:</label>
-            <select id="rule-select">
-              {% for rule in article.representative_comments.keys() %}
-                <option value="{{ rule }}">{{ rule }}</option>
-              {% endfor %}
-            </select>
-          </div>
-          <div>
-            <label for="size-select">Number of Representative Comments:</label>
-            <select id="size-select">
-              {% set first_rule = article.representative_comments|first %}
-              {% for size in article.representative_comments[first_rule].keys() %}
-                <option value="{{ size }}">{{ size }}</option>
-              {% endfor %}
-            </select>
-          </div>
+        <button id="show-advanced-controls">Show Advanced Controls</button>
+
+        <div id="size-selection-wrap">
+          <label for="size-select">Number of Representative Comments:</label>
+          <select id="size-select">
+            {% set first_rule = article.representative_comments|first %}
+            {% for size in article.representative_comments[first_rule].keys() %}
+              <option value="{{ size }}"{% if size == 5 %} selected="selected"{% endif %}>{{ size }}</option>
+            {% endfor %}
+          </select>
         </div>
 
-        <div id="representative-comments-list" class="article-comments-list">
-          <!-- JS will populate this based on selections -->
+        <div id="representative-comments-wrap">
+          {% for default_rule, default_rule_title in default_rules %}
+            <div class="representative-comments-block">
+              <h3 class="representative-comments-block-title">{{ default_rule_title }}</h3>
+              <div class="rule-selection-wrap">
+                <label for="rule-select-{{ default_rule }}">Selection Method:</label>
+                <select id="rule-select-{{ default_rule }}" class="rule-select">
+                  {% for rule in article.representative_comments.keys() %}
+                    <option value="{{ rule }}"{% if rule == default_rule %} selected="selected"{% endif %}>{{ rule }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+
+              <div class="article-comments-list representative-comments-list">
+                <!-- JS will populate this based on selections -->
+              </div>
+            </div>
+          {% endfor %}
         </div>
       </section>
     {% endif %}
@@ -57,49 +65,81 @@
     nextCollapsibles.forEach(function (e) {
         e.addEventListener("click", function () {
             this.nextElementSibling.classList.toggle("hidden");
+            this.scrollIntoView();
+            window.scrollBy(0,100);
         });
     });
 
     const repCommentsData = {{ article.representative_comments | tojson }};
 
-    const ruleSelect = document.getElementById('rule-select');
+    const ruleSelects = document.querySelectorAll('.rule-select');
     const sizeSelect = document.getElementById('size-select');
-    const repCommentList = document.getElementById('representative-comments-list');
 
-    function updateRepresentativeComments() {
-      if (!ruleSelect || !sizeSelect || !repCommentList) {
-        return;  // required elements missing, safely bail out
-      }
+    function updateRepresentativeCommentsBlock(ruleSelect) {
+        const rule = ruleSelect.value;
+        const size = sizeSelect.value;
 
-      const rule = ruleSelect.value;
-      const size = sizeSelect.value;
+        // Use optional chaining and fallback to empty array
+        const commentIds = repCommentsData?.[rule]?.[size] || [];
 
-      // Use optional chaining and fallback to empty array
-      const commentIds = repCommentsData?.[rule]?.[size] || [];
+        // Fetch the div for the comments
+        let repCommentBlock = ruleSelect.closest('.representative-comments-block');
+        let repCommentList = repCommentBlock.querySelector('.representative-comments-list');
 
-      // Clear current list
-      repCommentList.innerHTML = '';
+        // Clear current list
+        repCommentList.innerHTML = '';
 
-      commentIds.forEach(cid => {
-        const original = document.querySelector(`.article-comment[data-comment-id="${cid}"]`);
-        if (original) {
-          const clone = original.cloneNode(true);
-          repCommentList.appendChild(clone);
-        }
+        commentIds.forEach(cid => {
+          const original = document.querySelector(`.article-comment[data-comment-id="${cid}"]`);
+          if (original) {
+            const clone = original.cloneNode(true);
+            repCommentList.appendChild(clone);
+          }
+        });
+    }
+
+    function updateAllRepresentativeComments() {
+      ruleSelects.forEach(ruleSelect => {
+        updateRepresentativeCommentsBlock(ruleSelect);
       });
     }
 
-    // Only add event listeners if selects exist
-    if (ruleSelect && sizeSelect) {
-      ruleSelect.addEventListener('change', updateRepresentativeComments);
-      sizeSelect.addEventListener('change', updateRepresentativeComments);
+    if (sizeSelect) {
+      sizeSelect.addEventListener('change', updateAllRepresentativeComments);
+
+      ruleSelects.forEach(ruleSelect => {
+        ruleSelect.addEventListener('change', function () {
+          updateRepresentativeCommentsBlock(ruleSelect);
+        });
+      });
+
+      updateAllRepresentativeComments();
     }
 
-    // Initial update only if all elements exist
-    if (ruleSelect && sizeSelect && repCommentList) {
-      updateRepresentativeComments();
+    let showAdvancedControlsButton = document.getElementById('show-advanced-controls');
+    let advancedControls = true;
+    let sizeSelectionWrap = document.getElementById('size-selection-wrap');
+    let ruleSelectionWraps = document.querySelectorAll('.rule-selection-wrap');
+    let representativeCommentsTitles = document.querySelectorAll('.representative-comments-block-title');
+
+    function toggleAdvancedControlsVisibility() {
+      if (advancedControls) {
+        advancedControls = false;
+        showAdvancedControlsButton.textContent = 'Show Advanced Controls';
+        ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.add('hidden'));
+        representativeCommentsTitles.forEach(title => {title.classList.remove('hidden')});
+        sizeSelectionWrap.classList.add('hidden');
+      } else {
+        advancedControls = true;
+        showAdvancedControlsButton.textContent = 'Hide Advanced Controls';
+        ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.remove('hidden'));
+        representativeCommentsTitles.forEach(title => {title.classList.add('hidden')});
+        sizeSelectionWrap.classList.remove('hidden');
+      }
     }
 
+    showAdvancedControlsButton.addEventListener('click', toggleAdvancedControlsVisibility);
+    toggleAdvancedControlsVisibility();
 });
 </script>
 

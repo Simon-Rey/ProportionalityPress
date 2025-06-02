@@ -96,11 +96,7 @@ input {
 
 a {
     text-decoration: none;
-    color: inherit;
-}
-
-.link {
-    color: var(--color-frame-bright);
+    color: var(--color-frame-dark);
 }
 
 .center-align {
@@ -154,6 +150,7 @@ header {
   align-items: center;
   flex-direction: column;
   gap: 0.5vh;
+  color: black;
 }
 
 .logo-main {
@@ -206,11 +203,6 @@ header {
   margin-bottom: 10px;
 }
 
-#left-nav a {
-  text-decoration: none;
-  color: var(--color-frame-dark);
-}
-
 #left-nav a:hover {
   text-decoration: underline;
 }
@@ -237,6 +229,10 @@ footer {
 
 .collapsed-content.hidden {
 	display: none;
+}
+
+.hidden {
+  display: none;
 }
 
 /* =====
@@ -277,11 +273,25 @@ h1 {
   margin: 0;
 }
 
-#representative-comments-controls {
-  margin: 0 0.5vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+#representative-comments-wrap {
+  padding: 0.5vw 0.5vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.representative-comments-block-title {
+  text-align: center;
+}
+
+#representative-comments-wrap .article-comment-content-wrap {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+#representative-comments-wrap .article-agreement-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .article-comments-list {

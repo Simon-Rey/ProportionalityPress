@@ -27,10 +27,12 @@ def generate_site(config: SiteConfig, articles: list[Article]):
     )
 
     # Write index page
+    highlighted_articles_title = ["$15/hour", "Ernährung und Landnutzung", "Mobilität", "Operation Marching Orders", "Tax HiveMind Window"]
     index_template = env.get_template("index.html")
     index_html = index_template.render(
         all_articles=articles,
-        config=config
+        config=config,
+        highlighted_articles= [a for a in articles if a.title in highlighted_articles_title]
     )
     with open(os.path.join(output_dir_path, "index.html"), "w", encoding="utf-8") as f:
         f.write(index_html)
@@ -43,7 +45,8 @@ def generate_site(config: SiteConfig, articles: list[Article]):
         article_html = article_template.render(
             article=article,
             all_articles=articles,
-            config=config
+            config=config,
+            default_rules=(("av", "Most popular comments"), ("equal-shares-with-increment-completion", "Representative selection of comments"), ("cc", "Diverse selection of comments"))
         )
 
         with open(os.path.join(output_dir_path, article.link), "w", encoding="utf-8") as f:

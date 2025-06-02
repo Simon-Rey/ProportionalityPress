@@ -82,58 +82,136 @@
 
     
       <section class="article-comments-wrap">
-        <h2>Representative Comments</h2>
+        <h2>Selected Comments</h2>
 
-        <div id="representative-comments-controls">
-          <div>
-            <label for="rule-select">Selection Method:</label>
-            <select id="rule-select">
-              
-                <option value="av">av</option>
-              
-                <option value="sav">sav</option>
-              
-                <option value="pav">pav</option>
-              
-                <option value="cc">cc</option>
-              
-                <option value="seqpav">seqpav</option>
-              
-                <option value="seqphragmen">seqphragmen</option>
-              
-                <option value="equal-shares">equal-shares</option>
-              
-                <option value="equal-shares-with-av-completion">equal-shares-with-av-completion</option>
-              
-                <option value="equal-shares-with-increment-completion">equal-shares-with-increment-completion</option>
-              
-                <option value="phragmen-enestroem">phragmen-enestroem</option>
-              
-                <option value="consensus-rule">consensus-rule</option>
-              
-                <option value="trivial">trivial</option>
-              
-            </select>
-          </div>
-          <div>
-            <label for="size-select">Number of Representative Comments:</label>
-            <select id="size-select">
-              
-              
-                <option value="3">3</option>
-              
-                <option value="5">5</option>
-              
-                <option value="8">8</option>
-              
-                <option value="10">10</option>
-              
-            </select>
-          </div>
+        <button id="show-advanced-controls">Show Advanced Controls</button>
+
+        <div id="size-selection-wrap">
+          <label for="size-select">Number of Representative Comments:</label>
+          <select id="size-select">
+            
+            
+              <option value="3">3</option>
+            
+              <option value="5" selected="selected">5</option>
+            
+              <option value="8">8</option>
+            
+              <option value="10">10</option>
+            
+          </select>
         </div>
 
-        <div id="representative-comments-list" class="article-comments-list">
-          <!-- JS will populate this based on selections -->
+        <div id="representative-comments-wrap">
+          
+            <div class="representative-comments-block">
+              <h3 class="representative-comments-block-title">Most popular comments</h3>
+              <div class="rule-selection-wrap">
+                <label for="rule-select-av">Selection Method:</label>
+                <select id="rule-select-av" class="rule-select">
+                  
+                    <option value="av" selected="selected">av</option>
+                  
+                    <option value="sav">sav</option>
+                  
+                    <option value="pav">pav</option>
+                  
+                    <option value="cc">cc</option>
+                  
+                    <option value="seqpav">seqpav</option>
+                  
+                    <option value="seqphragmen">seqphragmen</option>
+                  
+                    <option value="equal-shares">equal-shares</option>
+                  
+                    <option value="equal-shares-with-av-completion">equal-shares-with-av-completion</option>
+                  
+                    <option value="equal-shares-with-increment-completion">equal-shares-with-increment-completion</option>
+                  
+                    <option value="phragmen-enestroem">phragmen-enestroem</option>
+                  
+                    <option value="consensus-rule">consensus-rule</option>
+                  
+                </select>
+              </div>
+
+              <div class="article-comments-list representative-comments-list">
+                <!-- JS will populate this based on selections -->
+              </div>
+            </div>
+          
+            <div class="representative-comments-block">
+              <h3 class="representative-comments-block-title">Representative selection of comments</h3>
+              <div class="rule-selection-wrap">
+                <label for="rule-select-equal-shares-with-increment-completion">Selection Method:</label>
+                <select id="rule-select-equal-shares-with-increment-completion" class="rule-select">
+                  
+                    <option value="av">av</option>
+                  
+                    <option value="sav">sav</option>
+                  
+                    <option value="pav">pav</option>
+                  
+                    <option value="cc">cc</option>
+                  
+                    <option value="seqpav">seqpav</option>
+                  
+                    <option value="seqphragmen">seqphragmen</option>
+                  
+                    <option value="equal-shares">equal-shares</option>
+                  
+                    <option value="equal-shares-with-av-completion">equal-shares-with-av-completion</option>
+                  
+                    <option value="equal-shares-with-increment-completion" selected="selected">equal-shares-with-increment-completion</option>
+                  
+                    <option value="phragmen-enestroem">phragmen-enestroem</option>
+                  
+                    <option value="consensus-rule">consensus-rule</option>
+                  
+                </select>
+              </div>
+
+              <div class="article-comments-list representative-comments-list">
+                <!-- JS will populate this based on selections -->
+              </div>
+            </div>
+          
+            <div class="representative-comments-block">
+              <h3 class="representative-comments-block-title">Diverse selection of comments</h3>
+              <div class="rule-selection-wrap">
+                <label for="rule-select-cc">Selection Method:</label>
+                <select id="rule-select-cc" class="rule-select">
+                  
+                    <option value="av">av</option>
+                  
+                    <option value="sav">sav</option>
+                  
+                    <option value="pav">pav</option>
+                  
+                    <option value="cc" selected="selected">cc</option>
+                  
+                    <option value="seqpav">seqpav</option>
+                  
+                    <option value="seqphragmen">seqphragmen</option>
+                  
+                    <option value="equal-shares">equal-shares</option>
+                  
+                    <option value="equal-shares-with-av-completion">equal-shares-with-av-completion</option>
+                  
+                    <option value="equal-shares-with-increment-completion">equal-shares-with-increment-completion</option>
+                  
+                    <option value="phragmen-enestroem">phragmen-enestroem</option>
+                  
+                    <option value="consensus-rule">consensus-rule</option>
+                  
+                </select>
+              </div>
+
+              <div class="article-comments-list representative-comments-list">
+                <!-- JS will populate this based on selections -->
+              </div>
+            </div>
+          
         </div>
       </section>
     
@@ -146,7 +224,7 @@
           <div class="article-comment" data-timestamp="1627777516927" data-agrees="1" data-disagrees="0" data-comment-id="296">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 296</strong></span>
       <span class="comment-timestamp">[2021-08-01 02:25]</span>
     </div>
     <div class="article-comment-text">
@@ -162,7 +240,7 @@
           <div class="article-comment" data-timestamp="1627772485664" data-agrees="1" data-disagrees="0" data-comment-id="295">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 295</strong></span>
       <span class="comment-timestamp">[2021-08-01 01:01]</span>
     </div>
     <div class="article-comment-text">
@@ -178,7 +256,7 @@
           <div class="article-comment" data-timestamp="1627704975220" data-agrees="1" data-disagrees="0" data-comment-id="294">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 294</strong></span>
       <span class="comment-timestamp">[2021-07-31 06:16]</span>
     </div>
     <div class="article-comment-text">
@@ -194,7 +272,7 @@
           <div class="article-comment" data-timestamp="1627700123155" data-agrees="1" data-disagrees="0" data-comment-id="293">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 293</strong></span>
       <span class="comment-timestamp">[2021-07-31 04:55]</span>
     </div>
     <div class="article-comment-text">
@@ -210,7 +288,7 @@
           <div class="article-comment" data-timestamp="1627698287274" data-agrees="1" data-disagrees="0" data-comment-id="292">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 292</strong></span>
       <span class="comment-timestamp">[2021-07-31 04:24]</span>
     </div>
     <div class="article-comment-text">
@@ -226,7 +304,7 @@
           <div class="article-comment" data-timestamp="1627690151470" data-agrees="1" data-disagrees="0" data-comment-id="291">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 291</strong></span>
       <span class="comment-timestamp">[2021-07-31 02:09]</span>
     </div>
     <div class="article-comment-text">
@@ -242,7 +320,7 @@
           <div class="article-comment" data-timestamp="1627674963618" data-agrees="1" data-disagrees="0" data-comment-id="290">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 290</strong></span>
       <span class="comment-timestamp">[2021-07-30 21:56]</span>
     </div>
     <div class="article-comment-text">
@@ -258,7 +336,7 @@
           <div class="article-comment" data-timestamp="1627664557158" data-agrees="11" data-disagrees="7" data-comment-id="289">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 289</strong></span>
       <span class="comment-timestamp">[2021-07-30 19:02]</span>
     </div>
     <div class="article-comment-text">
@@ -274,7 +352,7 @@
           <div class="article-comment" data-timestamp="1627656776377" data-agrees="1" data-disagrees="0" data-comment-id="288">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 288</strong></span>
       <span class="comment-timestamp">[2021-07-30 16:52]</span>
     </div>
     <div class="article-comment-text">
@@ -290,7 +368,7 @@
           <div class="article-comment" data-timestamp="1627614476749" data-agrees="1" data-disagrees="0" data-comment-id="287">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 287</strong></span>
       <span class="comment-timestamp">[2021-07-30 05:07]</span>
     </div>
     <div class="article-comment-text">
@@ -306,7 +384,7 @@
           <div class="article-comment" data-timestamp="1627610887952" data-agrees="12" data-disagrees="4" data-comment-id="286">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 286</strong></span>
       <span class="comment-timestamp">[2021-07-30 04:08]</span>
     </div>
     <div class="article-comment-text">
@@ -322,7 +400,7 @@
           <div class="article-comment" data-timestamp="1627610810857" data-agrees="16" data-disagrees="1" data-comment-id="285">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 285</strong></span>
       <span class="comment-timestamp">[2021-07-30 04:06]</span>
     </div>
     <div class="article-comment-text">
@@ -338,7 +416,7 @@
           <div class="article-comment" data-timestamp="1627608317249" data-agrees="1" data-disagrees="0" data-comment-id="284">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 284</strong></span>
       <span class="comment-timestamp">[2021-07-30 03:25]</span>
     </div>
     <div class="article-comment-text">
@@ -354,7 +432,7 @@
           <div class="article-comment" data-timestamp="1627571077994" data-agrees="1" data-disagrees="0" data-comment-id="283">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 283</strong></span>
       <span class="comment-timestamp">[2021-07-29 17:04]</span>
     </div>
     <div class="article-comment-text">
@@ -370,7 +448,7 @@
           <div class="article-comment" data-timestamp="1627568821508" data-agrees="8" data-disagrees="14" data-comment-id="282">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 282</strong></span>
       <span class="comment-timestamp">[2021-07-29 16:27]</span>
     </div>
     <div class="article-comment-text">
@@ -386,7 +464,7 @@
           <div class="article-comment" data-timestamp="1627568663431" data-agrees="1" data-disagrees="0" data-comment-id="281">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 281</strong></span>
       <span class="comment-timestamp">[2021-07-29 16:24]</span>
     </div>
     <div class="article-comment-text">
@@ -402,7 +480,7 @@
           <div class="article-comment" data-timestamp="1627535668747" data-agrees="1" data-disagrees="0" data-comment-id="280">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 280</strong></span>
       <span class="comment-timestamp">[2021-07-29 07:14]</span>
     </div>
     <div class="article-comment-text">
@@ -418,7 +496,7 @@
           <div class="article-comment" data-timestamp="1627535348452" data-agrees="1" data-disagrees="0" data-comment-id="279">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 279</strong></span>
       <span class="comment-timestamp">[2021-07-29 07:09]</span>
     </div>
     <div class="article-comment-text">
@@ -434,7 +512,7 @@
           <div class="article-comment" data-timestamp="1627532272966" data-agrees="1" data-disagrees="0" data-comment-id="278">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 278</strong></span>
       <span class="comment-timestamp">[2021-07-29 06:17]</span>
     </div>
     <div class="article-comment-text">
@@ -450,7 +528,7 @@
           <div class="article-comment" data-timestamp="1627531167586" data-agrees="1" data-disagrees="0" data-comment-id="277">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 277</strong></span>
       <span class="comment-timestamp">[2021-07-29 05:59]</span>
     </div>
     <div class="article-comment-text">
@@ -466,7 +544,7 @@
           <div class="article-comment" data-timestamp="1627530983838" data-agrees="1" data-disagrees="0" data-comment-id="276">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 276</strong></span>
       <span class="comment-timestamp">[2021-07-29 05:56]</span>
     </div>
     <div class="article-comment-text">
@@ -482,7 +560,7 @@
           <div class="article-comment" data-timestamp="1627530922883" data-agrees="9" data-disagrees="7" data-comment-id="275">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 275</strong></span>
       <span class="comment-timestamp">[2021-07-29 05:55]</span>
     </div>
     <div class="article-comment-text">
@@ -498,7 +576,7 @@
           <div class="article-comment" data-timestamp="1627530862688" data-agrees="1" data-disagrees="0" data-comment-id="274">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 274</strong></span>
       <span class="comment-timestamp">[2021-07-29 05:54]</span>
     </div>
     <div class="article-comment-text">
@@ -514,7 +592,7 @@
           <div class="article-comment" data-timestamp="1627524491837" data-agrees="1" data-disagrees="0" data-comment-id="273">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 273</strong></span>
       <span class="comment-timestamp">[2021-07-29 04:08]</span>
     </div>
     <div class="article-comment-text">
@@ -530,7 +608,7 @@
           <div class="article-comment" data-timestamp="1627521376783" data-agrees="1" data-disagrees="0" data-comment-id="272">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 272</strong></span>
       <span class="comment-timestamp">[2021-07-29 03:16]</span>
     </div>
     <div class="article-comment-text">
@@ -546,7 +624,7 @@
           <div class="article-comment" data-timestamp="1627517082561" data-agrees="25" data-disagrees="1" data-comment-id="271">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 271</strong></span>
       <span class="comment-timestamp">[2021-07-29 02:04]</span>
     </div>
     <div class="article-comment-text">
@@ -562,7 +640,7 @@
           <div class="article-comment" data-timestamp="1627516999424" data-agrees="18" data-disagrees="1" data-comment-id="270">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 270</strong></span>
       <span class="comment-timestamp">[2021-07-29 02:03]</span>
     </div>
     <div class="article-comment-text">
@@ -578,7 +656,7 @@
           <div class="article-comment" data-timestamp="1627515953267" data-agrees="1" data-disagrees="0" data-comment-id="269">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 269</strong></span>
       <span class="comment-timestamp">[2021-07-29 01:45]</span>
     </div>
     <div class="article-comment-text">
@@ -594,7 +672,7 @@
           <div class="article-comment" data-timestamp="1627355866281" data-agrees="1" data-disagrees="0" data-comment-id="268">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 268</strong></span>
       <span class="comment-timestamp">[2021-07-27 05:17]</span>
     </div>
     <div class="article-comment-text">
@@ -610,7 +688,7 @@
           <div class="article-comment" data-timestamp="1627242633076" data-agrees="12" data-disagrees="5" data-comment-id="267">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 267</strong></span>
       <span class="comment-timestamp">[2021-07-25 21:50]</span>
     </div>
     <div class="article-comment-text">
@@ -626,7 +704,7 @@
           <div class="article-comment" data-timestamp="1627242471514" data-agrees="15" data-disagrees="1" data-comment-id="266">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 266</strong></span>
       <span class="comment-timestamp">[2021-07-25 21:47]</span>
     </div>
     <div class="article-comment-text">
@@ -642,7 +720,7 @@
           <div class="article-comment" data-timestamp="1627242377834" data-agrees="10" data-disagrees="12" data-comment-id="265">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 265</strong></span>
       <span class="comment-timestamp">[2021-07-25 21:46]</span>
     </div>
     <div class="article-comment-text">
@@ -658,7 +736,7 @@
           <div class="article-comment" data-timestamp="1627189161584" data-agrees="1" data-disagrees="0" data-comment-id="264">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 264</strong></span>
       <span class="comment-timestamp">[2021-07-25 06:59]</span>
     </div>
     <div class="article-comment-text">
@@ -674,7 +752,7 @@
           <div class="article-comment" data-timestamp="1627188565659" data-agrees="14" data-disagrees="6" data-comment-id="263">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 263</strong></span>
       <span class="comment-timestamp">[2021-07-25 06:49]</span>
     </div>
     <div class="article-comment-text">
@@ -690,7 +768,7 @@
           <div class="article-comment" data-timestamp="1627098714456" data-agrees="24" data-disagrees="14" data-comment-id="262">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 262</strong></span>
       <span class="comment-timestamp">[2021-07-24 05:51]</span>
     </div>
     <div class="article-comment-text">
@@ -706,7 +784,7 @@
           <div class="article-comment" data-timestamp="1627089473774" data-agrees="1" data-disagrees="0" data-comment-id="261">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 261</strong></span>
       <span class="comment-timestamp">[2021-07-24 03:17]</span>
     </div>
     <div class="article-comment-text">
@@ -722,7 +800,7 @@
           <div class="article-comment" data-timestamp="1627089332610" data-agrees="26" data-disagrees="13" data-comment-id="260">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 260</strong></span>
       <span class="comment-timestamp">[2021-07-24 03:15]</span>
     </div>
     <div class="article-comment-text">
@@ -738,7 +816,7 @@
           <div class="article-comment" data-timestamp="1627089047295" data-agrees="1" data-disagrees="0" data-comment-id="259">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 259</strong></span>
       <span class="comment-timestamp">[2021-07-24 03:10]</span>
     </div>
     <div class="article-comment-text">
@@ -754,7 +832,7 @@
           <div class="article-comment" data-timestamp="1627088880397" data-agrees="1" data-disagrees="0" data-comment-id="258">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 258</strong></span>
       <span class="comment-timestamp">[2021-07-24 03:08]</span>
     </div>
     <div class="article-comment-text">
@@ -770,7 +848,7 @@
           <div class="article-comment" data-timestamp="1627087557804" data-agrees="1" data-disagrees="0" data-comment-id="257">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 257</strong></span>
       <span class="comment-timestamp">[2021-07-24 02:45]</span>
     </div>
     <div class="article-comment-text">
@@ -786,7 +864,7 @@
           <div class="article-comment" data-timestamp="1627086079944" data-agrees="1" data-disagrees="0" data-comment-id="256">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 256</strong></span>
       <span class="comment-timestamp">[2021-07-24 02:21]</span>
     </div>
     <div class="article-comment-text">
@@ -802,7 +880,7 @@
           <div class="article-comment" data-timestamp="1627084908613" data-agrees="23" data-disagrees="19" data-comment-id="255">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 255</strong></span>
       <span class="comment-timestamp">[2021-07-24 02:01]</span>
     </div>
     <div class="article-comment-text">
@@ -818,7 +896,7 @@
           <div class="article-comment" data-timestamp="1627084796794" data-agrees="34" data-disagrees="9" data-comment-id="254">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 254</strong></span>
       <span class="comment-timestamp">[2021-07-24 01:59]</span>
     </div>
     <div class="article-comment-text">
@@ -834,7 +912,7 @@
           <div class="article-comment" data-timestamp="1626910453542" data-agrees="1" data-disagrees="0" data-comment-id="253">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 253</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:34]</span>
     </div>
     <div class="article-comment-text">
@@ -850,7 +928,7 @@
           <div class="article-comment" data-timestamp="1626910234026" data-agrees="6" data-disagrees="26" data-comment-id="252">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 252</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:30]</span>
     </div>
     <div class="article-comment-text">
@@ -866,7 +944,7 @@
           <div class="article-comment" data-timestamp="1626910110811" data-agrees="1" data-disagrees="0" data-comment-id="251">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 251</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:28]</span>
     </div>
     <div class="article-comment-text">
@@ -882,7 +960,7 @@
           <div class="article-comment" data-timestamp="1626910033812" data-agrees="18" data-disagrees="10" data-comment-id="250">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 250</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:27]</span>
     </div>
     <div class="article-comment-text">
@@ -898,7 +976,7 @@
           <div class="article-comment" data-timestamp="1626909953255" data-agrees="16" data-disagrees="33" data-comment-id="249">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 249</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:25]</span>
     </div>
     <div class="article-comment-text">
@@ -914,7 +992,7 @@
           <div class="article-comment" data-timestamp="1626909845901" data-agrees="30" data-disagrees="18" data-comment-id="248">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 248</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:24]</span>
     </div>
     <div class="article-comment-text">
@@ -930,7 +1008,7 @@
           <div class="article-comment" data-timestamp="1626909750514" data-agrees="1" data-disagrees="0" data-comment-id="247">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 247</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:22]</span>
     </div>
     <div class="article-comment-text">
@@ -946,7 +1024,7 @@
           <div class="article-comment" data-timestamp="1626909503196" data-agrees="31" data-disagrees="3" data-comment-id="246">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 246</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:18]</span>
     </div>
     <div class="article-comment-text">
@@ -962,7 +1040,7 @@
           <div class="article-comment" data-timestamp="1626909487114" data-agrees="1" data-disagrees="0" data-comment-id="245">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 245</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:18]</span>
     </div>
     <div class="article-comment-text">
@@ -978,7 +1056,7 @@
           <div class="article-comment" data-timestamp="1626909347142" data-agrees="7" data-disagrees="21" data-comment-id="244">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 244</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:15]</span>
     </div>
     <div class="article-comment-text">
@@ -994,7 +1072,7 @@
           <div class="article-comment" data-timestamp="1626909232542" data-agrees="53" data-disagrees="4" data-comment-id="243">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 243</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:13]</span>
     </div>
     <div class="article-comment-text">
@@ -1010,7 +1088,7 @@
           <div class="article-comment" data-timestamp="1626909170860" data-agrees="28" data-disagrees="15" data-comment-id="242">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 242</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:12]</span>
     </div>
     <div class="article-comment-text">
@@ -1026,7 +1104,7 @@
           <div class="article-comment" data-timestamp="1626909086616" data-agrees="59" data-disagrees="2" data-comment-id="241">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 241</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:11]</span>
     </div>
     <div class="article-comment-text">
@@ -1042,7 +1120,7 @@
           <div class="article-comment" data-timestamp="1626908999844" data-agrees="27" data-disagrees="23" data-comment-id="240">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 240</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:09]</span>
     </div>
     <div class="article-comment-text">
@@ -1058,7 +1136,7 @@
           <div class="article-comment" data-timestamp="1626908954743" data-agrees="1" data-disagrees="0" data-comment-id="239">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 239</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:09]</span>
     </div>
     <div class="article-comment-text">
@@ -1074,7 +1152,7 @@
           <div class="article-comment" data-timestamp="1626908895257" data-agrees="30" data-disagrees="16" data-comment-id="238">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 238</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:08]</span>
     </div>
     <div class="article-comment-text">
@@ -1090,7 +1168,7 @@
           <div class="article-comment" data-timestamp="1626908830250" data-agrees="14" data-disagrees="18" data-comment-id="237">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 237</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:07]</span>
     </div>
     <div class="article-comment-text">
@@ -1106,7 +1184,7 @@
           <div class="article-comment" data-timestamp="1626908750611" data-agrees="28" data-disagrees="16" data-comment-id="236">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 236</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:05]</span>
     </div>
     <div class="article-comment-text">
@@ -1122,7 +1200,7 @@
           <div class="article-comment" data-timestamp="1626908646728" data-agrees="1" data-disagrees="0" data-comment-id="235">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 235</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:04]</span>
     </div>
     <div class="article-comment-text">
@@ -1138,7 +1216,7 @@
           <div class="article-comment" data-timestamp="1626908559606" data-agrees="29" data-disagrees="33" data-comment-id="234">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 234</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:02]</span>
     </div>
     <div class="article-comment-text">
@@ -1154,7 +1232,7 @@
           <div class="article-comment" data-timestamp="1626908506829" data-agrees="41" data-disagrees="19" data-comment-id="233">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 233</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:01]</span>
     </div>
     <div class="article-comment-text">
@@ -1170,7 +1248,7 @@
           <div class="article-comment" data-timestamp="1626908422663" data-agrees="18" data-disagrees="25" data-comment-id="232">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 232</strong></span>
       <span class="comment-timestamp">[2021-07-22 01:00]</span>
     </div>
     <div class="article-comment-text">
@@ -1186,7 +1264,7 @@
           <div class="article-comment" data-timestamp="1626908323497" data-agrees="34" data-disagrees="16" data-comment-id="231">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 231</strong></span>
       <span class="comment-timestamp">[2021-07-22 00:58]</span>
     </div>
     <div class="article-comment-text">
@@ -1202,7 +1280,7 @@
           <div class="article-comment" data-timestamp="1626908252370" data-agrees="1" data-disagrees="0" data-comment-id="230">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 230</strong></span>
       <span class="comment-timestamp">[2021-07-22 00:57]</span>
     </div>
     <div class="article-comment-text">
@@ -1218,7 +1296,7 @@
           <div class="article-comment" data-timestamp="1626908154799" data-agrees="29" data-disagrees="14" data-comment-id="229">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 229</strong></span>
       <span class="comment-timestamp">[2021-07-22 00:55]</span>
     </div>
     <div class="article-comment-text">
@@ -1234,7 +1312,7 @@
           <div class="article-comment" data-timestamp="1626908070367" data-agrees="31" data-disagrees="21" data-comment-id="228">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 228</strong></span>
       <span class="comment-timestamp">[2021-07-22 00:54]</span>
     </div>
     <div class="article-comment-text">
@@ -1250,7 +1328,7 @@
           <div class="article-comment" data-timestamp="1626757218267" data-agrees="10" data-disagrees="30" data-comment-id="227">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 227</strong></span>
       <span class="comment-timestamp">[2021-07-20 07:00]</span>
     </div>
     <div class="article-comment-text">
@@ -1266,7 +1344,7 @@
           <div class="article-comment" data-timestamp="1626737181614" data-agrees="1" data-disagrees="0" data-comment-id="226">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 226</strong></span>
       <span class="comment-timestamp">[2021-07-20 01:26]</span>
     </div>
     <div class="article-comment-text">
@@ -1282,7 +1360,7 @@
           <div class="article-comment" data-timestamp="1626721242822" data-agrees="1" data-disagrees="0" data-comment-id="225">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 225</strong></span>
       <span class="comment-timestamp">[2021-07-19 21:00]</span>
     </div>
     <div class="article-comment-text">
@@ -1298,7 +1376,7 @@
           <div class="article-comment" data-timestamp="1626716146771" data-agrees="1" data-disagrees="0" data-comment-id="224">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 224</strong></span>
       <span class="comment-timestamp">[2021-07-19 19:35]</span>
     </div>
     <div class="article-comment-text">
@@ -1314,7 +1392,7 @@
           <div class="article-comment" data-timestamp="1626713910116" data-agrees="1" data-disagrees="0" data-comment-id="223">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 223</strong></span>
       <span class="comment-timestamp">[2021-07-19 18:58]</span>
     </div>
     <div class="article-comment-text">
@@ -1330,7 +1408,7 @@
           <div class="article-comment" data-timestamp="1626554634335" data-agrees="46" data-disagrees="10" data-comment-id="222">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 222</strong></span>
       <span class="comment-timestamp">[2021-07-17 22:43]</span>
     </div>
     <div class="article-comment-text">
@@ -1346,7 +1424,7 @@
           <div class="article-comment" data-timestamp="1626541884478" data-agrees="1" data-disagrees="0" data-comment-id="221">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 221</strong></span>
       <span class="comment-timestamp">[2021-07-17 19:11]</span>
     </div>
     <div class="article-comment-text">
@@ -1362,7 +1440,7 @@
           <div class="article-comment" data-timestamp="1626525466820" data-agrees="1" data-disagrees="0" data-comment-id="220">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 220</strong></span>
       <span class="comment-timestamp">[2021-07-17 14:37]</span>
     </div>
     <div class="article-comment-text">
@@ -1378,7 +1456,7 @@
           <div class="article-comment" data-timestamp="1626415256653" data-agrees="17" data-disagrees="22" data-comment-id="219">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 219</strong></span>
       <span class="comment-timestamp">[2021-07-16 08:00]</span>
     </div>
     <div class="article-comment-text">
@@ -1394,7 +1472,7 @@
           <div class="article-comment" data-timestamp="1626383099726" data-agrees="1" data-disagrees="0" data-comment-id="218">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 218</strong></span>
       <span class="comment-timestamp">[2021-07-15 23:04]</span>
     </div>
     <div class="article-comment-text">
@@ -1410,7 +1488,7 @@
           <div class="article-comment" data-timestamp="1626361114009" data-agrees="1" data-disagrees="0" data-comment-id="217">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 217</strong></span>
       <span class="comment-timestamp">[2021-07-15 16:58]</span>
     </div>
     <div class="article-comment-text">
@@ -1426,7 +1504,7 @@
           <div class="article-comment" data-timestamp="1626215064995" data-agrees="1" data-disagrees="0" data-comment-id="216">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 216</strong></span>
       <span class="comment-timestamp">[2021-07-14 00:24]</span>
     </div>
     <div class="article-comment-text">
@@ -1442,7 +1520,7 @@
           <div class="article-comment" data-timestamp="1626185644586" data-agrees="73" data-disagrees="11" data-comment-id="215">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 215</strong></span>
       <span class="comment-timestamp">[2021-07-13 16:14]</span>
     </div>
     <div class="article-comment-text">
@@ -1458,7 +1536,7 @@
           <div class="article-comment" data-timestamp="1626160686521" data-agrees="52" data-disagrees="13" data-comment-id="214">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 214</strong></span>
       <span class="comment-timestamp">[2021-07-13 09:18]</span>
     </div>
     <div class="article-comment-text">
@@ -1474,7 +1552,7 @@
           <div class="article-comment" data-timestamp="1626160665806" data-agrees="19" data-disagrees="45" data-comment-id="213">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 213</strong></span>
       <span class="comment-timestamp">[2021-07-13 09:17]</span>
     </div>
     <div class="article-comment-text">
@@ -1490,7 +1568,7 @@
           <div class="article-comment" data-timestamp="1626145220983" data-agrees="1" data-disagrees="0" data-comment-id="212">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 212</strong></span>
       <span class="comment-timestamp">[2021-07-13 05:00]</span>
     </div>
     <div class="article-comment-text">
@@ -1506,7 +1584,7 @@
           <div class="article-comment" data-timestamp="1626145164449" data-agrees="55" data-disagrees="17" data-comment-id="211">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 211</strong></span>
       <span class="comment-timestamp">[2021-07-13 04:59]</span>
     </div>
     <div class="article-comment-text">
@@ -1522,7 +1600,7 @@
           <div class="article-comment" data-timestamp="1626039446694" data-agrees="1" data-disagrees="0" data-comment-id="210">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 210</strong></span>
       <span class="comment-timestamp">[2021-07-11 23:37]</span>
     </div>
     <div class="article-comment-text">
@@ -1538,7 +1616,7 @@
           <div class="article-comment" data-timestamp="1626033020759" data-agrees="1" data-disagrees="0" data-comment-id="209">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 209</strong></span>
       <span class="comment-timestamp">[2021-07-11 21:50]</span>
     </div>
     <div class="article-comment-text">
@@ -1554,7 +1632,7 @@
           <div class="article-comment" data-timestamp="1626029794553" data-agrees="1" data-disagrees="0" data-comment-id="208">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 208</strong></span>
       <span class="comment-timestamp">[2021-07-11 20:56]</span>
     </div>
     <div class="article-comment-text">
@@ -1570,7 +1648,7 @@
           <div class="article-comment" data-timestamp="1626016246705" data-agrees="23" data-disagrees="32" data-comment-id="207">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 207</strong></span>
       <span class="comment-timestamp">[2021-07-11 17:10]</span>
     </div>
     <div class="article-comment-text">
@@ -1586,7 +1664,7 @@
           <div class="article-comment" data-timestamp="1625966738591" data-agrees="50" data-disagrees="28" data-comment-id="206">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 206</strong></span>
       <span class="comment-timestamp">[2021-07-11 03:25]</span>
     </div>
     <div class="article-comment-text">
@@ -1602,7 +1680,7 @@
           <div class="article-comment" data-timestamp="1625939156419" data-agrees="19" data-disagrees="12" data-comment-id="205">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 205</strong></span>
       <span class="comment-timestamp">[2021-07-10 19:45]</span>
     </div>
     <div class="article-comment-text">
@@ -1618,7 +1696,7 @@
           <div class="article-comment" data-timestamp="1625914583401" data-agrees="16" data-disagrees="45" data-comment-id="204">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 204</strong></span>
       <span class="comment-timestamp">[2021-07-10 12:56]</span>
     </div>
     <div class="article-comment-text">
@@ -1634,7 +1712,7 @@
           <div class="article-comment" data-timestamp="1625863796905" data-agrees="1" data-disagrees="0" data-comment-id="203">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 203</strong></span>
       <span class="comment-timestamp">[2021-07-09 22:49]</span>
     </div>
     <div class="article-comment-text">
@@ -1650,7 +1728,7 @@
           <div class="article-comment" data-timestamp="1625856382883" data-agrees="1" data-disagrees="0" data-comment-id="202">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 202</strong></span>
       <span class="comment-timestamp">[2021-07-09 20:46]</span>
     </div>
     <div class="article-comment-text">
@@ -1666,7 +1744,7 @@
           <div class="article-comment" data-timestamp="1625845639042" data-agrees="1" data-disagrees="0" data-comment-id="201">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 201</strong></span>
       <span class="comment-timestamp">[2021-07-09 17:47]</span>
     </div>
     <div class="article-comment-text">
@@ -1682,7 +1760,7 @@
           <div class="article-comment" data-timestamp="1625805256123" data-agrees="1" data-disagrees="0" data-comment-id="200">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 200</strong></span>
       <span class="comment-timestamp">[2021-07-09 06:34]</span>
     </div>
     <div class="article-comment-text">
@@ -1698,7 +1776,7 @@
           <div class="article-comment" data-timestamp="1625794019115" data-agrees="1" data-disagrees="0" data-comment-id="199">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 199</strong></span>
       <span class="comment-timestamp">[2021-07-09 03:26]</span>
     </div>
     <div class="article-comment-text">
@@ -1714,7 +1792,7 @@
           <div class="article-comment" data-timestamp="1625773104590" data-agrees="1" data-disagrees="0" data-comment-id="198">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 198</strong></span>
       <span class="comment-timestamp">[2021-07-08 21:38]</span>
     </div>
     <div class="article-comment-text">
@@ -1730,7 +1808,7 @@
           <div class="article-comment" data-timestamp="1625755260709" data-agrees="1" data-disagrees="0" data-comment-id="197">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 197</strong></span>
       <span class="comment-timestamp">[2021-07-08 16:41]</span>
     </div>
     <div class="article-comment-text">
@@ -1746,7 +1824,7 @@
           <div class="article-comment" data-timestamp="1625701098689" data-agrees="65" data-disagrees="26" data-comment-id="196">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 196</strong></span>
       <span class="comment-timestamp">[2021-07-08 01:38]</span>
     </div>
     <div class="article-comment-text">
@@ -1762,7 +1840,7 @@
           <div class="article-comment" data-timestamp="1625695682262" data-agrees="1" data-disagrees="0" data-comment-id="195">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 195</strong></span>
       <span class="comment-timestamp">[2021-07-08 00:08]</span>
     </div>
     <div class="article-comment-text">
@@ -1778,7 +1856,7 @@
           <div class="article-comment" data-timestamp="1625694647889" data-agrees="57" data-disagrees="35" data-comment-id="194">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 194</strong></span>
       <span class="comment-timestamp">[2021-07-07 23:50]</span>
     </div>
     <div class="article-comment-text">
@@ -1794,7 +1872,7 @@
           <div class="article-comment" data-timestamp="1625693947062" data-agrees="1" data-disagrees="0" data-comment-id="193">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 193</strong></span>
       <span class="comment-timestamp">[2021-07-07 23:39]</span>
     </div>
     <div class="article-comment-text">
@@ -1810,7 +1888,7 @@
           <div class="article-comment" data-timestamp="1625677295245" data-agrees="1" data-disagrees="0" data-comment-id="192">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 192</strong></span>
       <span class="comment-timestamp">[2021-07-07 19:01]</span>
     </div>
     <div class="article-comment-text">
@@ -1826,7 +1904,7 @@
           <div class="article-comment" data-timestamp="1625675815052" data-agrees="1" data-disagrees="0" data-comment-id="191">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 191</strong></span>
       <span class="comment-timestamp">[2021-07-07 18:36]</span>
     </div>
     <div class="article-comment-text">
@@ -1842,7 +1920,7 @@
           <div class="article-comment" data-timestamp="1625675760669" data-agrees="1" data-disagrees="0" data-comment-id="190">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 190</strong></span>
       <span class="comment-timestamp">[2021-07-07 18:36]</span>
     </div>
     <div class="article-comment-text">
@@ -1858,7 +1936,7 @@
           <div class="article-comment" data-timestamp="1625675389607" data-agrees="1" data-disagrees="0" data-comment-id="189">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 189</strong></span>
       <span class="comment-timestamp">[2021-07-07 18:29]</span>
     </div>
     <div class="article-comment-text">
@@ -1874,7 +1952,7 @@
           <div class="article-comment" data-timestamp="1625675233717" data-agrees="41" data-disagrees="29" data-comment-id="188">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 188</strong></span>
       <span class="comment-timestamp">[2021-07-07 18:27]</span>
     </div>
     <div class="article-comment-text">
@@ -1890,7 +1968,7 @@
           <div class="article-comment" data-timestamp="1625675101678" data-agrees="127" data-disagrees="9" data-comment-id="187">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 187</strong></span>
       <span class="comment-timestamp">[2021-07-07 18:25]</span>
     </div>
     <div class="article-comment-text">
@@ -1906,7 +1984,7 @@
           <div class="article-comment" data-timestamp="1625672643969" data-agrees="1" data-disagrees="0" data-comment-id="186">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 186</strong></span>
       <span class="comment-timestamp">[2021-07-07 17:44]</span>
     </div>
     <div class="article-comment-text">
@@ -1922,7 +2000,7 @@
           <div class="article-comment" data-timestamp="1625544673932" data-agrees="1" data-disagrees="0" data-comment-id="185">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 185</strong></span>
       <span class="comment-timestamp">[2021-07-06 06:11]</span>
     </div>
     <div class="article-comment-text">
@@ -1938,7 +2016,7 @@
           <div class="article-comment" data-timestamp="1625439504986" data-agrees="1" data-disagrees="0" data-comment-id="184">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 184</strong></span>
       <span class="comment-timestamp">[2021-07-05 00:58]</span>
     </div>
     <div class="article-comment-text">
@@ -1954,7 +2032,7 @@
           <div class="article-comment" data-timestamp="1625439443391" data-agrees="1" data-disagrees="0" data-comment-id="183">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 183</strong></span>
       <span class="comment-timestamp">[2021-07-05 00:57]</span>
     </div>
     <div class="article-comment-text">
@@ -1970,7 +2048,7 @@
           <div class="article-comment" data-timestamp="1625439140530" data-agrees="1" data-disagrees="0" data-comment-id="182">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 182</strong></span>
       <span class="comment-timestamp">[2021-07-05 00:52]</span>
     </div>
     <div class="article-comment-text">
@@ -1986,7 +2064,7 @@
           <div class="article-comment" data-timestamp="1625438350027" data-agrees="1" data-disagrees="0" data-comment-id="181">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 181</strong></span>
       <span class="comment-timestamp">[2021-07-05 00:39]</span>
     </div>
     <div class="article-comment-text">
@@ -2002,7 +2080,7 @@
           <div class="article-comment" data-timestamp="1625438186189" data-agrees="1" data-disagrees="0" data-comment-id="180">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 180</strong></span>
       <span class="comment-timestamp">[2021-07-05 00:36]</span>
     </div>
     <div class="article-comment-text">
@@ -2018,7 +2096,7 @@
           <div class="article-comment" data-timestamp="1625437485772" data-agrees="6" data-disagrees="23" data-comment-id="179">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 179</strong></span>
       <span class="comment-timestamp">[2021-07-05 00:24]</span>
     </div>
     <div class="article-comment-text">
@@ -2034,7 +2112,7 @@
           <div class="article-comment" data-timestamp="1625436669385" data-agrees="1" data-disagrees="0" data-comment-id="178">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 178</strong></span>
       <span class="comment-timestamp">[2021-07-05 00:11]</span>
     </div>
     <div class="article-comment-text">
@@ -2050,7 +2128,7 @@
           <div class="article-comment" data-timestamp="1625429760140" data-agrees="64" data-disagrees="61" data-comment-id="177">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 177</strong></span>
       <span class="comment-timestamp">[2021-07-04 22:16]</span>
     </div>
     <div class="article-comment-text">
@@ -2066,7 +2144,7 @@
           <div class="article-comment" data-timestamp="1625411094429" data-agrees="121" data-disagrees="9" data-comment-id="176">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 176</strong></span>
       <span class="comment-timestamp">[2021-07-04 17:04]</span>
     </div>
     <div class="article-comment-text">
@@ -2082,7 +2160,7 @@
           <div class="article-comment" data-timestamp="1625376746681" data-agrees="62" data-disagrees="61" data-comment-id="175">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 175</strong></span>
       <span class="comment-timestamp">[2021-07-04 07:32]</span>
     </div>
     <div class="article-comment-text">
@@ -2098,7 +2176,7 @@
           <div class="article-comment" data-timestamp="1625285792990" data-agrees="1" data-disagrees="0" data-comment-id="174">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 174</strong></span>
       <span class="comment-timestamp">[2021-07-03 06:16]</span>
     </div>
     <div class="article-comment-text">
@@ -2114,7 +2192,7 @@
           <div class="article-comment" data-timestamp="1625285731182" data-agrees="1" data-disagrees="0" data-comment-id="173">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 173</strong></span>
       <span class="comment-timestamp">[2021-07-03 06:15]</span>
     </div>
     <div class="article-comment-text">
@@ -2130,7 +2208,7 @@
           <div class="article-comment" data-timestamp="1625267237019" data-agrees="80" data-disagrees="34" data-comment-id="172">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 172</strong></span>
       <span class="comment-timestamp">[2021-07-03 01:07]</span>
     </div>
     <div class="article-comment-text">
@@ -2146,7 +2224,7 @@
           <div class="article-comment" data-timestamp="1625266639983" data-agrees="1" data-disagrees="0" data-comment-id="171">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 171</strong></span>
       <span class="comment-timestamp">[2021-07-03 00:57]</span>
     </div>
     <div class="article-comment-text">
@@ -2162,7 +2240,7 @@
           <div class="article-comment" data-timestamp="1625257600418" data-agrees="89" data-disagrees="23" data-comment-id="170">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 170</strong></span>
       <span class="comment-timestamp">[2021-07-02 22:26]</span>
     </div>
     <div class="article-comment-text">
@@ -2178,7 +2256,7 @@
           <div class="article-comment" data-timestamp="1625246694413" data-agrees="1" data-disagrees="0" data-comment-id="169">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 169</strong></span>
       <span class="comment-timestamp">[2021-07-02 19:24]</span>
     </div>
     <div class="article-comment-text">
@@ -2194,7 +2272,7 @@
           <div class="article-comment" data-timestamp="1625246204414" data-agrees="42" data-disagrees="71" data-comment-id="168">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 168</strong></span>
       <span class="comment-timestamp">[2021-07-02 19:16]</span>
     </div>
     <div class="article-comment-text">
@@ -2210,7 +2288,7 @@
           <div class="article-comment" data-timestamp="1625246096924" data-agrees="88" data-disagrees="41" data-comment-id="167">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 167</strong></span>
       <span class="comment-timestamp">[2021-07-02 19:14]</span>
     </div>
     <div class="article-comment-text">
@@ -2226,7 +2304,7 @@
           <div class="article-comment" data-timestamp="1625242965695" data-agrees="112" data-disagrees="21" data-comment-id="166">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 166</strong></span>
       <span class="comment-timestamp">[2021-07-02 18:22]</span>
     </div>
     <div class="article-comment-text">
@@ -2242,7 +2320,7 @@
           <div class="article-comment" data-timestamp="1625242733697" data-agrees="59" data-disagrees="28" data-comment-id="165">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 165</strong></span>
       <span class="comment-timestamp">[2021-07-02 18:18]</span>
     </div>
     <div class="article-comment-text">
@@ -2258,7 +2336,7 @@
           <div class="article-comment" data-timestamp="1625242606021" data-agrees="123" data-disagrees="35" data-comment-id="164">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 164</strong></span>
       <span class="comment-timestamp">[2021-07-02 18:16]</span>
     </div>
     <div class="article-comment-text">
@@ -2274,7 +2352,7 @@
           <div class="article-comment" data-timestamp="1625242332566" data-agrees="126" data-disagrees="26" data-comment-id="163">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 163</strong></span>
       <span class="comment-timestamp">[2021-07-02 18:12]</span>
     </div>
     <div class="article-comment-text">
@@ -2290,7 +2368,7 @@
           <div class="article-comment" data-timestamp="1625242166125" data-agrees="1" data-disagrees="0" data-comment-id="162">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 162</strong></span>
       <span class="comment-timestamp">[2021-07-02 18:09]</span>
     </div>
     <div class="article-comment-text">
@@ -2306,7 +2384,7 @@
           <div class="article-comment" data-timestamp="1625201376171" data-agrees="42" data-disagrees="52" data-comment-id="161">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 161</strong></span>
       <span class="comment-timestamp">[2021-07-02 06:49]</span>
     </div>
     <div class="article-comment-text">
@@ -2322,7 +2400,7 @@
           <div class="article-comment" data-timestamp="1625190739163" data-agrees="1" data-disagrees="0" data-comment-id="160">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 160</strong></span>
       <span class="comment-timestamp">[2021-07-02 03:52]</span>
     </div>
     <div class="article-comment-text">
@@ -2338,7 +2416,7 @@
           <div class="article-comment" data-timestamp="1625183419146" data-agrees="43" data-disagrees="70" data-comment-id="159">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 159</strong></span>
       <span class="comment-timestamp">[2021-07-02 01:50]</span>
     </div>
     <div class="article-comment-text">
@@ -2354,7 +2432,7 @@
           <div class="article-comment" data-timestamp="1625173639977" data-agrees="34" data-disagrees="8" data-comment-id="158">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 158</strong></span>
       <span class="comment-timestamp">[2021-07-01 23:07]</span>
     </div>
     <div class="article-comment-text">
@@ -2370,7 +2448,7 @@
           <div class="article-comment" data-timestamp="1625169051359" data-agrees="1" data-disagrees="0" data-comment-id="157">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 157</strong></span>
       <span class="comment-timestamp">[2021-07-01 21:50]</span>
     </div>
     <div class="article-comment-text">
@@ -2386,7 +2464,7 @@
           <div class="article-comment" data-timestamp="1625165199897" data-agrees="1" data-disagrees="0" data-comment-id="156">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 156</strong></span>
       <span class="comment-timestamp">[2021-07-01 20:46]</span>
     </div>
     <div class="article-comment-text">
@@ -2402,7 +2480,7 @@
           <div class="article-comment" data-timestamp="1625164895025" data-agrees="23" data-disagrees="100" data-comment-id="155">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 155</strong></span>
       <span class="comment-timestamp">[2021-07-01 20:41]</span>
     </div>
     <div class="article-comment-text">
@@ -2418,7 +2496,7 @@
           <div class="article-comment" data-timestamp="1625163287530" data-agrees="1" data-disagrees="0" data-comment-id="154">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 154</strong></span>
       <span class="comment-timestamp">[2021-07-01 20:14]</span>
     </div>
     <div class="article-comment-text">
@@ -2434,7 +2512,7 @@
           <div class="article-comment" data-timestamp="1625163129367" data-agrees="1" data-disagrees="0" data-comment-id="153">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 153</strong></span>
       <span class="comment-timestamp">[2021-07-01 20:12]</span>
     </div>
     <div class="article-comment-text">
@@ -2450,7 +2528,7 @@
           <div class="article-comment" data-timestamp="1625163092020" data-agrees="1" data-disagrees="0" data-comment-id="152">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 152</strong></span>
       <span class="comment-timestamp">[2021-07-01 20:11]</span>
     </div>
     <div class="article-comment-text">
@@ -2466,7 +2544,7 @@
           <div class="article-comment" data-timestamp="1625162541562" data-agrees="1" data-disagrees="0" data-comment-id="151">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 151</strong></span>
       <span class="comment-timestamp">[2021-07-01 20:02]</span>
     </div>
     <div class="article-comment-text">
@@ -2482,7 +2560,7 @@
           <div class="article-comment" data-timestamp="1625162424196" data-agrees="1" data-disagrees="0" data-comment-id="150">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 150</strong></span>
       <span class="comment-timestamp">[2021-07-01 20:00]</span>
     </div>
     <div class="article-comment-text">
@@ -2498,7 +2576,7 @@
           <div class="article-comment" data-timestamp="1625162272511" data-agrees="1" data-disagrees="0" data-comment-id="149">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 149</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:57]</span>
     </div>
     <div class="article-comment-text">
@@ -2514,7 +2592,7 @@
           <div class="article-comment" data-timestamp="1625162227077" data-agrees="69" data-disagrees="83" data-comment-id="148">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 148</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:57]</span>
     </div>
     <div class="article-comment-text">
@@ -2530,7 +2608,7 @@
           <div class="article-comment" data-timestamp="1625162107401" data-agrees="1" data-disagrees="0" data-comment-id="147">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 147</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:55]</span>
     </div>
     <div class="article-comment-text">
@@ -2546,7 +2624,7 @@
           <div class="article-comment" data-timestamp="1625162077740" data-agrees="1" data-disagrees="0" data-comment-id="146">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 146</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:54]</span>
     </div>
     <div class="article-comment-text">
@@ -2562,7 +2640,7 @@
           <div class="article-comment" data-timestamp="1625162004414" data-agrees="8" data-disagrees="15" data-comment-id="145">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 145</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:53]</span>
     </div>
     <div class="article-comment-text">
@@ -2578,7 +2656,7 @@
           <div class="article-comment" data-timestamp="1625161843633" data-agrees="1" data-disagrees="0" data-comment-id="144">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 144</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:50]</span>
     </div>
     <div class="article-comment-text">
@@ -2594,7 +2672,7 @@
           <div class="article-comment" data-timestamp="1625161758943" data-agrees="1" data-disagrees="0" data-comment-id="143">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 143</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:49]</span>
     </div>
     <div class="article-comment-text">
@@ -2610,7 +2688,7 @@
           <div class="article-comment" data-timestamp="1625161662395" data-agrees="1" data-disagrees="0" data-comment-id="142">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 142</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:47]</span>
     </div>
     <div class="article-comment-text">
@@ -2626,7 +2704,7 @@
           <div class="article-comment" data-timestamp="1625161607632" data-agrees="1" data-disagrees="0" data-comment-id="141">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 141</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:46]</span>
     </div>
     <div class="article-comment-text">
@@ -2642,7 +2720,7 @@
           <div class="article-comment" data-timestamp="1625161545677" data-agrees="1" data-disagrees="0" data-comment-id="140">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 140</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:45]</span>
     </div>
     <div class="article-comment-text">
@@ -2658,7 +2736,7 @@
           <div class="article-comment" data-timestamp="1625161437989" data-agrees="11" data-disagrees="0" data-comment-id="139">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 139</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:43]</span>
     </div>
     <div class="article-comment-text">
@@ -2674,7 +2752,7 @@
           <div class="article-comment" data-timestamp="1625161297689" data-agrees="72" data-disagrees="74" data-comment-id="138">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 138</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:41]</span>
     </div>
     <div class="article-comment-text">
@@ -2690,7 +2768,7 @@
           <div class="article-comment" data-timestamp="1625161242818" data-agrees="1" data-disagrees="0" data-comment-id="137">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 137</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:40]</span>
     </div>
     <div class="article-comment-text">
@@ -2706,7 +2784,7 @@
           <div class="article-comment" data-timestamp="1625161149715" data-agrees="193" data-disagrees="2" data-comment-id="136">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 136</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:39]</span>
     </div>
     <div class="article-comment-text">
@@ -2722,7 +2800,7 @@
           <div class="article-comment" data-timestamp="1625161101034" data-agrees="29" data-disagrees="38" data-comment-id="135">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 135</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:38]</span>
     </div>
     <div class="article-comment-text">
@@ -2738,7 +2816,7 @@
           <div class="article-comment" data-timestamp="1625161013619" data-agrees="45" data-disagrees="64" data-comment-id="134">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 134</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:36]</span>
     </div>
     <div class="article-comment-text">
@@ -2754,7 +2832,7 @@
           <div class="article-comment" data-timestamp="1625160919098" data-agrees="131" data-disagrees="20" data-comment-id="133">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 133</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:35]</span>
     </div>
     <div class="article-comment-text">
@@ -2770,7 +2848,7 @@
           <div class="article-comment" data-timestamp="1625160847191" data-agrees="1" data-disagrees="0" data-comment-id="132">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 132</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:34]</span>
     </div>
     <div class="article-comment-text">
@@ -2786,7 +2864,7 @@
           <div class="article-comment" data-timestamp="1625160817729" data-agrees="1" data-disagrees="0" data-comment-id="131">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 131</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:33]</span>
     </div>
     <div class="article-comment-text">
@@ -2802,7 +2880,7 @@
           <div class="article-comment" data-timestamp="1625160737761" data-agrees="1" data-disagrees="0" data-comment-id="130">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 130</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:32]</span>
     </div>
     <div class="article-comment-text">
@@ -2818,7 +2896,7 @@
           <div class="article-comment" data-timestamp="1625160683043" data-agrees="1" data-disagrees="0" data-comment-id="129">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 129</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:31]</span>
     </div>
     <div class="article-comment-text">
@@ -2834,7 +2912,7 @@
           <div class="article-comment" data-timestamp="1625160671437" data-agrees="1" data-disagrees="0" data-comment-id="128">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 128</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:31]</span>
     </div>
     <div class="article-comment-text">
@@ -2850,7 +2928,7 @@
           <div class="article-comment" data-timestamp="1625160612688" data-agrees="18" data-disagrees="4" data-comment-id="127">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 127</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:30]</span>
     </div>
     <div class="article-comment-text">
@@ -2866,7 +2944,7 @@
           <div class="article-comment" data-timestamp="1625160539791" data-agrees="153" data-disagrees="22" data-comment-id="126">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 126</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:28]</span>
     </div>
     <div class="article-comment-text">
@@ -2882,7 +2960,7 @@
           <div class="article-comment" data-timestamp="1625160476364" data-agrees="132" data-disagrees="15" data-comment-id="125">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 125</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:27]</span>
     </div>
     <div class="article-comment-text">
@@ -2898,7 +2976,7 @@
           <div class="article-comment" data-timestamp="1625160415473" data-agrees="1" data-disagrees="0" data-comment-id="124">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 124</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:26]</span>
     </div>
     <div class="article-comment-text">
@@ -2914,7 +2992,7 @@
           <div class="article-comment" data-timestamp="1625159076436" data-agrees="1" data-disagrees="0" data-comment-id="123">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 123</strong></span>
       <span class="comment-timestamp">[2021-07-01 19:04]</span>
     </div>
     <div class="article-comment-text">
@@ -2930,7 +3008,7 @@
           <div class="article-comment" data-timestamp="1625156189829" data-agrees="1" data-disagrees="0" data-comment-id="122">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 122</strong></span>
       <span class="comment-timestamp">[2021-07-01 18:16]</span>
     </div>
     <div class="article-comment-text">
@@ -2946,7 +3024,7 @@
           <div class="article-comment" data-timestamp="1625153407372" data-agrees="88" data-disagrees="54" data-comment-id="121">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 121</strong></span>
       <span class="comment-timestamp">[2021-07-01 17:30]</span>
     </div>
     <div class="article-comment-text">
@@ -2962,7 +3040,7 @@
           <div class="article-comment" data-timestamp="1625151556976" data-agrees="160" data-disagrees="19" data-comment-id="120">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 120</strong></span>
       <span class="comment-timestamp">[2021-07-01 16:59]</span>
     </div>
     <div class="article-comment-text">
@@ -2978,7 +3056,7 @@
           <div class="article-comment" data-timestamp="1625102135621" data-agrees="34" data-disagrees="79" data-comment-id="119">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 119</strong></span>
       <span class="comment-timestamp">[2021-07-01 03:15]</span>
     </div>
     <div class="article-comment-text">
@@ -2994,7 +3072,7 @@
           <div class="article-comment" data-timestamp="1625102108952" data-agrees="9" data-disagrees="126" data-comment-id="118">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 118</strong></span>
       <span class="comment-timestamp">[2021-07-01 03:15]</span>
     </div>
     <div class="article-comment-text">
@@ -3010,7 +3088,7 @@
           <div class="article-comment" data-timestamp="1625102079674" data-agrees="14" data-disagrees="133" data-comment-id="117">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 117</strong></span>
       <span class="comment-timestamp">[2021-07-01 03:14]</span>
     </div>
     <div class="article-comment-text">
@@ -3026,7 +3104,7 @@
           <div class="article-comment" data-timestamp="1625102051000" data-agrees="37" data-disagrees="91" data-comment-id="116">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 116</strong></span>
       <span class="comment-timestamp">[2021-07-01 03:14]</span>
     </div>
     <div class="article-comment-text">
@@ -3042,7 +3120,7 @@
           <div class="article-comment" data-timestamp="1625102000574" data-agrees="62" data-disagrees="84" data-comment-id="115">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 115</strong></span>
       <span class="comment-timestamp">[2021-07-01 03:13]</span>
     </div>
     <div class="article-comment-text">
@@ -3058,7 +3136,7 @@
           <div class="article-comment" data-timestamp="1625101981913" data-agrees="55" data-disagrees="95" data-comment-id="114">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 114</strong></span>
       <span class="comment-timestamp">[2021-07-01 03:13]</span>
     </div>
     <div class="article-comment-text">
@@ -3074,7 +3152,7 @@
           <div class="article-comment" data-timestamp="1625098103957" data-agrees="169" data-disagrees="29" data-comment-id="113">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 113</strong></span>
       <span class="comment-timestamp">[2021-07-01 02:08]</span>
     </div>
     <div class="article-comment-text">
@@ -3090,7 +3168,7 @@
           <div class="article-comment" data-timestamp="1625097851466" data-agrees="124" data-disagrees="26" data-comment-id="112">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 112</strong></span>
       <span class="comment-timestamp">[2021-07-01 02:04]</span>
     </div>
     <div class="article-comment-text">
@@ -3106,7 +3184,7 @@
           <div class="article-comment" data-timestamp="1625097596973" data-agrees="105" data-disagrees="40" data-comment-id="111">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 111</strong></span>
       <span class="comment-timestamp">[2021-07-01 01:59]</span>
     </div>
     <div class="article-comment-text">
@@ -3122,7 +3200,7 @@
           <div class="article-comment" data-timestamp="1625097430154" data-agrees="111" data-disagrees="42" data-comment-id="110">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 110</strong></span>
       <span class="comment-timestamp">[2021-07-01 01:57]</span>
     </div>
     <div class="article-comment-text">
@@ -3138,7 +3216,7 @@
           <div class="article-comment" data-timestamp="1625097383579" data-agrees="1" data-disagrees="0" data-comment-id="109">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 109</strong></span>
       <span class="comment-timestamp">[2021-07-01 01:56]</span>
     </div>
     <div class="article-comment-text">
@@ -3154,7 +3232,7 @@
           <div class="article-comment" data-timestamp="1625097171610" data-agrees="97" data-disagrees="33" data-comment-id="108">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 108</strong></span>
       <span class="comment-timestamp">[2021-07-01 01:52]</span>
     </div>
     <div class="article-comment-text">
@@ -3170,7 +3248,7 @@
           <div class="article-comment" data-timestamp="1625096179820" data-agrees="39" data-disagrees="102" data-comment-id="107">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 107</strong></span>
       <span class="comment-timestamp">[2021-07-01 01:36]</span>
     </div>
     <div class="article-comment-text">
@@ -3186,7 +3264,7 @@
           <div class="article-comment" data-timestamp="1625095427094" data-agrees="1" data-disagrees="0" data-comment-id="106">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 106</strong></span>
       <span class="comment-timestamp">[2021-07-01 01:23]</span>
     </div>
     <div class="article-comment-text">
@@ -3202,7 +3280,7 @@
           <div class="article-comment" data-timestamp="1625093250176" data-agrees="158" data-disagrees="27" data-comment-id="105">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 105</strong></span>
       <span class="comment-timestamp">[2021-07-01 00:47]</span>
     </div>
     <div class="article-comment-text">
@@ -3218,7 +3296,7 @@
           <div class="article-comment" data-timestamp="1625080665918" data-agrees="1" data-disagrees="0" data-comment-id="104">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 104</strong></span>
       <span class="comment-timestamp">[2021-06-30 21:17]</span>
     </div>
     <div class="article-comment-text">
@@ -3234,7 +3312,7 @@
           <div class="article-comment" data-timestamp="1625069013960" data-agrees="88" data-disagrees="21" data-comment-id="103">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 103</strong></span>
       <span class="comment-timestamp">[2021-06-30 18:03]</span>
     </div>
     <div class="article-comment-text">
@@ -3250,7 +3328,7 @@
           <div class="article-comment" data-timestamp="1625068720992" data-agrees="104" data-disagrees="52" data-comment-id="102">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 102</strong></span>
       <span class="comment-timestamp">[2021-06-30 17:58]</span>
     </div>
     <div class="article-comment-text">
@@ -3266,7 +3344,7 @@
           <div class="article-comment" data-timestamp="1625068601992" data-agrees="92" data-disagrees="48" data-comment-id="101">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 101</strong></span>
       <span class="comment-timestamp">[2021-06-30 17:56]</span>
     </div>
     <div class="article-comment-text">
@@ -3282,7 +3360,7 @@
           <div class="article-comment" data-timestamp="1625068485458" data-agrees="209" data-disagrees="18" data-comment-id="100">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 100</strong></span>
       <span class="comment-timestamp">[2021-06-30 17:54]</span>
     </div>
     <div class="article-comment-text">
@@ -3298,7 +3376,7 @@
           <div class="article-comment" data-timestamp="1625060777755" data-agrees="174" data-disagrees="53" data-comment-id="99">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 99</strong></span>
       <span class="comment-timestamp">[2021-06-30 15:46]</span>
     </div>
     <div class="article-comment-text">
@@ -3314,7 +3392,7 @@
           <div class="article-comment" data-timestamp="1625060030770" data-agrees="182" data-disagrees="32" data-comment-id="98">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 98</strong></span>
       <span class="comment-timestamp">[2021-06-30 15:33]</span>
     </div>
     <div class="article-comment-text">
@@ -3330,7 +3408,7 @@
           <div class="article-comment" data-timestamp="1625059819409" data-agrees="125" data-disagrees="26" data-comment-id="97">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 97</strong></span>
       <span class="comment-timestamp">[2021-06-30 15:30]</span>
     </div>
     <div class="article-comment-text">
@@ -3346,7 +3424,7 @@
           <div class="article-comment" data-timestamp="1625059134137" data-agrees="54" data-disagrees="73" data-comment-id="96">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 96</strong></span>
       <span class="comment-timestamp">[2021-06-30 15:18]</span>
     </div>
     <div class="article-comment-text">
@@ -3362,7 +3440,7 @@
           <div class="article-comment" data-timestamp="1625058561781" data-agrees="97" data-disagrees="59" data-comment-id="95">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 95</strong></span>
       <span class="comment-timestamp">[2021-06-30 15:09]</span>
     </div>
     <div class="article-comment-text">
@@ -3378,7 +3456,7 @@
           <div class="article-comment" data-timestamp="1625055935048" data-agrees="44" data-disagrees="78" data-comment-id="94">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 94</strong></span>
       <span class="comment-timestamp">[2021-06-30 14:25]</span>
     </div>
     <div class="article-comment-text">
@@ -3394,7 +3472,7 @@
           <div class="article-comment" data-timestamp="1625055848518" data-agrees="216" data-disagrees="26" data-comment-id="93">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 93</strong></span>
       <span class="comment-timestamp">[2021-06-30 14:24]</span>
     </div>
     <div class="article-comment-text">
@@ -3410,7 +3488,7 @@
           <div class="article-comment" data-timestamp="1625055805138" data-agrees="29" data-disagrees="67" data-comment-id="92">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 92</strong></span>
       <span class="comment-timestamp">[2021-06-30 14:23]</span>
     </div>
     <div class="article-comment-text">
@@ -3426,7 +3504,7 @@
           <div class="article-comment" data-timestamp="1625022573157" data-agrees="58" data-disagrees="81" data-comment-id="91">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 91</strong></span>
       <span class="comment-timestamp">[2021-06-30 05:09]</span>
     </div>
     <div class="article-comment-text">
@@ -3442,7 +3520,7 @@
           <div class="article-comment" data-timestamp="1625022492938" data-agrees="1" data-disagrees="0" data-comment-id="90">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 90</strong></span>
       <span class="comment-timestamp">[2021-06-30 05:08]</span>
     </div>
     <div class="article-comment-text">
@@ -3458,7 +3536,7 @@
           <div class="article-comment" data-timestamp="1625022416386" data-agrees="170" data-disagrees="46" data-comment-id="89">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 89</strong></span>
       <span class="comment-timestamp">[2021-06-30 05:06]</span>
     </div>
     <div class="article-comment-text">
@@ -3474,7 +3552,7 @@
           <div class="article-comment" data-timestamp="1625020643726" data-agrees="121" data-disagrees="60" data-comment-id="88">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 88</strong></span>
       <span class="comment-timestamp">[2021-06-30 04:37]</span>
     </div>
     <div class="article-comment-text">
@@ -3490,7 +3568,7 @@
           <div class="article-comment" data-timestamp="1625020502086" data-agrees="188" data-disagrees="25" data-comment-id="87">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 87</strong></span>
       <span class="comment-timestamp">[2021-06-30 04:35]</span>
     </div>
     <div class="article-comment-text">
@@ -3506,7 +3584,7 @@
           <div class="article-comment" data-timestamp="1625019670561" data-agrees="196" data-disagrees="17" data-comment-id="86">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 86</strong></span>
       <span class="comment-timestamp">[2021-06-30 04:21]</span>
     </div>
     <div class="article-comment-text">
@@ -3522,7 +3600,7 @@
           <div class="article-comment" data-timestamp="1625012150137" data-agrees="149" data-disagrees="84" data-comment-id="85">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 85</strong></span>
       <span class="comment-timestamp">[2021-06-30 02:15]</span>
     </div>
     <div class="article-comment-text">
@@ -3538,7 +3616,7 @@
           <div class="article-comment" data-timestamp="1625011741307" data-agrees="162" data-disagrees="39" data-comment-id="84">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 84</strong></span>
       <span class="comment-timestamp">[2021-06-30 02:09]</span>
     </div>
     <div class="article-comment-text">
@@ -3554,7 +3632,7 @@
           <div class="article-comment" data-timestamp="1625011578848" data-agrees="99" data-disagrees="61" data-comment-id="83">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 83</strong></span>
       <span class="comment-timestamp">[2021-06-30 02:06]</span>
     </div>
     <div class="article-comment-text">
@@ -3570,7 +3648,7 @@
           <div class="article-comment" data-timestamp="1625011301461" data-agrees="14" data-disagrees="121" data-comment-id="82">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 82</strong></span>
       <span class="comment-timestamp">[2021-06-30 02:01]</span>
     </div>
     <div class="article-comment-text">
@@ -3586,7 +3664,7 @@
           <div class="article-comment" data-timestamp="1625011188306" data-agrees="145" data-disagrees="55" data-comment-id="81">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 81</strong></span>
       <span class="comment-timestamp">[2021-06-30 01:59]</span>
     </div>
     <div class="article-comment-text">
@@ -3602,7 +3680,7 @@
           <div class="article-comment" data-timestamp="1625010976406" data-agrees="105" data-disagrees="34" data-comment-id="80">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 80</strong></span>
       <span class="comment-timestamp">[2021-06-30 01:56]</span>
     </div>
     <div class="article-comment-text">
@@ -3618,7 +3696,7 @@
           <div class="article-comment" data-timestamp="1625010535140" data-agrees="202" data-disagrees="35" data-comment-id="79">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 79</strong></span>
       <span class="comment-timestamp">[2021-06-30 01:48]</span>
     </div>
     <div class="article-comment-text">
@@ -3634,7 +3712,7 @@
           <div class="article-comment" data-timestamp="1625009707400" data-agrees="215" data-disagrees="12" data-comment-id="78">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 78</strong></span>
       <span class="comment-timestamp">[2021-06-30 01:35]</span>
     </div>
     <div class="article-comment-text">
@@ -3650,7 +3728,7 @@
           <div class="article-comment" data-timestamp="1625009571543" data-agrees="67" data-disagrees="82" data-comment-id="77">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 77</strong></span>
       <span class="comment-timestamp">[2021-06-30 01:32]</span>
     </div>
     <div class="article-comment-text">
@@ -3666,7 +3744,7 @@
           <div class="article-comment" data-timestamp="1625009461315" data-agrees="138" data-disagrees="88" data-comment-id="76">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 76</strong></span>
       <span class="comment-timestamp">[2021-06-30 01:31]</span>
     </div>
     <div class="article-comment-text">
@@ -3682,7 +3760,7 @@
           <div class="article-comment" data-timestamp="1625008442718" data-agrees="45" data-disagrees="146" data-comment-id="75">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 75</strong></span>
       <span class="comment-timestamp">[2021-06-30 01:14]</span>
     </div>
     <div class="article-comment-text">
@@ -3698,7 +3776,7 @@
           <div class="article-comment" data-timestamp="1625007691747" data-agrees="142" data-disagrees="38" data-comment-id="74">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 74</strong></span>
       <span class="comment-timestamp">[2021-06-30 01:01]</span>
     </div>
     <div class="article-comment-text">
@@ -3714,7 +3792,7 @@
           <div class="article-comment" data-timestamp="1625003797865" data-agrees="185" data-disagrees="24" data-comment-id="73">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 73</strong></span>
       <span class="comment-timestamp">[2021-06-29 23:56]</span>
     </div>
     <div class="article-comment-text">
@@ -3730,7 +3808,7 @@
           <div class="article-comment" data-timestamp="1625003673865" data-agrees="107" data-disagrees="68" data-comment-id="72">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 72</strong></span>
       <span class="comment-timestamp">[2021-06-29 23:54]</span>
     </div>
     <div class="article-comment-text">
@@ -3746,7 +3824,7 @@
           <div class="article-comment" data-timestamp="1625003599673" data-agrees="187" data-disagrees="29" data-comment-id="71">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 71</strong></span>
       <span class="comment-timestamp">[2021-06-29 23:53]</span>
     </div>
     <div class="article-comment-text">
@@ -3762,7 +3840,7 @@
           <div class="article-comment" data-timestamp="1625002505368" data-agrees="78" data-disagrees="227" data-comment-id="70">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 70</strong></span>
       <span class="comment-timestamp">[2021-06-29 23:35]</span>
     </div>
     <div class="article-comment-text">
@@ -3778,7 +3856,7 @@
           <div class="article-comment" data-timestamp="1625002483855" data-agrees="1" data-disagrees="0" data-comment-id="69">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 69</strong></span>
       <span class="comment-timestamp">[2021-06-29 23:34]</span>
     </div>
     <div class="article-comment-text">
@@ -3794,7 +3872,7 @@
           <div class="article-comment" data-timestamp="1625002427027" data-agrees="95" data-disagrees="205" data-comment-id="68">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 68</strong></span>
       <span class="comment-timestamp">[2021-06-29 23:33]</span>
     </div>
     <div class="article-comment-text">
@@ -3810,7 +3888,7 @@
           <div class="article-comment" data-timestamp="1625001646331" data-agrees="10" data-disagrees="301" data-comment-id="67">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 67</strong></span>
       <span class="comment-timestamp">[2021-06-29 23:20]</span>
     </div>
     <div class="article-comment-text">
@@ -3826,7 +3904,7 @@
           <div class="article-comment" data-timestamp="1625001535255" data-agrees="157" data-disagrees="171" data-comment-id="66">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 66</strong></span>
       <span class="comment-timestamp">[2021-06-29 23:18]</span>
     </div>
     <div class="article-comment-text">
@@ -3842,7 +3920,7 @@
           <div class="article-comment" data-timestamp="1625001527149" data-agrees="57" data-disagrees="255" data-comment-id="65">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 65</strong></span>
       <span class="comment-timestamp">[2021-06-29 23:18]</span>
     </div>
     <div class="article-comment-text">
@@ -3858,7 +3936,7 @@
           <div class="article-comment" data-timestamp="1625001520011" data-agrees="118" data-disagrees="203" data-comment-id="64">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 64</strong></span>
       <span class="comment-timestamp">[2021-06-29 23:18]</span>
     </div>
     <div class="article-comment-text">
@@ -3874,7 +3952,7 @@
           <div class="article-comment" data-timestamp="1625000646475" data-agrees="72" data-disagrees="156" data-comment-id="63">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 63</strong></span>
       <span class="comment-timestamp">[2021-06-29 23:04]</span>
     </div>
     <div class="article-comment-text">
@@ -3890,7 +3968,7 @@
           <div class="article-comment" data-timestamp="1624995861121" data-agrees="192" data-disagrees="26" data-comment-id="62">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 62</strong></span>
       <span class="comment-timestamp">[2021-06-29 21:44]</span>
     </div>
     <div class="article-comment-text">
@@ -3906,7 +3984,7 @@
           <div class="article-comment" data-timestamp="1624995776573" data-agrees="89" data-disagrees="122" data-comment-id="61">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 61</strong></span>
       <span class="comment-timestamp">[2021-06-29 21:42]</span>
     </div>
     <div class="article-comment-text">
@@ -3922,7 +4000,7 @@
           <div class="article-comment" data-timestamp="1624995702912" data-agrees="23" data-disagrees="122" data-comment-id="60">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 60</strong></span>
       <span class="comment-timestamp">[2021-06-29 21:41]</span>
     </div>
     <div class="article-comment-text">
@@ -3938,7 +4016,7 @@
           <div class="article-comment" data-timestamp="1624995616826" data-agrees="117" data-disagrees="70" data-comment-id="59">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 59</strong></span>
       <span class="comment-timestamp">[2021-06-29 21:40]</span>
     </div>
     <div class="article-comment-text">
@@ -3954,7 +4032,7 @@
           <div class="article-comment" data-timestamp="1624995352763" data-agrees="149" data-disagrees="58" data-comment-id="58">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 58</strong></span>
       <span class="comment-timestamp">[2021-06-29 21:35]</span>
     </div>
     <div class="article-comment-text">
@@ -3970,7 +4048,7 @@
           <div class="article-comment" data-timestamp="1624824306022" data-agrees="24" data-disagrees="143" data-comment-id="57">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 57</strong></span>
       <span class="comment-timestamp">[2021-06-27 22:05]</span>
     </div>
     <div class="article-comment-text">
@@ -3986,7 +4064,7 @@
           <div class="article-comment" data-timestamp="1624824207304" data-agrees="113" data-disagrees="70" data-comment-id="56">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 56</strong></span>
       <span class="comment-timestamp">[2021-06-27 22:03]</span>
     </div>
     <div class="article-comment-text">
@@ -4002,7 +4080,7 @@
           <div class="article-comment" data-timestamp="1624662019316" data-agrees="312" data-disagrees="24" data-comment-id="55">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 55</strong></span>
       <span class="comment-timestamp">[2021-06-26 01:00]</span>
     </div>
     <div class="article-comment-text">
@@ -4018,7 +4096,7 @@
           <div class="article-comment" data-timestamp="1624662009704" data-agrees="311" data-disagrees="24" data-comment-id="54">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 54</strong></span>
       <span class="comment-timestamp">[2021-06-26 01:00]</span>
     </div>
     <div class="article-comment-text">
@@ -4034,7 +4112,7 @@
           <div class="article-comment" data-timestamp="1624661998941" data-agrees="298" data-disagrees="40" data-comment-id="53">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 53</strong></span>
       <span class="comment-timestamp">[2021-06-26 00:59]</span>
     </div>
     <div class="article-comment-text">
@@ -4050,7 +4128,7 @@
           <div class="article-comment" data-timestamp="1624639673935" data-agrees="44" data-disagrees="101" data-comment-id="52">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 52</strong></span>
       <span class="comment-timestamp">[2021-06-25 18:47]</span>
     </div>
     <div class="article-comment-text">
@@ -4066,7 +4144,7 @@
           <div class="article-comment" data-timestamp="1624639388678" data-agrees="164" data-disagrees="26" data-comment-id="51">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 51</strong></span>
       <span class="comment-timestamp">[2021-06-25 18:43]</span>
     </div>
     <div class="article-comment-text">
@@ -4082,7 +4160,7 @@
           <div class="article-comment" data-timestamp="1624638680739" data-agrees="32" data-disagrees="64" data-comment-id="50">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 50</strong></span>
       <span class="comment-timestamp">[2021-06-25 18:31]</span>
     </div>
     <div class="article-comment-text">
@@ -4098,7 +4176,7 @@
           <div class="article-comment" data-timestamp="1624638646665" data-agrees="226" data-disagrees="17" data-comment-id="49">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 49</strong></span>
       <span class="comment-timestamp">[2021-06-25 18:30]</span>
     </div>
     <div class="article-comment-text">
@@ -4114,7 +4192,7 @@
           <div class="article-comment" data-timestamp="1624638582103" data-agrees="220" data-disagrees="36" data-comment-id="48">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 48</strong></span>
       <span class="comment-timestamp">[2021-06-25 18:29]</span>
     </div>
     <div class="article-comment-text">
@@ -4130,7 +4208,7 @@
           <div class="article-comment" data-timestamp="1624638539288" data-agrees="38" data-disagrees="70" data-comment-id="47">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 47</strong></span>
       <span class="comment-timestamp">[2021-06-25 18:28]</span>
     </div>
     <div class="article-comment-text">
@@ -4146,7 +4224,7 @@
           <div class="article-comment" data-timestamp="1624638520649" data-agrees="0" data-disagrees="0" data-comment-id="46">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 46</strong></span>
       <span class="comment-timestamp">[2021-06-25 18:28]</span>
     </div>
     <div class="article-comment-text">
@@ -4162,7 +4240,7 @@
           <div class="article-comment" data-timestamp="1624638346468" data-agrees="132" data-disagrees="35" data-comment-id="45">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 45</strong></span>
       <span class="comment-timestamp">[2021-06-25 18:25]</span>
     </div>
     <div class="article-comment-text">
@@ -4178,7 +4256,7 @@
           <div class="article-comment" data-timestamp="1624394685271" data-agrees="60" data-disagrees="90" data-comment-id="44">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 44</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:44]</span>
     </div>
     <div class="article-comment-text">
@@ -4194,7 +4272,7 @@
           <div class="article-comment" data-timestamp="1624394669723" data-agrees="146" data-disagrees="20" data-comment-id="43">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 43</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:44]</span>
     </div>
     <div class="article-comment-text">
@@ -4210,7 +4288,7 @@
           <div class="article-comment" data-timestamp="1624394661253" data-agrees="205" data-disagrees="36" data-comment-id="42">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 42</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:44]</span>
     </div>
     <div class="article-comment-text">
@@ -4226,7 +4304,7 @@
           <div class="article-comment" data-timestamp="1624394649465" data-agrees="216" data-disagrees="21" data-comment-id="41">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 41</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:44]</span>
     </div>
     <div class="article-comment-text">
@@ -4242,7 +4320,7 @@
           <div class="article-comment" data-timestamp="1624394639744" data-agrees="26" data-disagrees="120" data-comment-id="40">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 40</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:43]</span>
     </div>
     <div class="article-comment-text">
@@ -4258,7 +4336,7 @@
           <div class="article-comment" data-timestamp="1624394628811" data-agrees="139" data-disagrees="69" data-comment-id="39">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 39</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:43]</span>
     </div>
     <div class="article-comment-text">
@@ -4274,7 +4352,7 @@
           <div class="article-comment" data-timestamp="1624394612927" data-agrees="121" data-disagrees="74" data-comment-id="38">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 38</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:43]</span>
     </div>
     <div class="article-comment-text">
@@ -4290,7 +4368,7 @@
           <div class="article-comment" data-timestamp="1624394572510" data-agrees="101" data-disagrees="68" data-comment-id="37">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 37</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:42]</span>
     </div>
     <div class="article-comment-text">
@@ -4306,7 +4384,7 @@
           <div class="article-comment" data-timestamp="1624394558783" data-agrees="108" data-disagrees="74" data-comment-id="36">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 36</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:42]</span>
     </div>
     <div class="article-comment-text">
@@ -4322,7 +4400,7 @@
           <div class="article-comment" data-timestamp="1624394545734" data-agrees="148" data-disagrees="49" data-comment-id="35">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 35</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:42]</span>
     </div>
     <div class="article-comment-text">
@@ -4338,7 +4416,7 @@
           <div class="article-comment" data-timestamp="1624394528742" data-agrees="89" data-disagrees="103" data-comment-id="34">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 34</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:42]</span>
     </div>
     <div class="article-comment-text">
@@ -4354,7 +4432,7 @@
           <div class="article-comment" data-timestamp="1624394516681" data-agrees="81" data-disagrees="89" data-comment-id="33">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 33</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:41]</span>
     </div>
     <div class="article-comment-text">
@@ -4370,7 +4448,7 @@
           <div class="article-comment" data-timestamp="1624394503210" data-agrees="147" data-disagrees="53" data-comment-id="32">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 32</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:41]</span>
     </div>
     <div class="article-comment-text">
@@ -4386,7 +4464,7 @@
           <div class="article-comment" data-timestamp="1624394493814" data-agrees="184" data-disagrees="47" data-comment-id="31">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 31</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:41]</span>
     </div>
     <div class="article-comment-text">
@@ -4402,7 +4480,7 @@
           <div class="article-comment" data-timestamp="1624394478174" data-agrees="1" data-disagrees="4" data-comment-id="30">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 30</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:41]</span>
     </div>
     <div class="article-comment-text">
@@ -4418,7 +4496,7 @@
           <div class="article-comment" data-timestamp="1624394397728" data-agrees="176" data-disagrees="34" data-comment-id="29">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 29</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:39]</span>
     </div>
     <div class="article-comment-text">
@@ -4434,7 +4512,7 @@
           <div class="article-comment" data-timestamp="1624394377264" data-agrees="27" data-disagrees="164" data-comment-id="28">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 28</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:39]</span>
     </div>
     <div class="article-comment-text">
@@ -4450,7 +4528,7 @@
           <div class="article-comment" data-timestamp="1624394340546" data-agrees="160" data-disagrees="54" data-comment-id="27">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 27</strong></span>
       <span class="comment-timestamp">[2021-06-22 22:39]</span>
     </div>
     <div class="article-comment-text">
@@ -4466,7 +4544,7 @@
           <div class="article-comment" data-timestamp="1624311475078" data-agrees="210" data-disagrees="39" data-comment-id="26">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 26</strong></span>
       <span class="comment-timestamp">[2021-06-21 23:37]</span>
     </div>
     <div class="article-comment-text">
@@ -4482,7 +4560,7 @@
           <div class="article-comment" data-timestamp="1624311233062" data-agrees="168" data-disagrees="19" data-comment-id="25">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 25</strong></span>
       <span class="comment-timestamp">[2021-06-21 23:33]</span>
     </div>
     <div class="article-comment-text">
@@ -4498,7 +4576,7 @@
           <div class="article-comment" data-timestamp="1624311219803" data-agrees="78" data-disagrees="70" data-comment-id="24">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 24</strong></span>
       <span class="comment-timestamp">[2021-06-21 23:33]</span>
     </div>
     <div class="article-comment-text">
@@ -4514,7 +4592,7 @@
           <div class="article-comment" data-timestamp="1624311211515" data-agrees="71" data-disagrees="69" data-comment-id="23">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 23</strong></span>
       <span class="comment-timestamp">[2021-06-21 23:33]</span>
     </div>
     <div class="article-comment-text">
@@ -4530,7 +4608,7 @@
           <div class="article-comment" data-timestamp="1624311198655" data-agrees="77" data-disagrees="94" data-comment-id="22">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 22</strong></span>
       <span class="comment-timestamp">[2021-06-21 23:33]</span>
     </div>
     <div class="article-comment-text">
@@ -4546,7 +4624,7 @@
           <div class="article-comment" data-timestamp="1624311158463" data-agrees="99" data-disagrees="82" data-comment-id="21">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 21</strong></span>
       <span class="comment-timestamp">[2021-06-21 23:32]</span>
     </div>
     <div class="article-comment-text">
@@ -4562,7 +4640,7 @@
           <div class="article-comment" data-timestamp="1624311146935" data-agrees="233" data-disagrees="12" data-comment-id="20">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 20</strong></span>
       <span class="comment-timestamp">[2021-06-21 23:32]</span>
     </div>
     <div class="article-comment-text">
@@ -4578,7 +4656,7 @@
           <div class="article-comment" data-timestamp="1624311058128" data-agrees="92" data-disagrees="73" data-comment-id="19">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 19</strong></span>
       <span class="comment-timestamp">[2021-06-21 23:30]</span>
     </div>
     <div class="article-comment-text">
@@ -4594,7 +4672,7 @@
           <div class="article-comment" data-timestamp="1623988843674" data-agrees="138" data-disagrees="88" data-comment-id="18">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 18</strong></span>
       <span class="comment-timestamp">[2021-06-18 06:00]</span>
     </div>
     <div class="article-comment-text">
@@ -4610,7 +4688,7 @@
           <div class="article-comment" data-timestamp="1623988826043" data-agrees="204" data-disagrees="19" data-comment-id="17">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 17</strong></span>
       <span class="comment-timestamp">[2021-06-18 06:00]</span>
     </div>
     <div class="article-comment-text">
@@ -4626,7 +4704,7 @@
           <div class="article-comment" data-timestamp="1623988813253" data-agrees="0" data-disagrees="0" data-comment-id="16">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 16</strong></span>
       <span class="comment-timestamp">[2021-06-18 06:00]</span>
     </div>
     <div class="article-comment-text">
@@ -4642,7 +4720,7 @@
           <div class="article-comment" data-timestamp="1623988798117" data-agrees="210" data-disagrees="12" data-comment-id="15">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 15</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:59]</span>
     </div>
     <div class="article-comment-text">
@@ -4658,7 +4736,7 @@
           <div class="article-comment" data-timestamp="1623988785406" data-agrees="200" data-disagrees="22" data-comment-id="14">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 14</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:59]</span>
     </div>
     <div class="article-comment-text">
@@ -4674,7 +4752,7 @@
           <div class="article-comment" data-timestamp="1623988775826" data-agrees="0" data-disagrees="6" data-comment-id="13">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 13</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:59]</span>
     </div>
     <div class="article-comment-text">
@@ -4690,7 +4768,7 @@
           <div class="article-comment" data-timestamp="1623988767933" data-agrees="207" data-disagrees="21" data-comment-id="12">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 12</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:59]</span>
     </div>
     <div class="article-comment-text">
@@ -4706,7 +4784,7 @@
           <div class="article-comment" data-timestamp="1623988759820" data-agrees="0" data-disagrees="0" data-comment-id="11">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 11</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:59]</span>
     </div>
     <div class="article-comment-text">
@@ -4722,7 +4800,7 @@
           <div class="article-comment" data-timestamp="1623988752306" data-agrees="24" data-disagrees="161" data-comment-id="10">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 10</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:59]</span>
     </div>
     <div class="article-comment-text">
@@ -4738,7 +4816,7 @@
           <div class="article-comment" data-timestamp="1623988744373" data-agrees="127" data-disagrees="81" data-comment-id="9">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 9</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:59]</span>
     </div>
     <div class="article-comment-text">
@@ -4754,7 +4832,7 @@
           <div class="article-comment" data-timestamp="1623988734330" data-agrees="193" data-disagrees="19" data-comment-id="8">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 8</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:58]</span>
     </div>
     <div class="article-comment-text">
@@ -4770,7 +4848,7 @@
           <div class="article-comment" data-timestamp="1623988723538" data-agrees="0" data-disagrees="0" data-comment-id="7">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 7</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:58]</span>
     </div>
     <div class="article-comment-text">
@@ -4786,7 +4864,7 @@
           <div class="article-comment" data-timestamp="1623988695439" data-agrees="213" data-disagrees="29" data-comment-id="6">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 6</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:58]</span>
     </div>
     <div class="article-comment-text">
@@ -4802,7 +4880,7 @@
           <div class="article-comment" data-timestamp="1623988672667" data-agrees="72" data-disagrees="130" data-comment-id="5">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 5</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:57]</span>
     </div>
     <div class="article-comment-text">
@@ -4818,7 +4896,7 @@
           <div class="article-comment" data-timestamp="1623988664299" data-agrees="114" data-disagrees="54" data-comment-id="4">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 4</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:57]</span>
     </div>
     <div class="article-comment-text">
@@ -4834,7 +4912,7 @@
           <div class="article-comment" data-timestamp="1623988649872" data-agrees="136" data-disagrees="40" data-comment-id="3">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 3</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:57]</span>
     </div>
     <div class="article-comment-text">
@@ -4850,7 +4928,7 @@
           <div class="article-comment" data-timestamp="1623988639026" data-agrees="61" data-disagrees="146" data-comment-id="2">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 2</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:57]</span>
     </div>
     <div class="article-comment-text">
@@ -4866,7 +4944,7 @@
           <div class="article-comment" data-timestamp="1623988627706" data-agrees="109" data-disagrees="74" data-comment-id="1">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 1</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:57]</span>
     </div>
     <div class="article-comment-text">
@@ -4882,7 +4960,7 @@
           <div class="article-comment" data-timestamp="1623988616400" data-agrees="70" data-disagrees="88" data-comment-id="0">
   <div class="article-comment-content-wrap">
     <div class="article-comment-details">
-      <span><strong>Anonymous</strong></span>
+      <span><strong>User 0</strong></span>
       <span class="comment-timestamp">[2021-06-18 05:56]</span>
     </div>
     <div class="article-comment-text">
@@ -4906,49 +4984,81 @@
     nextCollapsibles.forEach(function (e) {
         e.addEventListener("click", function () {
             this.nextElementSibling.classList.toggle("hidden");
+            this.scrollIntoView();
+            window.scrollBy(0,100);
         });
     });
 
-    const repCommentsData = {"av": {"3": ["53", "54", "55"], "5": ["20", "49", "53", "54", "55"], "8": ["20", "41", "48", "49", "53", "54", "55", "93"], "10": ["20", "41", "48", "49", "53", "54", "55", "6", "78", "93"]}, "cc": {"3": ["48", "53", "55"], "5": ["48", "53", "55", "66", "70"], "8": ["53", "54", "55", "63", "64", "66", "70", "78"], "10": ["112", "14", "48", "53", "54", "55", "64", "66", "70", "78"]}, "consensus-rule": {"3": ["53", "54", "55"], "5": ["20", "48", "53", "54", "55"], "8": ["20", "48", "53", "54", "55", "64", "65", "66"], "10": ["14", "20", "48", "53", "54", "55", "64", "65", "66", "70"]}, "equal-shares": {"3": ["53", "54", "55"], "5": ["20", "48", "53", "54", "55"], "8": ["20", "48", "49", "53", "54", "55", "66", "93"], "10": ["15", "20", "26", "48", "49", "53", "54", "55", "66", "93"]}, "equal-shares-with-av-completion": {"3": ["53", "54", "55"], "5": ["20", "49", "53", "54", "55"], "8": ["20", "41", "48", "49", "53", "54", "55", "93"], "10": ["20", "41", "48", "49", "53", "54", "55", "6", "78", "93"]}, "equal-shares-with-increment-completion": {"3": ["53", "54", "55"], "5": ["20", "48", "53", "54", "55"], "8": ["20", "48", "49", "53", "54", "55", "66", "93"], "10": ["15", "20", "41", "48", "49", "53", "54", "55", "66", "93"]}, "pav": {"3": ["53", "54", "55"], "5": ["20", "48", "53", "54", "55"], "8": ["20", "48", "49", "53", "54", "55", "78", "93"], "10": ["15", "20", "48", "49", "53", "54", "55", "66", "78", "93"]}, "phragmen-enestroem": {"3": ["53", "54", "55"], "5": ["48", "53", "54", "55", "66"], "8": ["20", "48", "53", "54", "55", "64", "66", "93"], "10": ["20", "26", "48", "49", "53", "54", "55", "64", "66", "70"]}, "sav": {"3": ["53", "54", "55"], "5": ["53", "54", "55", "64", "66"], "8": ["48", "53", "54", "55", "64", "66", "70", "78"], "10": ["14", "48", "53", "54", "55", "6", "64", "66", "70", "78"]}, "seqpav": {"3": ["53", "54", "55"], "5": ["20", "48", "53", "54", "55"], "8": ["20", "48", "49", "53", "54", "55", "78", "93"], "10": ["15", "20", "48", "49", "53", "54", "55", "66", "78", "93"]}, "seqphragmen": {"3": ["53", "54", "55"], "5": ["20", "48", "53", "54", "55"], "8": ["20", "48", "49", "53", "54", "55", "66", "93"], "10": ["136", "20", "26", "48", "49", "53", "54", "55", "66", "93"]}, "trivial": {"3": ["296", "295", "294"], "5": ["296", "295", "294", "293", "292"], "8": ["296", "295", "294", "293", "292", "291", "290", "289"], "10": ["296", "295", "294", "293", "292", "291", "290", "289", "288", "287"]}};
+    const repCommentsData = {"av": {"3": ["53", "54", "55"], "5": ["20", "49", "53", "54", "55"], "8": ["20", "41", "48", "49", "53", "54", "55", "93"], "10": ["6", "20", "41", "48", "49", "53", "54", "55", "78", "93"]}, "cc": {"3": ["48", "53", "55"], "5": ["48", "53", "55", "66", "70"], "8": ["53", "54", "55", "64", "66", "70", "71", "78"], "10": ["14", "53", "54", "55", "64", "66", "70", "71", "75", "78"]}, "consensus-rule": {"3": ["53", "54", "55"], "5": ["20", "48", "53", "54", "55"], "8": ["20", "48", "53", "54", "55", "64", "65", "66"], "10": ["14", "20", "48", "53", "54", "55", "64", "65", "66", "70"]}, "equal-shares": {"3": ["53", "54", "55"], "5": ["20", "48", "53", "54", "55"], "8": ["20", "48", "49", "53", "54", "55", "66", "93"], "10": ["15", "20", "26", "48", "49", "53", "54", "55", "66", "93"]}, "equal-shares-with-av-completion": {"3": ["53", "54", "55"], "5": ["20", "49", "53", "54", "55"], "8": ["20", "41", "48", "49", "53", "54", "55", "93"], "10": ["6", "20", "41", "48", "49", "53", "54", "55", "78", "93"]}, "equal-shares-with-increment-completion": {"3": ["53", "54", "55"], "5": ["20", "48", "53", "54", "55"], "8": ["20", "48", "49", "53", "54", "55", "66", "93"], "10": ["15", "20", "41", "48", "49", "53", "54", "55", "66", "93"]}, "pav": {"3": ["53", "54", "55"], "5": ["20", "48", "53", "54", "55"], "8": ["20", "48", "49", "53", "54", "55", "78", "93"], "10": ["15", "20", "48", "49", "53", "54", "55", "66", "78", "93"]}, "phragmen-enestroem": {"3": ["53", "54", "55"], "5": ["48", "53", "54", "55", "66"], "8": ["20", "48", "53", "54", "55", "64", "66", "93"], "10": ["20", "26", "48", "49", "53", "54", "55", "64", "66", "70"]}, "sav": {"3": ["53", "54", "55"], "5": ["53", "54", "55", "64", "66"], "8": ["48", "53", "54", "55", "64", "66", "70", "78"], "10": ["6", "14", "48", "53", "54", "55", "64", "66", "70", "78"]}, "seqpav": {"3": ["53", "54", "55"], "5": ["20", "48", "53", "54", "55"], "8": ["20", "48", "49", "53", "54", "55", "78", "93"], "10": ["15", "20", "48", "49", "53", "54", "55", "66", "78", "93"]}, "seqphragmen": {"3": ["53", "54", "55"], "5": ["20", "48", "53", "54", "55"], "8": ["20", "48", "49", "53", "54", "55", "66", "93"], "10": ["20", "26", "48", "49", "53", "54", "55", "66", "93", "136"]}};
 
-    const ruleSelect = document.getElementById('rule-select');
+    const ruleSelects = document.querySelectorAll('.rule-select');
     const sizeSelect = document.getElementById('size-select');
-    const repCommentList = document.getElementById('representative-comments-list');
 
-    function updateRepresentativeComments() {
-      if (!ruleSelect || !sizeSelect || !repCommentList) {
-        return;  // required elements missing, safely bail out
-      }
+    function updateRepresentativeCommentsBlock(ruleSelect) {
+        const rule = ruleSelect.value;
+        const size = sizeSelect.value;
 
-      const rule = ruleSelect.value;
-      const size = sizeSelect.value;
+        // Use optional chaining and fallback to empty array
+        const commentIds = repCommentsData?.[rule]?.[size] || [];
 
-      // Use optional chaining and fallback to empty array
-      const commentIds = repCommentsData?.[rule]?.[size] || [];
+        // Fetch the div for the comments
+        let repCommentBlock = ruleSelect.closest('.representative-comments-block');
+        let repCommentList = repCommentBlock.querySelector('.representative-comments-list');
 
-      // Clear current list
-      repCommentList.innerHTML = '';
+        // Clear current list
+        repCommentList.innerHTML = '';
 
-      commentIds.forEach(cid => {
-        const original = document.querySelector(`.article-comment[data-comment-id="${cid}"]`);
-        if (original) {
-          const clone = original.cloneNode(true);
-          repCommentList.appendChild(clone);
-        }
+        commentIds.forEach(cid => {
+          const original = document.querySelector(`.article-comment[data-comment-id="${cid}"]`);
+          if (original) {
+            const clone = original.cloneNode(true);
+            repCommentList.appendChild(clone);
+          }
+        });
+    }
+
+    function updateAllRepresentativeComments() {
+      ruleSelects.forEach(ruleSelect => {
+        updateRepresentativeCommentsBlock(ruleSelect);
       });
     }
 
-    // Only add event listeners if selects exist
-    if (ruleSelect && sizeSelect) {
-      ruleSelect.addEventListener('change', updateRepresentativeComments);
-      sizeSelect.addEventListener('change', updateRepresentativeComments);
+    if (sizeSelect) {
+      sizeSelect.addEventListener('change', updateAllRepresentativeComments);
+
+      ruleSelects.forEach(ruleSelect => {
+        ruleSelect.addEventListener('change', function () {
+          updateRepresentativeCommentsBlock(ruleSelect);
+        });
+      });
+
+      updateAllRepresentativeComments();
     }
 
-    // Initial update only if all elements exist
-    if (ruleSelect && sizeSelect && repCommentList) {
-      updateRepresentativeComments();
+    let showAdvancedControlsButton = document.getElementById('show-advanced-controls');
+    let advancedControls = true;
+    let sizeSelectionWrap = document.getElementById('size-selection-wrap');
+    let ruleSelectionWraps = document.querySelectorAll('.rule-selection-wrap');
+    let representativeCommentsTitles = document.querySelectorAll('.representative-comments-block-title');
+
+    function toggleAdvancedControlsVisibility() {
+      if (advancedControls) {
+        advancedControls = false;
+        showAdvancedControlsButton.textContent = 'Show Advanced Controls';
+        ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.add('hidden'));
+        representativeCommentsTitles.forEach(title => {title.classList.remove('hidden')});
+        sizeSelectionWrap.classList.add('hidden');
+      } else {
+        advancedControls = true;
+        showAdvancedControlsButton.textContent = 'Hide Advanced Controls';
+        ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.remove('hidden'));
+        representativeCommentsTitles.forEach(title => {title.classList.add('hidden')});
+        sizeSelectionWrap.classList.remove('hidden');
+      }
     }
 
+    showAdvancedControlsButton.addEventListener('click', toggleAdvancedControlsVisibility);
+    toggleAdvancedControlsVisibility();
 });
 </script>
 

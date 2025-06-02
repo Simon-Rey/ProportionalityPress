@@ -13,4 +13,11 @@
   <p>
     Explore the articles to see proportionality in action and learn how computational methods can bring clarity and balance to complex discussions.
   </p>
+
+  <p>Highlighted Articles:</p>
+  <ul>
+    {% for article in highlighted_articles %}
+      <li><a href="{{ article.link }}">{{ article.title }}</a></li>
+    {% endfor %}
+  </ul>
 {% endblock %}

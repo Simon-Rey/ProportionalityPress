@@ -140,7 +140,7 @@ def polis_poll_to_article(poll: PolisPoll, ignore_not_seen: bool = True) -> Arti
         participant_ids=[pp.participant_id for pp in poll.participants],
     )
 
-    for pc in poll.comments:
+    for pc_index, pc in enumerate(sorted(poll.comments, key=lambda c: c.timestamp)):
         dt = datetime.fromtimestamp(int(pc.timestamp) / 1000)  # It is probably Unix Epoch in ms
         formatted_dt = dt.strftime("%Y-%m-%d %H:%M")
 
@@ -166,7 +166,7 @@ def polis_poll_to_article(poll: PolisPoll, ignore_not_seen: bool = True) -> Arti
                 comment_id=pc.comment_id,
                 text=pc.comment,
                 timestamp=pc.timestamp,
-                author="Anonymous",
+                author=f"User {pc_index}",
                 agreeing_ids=agreeing_ids,
                 disagreeing_ids=disagreeing_ids,
                 passed_ids=passed_ids,
