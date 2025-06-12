@@ -152,6 +152,13 @@ body {
   border-right: 2px solid var(--color-background-very-very-dark);
 }
 
+@media screen and (max-width: 1000px) {
+    #body-content-wrap {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
 header {
   display: flex;
   align-items: center;
