@@ -102,115 +102,154 @@
         </div>
 
         <div id="representative-comments-wrap" class="standard-padded-container">
+
           
             <div class="representative-comments-block">
-              <h3 class="representative-comments-block-title">Most popular comments</h3>
-              <div class="rule-selection-wrap">
-                <label for="rule-select-av">Selection Method:</label>
-                <select id="rule-select-av" class="rule-select">
-                  
-                    <option value="av" selected="selected">Approval Voting</option>
-                  
-                    <option value="sav">Satisfaction Approval Voting</option>
-                  
-                    <option value="pav">Proportional Approval Voting</option>
-                  
-                    <option value="cc">Chamberlin–Courant</option>
-                  
-                    <option value="seqpav">Sequential Proportional Approval Voting</option>
-                  
-                    <option value="seqphragmen">Phragmén&#39;s Sequential Rule</option>
-                  
-                    <option value="equal-shares">Method of Equal Shares</option>
-                  
-                    <option value="equal-shares-with-av-completion">Method of Equal Shares with Approval Voting Completion</option>
-                  
-                    <option value="equal-shares-with-increment-completion">Method of Equal Shares with Increment Completion</option>
-                  
-                    <option value="phragmen-enestroem">Eneström–Phragmén</option>
-                  
-                    <option value="consensus-rule">Consensus Rule</option>
-                  
-                </select>
-              </div>
+  <h3 class="representative-comments-block-title">Popularity-Based Selection</h3>
+  <div class="rule-selection-wrap">
+    <label for="rule-select-popularity">Selection Method:</label>
+    <select id="rule-select-popularity" class="rule-select">
+      
+        <option value="av">Approval Voting</option>
+      
+        <option value="sav">Satisfaction Approval Voting</option>
+      
+        <option value="pav">Proportional Approval Voting</option>
+      
+        <option value="cc">Chamberlin–Courant</option>
+      
+        <option value="seqpav">Sequential Proportional Approval Voting</option>
+      
+        <option value="seqphragmen">Phragmén&#39;s Sequential Rule</option>
+      
+        <option value="equal-shares">Method of Equal Shares</option>
+      
+        <option value="equal-shares-with-av-completion">Method of Equal Shares with Approval Voting Completion</option>
+      
+        <option value="equal-shares-with-increment-completion">Method of Equal Shares with Increment Completion</option>
+      
+        <option value="phragmen-enestroem">Eneström–Phragmén</option>
+      
+        <option value="consensus-rule">Consensus Rule</option>
+      
+    </select>
+  </div>
 
-              <div class="article-comments-list representative-comments-list">
-                <!-- JS will populate this based on selections -->
-              </div>
-            </div>
+  <div class="representative-comments-analysis">
+    <div class="comment-analysis-measure-block">
+      <div class="comment-analysis-measure-header">Satisfaction</div>
+      <div class="comment-analysis-measure satisfaction-progress">
+        <div class="satisfaction-bar-fill">
+          <span class="current-satisfaction-count"></span><span class="satisfaction-bar-percentage"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-comments-list representative-comments-list" id="comment-list-popularity">
+    <!-- JS will populate this based on selections -->
+  </div>
+</div>
+          
+
           
             <div class="representative-comments-block">
-              <h3 class="representative-comments-block-title">Representative selection of comments</h3>
-              <div class="rule-selection-wrap">
-                <label for="rule-select-equal-shares-with-increment-completion">Selection Method:</label>
-                <select id="rule-select-equal-shares-with-increment-completion" class="rule-select">
-                  
-                    <option value="av">Approval Voting</option>
-                  
-                    <option value="sav">Satisfaction Approval Voting</option>
-                  
-                    <option value="pav">Proportional Approval Voting</option>
-                  
-                    <option value="cc">Chamberlin–Courant</option>
-                  
-                    <option value="seqpav">Sequential Proportional Approval Voting</option>
-                  
-                    <option value="seqphragmen">Phragmén&#39;s Sequential Rule</option>
-                  
-                    <option value="equal-shares">Method of Equal Shares</option>
-                  
-                    <option value="equal-shares-with-av-completion">Method of Equal Shares with Approval Voting Completion</option>
-                  
-                    <option value="equal-shares-with-increment-completion" selected="selected">Method of Equal Shares with Increment Completion</option>
-                  
-                    <option value="phragmen-enestroem">Eneström–Phragmén</option>
-                  
-                    <option value="consensus-rule">Consensus Rule</option>
-                  
-                </select>
-              </div>
+  <h3 class="representative-comments-block-title">Representation-Based Selection</h3>
+  <div class="rule-selection-wrap">
+    <label for="rule-select-representation">Selection Method:</label>
+    <select id="rule-select-representation" class="rule-select">
+      
+        <option value="av">Approval Voting</option>
+      
+        <option value="sav">Satisfaction Approval Voting</option>
+      
+        <option value="pav">Proportional Approval Voting</option>
+      
+        <option value="cc">Chamberlin–Courant</option>
+      
+        <option value="seqpav">Sequential Proportional Approval Voting</option>
+      
+        <option value="seqphragmen">Phragmén&#39;s Sequential Rule</option>
+      
+        <option value="equal-shares">Method of Equal Shares</option>
+      
+        <option value="equal-shares-with-av-completion">Method of Equal Shares with Approval Voting Completion</option>
+      
+        <option value="equal-shares-with-increment-completion">Method of Equal Shares with Increment Completion</option>
+      
+        <option value="phragmen-enestroem">Eneström–Phragmén</option>
+      
+        <option value="consensus-rule">Consensus Rule</option>
+      
+    </select>
+  </div>
 
-              <div class="article-comments-list representative-comments-list">
-                <!-- JS will populate this based on selections -->
-              </div>
-            </div>
+  <div class="representative-comments-analysis">
+    <div class="comment-analysis-measure-block">
+      <div class="comment-analysis-measure-header">Satisfaction</div>
+      <div class="comment-analysis-measure satisfaction-progress">
+        <div class="satisfaction-bar-fill">
+          <span class="current-satisfaction-count"></span><span class="satisfaction-bar-percentage"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-comments-list representative-comments-list" id="comment-list-representation">
+    <!-- JS will populate this based on selections -->
+  </div>
+</div>
+          
+
           
             <div class="representative-comments-block">
-              <h3 class="representative-comments-block-title">Diverse selection of comments</h3>
-              <div class="rule-selection-wrap">
-                <label for="rule-select-cc">Selection Method:</label>
-                <select id="rule-select-cc" class="rule-select">
-                  
-                    <option value="av">Approval Voting</option>
-                  
-                    <option value="sav">Satisfaction Approval Voting</option>
-                  
-                    <option value="pav">Proportional Approval Voting</option>
-                  
-                    <option value="cc" selected="selected">Chamberlin–Courant</option>
-                  
-                    <option value="seqpav">Sequential Proportional Approval Voting</option>
-                  
-                    <option value="seqphragmen">Phragmén&#39;s Sequential Rule</option>
-                  
-                    <option value="equal-shares">Method of Equal Shares</option>
-                  
-                    <option value="equal-shares-with-av-completion">Method of Equal Shares with Approval Voting Completion</option>
-                  
-                    <option value="equal-shares-with-increment-completion">Method of Equal Shares with Increment Completion</option>
-                  
-                    <option value="phragmen-enestroem">Eneström–Phragmén</option>
-                  
-                    <option value="consensus-rule">Consensus Rule</option>
-                  
-                </select>
-              </div>
+  <h3 class="representative-comments-block-title">Diversity-Based Selection</h3>
+  <div class="rule-selection-wrap">
+    <label for="rule-select-diversity">Selection Method:</label>
+    <select id="rule-select-diversity" class="rule-select">
+      
+        <option value="av">Approval Voting</option>
+      
+        <option value="sav">Satisfaction Approval Voting</option>
+      
+        <option value="pav">Proportional Approval Voting</option>
+      
+        <option value="cc">Chamberlin–Courant</option>
+      
+        <option value="seqpav">Sequential Proportional Approval Voting</option>
+      
+        <option value="seqphragmen">Phragmén&#39;s Sequential Rule</option>
+      
+        <option value="equal-shares">Method of Equal Shares</option>
+      
+        <option value="equal-shares-with-av-completion">Method of Equal Shares with Approval Voting Completion</option>
+      
+        <option value="equal-shares-with-increment-completion">Method of Equal Shares with Increment Completion</option>
+      
+        <option value="phragmen-enestroem">Eneström–Phragmén</option>
+      
+        <option value="consensus-rule">Consensus Rule</option>
+      
+    </select>
+  </div>
 
-              <div class="article-comments-list representative-comments-list">
-                <!-- JS will populate this based on selections -->
-              </div>
-            </div>
+  <div class="representative-comments-analysis">
+    <div class="comment-analysis-measure-block">
+      <div class="comment-analysis-measure-header">Satisfaction</div>
+      <div class="comment-analysis-measure satisfaction-progress">
+        <div class="satisfaction-bar-fill">
+          <span class="current-satisfaction-count"></span><span class="satisfaction-bar-percentage"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-comments-list representative-comments-list" id="comment-list-diversity">
+    <!-- JS will populate this based on selections -->
+  </div>
+</div>
           
+
         </div>
       </section>
     
@@ -222,624 +261,702 @@
         
           <div class="article-comment" data-timestamp="1658934633363" data-agrees="3" data-disagrees="0" data-comment-id="38">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 38</strong></span>
+    <div class="article-comment-header">
+      <span>User 38</span>
       <span class="comment-timestamp">[2022-07-27 17:10]</span>
     </div>
-    <div class="article-comment-text">
-      Why are so many policemen also domestic abusers? Why are we allowing them to police us?
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍3</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Why are so many policemen also domestic abusers? Why are we allowing them to police us?
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 3fr 0fr;">
+        <span class="article-num-agrees">👍3</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934631392" data-agrees="4" data-disagrees="0" data-comment-id="37">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 37</strong></span>
+    <div class="article-comment-header">
+      <span>User 37</span>
       <span class="comment-timestamp">[2022-07-27 17:10]</span>
     </div>
-    <div class="article-comment-text">
-      It is to actively seek out and engage with young individuals to get their opinion and ideas with incentives
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍4</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        It is to actively seek out and engage with young individuals to get their opinion and ideas with incentives
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 4fr 0fr;">
+        <span class="article-num-agrees">👍4</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934593316" data-agrees="4" data-disagrees="0" data-comment-id="36">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 36</strong></span>
+    <div class="article-comment-header">
+      <span>User 36</span>
       <span class="comment-timestamp">[2022-07-27 17:09]</span>
     </div>
-    <div class="article-comment-text">
-      Allow them to be at the forefront of the decision making
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍4</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Allow them to be at the forefront of the decision making
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 4fr 0fr;">
+        <span class="article-num-agrees">👍4</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934589213" data-agrees="2" data-disagrees="1" data-comment-id="35">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 35</strong></span>
+    <div class="article-comment-header">
+      <span>User 35</span>
       <span class="comment-timestamp">[2022-07-27 17:09]</span>
     </div>
-    <div class="article-comment-text">
-      Eliminate bias - wider background check to see the type of people they are hiring
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍2</span>
-      <span class="article-num-disagree">👎1</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Eliminate bias - wider background check to see the type of people they are hiring
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 2fr 1fr;">
+        <span class="article-num-agrees">👍2</span>
+        <span class="article-num-disagree">👎1</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934544509" data-agrees="6" data-disagrees="0" data-comment-id="34">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 34</strong></span>
+    <div class="article-comment-header">
+      <span>User 34</span>
       <span class="comment-timestamp">[2022-07-27 17:09]</span>
     </div>
-    <div class="article-comment-text">
-      Global transparency is a must
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍6</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Global transparency is a must
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 6fr 0fr;">
+        <span class="article-num-agrees">👍6</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934540082" data-agrees="3" data-disagrees="1" data-comment-id="33">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 33</strong></span>
+    <div class="article-comment-header">
+      <span>User 33</span>
       <span class="comment-timestamp">[2022-07-27 17:09]</span>
     </div>
-    <div class="article-comment-text">
-      Diversity in policing
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍3</span>
-      <span class="article-num-disagree">👎1</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Diversity in policing
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 3fr 1fr;">
+        <span class="article-num-agrees">👍3</span>
+        <span class="article-num-disagree">👎1</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934510601" data-agrees="12" data-disagrees="0" data-comment-id="32">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 32</strong></span>
+    <div class="article-comment-header">
+      <span>User 32</span>
       <span class="comment-timestamp">[2022-07-27 17:08]</span>
     </div>
-    <div class="article-comment-text">
-      I think we need to look into the role of the police and how we want them to function in society- rewrite the policies
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍12</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I think we need to look into the role of the police and how we want them to function in society- rewrite the policies
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 12fr 0fr;">
+        <span class="article-num-agrees">👍12</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934504343" data-agrees="11" data-disagrees="1" data-comment-id="31">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 31</strong></span>
+    <div class="article-comment-header">
+      <span>User 31</span>
       <span class="comment-timestamp">[2022-07-27 17:08]</span>
     </div>
-    <div class="article-comment-text">
-      Create a new policing system with key stakeholders including young people and especially black people.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍11</span>
-      <span class="article-num-disagree">👎1</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Create a new policing system with key stakeholders including young people and especially black people.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 11fr 1fr;">
+        <span class="article-num-agrees">👍11</span>
+        <span class="article-num-disagree">👎1</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934500120" data-agrees="10" data-disagrees="0" data-comment-id="30">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 30</strong></span>
+    <div class="article-comment-header">
+      <span>User 30</span>
       <span class="comment-timestamp">[2022-07-27 17:08]</span>
     </div>
-    <div class="article-comment-text">
-      We need more changes to policy and police engage more with young people
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍10</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        We need more changes to policy and police engage more with young people
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 10fr 0fr;">
+        <span class="article-num-agrees">👍10</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934486273" data-agrees="8" data-disagrees="0" data-comment-id="29">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 29</strong></span>
+    <div class="article-comment-header">
+      <span>User 29</span>
       <span class="comment-timestamp">[2022-07-27 17:08]</span>
     </div>
-    <div class="article-comment-text">
-      Good detail Clear and thorough  The full truth
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍8</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Good detail Clear and thorough  The full truth
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 8fr 0fr;">
+        <span class="article-num-agrees">👍8</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934477393" data-agrees="7" data-disagrees="4" data-comment-id="28">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 28</strong></span>
+    <div class="article-comment-header">
+      <span>User 28</span>
       <span class="comment-timestamp">[2022-07-27 17:07]</span>
     </div>
-    <div class="article-comment-text">
-      pan3l discussions where they can communicate without power dynamics
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍7</span>
-      <span class="article-num-disagree">👎4</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        pan3l discussions where they can communicate without power dynamics
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 7fr 4fr;">
+        <span class="article-num-agrees">👍7</span>
+        <span class="article-num-disagree">👎4</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934404094" data-agrees="14" data-disagrees="0" data-comment-id="27">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 27</strong></span>
+    <div class="article-comment-header">
+      <span>User 27</span>
       <span class="comment-timestamp">[2022-07-27 17:06]</span>
     </div>
-    <div class="article-comment-text">
-      do regular, independent investigations on police conduct and present data to young people so they can hold conversations about the findings.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍14</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        do regular, independent investigations on police conduct and present data to young people so they can hold conversations about the findings.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 14fr 0fr;">
+        <span class="article-num-agrees">👍14</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934350700" data-agrees="13" data-disagrees="1" data-comment-id="26">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 26</strong></span>
+    <div class="article-comment-header">
+      <span>User 26</span>
       <span class="comment-timestamp">[2022-07-27 17:05]</span>
     </div>
-    <div class="article-comment-text">
-      Have community police officers in schools create a rapport with the young people to build up trust and provide accountability, in all areas.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍13</span>
-      <span class="article-num-disagree">👎1</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Have community police officers in schools create a rapport with the young people to build up trust and provide accountability, in all areas.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 13fr 1fr;">
+        <span class="article-num-agrees">👍13</span>
+        <span class="article-num-disagree">👎1</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934260868" data-agrees="15" data-disagrees="2" data-comment-id="25">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 25</strong></span>
+    <div class="article-comment-header">
+      <span>User 25</span>
       <span class="comment-timestamp">[2022-07-27 17:04]</span>
     </div>
-    <div class="article-comment-text">
-      educate young people on the history of policing so that they can identify negative/detrimental patterns in police behaviour.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍15</span>
-      <span class="article-num-disagree">👎2</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        educate young people on the history of policing so that they can identify negative/detrimental patterns in police behaviour.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 15fr 2fr;">
+        <span class="article-num-agrees">👍15</span>
+        <span class="article-num-disagree">👎2</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934160198" data-agrees="7" data-disagrees="9" data-comment-id="24">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 24</strong></span>
+    <div class="article-comment-header">
+      <span>User 24</span>
       <span class="comment-timestamp">[2022-07-27 17:02]</span>
     </div>
-    <div class="article-comment-text">
-      encourage young people into cadets so that they can develop rapports with people who can assist them in the scrutiny of police.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍7</span>
-      <span class="article-num-disagree">👎9</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        encourage young people into cadets so that they can develop rapports with people who can assist them in the scrutiny of police.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 7fr 9fr;">
+        <span class="article-num-agrees">👍7</span>
+        <span class="article-num-disagree">👎9</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934060401" data-agrees="20" data-disagrees="1" data-comment-id="23">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 23</strong></span>
+    <div class="article-comment-header">
+      <span>User 23</span>
       <span class="comment-timestamp">[2022-07-27 17:01]</span>
     </div>
-    <div class="article-comment-text">
-      To have open dialogues with police about why they have negative feelings towards them. Share their personal experiences.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍20</span>
-      <span class="article-num-disagree">👎1</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        To have open dialogues with police about why they have negative feelings towards them. Share their personal experiences.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 20fr 1fr;">
+        <span class="article-num-agrees">👍20</span>
+        <span class="article-num-disagree">👎1</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934038902" data-agrees="16" data-disagrees="5" data-comment-id="22">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 22</strong></span>
+    <div class="article-comment-header">
+      <span>User 22</span>
       <span class="comment-timestamp">[2022-07-27 17:00]</span>
     </div>
-    <div class="article-comment-text">
-      Have talks with police officers at events to debate with them about the justice system and what may need to change
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍16</span>
-      <span class="article-num-disagree">👎5</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Have talks with police officers at events to debate with them about the justice system and what may need to change
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 16fr 5fr;">
+        <span class="article-num-agrees">👍16</span>
+        <span class="article-num-disagree">👎5</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934035490" data-agrees="16" data-disagrees="2" data-comment-id="21">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 21</strong></span>
+    <div class="article-comment-header">
+      <span>User 21</span>
       <span class="comment-timestamp">[2022-07-27 17:00]</span>
     </div>
-    <div class="article-comment-text">
-      Have officers write briefs as to why they took the actions they did. Young people can look and then question them upon suitability of action
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍16</span>
-      <span class="article-num-disagree">👎2</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Have officers write briefs as to why they took the actions they did. Young people can look and then question them upon suitability of action
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 16fr 2fr;">
+        <span class="article-num-agrees">👍16</span>
+        <span class="article-num-disagree">👎2</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934021098" data-agrees="21" data-disagrees="1" data-comment-id="20">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 20</strong></span>
+    <div class="article-comment-header">
+      <span>User 20</span>
       <span class="comment-timestamp">[2022-07-27 17:00]</span>
     </div>
-    <div class="article-comment-text">
-      First - ensure that young people feel safe/comfortable to scrutinise policing
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍21</span>
-      <span class="article-num-disagree">👎1</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        First - ensure that young people feel safe/comfortable to scrutinise policing
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 21fr 1fr;">
+        <span class="article-num-agrees">👍21</span>
+        <span class="article-num-disagree">👎1</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934018240" data-agrees="15" data-disagrees="3" data-comment-id="19">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 19</strong></span>
+    <div class="article-comment-header">
+      <span>User 19</span>
       <span class="comment-timestamp">[2022-07-27 17:00]</span>
     </div>
-    <div class="article-comment-text">
-      give them the autonomy and power to influence decisions made regarding policing
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍15</span>
-      <span class="article-num-disagree">👎3</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        give them the autonomy and power to influence decisions made regarding policing
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 15fr 3fr;">
+        <span class="article-num-agrees">👍15</span>
+        <span class="article-num-disagree">👎3</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658934003205" data-agrees="18" data-disagrees="2" data-comment-id="18">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 18</strong></span>
+    <div class="article-comment-header">
+      <span>User 18</span>
       <span class="comment-timestamp">[2022-07-27 17:00]</span>
     </div>
-    <div class="article-comment-text">
-      Give the young Londoners a chance to speak their mind to the police, tell them how they are feeling - incentives too
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍18</span>
-      <span class="article-num-disagree">👎2</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Give the young Londoners a chance to speak their mind to the police, tell them how they are feeling - incentives too
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 18fr 2fr;">
+        <span class="article-num-agrees">👍18</span>
+        <span class="article-num-disagree">👎2</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658933950342" data-agrees="20" data-disagrees="0" data-comment-id="17">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 17</strong></span>
+    <div class="article-comment-header">
+      <span>User 17</span>
       <span class="comment-timestamp">[2022-07-27 16:59]</span>
     </div>
-    <div class="article-comment-text">
-      To provide incentives and to allow for true change to be made. Not just conversation
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍20</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        To provide incentives and to allow for true change to be made. Not just conversation
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 20fr 0fr;">
+        <span class="article-num-agrees">👍20</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658933932974" data-agrees="19" data-disagrees="2" data-comment-id="16">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 16</strong></span>
+    <div class="article-comment-header">
+      <span>User 16</span>
       <span class="comment-timestamp">[2022-07-27 16:58]</span>
     </div>
-    <div class="article-comment-text">
-      Involve them more in training.   Involve them more in spaces were policy’s are made.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍19</span>
-      <span class="article-num-disagree">👎2</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Involve them more in training.   Involve them more in spaces were policy’s are made.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 19fr 2fr;">
+        <span class="article-num-agrees">👍19</span>
+        <span class="article-num-disagree">👎2</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658933916725" data-agrees="19" data-disagrees="2" data-comment-id="15">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 15</strong></span>
+    <div class="article-comment-header">
+      <span>User 15</span>
       <span class="comment-timestamp">[2022-07-27 16:58]</span>
     </div>
-    <div class="article-comment-text">
-      To offer the young people incentives
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍19</span>
-      <span class="article-num-disagree">👎2</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        To offer the young people incentives
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 19fr 2fr;">
+        <span class="article-num-agrees">👍19</span>
+        <span class="article-num-disagree">👎2</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658852806489" data-agrees="18" data-disagrees="3" data-comment-id="14">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 14</strong></span>
+    <div class="article-comment-header">
+      <span>User 14</span>
       <span class="comment-timestamp">[2022-07-26 18:26]</span>
     </div>
-    <div class="article-comment-text">
-      I had at least one encounter (good or bad) with the police.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍18</span>
-      <span class="article-num-disagree">👎3</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I had at least one encounter (good or bad) with the police.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 18fr 3fr;">
+        <span class="article-num-agrees">👍18</span>
+        <span class="article-num-disagree">👎3</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658852798018" data-agrees="2" data-disagrees="20" data-comment-id="13">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 13</strong></span>
+    <div class="article-comment-header">
+      <span>User 13</span>
       <span class="comment-timestamp">[2022-07-26 18:26]</span>
     </div>
-    <div class="article-comment-text">
-      My ethnicity is Arab.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍2</span>
-      <span class="article-num-disagree">👎20</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        My ethnicity is Arab.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 2fr 20fr;">
+        <span class="article-num-agrees">👍2</span>
+        <span class="article-num-disagree">👎20</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658852792562" data-agrees="10" data-disagrees="13" data-comment-id="12">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 12</strong></span>
+    <div class="article-comment-header">
+      <span>User 12</span>
       <span class="comment-timestamp">[2022-07-26 18:26]</span>
     </div>
-    <div class="article-comment-text">
-      My ethnicity is Mixed (Multiple ethnic groups).
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍10</span>
-      <span class="article-num-disagree">👎13</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        My ethnicity is Mixed (Multiple ethnic groups).
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 10fr 13fr;">
+        <span class="article-num-agrees">👍10</span>
+        <span class="article-num-disagree">👎13</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658852785818" data-agrees="3" data-disagrees="19" data-comment-id="11">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 11</strong></span>
+    <div class="article-comment-header">
+      <span>User 11</span>
       <span class="comment-timestamp">[2022-07-26 18:26]</span>
     </div>
-    <div class="article-comment-text">
-      My ethnicity is Asian or British Asian.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍3</span>
-      <span class="article-num-disagree">👎19</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        My ethnicity is Asian or British Asian.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 3fr 19fr;">
+        <span class="article-num-agrees">👍3</span>
+        <span class="article-num-disagree">👎19</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658852778774" data-agrees="12" data-disagrees="8" data-comment-id="10">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 10</strong></span>
+    <div class="article-comment-header">
+      <span>User 10</span>
       <span class="comment-timestamp">[2022-07-26 18:26]</span>
     </div>
-    <div class="article-comment-text">
-      My ethnicity is Black, Black British, Caribbean or African.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍12</span>
-      <span class="article-num-disagree">👎8</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        My ethnicity is Black, Black British, Caribbean or African.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 12fr 8fr;">
+        <span class="article-num-agrees">👍12</span>
+        <span class="article-num-disagree">👎8</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658852772907" data-agrees="4" data-disagrees="18" data-comment-id="9">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 9</strong></span>
+    <div class="article-comment-header">
+      <span>User 9</span>
       <span class="comment-timestamp">[2022-07-26 18:26]</span>
     </div>
-    <div class="article-comment-text">
-      My ethnicity is White.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍4</span>
-      <span class="article-num-disagree">👎18</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        My ethnicity is White.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 4fr 18fr;">
+        <span class="article-num-agrees">👍4</span>
+        <span class="article-num-disagree">👎18</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658852767722" data-agrees="15" data-disagrees="7" data-comment-id="8">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 8</strong></span>
+    <div class="article-comment-header">
+      <span>User 8</span>
       <span class="comment-timestamp">[2022-07-26 18:26]</span>
     </div>
-    <div class="article-comment-text">
-      English is my first language.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍15</span>
-      <span class="article-num-disagree">👎7</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        English is my first language.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 15fr 7fr;">
+        <span class="article-num-agrees">👍15</span>
+        <span class="article-num-disagree">👎7</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658852761783" data-agrees="2" data-disagrees="20" data-comment-id="7">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 7</strong></span>
+    <div class="article-comment-header">
+      <span>User 7</span>
       <span class="comment-timestamp">[2022-07-26 18:26]</span>
     </div>
-    <div class="article-comment-text">
-      My gender has changed since birth.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍2</span>
-      <span class="article-num-disagree">👎20</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        My gender has changed since birth.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 2fr 20fr;">
+        <span class="article-num-agrees">👍2</span>
+        <span class="article-num-disagree">👎20</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658852756014" data-agrees="13" data-disagrees="10" data-comment-id="6">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 6</strong></span>
+    <div class="article-comment-header">
+      <span>User 6</span>
       <span class="comment-timestamp">[2022-07-26 18:25]</span>
     </div>
-    <div class="article-comment-text">
-      I identify as female.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍13</span>
-      <span class="article-num-disagree">👎10</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I identify as female.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 13fr 10fr;">
+        <span class="article-num-agrees">👍13</span>
+        <span class="article-num-disagree">👎10</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658852750376" data-agrees="9" data-disagrees="14" data-comment-id="5">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 5</strong></span>
+    <div class="article-comment-header">
+      <span>User 5</span>
       <span class="comment-timestamp">[2022-07-26 18:25]</span>
     </div>
-    <div class="article-comment-text">
-      I identify as male.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍9</span>
-      <span class="article-num-disagree">👎14</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I identify as male.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 9fr 14fr;">
+        <span class="article-num-agrees">👍9</span>
+        <span class="article-num-disagree">👎14</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658852744135" data-agrees="12" data-disagrees="10" data-comment-id="4">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 4</strong></span>
+    <div class="article-comment-header">
+      <span>User 4</span>
       <span class="comment-timestamp">[2022-07-26 18:25]</span>
     </div>
-    <div class="article-comment-text">
-      I am between 20 and 25 years old.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍12</span>
-      <span class="article-num-disagree">👎10</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I am between 20 and 25 years old.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 12fr 10fr;">
+        <span class="article-num-agrees">👍12</span>
+        <span class="article-num-disagree">👎10</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658828110960" data-agrees="0" data-disagrees="0" data-comment-id="3">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 3</strong></span>
+    <div class="article-comment-header">
+      <span>User 3</span>
       <span class="comment-timestamp">[2022-07-26 11:35]</span>
     </div>
-    <div class="article-comment-text">
-      I am between 25 and 29 years old.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍0</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I am between 25 and 29 years old.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 0fr 0fr;">
+        <span class="article-num-agrees">👍0</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658828100523" data-agrees="0" data-disagrees="0" data-comment-id="2">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 2</strong></span>
+    <div class="article-comment-header">
+      <span>User 2</span>
       <span class="comment-timestamp">[2022-07-26 11:35]</span>
     </div>
-    <div class="article-comment-text">
-      I am between 20 and 24 years old.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍0</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I am between 20 and 24 years old.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 0fr 0fr;">
+        <span class="article-num-agrees">👍0</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658828087742" data-agrees="9" data-disagrees="13" data-comment-id="1">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 1</strong></span>
+    <div class="article-comment-header">
+      <span>User 1</span>
       <span class="comment-timestamp">[2022-07-26 11:34]</span>
     </div>
-    <div class="article-comment-text">
-      I am between 15 and 19 years old.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍9</span>
-      <span class="article-num-disagree">👎13</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I am between 15 and 19 years old.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 9fr 13fr;">
+        <span class="article-num-agrees">👍9</span>
+        <span class="article-num-disagree">👎13</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1658827822012" data-agrees="0" data-disagrees="0" data-comment-id="0">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 0</strong></span>
+    <div class="article-comment-header">
+      <span>User 0</span>
       <span class="comment-timestamp">[2022-07-26 11:30]</span>
     </div>
-    <div class="article-comment-text">
-      Are you between 15 and 19 years old?
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍0</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Are you between 15 and 19 years old?
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 0fr 0fr;">
+        <span class="article-num-agrees">👍0</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
@@ -863,6 +980,7 @@
 
     const ruleSelects = document.querySelectorAll('.rule-select');
     const sizeSelect = document.getElementById('size-select');
+    const maximumSatisfactionCounts = document.querySelectorAll('.maximum-satisfaction-count');
 
     function updateRepresentativeCommentsBlock(ruleSelect) {
         const rule = ruleSelect.value;
@@ -885,6 +1003,62 @@
             repCommentList.appendChild(clone);
           }
         });
+
+        // Update the satisfaction count
+        updateSatisfactionProgressBar(repCommentBlock);
+    }
+
+    function computeTotalCommentsSatisfaction (commentList) {
+      const comments = commentList.querySelectorAll('.article-comment');
+      let totalSatisfaction = 0;
+      comments.forEach(function (comment) {
+        totalSatisfaction += Number(comment.dataset.agrees);
+      })
+      return totalSatisfaction;
+    }
+
+    function computeTotalSatisfactionIds (commentIdsList) {
+      let totalSatisfaction = 0;
+      for (let i = 0; i < commentIdsList.length; i++) {
+        const commentId = commentIdsList[i];
+        const comment = document.querySelector(`.article-comment[data-comment-id="${commentId}"]`);
+        totalSatisfaction += Number(comment.dataset.agrees);
+      }
+      return totalSatisfaction;
+    }
+
+    const maxSatisfactionCache = {};
+
+    function maxSatisfaction() {
+      let num_comments = sizeSelect.value;
+
+      // Check if already cached
+      if (maxSatisfactionCache[num_comments] !== undefined) {
+        return maxSatisfactionCache[num_comments];
+      }
+
+      // Compute and store in cache
+      let commentIds = repCommentsData?.["av"]?.[num_comments];
+      let satisfaction = computeTotalSatisfactionIds(commentIds);
+
+      maxSatisfactionCache[num_comments] = satisfaction;
+      return satisfaction;
+    }
+
+    function updateSatisfactionProgressBar(repCommentBlock) {
+      const repCommentList = repCommentBlock.querySelector('.representative-comments-list');
+      const currentSat = computeTotalCommentsSatisfaction(repCommentList);
+      const maxSat = maxSatisfaction();
+
+      const bar = repCommentBlock.querySelector('.satisfaction-bar-fill');
+
+      if (bar && maxSat) {
+        const percentage = Math.min((currentSat / maxSat) * 100, 100);
+        bar.style.width = `${percentage}%`;
+
+        repCommentBlock.querySelector('.satisfaction-bar-percentage').textContent = `(${Math.round(percentage)}%)`;
+        repCommentBlock.querySelector('.current-satisfaction-count').textContent = `${currentSat}`;
+      }
     }
 
     function updateAllRepresentativeComments() {
@@ -894,7 +1068,9 @@
     }
 
     if (sizeSelect) {
-      sizeSelect.addEventListener('change', updateAllRepresentativeComments);
+      sizeSelect.addEventListener('change', function () {
+        updateAllRepresentativeComments();
+      });
 
       ruleSelects.forEach(ruleSelect => {
         ruleSelect.addEventListener('change', function () {
@@ -905,24 +1081,28 @@
       updateAllRepresentativeComments();
     }
 
-    let showAdvancedControlsButton = document.getElementById('show-advanced-controls');
+    const showAdvancedControlsButton = document.getElementById('show-advanced-controls');
     let advancedControls = true;
-    let sizeSelectionWrap = document.getElementById('size-selection-wrap');
-    let ruleSelectionWraps = document.querySelectorAll('.rule-selection-wrap');
-    let representativeCommentsTitles = document.querySelectorAll('.representative-comments-block-title');
+    const sizeSelectionWrap = document.getElementById('size-selection-wrap');
+    const ruleSelectionWraps = document.querySelectorAll('.rule-selection-wrap');
+    const selectPopularity = document.getElementById('rule-select-popularity');
+    const selectRepresentation = document.getElementById('rule-select-representation');
+    const selectDiversity = document.getElementById('rule-select-diversity');
 
     function toggleAdvancedControlsVisibility() {
       if (advancedControls) {
         advancedControls = false;
         showAdvancedControlsButton.textContent = 'Show Advanced Controls';
         ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.add('hidden'));
-        representativeCommentsTitles.forEach(title => {title.classList.remove('hidden')});
         sizeSelectionWrap.classList.add('hidden');
+        selectPopularity.value = 'av';
+        selectRepresentation.value = 'equal-shares-with-increment-completion';
+        selectDiversity.value = 'cc';
+        updateAllRepresentativeComments();
       } else {
         advancedControls = true;
         showAdvancedControlsButton.textContent = 'Hide Advanced Controls';
         ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.remove('hidden'));
-        representativeCommentsTitles.forEach(title => {title.classList.add('hidden')});
         sizeSelectionWrap.classList.remove('hidden');
       }
     }

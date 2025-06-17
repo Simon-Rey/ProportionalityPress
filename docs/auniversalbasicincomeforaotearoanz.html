@@ -104,115 +104,154 @@
         </div>
 
         <div id="representative-comments-wrap" class="standard-padded-container">
+
           
             <div class="representative-comments-block">
-              <h3 class="representative-comments-block-title">Most popular comments</h3>
-              <div class="rule-selection-wrap">
-                <label for="rule-select-av">Selection Method:</label>
-                <select id="rule-select-av" class="rule-select">
-                  
-                    <option value="av" selected="selected">Approval Voting</option>
-                  
-                    <option value="sav">Satisfaction Approval Voting</option>
-                  
-                    <option value="pav">Proportional Approval Voting</option>
-                  
-                    <option value="cc">Chamberlin–Courant</option>
-                  
-                    <option value="seqpav">Sequential Proportional Approval Voting</option>
-                  
-                    <option value="seqphragmen">Phragmén&#39;s Sequential Rule</option>
-                  
-                    <option value="equal-shares">Method of Equal Shares</option>
-                  
-                    <option value="equal-shares-with-av-completion">Method of Equal Shares with Approval Voting Completion</option>
-                  
-                    <option value="equal-shares-with-increment-completion">Method of Equal Shares with Increment Completion</option>
-                  
-                    <option value="phragmen-enestroem">Eneström–Phragmén</option>
-                  
-                    <option value="consensus-rule">Consensus Rule</option>
-                  
-                </select>
-              </div>
+  <h3 class="representative-comments-block-title">Popularity-Based Selection</h3>
+  <div class="rule-selection-wrap">
+    <label for="rule-select-popularity">Selection Method:</label>
+    <select id="rule-select-popularity" class="rule-select">
+      
+        <option value="av">Approval Voting</option>
+      
+        <option value="sav">Satisfaction Approval Voting</option>
+      
+        <option value="pav">Proportional Approval Voting</option>
+      
+        <option value="cc">Chamberlin–Courant</option>
+      
+        <option value="seqpav">Sequential Proportional Approval Voting</option>
+      
+        <option value="seqphragmen">Phragmén&#39;s Sequential Rule</option>
+      
+        <option value="equal-shares">Method of Equal Shares</option>
+      
+        <option value="equal-shares-with-av-completion">Method of Equal Shares with Approval Voting Completion</option>
+      
+        <option value="equal-shares-with-increment-completion">Method of Equal Shares with Increment Completion</option>
+      
+        <option value="phragmen-enestroem">Eneström–Phragmén</option>
+      
+        <option value="consensus-rule">Consensus Rule</option>
+      
+    </select>
+  </div>
 
-              <div class="article-comments-list representative-comments-list">
-                <!-- JS will populate this based on selections -->
-              </div>
-            </div>
+  <div class="representative-comments-analysis">
+    <div class="comment-analysis-measure-block">
+      <div class="comment-analysis-measure-header">Satisfaction</div>
+      <div class="comment-analysis-measure satisfaction-progress">
+        <div class="satisfaction-bar-fill">
+          <span class="current-satisfaction-count"></span><span class="satisfaction-bar-percentage"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-comments-list representative-comments-list" id="comment-list-popularity">
+    <!-- JS will populate this based on selections -->
+  </div>
+</div>
+          
+
           
             <div class="representative-comments-block">
-              <h3 class="representative-comments-block-title">Representative selection of comments</h3>
-              <div class="rule-selection-wrap">
-                <label for="rule-select-equal-shares-with-increment-completion">Selection Method:</label>
-                <select id="rule-select-equal-shares-with-increment-completion" class="rule-select">
-                  
-                    <option value="av">Approval Voting</option>
-                  
-                    <option value="sav">Satisfaction Approval Voting</option>
-                  
-                    <option value="pav">Proportional Approval Voting</option>
-                  
-                    <option value="cc">Chamberlin–Courant</option>
-                  
-                    <option value="seqpav">Sequential Proportional Approval Voting</option>
-                  
-                    <option value="seqphragmen">Phragmén&#39;s Sequential Rule</option>
-                  
-                    <option value="equal-shares">Method of Equal Shares</option>
-                  
-                    <option value="equal-shares-with-av-completion">Method of Equal Shares with Approval Voting Completion</option>
-                  
-                    <option value="equal-shares-with-increment-completion" selected="selected">Method of Equal Shares with Increment Completion</option>
-                  
-                    <option value="phragmen-enestroem">Eneström–Phragmén</option>
-                  
-                    <option value="consensus-rule">Consensus Rule</option>
-                  
-                </select>
-              </div>
+  <h3 class="representative-comments-block-title">Representation-Based Selection</h3>
+  <div class="rule-selection-wrap">
+    <label for="rule-select-representation">Selection Method:</label>
+    <select id="rule-select-representation" class="rule-select">
+      
+        <option value="av">Approval Voting</option>
+      
+        <option value="sav">Satisfaction Approval Voting</option>
+      
+        <option value="pav">Proportional Approval Voting</option>
+      
+        <option value="cc">Chamberlin–Courant</option>
+      
+        <option value="seqpav">Sequential Proportional Approval Voting</option>
+      
+        <option value="seqphragmen">Phragmén&#39;s Sequential Rule</option>
+      
+        <option value="equal-shares">Method of Equal Shares</option>
+      
+        <option value="equal-shares-with-av-completion">Method of Equal Shares with Approval Voting Completion</option>
+      
+        <option value="equal-shares-with-increment-completion">Method of Equal Shares with Increment Completion</option>
+      
+        <option value="phragmen-enestroem">Eneström–Phragmén</option>
+      
+        <option value="consensus-rule">Consensus Rule</option>
+      
+    </select>
+  </div>
 
-              <div class="article-comments-list representative-comments-list">
-                <!-- JS will populate this based on selections -->
-              </div>
-            </div>
+  <div class="representative-comments-analysis">
+    <div class="comment-analysis-measure-block">
+      <div class="comment-analysis-measure-header">Satisfaction</div>
+      <div class="comment-analysis-measure satisfaction-progress">
+        <div class="satisfaction-bar-fill">
+          <span class="current-satisfaction-count"></span><span class="satisfaction-bar-percentage"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-comments-list representative-comments-list" id="comment-list-representation">
+    <!-- JS will populate this based on selections -->
+  </div>
+</div>
+          
+
           
             <div class="representative-comments-block">
-              <h3 class="representative-comments-block-title">Diverse selection of comments</h3>
-              <div class="rule-selection-wrap">
-                <label for="rule-select-cc">Selection Method:</label>
-                <select id="rule-select-cc" class="rule-select">
-                  
-                    <option value="av">Approval Voting</option>
-                  
-                    <option value="sav">Satisfaction Approval Voting</option>
-                  
-                    <option value="pav">Proportional Approval Voting</option>
-                  
-                    <option value="cc" selected="selected">Chamberlin–Courant</option>
-                  
-                    <option value="seqpav">Sequential Proportional Approval Voting</option>
-                  
-                    <option value="seqphragmen">Phragmén&#39;s Sequential Rule</option>
-                  
-                    <option value="equal-shares">Method of Equal Shares</option>
-                  
-                    <option value="equal-shares-with-av-completion">Method of Equal Shares with Approval Voting Completion</option>
-                  
-                    <option value="equal-shares-with-increment-completion">Method of Equal Shares with Increment Completion</option>
-                  
-                    <option value="phragmen-enestroem">Eneström–Phragmén</option>
-                  
-                    <option value="consensus-rule">Consensus Rule</option>
-                  
-                </select>
-              </div>
+  <h3 class="representative-comments-block-title">Diversity-Based Selection</h3>
+  <div class="rule-selection-wrap">
+    <label for="rule-select-diversity">Selection Method:</label>
+    <select id="rule-select-diversity" class="rule-select">
+      
+        <option value="av">Approval Voting</option>
+      
+        <option value="sav">Satisfaction Approval Voting</option>
+      
+        <option value="pav">Proportional Approval Voting</option>
+      
+        <option value="cc">Chamberlin–Courant</option>
+      
+        <option value="seqpav">Sequential Proportional Approval Voting</option>
+      
+        <option value="seqphragmen">Phragmén&#39;s Sequential Rule</option>
+      
+        <option value="equal-shares">Method of Equal Shares</option>
+      
+        <option value="equal-shares-with-av-completion">Method of Equal Shares with Approval Voting Completion</option>
+      
+        <option value="equal-shares-with-increment-completion">Method of Equal Shares with Increment Completion</option>
+      
+        <option value="phragmen-enestroem">Eneström–Phragmén</option>
+      
+        <option value="consensus-rule">Consensus Rule</option>
+      
+    </select>
+  </div>
 
-              <div class="article-comments-list representative-comments-list">
-                <!-- JS will populate this based on selections -->
-              </div>
-            </div>
+  <div class="representative-comments-analysis">
+    <div class="comment-analysis-measure-block">
+      <div class="comment-analysis-measure-header">Satisfaction</div>
+      <div class="comment-analysis-measure satisfaction-progress">
+        <div class="satisfaction-bar-fill">
+          <span class="current-satisfaction-count"></span><span class="satisfaction-bar-percentage"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-comments-list representative-comments-list" id="comment-list-diversity">
+    <!-- JS will populate this based on selections -->
+  </div>
+</div>
           
+
         </div>
       </section>
     
@@ -224,1142 +263,1284 @@
         
           <div class="article-comment" data-timestamp="1503491937484" data-agrees="36" data-disagrees="6" data-comment-id="70">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 70</strong></span>
+    <div class="article-comment-header">
+      <span>User 70</span>
       <span class="comment-timestamp">[2017-08-23 14:38]</span>
     </div>
-    <div class="article-comment-text">
-      We should adopt these four steps recommended by BINZ to progress a UBI:
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        We should adopt these four steps recommended by BINZ to progress a UBI:
 1. Replace the jobseekers benefit with an income neutral UBI; 2. index this UBI by inflation, growth, and increases in productivity; 3. introduce a kids&#39; basic income; 4. expand on the Government&#39;s voluntary relocation scheme to make replacing the accommodation supplement more feasible in the future.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍36</span>
-      <span class="article-num-disagree">👎6</span>
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 36fr 6fr;">
+        <span class="article-num-agrees">👍36</span>
+        <span class="article-num-disagree">👎6</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1503482939572" data-agrees="1" data-disagrees="0" data-comment-id="69">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 69</strong></span>
+    <div class="article-comment-header">
+      <span>User 69</span>
       <span class="comment-timestamp">[2017-08-23 12:08]</span>
     </div>
-    <div class="article-comment-text">
-      Everyone deserves the opportunity to better themselves, but greed is an addiction. Let&#39;s stop debating &#39;min wage&#39; and discuss a &#39;max wage&#39;!
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Everyone deserves the opportunity to better themselves, but greed is an addiction. Let&#39;s stop debating &#39;min wage&#39; and discuss a &#39;max wage&#39;!
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1503460972734" data-agrees="1" data-disagrees="0" data-comment-id="68">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 68</strong></span>
+    <div class="article-comment-header">
+      <span>User 68</span>
       <span class="comment-timestamp">[2017-08-23 06:02]</span>
     </div>
-    <div class="article-comment-text">
-      Society is equally indispensable in the creation of economic wealth as the initiating party in all cases.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Society is equally indispensable in the creation of economic wealth as the initiating party in all cases.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1503401004643" data-agrees="22" data-disagrees="16" data-comment-id="67">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 67</strong></span>
+    <div class="article-comment-header">
+      <span>User 67</span>
       <span class="comment-timestamp">[2017-08-22 13:23]</span>
     </div>
-    <div class="article-comment-text">
-      UBI would need to be adequately funded to include investment into treatment of addictions.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍22</span>
-      <span class="article-num-disagree">👎16</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        UBI would need to be adequately funded to include investment into treatment of addictions.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 22fr 16fr;">
+        <span class="article-num-agrees">👍22</span>
+        <span class="article-num-disagree">👎16</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1503400789540" data-agrees="47" data-disagrees="5" data-comment-id="66">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 66</strong></span>
+    <div class="article-comment-header">
+      <span>User 66</span>
       <span class="comment-timestamp">[2017-08-22 13:19]</span>
     </div>
-    <div class="article-comment-text">
-      Assuming that the NZ economy produces enough to support all New Zealanders, a UBI seems the fairest way to provide that basic support
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍47</span>
-      <span class="article-num-disagree">👎5</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Assuming that the NZ economy produces enough to support all New Zealanders, a UBI seems the fairest way to provide that basic support
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 47fr 5fr;">
+        <span class="article-num-agrees">👍47</span>
+        <span class="article-num-disagree">👎5</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1503400765899" data-agrees="25" data-disagrees="15" data-comment-id="65">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 65</strong></span>
+    <div class="article-comment-header">
+      <span>User 65</span>
       <span class="comment-timestamp">[2017-08-22 13:19]</span>
     </div>
-    <div class="article-comment-text">
-      UBI could be funded by some form of government quantitative easing rather than by taxes.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍25</span>
-      <span class="article-num-disagree">👎15</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        UBI could be funded by some form of government quantitative easing rather than by taxes.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 25fr 15fr;">
+        <span class="article-num-agrees">👍25</span>
+        <span class="article-num-disagree">👎15</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1503400739878" data-agrees="47" data-disagrees="3" data-comment-id="64">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 64</strong></span>
+    <div class="article-comment-header">
+      <span>User 64</span>
       <span class="comment-timestamp">[2017-08-22 13:18]</span>
     </div>
-    <div class="article-comment-text">
-      With unemployment projected to reach 40% in the next 10 - 20 years we need something in place ready for that to happen
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍47</span>
-      <span class="article-num-disagree">👎3</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        With unemployment projected to reach 40% in the next 10 - 20 years we need something in place ready for that to happen
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 47fr 3fr;">
+        <span class="article-num-agrees">👍47</span>
+        <span class="article-num-disagree">👎3</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1503400709815" data-agrees="46" data-disagrees="6" data-comment-id="63">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 63</strong></span>
+    <div class="article-comment-header">
+      <span>User 63</span>
       <span class="comment-timestamp">[2017-08-22 13:18]</span>
     </div>
-    <div class="article-comment-text">
-      UBI has clear benefits, but like most major policy decisions it also has risks. This does not mean we should not go ahead with it, but that we need to plan to manage any risks that arise.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍46</span>
-      <span class="article-num-disagree">👎6</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        UBI has clear benefits, but like most major policy decisions it also has risks. This does not mean we should not go ahead with it, but that we need to plan to manage any risks that arise.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 46fr 6fr;">
+        <span class="article-num-agrees">👍46</span>
+        <span class="article-num-disagree">👎6</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1503400686756" data-agrees="34" data-disagrees="9" data-comment-id="62">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 62</strong></span>
+    <div class="article-comment-header">
+      <span>User 62</span>
       <span class="comment-timestamp">[2017-08-22 13:18]</span>
     </div>
-    <div class="article-comment-text">
-      It is possible that provision of a UBI could be done in a manner which does not increase overall government expenditure
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍34</span>
-      <span class="article-num-disagree">👎9</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        It is possible that provision of a UBI could be done in a manner which does not increase overall government expenditure
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 34fr 9fr;">
+        <span class="article-num-agrees">👍34</span>
+        <span class="article-num-disagree">👎9</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1503400655360" data-agrees="43" data-disagrees="6" data-comment-id="61">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 61</strong></span>
+    <div class="article-comment-header">
+      <span>User 61</span>
       <span class="comment-timestamp">[2017-08-22 13:17]</span>
     </div>
-    <div class="article-comment-text">
-      UBI is important to a fully functioning democracy. Voters cannot give due attention to politics when they have to worry about where the next meal is coming from or whether they will be able to pay their electricity bill.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍43</span>
-      <span class="article-num-disagree">👎6</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        UBI is important to a fully functioning democracy. Voters cannot give due attention to politics when they have to worry about where the next meal is coming from or whether they will be able to pay their electricity bill.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 43fr 6fr;">
+        <span class="article-num-agrees">👍43</span>
+        <span class="article-num-disagree">👎6</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1503400630023" data-agrees="31" data-disagrees="15" data-comment-id="60">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 60</strong></span>
+    <div class="article-comment-header">
+      <span>User 60</span>
       <span class="comment-timestamp">[2017-08-22 13:17]</span>
     </div>
-    <div class="article-comment-text">
-      Increasing the UBI should take precedence over minimum wage increases as employment becomes less secure
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍31</span>
-      <span class="article-num-disagree">👎15</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Increasing the UBI should take precedence over minimum wage increases as employment becomes less secure
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 31fr 15fr;">
+        <span class="article-num-agrees">👍31</span>
+        <span class="article-num-disagree">👎15</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1503400595570" data-agrees="49" data-disagrees="6" data-comment-id="59">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 59</strong></span>
+    <div class="article-comment-header">
+      <span>User 59</span>
       <span class="comment-timestamp">[2017-08-22 13:16]</span>
     </div>
-    <div class="article-comment-text">
-      We should encourage reduced working hours and job sharing alongside UBI so that employment is more equitably spread and the UBI supplements wages.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍49</span>
-      <span class="article-num-disagree">👎6</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        We should encourage reduced working hours and job sharing alongside UBI so that employment is more equitably spread and the UBI supplements wages.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 49fr 6fr;">
+        <span class="article-num-agrees">👍49</span>
+        <span class="article-num-disagree">👎6</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1503311375815" data-agrees="1" data-disagrees="0" data-comment-id="58">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 58</strong></span>
+    <div class="article-comment-header">
+      <span>User 58</span>
       <span class="comment-timestamp">[2017-08-21 12:29]</span>
     </div>
-    <div class="article-comment-text">
-      Assuming that the NZ economy produces enough to support all New Zealanders, a UBI seems the fairest way to provide that basic support.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Assuming that the NZ economy produces enough to support all New Zealanders, a UBI seems the fairest way to provide that basic support.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1503215678908" data-agrees="1" data-disagrees="0" data-comment-id="57">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 57</strong></span>
+    <div class="article-comment-header">
+      <span>User 57</span>
       <span class="comment-timestamp">[2017-08-20 09:54]</span>
     </div>
-    <div class="article-comment-text">
-      With UBI people&#39;s contribution to communities and the society as a whole will increase rather than decrease
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        With UBI people&#39;s contribution to communities and the society as a whole will increase rather than decrease
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1503204429263" data-agrees="1" data-disagrees="0" data-comment-id="56">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 56</strong></span>
+    <div class="article-comment-header">
+      <span>User 56</span>
       <span class="comment-timestamp">[2017-08-20 06:47]</span>
     </div>
-    <div class="article-comment-text">
-      There are ways to fund a UBI apart from tax e.g. some sort of  government quantatitive easing as in Bill Mitchell&#39;s Modern Monetary Theory
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        There are ways to fund a UBI apart from tax e.g. some sort of  government quantatitive easing as in Bill Mitchell&#39;s Modern Monetary Theory
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502934979831" data-agrees="1" data-disagrees="0" data-comment-id="55">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 55</strong></span>
+    <div class="article-comment-header">
+      <span>User 55</span>
       <span class="comment-timestamp">[2017-08-17 03:56]</span>
     </div>
-    <div class="article-comment-text">
-      It is possible that provision of a UBI could be done in a manner which does not increase overall government expenditure.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        It is possible that provision of a UBI could be done in a manner which does not increase overall government expenditure.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502928748407" data-agrees="1" data-disagrees="0" data-comment-id="54">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 54</strong></span>
+    <div class="article-comment-header">
+      <span>User 54</span>
       <span class="comment-timestamp">[2017-08-17 02:12]</span>
     </div>
-    <div class="article-comment-text">
-      UBI has clear benefits, but also risks, like most major policy decisions. We should go ahead with it and plan to manage risks that arise.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        UBI has clear benefits, but also risks, like most major policy decisions. We should go ahead with it and plan to manage risks that arise.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502859633605" data-agrees="1" data-disagrees="0" data-comment-id="53">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 53</strong></span>
+    <div class="article-comment-header">
+      <span>User 53</span>
       <span class="comment-timestamp">[2017-08-16 07:00]</span>
     </div>
-    <div class="article-comment-text">
-      So dumb really is if it happens then i will just quit my job and do nothing all day kinda like people on welfare
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        So dumb really is if it happens then i will just quit my job and do nothing all day kinda like people on welfare
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502831101944" data-agrees="1" data-disagrees="0" data-comment-id="52">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 52</strong></span>
+    <div class="article-comment-header">
+      <span>User 52</span>
       <span class="comment-timestamp">[2017-08-15 23:05]</span>
     </div>
-    <div class="article-comment-text">
-      With unemployment projected to reach 40% in the next 10 - 20 years we need something in place ready for that to happen.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        With unemployment projected to reach 40% in the next 10 - 20 years we need something in place ready for that to happen.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502817237200" data-agrees="1" data-disagrees="0" data-comment-id="51">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 51</strong></span>
+    <div class="article-comment-header">
+      <span>User 51</span>
       <span class="comment-timestamp">[2017-08-15 19:13]</span>
     </div>
-    <div class="article-comment-text">
-      Government control
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Government control
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502786778874" data-agrees="1" data-disagrees="0" data-comment-id="50">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 50</strong></span>
+    <div class="article-comment-header">
+      <span>User 50</span>
       <span class="comment-timestamp">[2017-08-15 10:46]</span>
     </div>
-    <div class="article-comment-text">
-      Streamlining the inefficiency and wasteful bureaucracy of our current tax and benefits system will not solve the underlying social problems
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Streamlining the inefficiency and wasteful bureaucracy of our current tax and benefits system will not solve the underlying social problems
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502777716639" data-agrees="1" data-disagrees="0" data-comment-id="49">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 49</strong></span>
+    <div class="article-comment-header">
+      <span>User 49</span>
       <span class="comment-timestamp">[2017-08-15 08:15]</span>
     </div>
-    <div class="article-comment-text">
-      A Sovereign Money System would mean that a UBI would actually become the funding for the economy.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        A Sovereign Money System would mean that a UBI would actually become the funding for the economy.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502770369607" data-agrees="1" data-disagrees="0" data-comment-id="48">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 48</strong></span>
+    <div class="article-comment-header">
+      <span>User 48</span>
       <span class="comment-timestamp">[2017-08-15 06:12]</span>
     </div>
-    <div class="article-comment-text">
-      People want jobs. UBI needs to be accompanied by shared work for all newly advertised positions. UBI is then a supplement to half a job.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        People want jobs. UBI needs to be accompanied by shared work for all newly advertised positions. UBI is then a supplement to half a job.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502744190929" data-agrees="1" data-disagrees="0" data-comment-id="47">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 47</strong></span>
+    <div class="article-comment-header">
+      <span>User 47</span>
       <span class="comment-timestamp">[2017-08-14 22:56]</span>
     </div>
-    <div class="article-comment-text">
-      A UBI might be a citizens&#39; dividend distributed from &#39;rent&#39; (not &#39;tax&#39;) paid by owners of private property for their use of social capital.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        A UBI might be a citizens&#39; dividend distributed from &#39;rent&#39; (not &#39;tax&#39;) paid by owners of private property for their use of social capital.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502699387723" data-agrees="1" data-disagrees="0" data-comment-id="46">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 46</strong></span>
+    <div class="article-comment-header">
+      <span>User 46</span>
       <span class="comment-timestamp">[2017-08-14 10:29]</span>
     </div>
-    <div class="article-comment-text">
-      Continually develop budget so: 1, UBI is well funded; 2, wastage on addictions is avoided.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Continually develop budget so: 1, UBI is well funded; 2, wastage on addictions is avoided.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502696803890" data-agrees="1" data-disagrees="0" data-comment-id="45">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 45</strong></span>
+    <div class="article-comment-header">
+      <span>User 45</span>
       <span class="comment-timestamp">[2017-08-14 09:46]</span>
     </div>
-    <div class="article-comment-text">
-      Automation and artificial intelligence are going to devastate the job market. Employment will no longer be an option for most people.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Automation and artificial intelligence are going to devastate the job market. Employment will no longer be an option for most people.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502664586481" data-agrees="1" data-disagrees="0" data-comment-id="44">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 44</strong></span>
+    <div class="article-comment-header">
+      <span>User 44</span>
       <span class="comment-timestamp">[2017-08-14 00:49]</span>
     </div>
-    <div class="article-comment-text">
-      A UBI that covers the basics will have a positive effect. It will help rebuild communities throughout the country and encourage sharing.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        A UBI that covers the basics will have a positive effect. It will help rebuild communities throughout the country and encourage sharing.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502661265267" data-agrees="1" data-disagrees="0" data-comment-id="43">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 43</strong></span>
+    <div class="article-comment-header">
+      <span>User 43</span>
       <span class="comment-timestamp">[2017-08-13 23:54]</span>
     </div>
-    <div class="article-comment-text">
-      I have advocated for some time that the minimum wage needs to be increased substantially. I now realise a UBI is a much better way.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍1</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I have advocated for some time that the minimum wage needs to be increased substantially. I now realise a UBI is a much better way.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
+        <span class="article-num-agrees">👍1</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502653345120" data-agrees="40" data-disagrees="108" data-comment-id="42">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 42</strong></span>
+    <div class="article-comment-header">
+      <span>User 42</span>
       <span class="comment-timestamp">[2017-08-13 21:42]</span>
     </div>
-    <div class="article-comment-text">
-      I am self employed or own a business
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍40</span>
-      <span class="article-num-disagree">👎108</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I am self employed or own a business
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 40fr 108fr;">
+        <span class="article-num-agrees">👍40</span>
+        <span class="article-num-disagree">👎108</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502653334058" data-agrees="105" data-disagrees="40" data-comment-id="41">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 41</strong></span>
+    <div class="article-comment-header">
+      <span>User 41</span>
       <span class="comment-timestamp">[2017-08-13 21:42]</span>
     </div>
-    <div class="article-comment-text">
-      I am currently working
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍105</span>
-      <span class="article-num-disagree">👎40</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I am currently working
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 105fr 40fr;">
+        <span class="article-num-agrees">👍105</span>
+        <span class="article-num-disagree">👎40</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502653325416" data-agrees="43" data-disagrees="97" data-comment-id="40">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 40</strong></span>
+    <div class="article-comment-header">
+      <span>User 40</span>
       <span class="comment-timestamp">[2017-08-13 21:42]</span>
     </div>
-    <div class="article-comment-text">
-      I am Female
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍43</span>
-      <span class="article-num-disagree">👎97</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I am Female
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 43fr 97fr;">
+        <span class="article-num-agrees">👍43</span>
+        <span class="article-num-disagree">👎97</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502653317574" data-agrees="104" data-disagrees="40" data-comment-id="39">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 39</strong></span>
+    <div class="article-comment-header">
+      <span>User 39</span>
       <span class="comment-timestamp">[2017-08-13 21:41]</span>
     </div>
-    <div class="article-comment-text">
-      I am male
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍104</span>
-      <span class="article-num-disagree">👎40</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I am male
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 104fr 40fr;">
+        <span class="article-num-agrees">👍104</span>
+        <span class="article-num-disagree">👎40</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502653310299" data-agrees="64" data-disagrees="78" data-comment-id="38">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 38</strong></span>
+    <div class="article-comment-header">
+      <span>User 38</span>
       <span class="comment-timestamp">[2017-08-13 21:41]</span>
     </div>
-    <div class="article-comment-text">
-      I am receiving or have received some form of WINZ allowance
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍64</span>
-      <span class="article-num-disagree">👎78</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I am receiving or have received some form of WINZ allowance
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 64fr 78fr;">
+        <span class="article-num-agrees">👍64</span>
+        <span class="article-num-disagree">👎78</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502653301702" data-agrees="110" data-disagrees="34" data-comment-id="37">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 37</strong></span>
+    <div class="article-comment-header">
+      <span>User 37</span>
       <span class="comment-timestamp">[2017-08-13 21:41]</span>
     </div>
-    <div class="article-comment-text">
-      I live in a city
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍110</span>
-      <span class="article-num-disagree">👎34</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I live in a city
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 110fr 34fr;">
+        <span class="article-num-agrees">👍110</span>
+        <span class="article-num-disagree">👎34</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502653294309" data-agrees="73" data-disagrees="68" data-comment-id="36">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 36</strong></span>
+    <div class="article-comment-header">
+      <span>User 36</span>
       <span class="comment-timestamp">[2017-08-13 21:41]</span>
     </div>
-    <div class="article-comment-text">
-      I live in a town
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍73</span>
-      <span class="article-num-disagree">👎68</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I live in a town
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 73fr 68fr;">
+        <span class="article-num-agrees">👍73</span>
+        <span class="article-num-disagree">👎68</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502653286203" data-agrees="30" data-disagrees="120" data-comment-id="35">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 35</strong></span>
+    <div class="article-comment-header">
+      <span>User 35</span>
       <span class="comment-timestamp">[2017-08-13 21:41]</span>
     </div>
-    <div class="article-comment-text">
-      I live in a rural area
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍30</span>
-      <span class="article-num-disagree">👎120</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I live in a rural area
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 30fr 120fr;">
+        <span class="article-num-agrees">👍30</span>
+        <span class="article-num-disagree">👎120</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502653277873" data-agrees="18" data-disagrees="127" data-comment-id="34">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 34</strong></span>
+    <div class="article-comment-header">
+      <span>User 34</span>
       <span class="comment-timestamp">[2017-08-13 21:41]</span>
     </div>
-    <div class="article-comment-text">
-      I am under 30 years of age
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍18</span>
-      <span class="article-num-disagree">👎127</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I am under 30 years of age
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 18fr 127fr;">
+        <span class="article-num-agrees">👍18</span>
+        <span class="article-num-disagree">👎127</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502653267879" data-agrees="71" data-disagrees="77" data-comment-id="33">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 33</strong></span>
+    <div class="article-comment-header">
+      <span>User 33</span>
       <span class="comment-timestamp">[2017-08-13 21:41]</span>
     </div>
-    <div class="article-comment-text">
-      I am 30 years of age or older but less than 55
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍71</span>
-      <span class="article-num-disagree">👎77</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I am 30 years of age or older but less than 55
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 71fr 77fr;">
+        <span class="article-num-agrees">👍71</span>
+        <span class="article-num-disagree">👎77</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502653253928" data-agrees="55" data-disagrees="87" data-comment-id="32">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 32</strong></span>
+    <div class="article-comment-header">
+      <span>User 32</span>
       <span class="comment-timestamp">[2017-08-13 21:40]</span>
     </div>
-    <div class="article-comment-text">
-      I am 55 years of age or older
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍55</span>
-      <span class="article-num-disagree">👎87</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        I am 55 years of age or older
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 55fr 87fr;">
+        <span class="article-num-agrees">👍55</span>
+        <span class="article-num-disagree">👎87</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652920251" data-agrees="143" data-disagrees="8" data-comment-id="31">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 31</strong></span>
+    <div class="article-comment-header">
+      <span>User 31</span>
       <span class="comment-timestamp">[2017-08-13 21:35]</span>
     </div>
-    <div class="article-comment-text">
-      We need more public debate about the UBI including wider discussion of how we should gather and employ our nation’s financial resources
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍143</span>
-      <span class="article-num-disagree">👎8</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        We need more public debate about the UBI including wider discussion of how we should gather and employ our nation’s financial resources
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 143fr 8fr;">
+        <span class="article-num-agrees">👍143</span>
+        <span class="article-num-disagree">👎8</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652903335" data-agrees="32" data-disagrees="93" data-comment-id="30">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 30</strong></span>
+    <div class="article-comment-header">
+      <span>User 30</span>
       <span class="comment-timestamp">[2017-08-13 21:35]</span>
     </div>
-    <div class="article-comment-text">
-      We should not implement a UBI until we have a well funded ‘Swedish style’ social welfare system with allowances for the most vulnerable, more generous employment laws and free university education
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍32</span>
-      <span class="article-num-disagree">👎93</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        We should not implement a UBI until we have a well funded ‘Swedish style’ social welfare system with allowances for the most vulnerable, more generous employment laws and free university education
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 32fr 93fr;">
+        <span class="article-num-agrees">👍32</span>
+        <span class="article-num-disagree">👎93</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652878397" data-agrees="45" data-disagrees="43" data-comment-id="29">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 29</strong></span>
+    <div class="article-comment-header">
+      <span>User 29</span>
       <span class="comment-timestamp">[2017-08-13 21:34]</span>
     </div>
-    <div class="article-comment-text">
-      Focusing resources on UBI rather than on pooled risk-sharing mechanisms will encourage people to provide for themselves with their income rather than promoting social solidarity.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍45</span>
-      <span class="article-num-disagree">👎43</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Focusing resources on UBI rather than on pooled risk-sharing mechanisms will encourage people to provide for themselves with their income rather than promoting social solidarity.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 45fr 43fr;">
+        <span class="article-num-agrees">👍45</span>
+        <span class="article-num-disagree">👎43</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652869182" data-agrees="121" data-disagrees="14" data-comment-id="28">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 28</strong></span>
+    <div class="article-comment-header">
+      <span>User 28</span>
       <span class="comment-timestamp">[2017-08-13 21:34]</span>
     </div>
-    <div class="article-comment-text">
-      A UBI will encourage people to create and share products and information for the public good.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍121</span>
-      <span class="article-num-disagree">👎14</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        A UBI will encourage people to create and share products and information for the public good.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 121fr 14fr;">
+        <span class="article-num-agrees">👍121</span>
+        <span class="article-num-disagree">👎14</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652860752" data-agrees="114" data-disagrees="12" data-comment-id="27">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 27</strong></span>
+    <div class="article-comment-header">
+      <span>User 27</span>
       <span class="comment-timestamp">[2017-08-13 21:34]</span>
     </div>
-    <div class="article-comment-text">
-      A UBI could contribute to the ‘degrowth’ agenda by promoting community development and more localised economies.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍114</span>
-      <span class="article-num-disagree">👎12</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        A UBI could contribute to the ‘degrowth’ agenda by promoting community development and more localised economies.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 114fr 12fr;">
+        <span class="article-num-agrees">👍114</span>
+        <span class="article-num-disagree">👎12</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652852872" data-agrees="143" data-disagrees="6" data-comment-id="26">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 26</strong></span>
+    <div class="article-comment-header">
+      <span>User 26</span>
       <span class="comment-timestamp">[2017-08-13 21:34]</span>
     </div>
-    <div class="article-comment-text">
-      A UBI could improve the bargaining positions of the most vulnerable workers by giving them more power to leave or negotiate.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍143</span>
-      <span class="article-num-disagree">👎6</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        A UBI could improve the bargaining positions of the most vulnerable workers by giving them more power to leave or negotiate.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 143fr 6fr;">
+        <span class="article-num-agrees">👍143</span>
+        <span class="article-num-disagree">👎6</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652844134" data-agrees="96" data-disagrees="33" data-comment-id="25">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 25</strong></span>
+    <div class="article-comment-header">
+      <span>User 25</span>
       <span class="comment-timestamp">[2017-08-13 21:34]</span>
     </div>
-    <div class="article-comment-text">
-      UBI should not be funded by higher personal income taxes but rather by targeting tax avoiders and extractive users of our shared common resources.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍96</span>
-      <span class="article-num-disagree">👎33</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        UBI should not be funded by higher personal income taxes but rather by targeting tax avoiders and extractive users of our shared common resources.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 96fr 33fr;">
+        <span class="article-num-agrees">👍96</span>
+        <span class="article-num-disagree">👎33</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652833470" data-agrees="139" data-disagrees="14" data-comment-id="24">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 24</strong></span>
+    <div class="article-comment-header">
+      <span>User 24</span>
       <span class="comment-timestamp">[2017-08-13 21:33]</span>
     </div>
-    <div class="article-comment-text">
-      The financial security of a UBI would give the least well off a better chance to climb the economic ladder.
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        The financial security of a UBI would give the least well off a better chance to climb the economic ladder.
 
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍139</span>
-      <span class="article-num-disagree">👎14</span>
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 139fr 14fr;">
+        <span class="article-num-agrees">👍139</span>
+        <span class="article-num-disagree">👎14</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652815859" data-agrees="117" data-disagrees="24" data-comment-id="23">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 23</strong></span>
+    <div class="article-comment-header">
+      <span>User 23</span>
       <span class="comment-timestamp">[2017-08-13 21:33]</span>
     </div>
-    <div class="article-comment-text">
-      A UBI must not completely replace the current welfare system as there are still vulnerable people in need of additional support.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍117</span>
-      <span class="article-num-disagree">👎24</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        A UBI must not completely replace the current welfare system as there are still vulnerable people in need of additional support.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 117fr 24fr;">
+        <span class="article-num-agrees">👍117</span>
+        <span class="article-num-disagree">👎24</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652805237" data-agrees="144" data-disagrees="8" data-comment-id="22">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 22</strong></span>
+    <div class="article-comment-header">
+      <span>User 22</span>
       <span class="comment-timestamp">[2017-08-13 21:33]</span>
     </div>
-    <div class="article-comment-text">
-      Direct contributions to GDP through paid work are a poor measure of people’s overall value to our society and economy.
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Direct contributions to GDP through paid work are a poor measure of people’s overall value to our society and economy.
 
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍144</span>
-      <span class="article-num-disagree">👎8</span>
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 144fr 8fr;">
+        <span class="article-num-agrees">👍144</span>
+        <span class="article-num-disagree">👎8</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652777326" data-agrees="147" data-disagrees="4" data-comment-id="21">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 21</strong></span>
+    <div class="article-comment-header">
+      <span>User 21</span>
       <span class="comment-timestamp">[2017-08-13 21:32]</span>
     </div>
-    <div class="article-comment-text">
-      The vast majority of New Zealanders believe in the value of work and desire to be a valued, respected and contributing member of society in some way.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍147</span>
-      <span class="article-num-disagree">👎4</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        The vast majority of New Zealanders believe in the value of work and desire to be a valued, respected and contributing member of society in some way.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 147fr 4fr;">
+        <span class="article-num-agrees">👍147</span>
+        <span class="article-num-disagree">👎4</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652767249" data-agrees="123" data-disagrees="14" data-comment-id="20">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 20</strong></span>
+    <div class="article-comment-header">
+      <span>User 20</span>
       <span class="comment-timestamp">[2017-08-13 21:32]</span>
     </div>
-    <div class="article-comment-text">
-      A good UBI policy would be one in which people have more expendable income as this will benefit the local economy and small businesses.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍123</span>
-      <span class="article-num-disagree">👎14</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        A good UBI policy would be one in which people have more expendable income as this will benefit the local economy and small businesses.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 123fr 14fr;">
+        <span class="article-num-agrees">👍123</span>
+        <span class="article-num-disagree">👎14</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652758089" data-agrees="114" data-disagrees="20" data-comment-id="19">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 19</strong></span>
+    <div class="article-comment-header">
+      <span>User 19</span>
       <span class="comment-timestamp">[2017-08-13 21:32]</span>
     </div>
-    <div class="article-comment-text">
-      UBI could advance public health as with more time, people will grow and prepare more nutritious food, will be less stressed and will be able to afford more health interventions.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍114</span>
-      <span class="article-num-disagree">👎20</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        UBI could advance public health as with more time, people will grow and prepare more nutritious food, will be less stressed and will be able to afford more health interventions.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 114fr 20fr;">
+        <span class="article-num-agrees">👍114</span>
+        <span class="article-num-disagree">👎20</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652747382" data-agrees="33" data-disagrees="115" data-comment-id="18">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 18</strong></span>
+    <div class="article-comment-header">
+      <span>User 18</span>
       <span class="comment-timestamp">[2017-08-13 21:32]</span>
     </div>
-    <div class="article-comment-text">
-      Some people are simply lazy so providing them with a foundational amount of money to cover basic needs like food, shelter, medical costs would mean they would just stop working or being productive altogether.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍33</span>
-      <span class="article-num-disagree">👎115</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Some people are simply lazy so providing them with a foundational amount of money to cover basic needs like food, shelter, medical costs would mean they would just stop working or being productive altogether.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 33fr 115fr;">
+        <span class="article-num-agrees">👍33</span>
+        <span class="article-num-disagree">👎115</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652736374" data-agrees="46" data-disagrees="61" data-comment-id="17">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 17</strong></span>
+    <div class="article-comment-header">
+      <span>User 17</span>
       <span class="comment-timestamp">[2017-08-13 21:32]</span>
     </div>
-    <div class="article-comment-text">
-      UBI combined with economic austerity and welfare cuts could mean that individuals are left to pay for essential services (eg housing) at fluctuating market rates and have even less purchasing power.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍46</span>
-      <span class="article-num-disagree">👎61</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        UBI combined with economic austerity and welfare cuts could mean that individuals are left to pay for essential services (eg housing) at fluctuating market rates and have even less purchasing power.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 46fr 61fr;">
+        <span class="article-num-agrees">👍46</span>
+        <span class="article-num-disagree">👎61</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652716913" data-agrees="141" data-disagrees="9" data-comment-id="16">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 16</strong></span>
+    <div class="article-comment-header">
+      <span>User 16</span>
       <span class="comment-timestamp">[2017-08-13 21:31]</span>
     </div>
-    <div class="article-comment-text">
-      Under a UBI the stigma of income support would be reduced as more people would see it as practical to their own financial security.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍141</span>
-      <span class="article-num-disagree">👎9</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Under a UBI the stigma of income support would be reduced as more people would see it as practical to their own financial security.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 141fr 9fr;">
+        <span class="article-num-agrees">👍141</span>
+        <span class="article-num-disagree">👎9</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652690962" data-agrees="134" data-disagrees="12" data-comment-id="15">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 15</strong></span>
+    <div class="article-comment-header">
+      <span>User 15</span>
       <span class="comment-timestamp">[2017-08-13 21:31]</span>
     </div>
-    <div class="article-comment-text">
-      People with an unconditional income would make more rational and sensible decisions because they would not live under the threat of absolute destitution.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍134</span>
-      <span class="article-num-disagree">👎12</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        People with an unconditional income would make more rational and sensible decisions because they would not live under the threat of absolute destitution.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 134fr 12fr;">
+        <span class="article-num-agrees">👍134</span>
+        <span class="article-num-disagree">👎12</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652650916" data-agrees="0" data-disagrees="0" data-comment-id="14">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 14</strong></span>
+    <div class="article-comment-header">
+      <span>User 14</span>
       <span class="comment-timestamp">[2017-08-13 21:30]</span>
     </div>
-    <div class="article-comment-text">
-      People with an unconditional income would make more rational decisions because they would not live under the threat of absolute destitution.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍0</span>
-      <span class="article-num-disagree">👎0</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        People with an unconditional income would make more rational decisions because they would not live under the threat of absolute destitution.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 0fr 0fr;">
+        <span class="article-num-agrees">👍0</span>
+        <span class="article-num-disagree">👎0</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652637824" data-agrees="123" data-disagrees="13" data-comment-id="13">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 13</strong></span>
+    <div class="article-comment-header">
+      <span>User 13</span>
       <span class="comment-timestamp">[2017-08-13 21:30]</span>
     </div>
-    <div class="article-comment-text">
-      The increase of the basic income over time should be linked to economic and productivity gains on top of inflation indexation in order to more fairly share the wealth of the growing economy.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍123</span>
-      <span class="article-num-disagree">👎13</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        The increase of the basic income over time should be linked to economic and productivity gains on top of inflation indexation in order to more fairly share the wealth of the growing economy.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 123fr 13fr;">
+        <span class="article-num-agrees">👍123</span>
+        <span class="article-num-disagree">👎13</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652628437" data-agrees="95" data-disagrees="23" data-comment-id="12">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 12</strong></span>
+    <div class="article-comment-header">
+      <span>User 12</span>
       <span class="comment-timestamp">[2017-08-13 21:30]</span>
     </div>
-    <div class="article-comment-text">
-      The actual cost of universal basic income to the taxpayer is their increase in tax payments minus what they receive back in basic income payments. 
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        The actual cost of universal basic income to the taxpayer is their increase in tax payments minus what they receive back in basic income payments. 
 
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍95</span>
-      <span class="article-num-disagree">👎23</span>
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 95fr 23fr;">
+        <span class="article-num-agrees">👍95</span>
+        <span class="article-num-disagree">👎23</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652616598" data-agrees="101" data-disagrees="19" data-comment-id="11">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 11</strong></span>
+    <div class="article-comment-header">
+      <span>User 11</span>
       <span class="comment-timestamp">[2017-08-13 21:30]</span>
     </div>
-    <div class="article-comment-text">
-      A UBI would better fit within a Maori sense of collective social justice, and would assist the Crown to honour their commitments to Maori.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍101</span>
-      <span class="article-num-disagree">👎19</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        A UBI would better fit within a Maori sense of collective social justice, and would assist the Crown to honour their commitments to Maori.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 101fr 19fr;">
+        <span class="article-num-agrees">👍101</span>
+        <span class="article-num-disagree">👎19</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652606501" data-agrees="97" data-disagrees="27" data-comment-id="10">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 10</strong></span>
+    <div class="article-comment-header">
+      <span>User 10</span>
       <span class="comment-timestamp">[2017-08-13 21:30]</span>
     </div>
-    <div class="article-comment-text">
-      Universal Basic Income should be funded by cuts to harmful spending such as military budgets, subsidies to agribusiness and the fossil fuel industry.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍97</span>
-      <span class="article-num-disagree">👎27</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        Universal Basic Income should be funded by cuts to harmful spending such as military budgets, subsidies to agribusiness and the fossil fuel industry.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 97fr 27fr;">
+        <span class="article-num-agrees">👍97</span>
+        <span class="article-num-disagree">👎27</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652596304" data-agrees="102" data-disagrees="17" data-comment-id="9">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 9</strong></span>
+    <div class="article-comment-header">
+      <span>User 9</span>
       <span class="comment-timestamp">[2017-08-13 21:29]</span>
     </div>
-    <div class="article-comment-text">
-      A universal basic income must be set at a level that matches the current allowances of the worst off so that means tested benefits can be eliminated to save on administration costs of WINZ.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍102</span>
-      <span class="article-num-disagree">👎17</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        A universal basic income must be set at a level that matches the current allowances of the worst off so that means tested benefits can be eliminated to save on administration costs of WINZ.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 102fr 17fr;">
+        <span class="article-num-agrees">👍102</span>
+        <span class="article-num-disagree">👎17</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652582871" data-agrees="139" data-disagrees="9" data-comment-id="8">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 8</strong></span>
+    <div class="article-comment-header">
+      <span>User 8</span>
       <span class="comment-timestamp">[2017-08-13 21:29]</span>
     </div>
-    <div class="article-comment-text">
-      The elimination of the inefficiencies of the current benefit system would at least partially offset spending required for a UBI.
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        The elimination of the inefficiencies of the current benefit system would at least partially offset spending required for a UBI.
 
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍139</span>
-      <span class="article-num-disagree">👎9</span>
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 139fr 9fr;">
+        <span class="article-num-agrees">👍139</span>
+        <span class="article-num-disagree">👎9</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652568905" data-agrees="127" data-disagrees="13" data-comment-id="7">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 7</strong></span>
+    <div class="article-comment-header">
+      <span>User 7</span>
       <span class="comment-timestamp">[2017-08-13 21:29]</span>
     </div>
-    <div class="article-comment-text">
-      A Universal Basic Income will be necessary to protect millions of working people from the worst effects of insecure employment caused by new technology.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍127</span>
-      <span class="article-num-disagree">👎13</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        A Universal Basic Income will be necessary to protect millions of working people from the worst effects of insecure employment caused by new technology.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 127fr 13fr;">
+        <span class="article-num-agrees">👍127</span>
+        <span class="article-num-disagree">👎13</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652558939" data-agrees="15" data-disagrees="135" data-comment-id="6">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 6</strong></span>
+    <div class="article-comment-header">
+      <span>User 6</span>
       <span class="comment-timestamp">[2017-08-13 21:29]</span>
     </div>
-    <div class="article-comment-text">
-      The expense of a UBl should be offset by cuts to government funded services, such as healthcare, education, &amp; childcare support.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍15</span>
-      <span class="article-num-disagree">👎135</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        The expense of a UBl should be offset by cuts to government funded services, such as healthcare, education, &amp; childcare support.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 15fr 135fr;">
+        <span class="article-num-agrees">👍15</span>
+        <span class="article-num-disagree">👎135</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652550951" data-agrees="150" data-disagrees="8" data-comment-id="5">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 5</strong></span>
+    <div class="article-comment-header">
+      <span>User 5</span>
       <span class="comment-timestamp">[2017-08-13 21:29]</span>
     </div>
-    <div class="article-comment-text">
-      A Universal Basic Income would better facilitate and recognise unpaid work such as care for the elderly, children, disabled people or other volunteer work which benefits society.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍150</span>
-      <span class="article-num-disagree">👎8</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        A Universal Basic Income would better facilitate and recognise unpaid work such as care for the elderly, children, disabled people or other volunteer work which benefits society.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 150fr 8fr;">
+        <span class="article-num-agrees">👍150</span>
+        <span class="article-num-disagree">👎8</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652541815" data-agrees="140" data-disagrees="7" data-comment-id="4">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 4</strong></span>
+    <div class="article-comment-header">
+      <span>User 4</span>
       <span class="comment-timestamp">[2017-08-13 21:29]</span>
     </div>
-    <div class="article-comment-text">
-      The Government must respect our ‘economic rights’ to have the means to access basic necessities set out in the UN declaration of Human Rights 1948.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍140</span>
-      <span class="article-num-disagree">👎7</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        The Government must respect our ‘economic rights’ to have the means to access basic necessities set out in the UN declaration of Human Rights 1948.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 140fr 7fr;">
+        <span class="article-num-agrees">👍140</span>
+        <span class="article-num-disagree">👎7</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652527954" data-agrees="126" data-disagrees="10" data-comment-id="3">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 3</strong></span>
+    <div class="article-comment-header">
+      <span>User 3</span>
       <span class="comment-timestamp">[2017-08-13 21:28]</span>
     </div>
-    <div class="article-comment-text">
-      We must ensure the political and economic upheaval of a transition to a universal basic income is not used by interest groups and idealogues to further subvert the welfare state.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍126</span>
-      <span class="article-num-disagree">👎10</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        We must ensure the political and economic upheaval of a transition to a universal basic income is not used by interest groups and idealogues to further subvert the welfare state.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 126fr 10fr;">
+        <span class="article-num-agrees">👍126</span>
+        <span class="article-num-disagree">👎10</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652510948" data-agrees="138" data-disagrees="12" data-comment-id="2">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 2</strong></span>
+    <div class="article-comment-header">
+      <span>User 2</span>
       <span class="comment-timestamp">[2017-08-13 21:28]</span>
     </div>
-    <div class="article-comment-text">
-      An unconditional income support system would eliminate the problem of people who fall through the cracks of the current complicated and conditional benefit system. 
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        An unconditional income support system would eliminate the problem of people who fall through the cracks of the current complicated and conditional benefit system. 
 
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍138</span>
-      <span class="article-num-disagree">👎12</span>
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 138fr 12fr;">
+        <span class="article-num-agrees">👍138</span>
+        <span class="article-num-disagree">👎12</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652460813" data-agrees="134" data-disagrees="6" data-comment-id="1">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 1</strong></span>
+    <div class="article-comment-header">
+      <span>User 1</span>
       <span class="comment-timestamp">[2017-08-13 21:27]</span>
     </div>
-    <div class="article-comment-text">
-      We need to streamline the inefficiency and wasteful bureaucracy of our current tax and benefits systems.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍134</span>
-      <span class="article-num-disagree">👎6</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        We need to streamline the inefficiency and wasteful bureaucracy of our current tax and benefits systems.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 134fr 6fr;">
+        <span class="article-num-agrees">👍134</span>
+        <span class="article-num-disagree">👎6</span>
+      </div>
     </div>
   </div>
 </div>
         
           <div class="article-comment" data-timestamp="1502652450312" data-agrees="152" data-disagrees="7" data-comment-id="0">
   <div class="article-comment-content-wrap">
-    <div class="article-comment-details">
-      <span><strong>User 0</strong></span>
+    <div class="article-comment-header">
+      <span>User 0</span>
       <span class="comment-timestamp">[2017-08-13 21:27]</span>
     </div>
-    <div class="article-comment-text">
-      NZ needs a new system that better guarantees the welfare of the least well off and those facing insecure work conditions.
-    </div>
-    <div class="article-agreement-box">
-      <span class="article-num-agrees">👍152</span>
-      <span class="article-num-disagree">👎7</span>
+    <div class="article-comment-body">
+      <div class="article-comment-text">
+        NZ needs a new system that better guarantees the welfare of the least well off and those facing insecure work conditions.
+      </div>
+      <div class="article-agreement-box" style="grid-template-columns: 152fr 7fr;">
+        <span class="article-num-agrees">👍152</span>
+        <span class="article-num-disagree">👎7</span>
+      </div>
     </div>
   </div>
 </div>
@@ -1383,6 +1564,7 @@
 
     const ruleSelects = document.querySelectorAll('.rule-select');
     const sizeSelect = document.getElementById('size-select');
+    const maximumSatisfactionCounts = document.querySelectorAll('.maximum-satisfaction-count');
 
     function updateRepresentativeCommentsBlock(ruleSelect) {
         const rule = ruleSelect.value;
@@ -1405,6 +1587,62 @@
             repCommentList.appendChild(clone);
           }
         });
+
+        // Update the satisfaction count
+        updateSatisfactionProgressBar(repCommentBlock);
+    }
+
+    function computeTotalCommentsSatisfaction (commentList) {
+      const comments = commentList.querySelectorAll('.article-comment');
+      let totalSatisfaction = 0;
+      comments.forEach(function (comment) {
+        totalSatisfaction += Number(comment.dataset.agrees);
+      })
+      return totalSatisfaction;
+    }
+
+    function computeTotalSatisfactionIds (commentIdsList) {
+      let totalSatisfaction = 0;
+      for (let i = 0; i < commentIdsList.length; i++) {
+        const commentId = commentIdsList[i];
+        const comment = document.querySelector(`.article-comment[data-comment-id="${commentId}"]`);
+        totalSatisfaction += Number(comment.dataset.agrees);
+      }
+      return totalSatisfaction;
+    }
+
+    const maxSatisfactionCache = {};
+
+    function maxSatisfaction() {
+      let num_comments = sizeSelect.value;
+
+      // Check if already cached
+      if (maxSatisfactionCache[num_comments] !== undefined) {
+        return maxSatisfactionCache[num_comments];
+      }
+
+      // Compute and store in cache
+      let commentIds = repCommentsData?.["av"]?.[num_comments];
+      let satisfaction = computeTotalSatisfactionIds(commentIds);
+
+      maxSatisfactionCache[num_comments] = satisfaction;
+      return satisfaction;
+    }
+
+    function updateSatisfactionProgressBar(repCommentBlock) {
+      const repCommentList = repCommentBlock.querySelector('.representative-comments-list');
+      const currentSat = computeTotalCommentsSatisfaction(repCommentList);
+      const maxSat = maxSatisfaction();
+
+      const bar = repCommentBlock.querySelector('.satisfaction-bar-fill');
+
+      if (bar && maxSat) {
+        const percentage = Math.min((currentSat / maxSat) * 100, 100);
+        bar.style.width = `${percentage}%`;
+
+        repCommentBlock.querySelector('.satisfaction-bar-percentage').textContent = `(${Math.round(percentage)}%)`;
+        repCommentBlock.querySelector('.current-satisfaction-count').textContent = `${currentSat}`;
+      }
     }
 
     function updateAllRepresentativeComments() {
@@ -1414,7 +1652,9 @@
     }
 
     if (sizeSelect) {
-      sizeSelect.addEventListener('change', updateAllRepresentativeComments);
+      sizeSelect.addEventListener('change', function () {
+        updateAllRepresentativeComments();
+      });
 
       ruleSelects.forEach(ruleSelect => {
         ruleSelect.addEventListener('change', function () {
@@ -1425,24 +1665,28 @@
       updateAllRepresentativeComments();
     }
 
-    let showAdvancedControlsButton = document.getElementById('show-advanced-controls');
+    const showAdvancedControlsButton = document.getElementById('show-advanced-controls');
     let advancedControls = true;
-    let sizeSelectionWrap = document.getElementById('size-selection-wrap');
-    let ruleSelectionWraps = document.querySelectorAll('.rule-selection-wrap');
-    let representativeCommentsTitles = document.querySelectorAll('.representative-comments-block-title');
+    const sizeSelectionWrap = document.getElementById('size-selection-wrap');
+    const ruleSelectionWraps = document.querySelectorAll('.rule-selection-wrap');
+    const selectPopularity = document.getElementById('rule-select-popularity');
+    const selectRepresentation = document.getElementById('rule-select-representation');
+    const selectDiversity = document.getElementById('rule-select-diversity');
 
     function toggleAdvancedControlsVisibility() {
       if (advancedControls) {
         advancedControls = false;
         showAdvancedControlsButton.textContent = 'Show Advanced Controls';
         ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.add('hidden'));
-        representativeCommentsTitles.forEach(title => {title.classList.remove('hidden')});
         sizeSelectionWrap.classList.add('hidden');
+        selectPopularity.value = 'av';
+        selectRepresentation.value = 'equal-shares-with-increment-completion';
+        selectDiversity.value = 'cc';
+        updateAllRepresentativeComments();
       } else {
         advancedControls = true;
         showAdvancedControlsButton.textContent = 'Hide Advanced Controls';
         ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.remove('hidden'));
-        representativeCommentsTitles.forEach(title => {title.classList.add('hidden')});
         sizeSelectionWrap.classList.remove('hidden');
       }
     }
