@@ -1,7 +1,6 @@
 import os
 import shutil
 
-from abc_vote import article_to_abc_profile, compute_rules_for_article
 from generate import generate_site
 from article import default_config, dump_article_to_json, load_article_from_json
 from polis import read_polis_poll, polis_poll_to_article
@@ -38,6 +37,8 @@ def generate_all_polis():
     generate_site(config, all_articles)
 
 def compute_and_write_all_rules():
+    from abc_vote import compute_rules_for_article
+
     source_dir_path = os.path.dirname(os.path.realpath(__file__))
     polis_data_dir_path = os.path.join(source_dir_path, 'data', 'polis')
 
