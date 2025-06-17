@@ -60,7 +60,9 @@ def generate_site(config: SiteConfig, articles: list[Article]):
             article=article,
             all_articles=articles,
             config=config,
-            default_rules=(("av", "Most popular comments"), ("equal-shares-with-increment-completion", "Representative selection of comments"), ("cc", "Diverse selection of comments")),
+            default_popularity_rule="av",
+            default_representation_rule="equal-shares-with-increment-completion",
+            default_diversity_rule="cc",
             rule_name_mapping=RULE_NAME_MAPPING,
         )
 

@@ -28,23 +28,19 @@
         </div>
 
         <div id="representative-comments-wrap" class="standard-padded-container">
-          {% for default_rule, default_rule_title in default_rules %}
-            <div class="representative-comments-block">
-              <h3 class="representative-comments-block-title">{{ default_rule_title }}</h3>
-              <div class="rule-selection-wrap">
-                <label for="rule-select-{{ default_rule }}">Selection Method:</label>
-                <select id="rule-select-{{ default_rule }}" class="rule-select">
-                  {% for rule in article.representative_comments.keys() %}
-                    <option value="{{ rule }}"{% if rule == default_rule %} selected="selected"{% endif %}>{{ rule_name_mapping[rule] }}</option>
-                  {% endfor %}
-                </select>
-              </div>
 
-              <div class="article-comments-list representative-comments-list">
-                <!-- JS will populate this based on selections -->
-              </div>
-            </div>
-          {% endfor %}
+          {% with title="Popularity-Based Selection", rule_select_id="rule-select-popularity", default_rule=default_rule_popularity, comment_list_id="comment-list-popularity" %}
+            {% include "includes/representative_comments_block.html" %}
+          {% endwith %}
+
+          {% with title="Representation-Based Selection", rule_select_id="rule-select-representation", default_rule=default_rule_representation, comment_list_id="comment-list-representation" %}
+            {% include "includes/representative_comments_block.html" %}
+          {% endwith %}
+
+          {% with title="Diversity-Based Selection", rule_select_id="rule-select-diversity", default_rule=default_rule_diversity, comment_list_id="comment-list-diversity" %}
+            {% include "includes/representative_comments_block.html" %}
+          {% endwith %}
+
         </div>
       </section>
     {% endif %}
@@ -75,6 +71,7 @@
 
     const ruleSelects = document.querySelectorAll('.rule-select');
     const sizeSelect = document.getElementById('size-select');
+    const maximumSatisfactionCounts = document.querySelectorAll('.maximum-satisfaction-count');
 
     function updateRepresentativeCommentsBlock(ruleSelect) {
         const rule = ruleSelect.value;
@@ -97,6 +94,62 @@
             repCommentList.appendChild(clone);
           }
         });
+
+        // Update the satisfaction count
+        updateSatisfactionProgressBar(repCommentBlock);
+    }
+
+    function computeTotalCommentsSatisfaction (commentList) {
+      const comments = commentList.querySelectorAll('.article-comment');
+      let totalSatisfaction = 0;
+      comments.forEach(function (comment) {
+        totalSatisfaction += Number(comment.dataset.agrees);
+      })
+      return totalSatisfaction;
+    }
+
+    function computeTotalSatisfactionIds (commentIdsList) {
+      let totalSatisfaction = 0;
+      for (let i = 0; i < commentIdsList.length; i++) {
+        const commentId = commentIdsList[i];
+        const comment = document.querySelector(`.article-comment[data-comment-id="${commentId}"]`);
+        totalSatisfaction += Number(comment.dataset.agrees);
+      }
+      return totalSatisfaction;
+    }
+
+    const maxSatisfactionCache = {};
+
+    function maxSatisfaction() {
+      let num_comments = sizeSelect.value;
+
+      // Check if already cached
+      if (maxSatisfactionCache[num_comments] !== undefined) {
+        return maxSatisfactionCache[num_comments];
+      }
+
+      // Compute and store in cache
+      let commentIds = repCommentsData?.["av"]?.[num_comments];
+      let satisfaction = computeTotalSatisfactionIds(commentIds);
+
+      maxSatisfactionCache[num_comments] = satisfaction;
+      return satisfaction;
+    }
+
+    function updateSatisfactionProgressBar(repCommentBlock) {
+      const repCommentList = repCommentBlock.querySelector('.representative-comments-list');
+      const currentSat = computeTotalCommentsSatisfaction(repCommentList);
+      const maxSat = maxSatisfaction();
+
+      const bar = repCommentBlock.querySelector('.satisfaction-bar-fill');
+
+      if (bar && maxSat) {
+        const percentage = Math.min((currentSat / maxSat) * 100, 100);
+        bar.style.width = `${percentage}%`;
+
+        repCommentBlock.querySelector('.satisfaction-bar-percentage').textContent = `(${Math.round(percentage)}%)`;
+        repCommentBlock.querySelector('.current-satisfaction-count').textContent = `${currentSat}`;
+      }
     }
 
     function updateAllRepresentativeComments() {
@@ -106,7 +159,9 @@
     }
 
     if (sizeSelect) {
-      sizeSelect.addEventListener('change', updateAllRepresentativeComments);
+      sizeSelect.addEventListener('change', function () {
+        updateAllRepresentativeComments();
+      });
 
       ruleSelects.forEach(ruleSelect => {
         ruleSelect.addEventListener('change', function () {
@@ -117,24 +172,28 @@
       updateAllRepresentativeComments();
     }
 
-    let showAdvancedControlsButton = document.getElementById('show-advanced-controls');
+    const showAdvancedControlsButton = document.getElementById('show-advanced-controls');
     let advancedControls = true;
-    let sizeSelectionWrap = document.getElementById('size-selection-wrap');
-    let ruleSelectionWraps = document.querySelectorAll('.rule-selection-wrap');
-    let representativeCommentsTitles = document.querySelectorAll('.representative-comments-block-title');
+    const sizeSelectionWrap = document.getElementById('size-selection-wrap');
+    const ruleSelectionWraps = document.querySelectorAll('.rule-selection-wrap');
+    const selectPopularity = document.getElementById('rule-select-popularity');
+    const selectRepresentation = document.getElementById('rule-select-representation');
+    const selectDiversity = document.getElementById('rule-select-diversity');
 
     function toggleAdvancedControlsVisibility() {
       if (advancedControls) {
         advancedControls = false;
         showAdvancedControlsButton.textContent = 'Show Advanced Controls';
         ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.add('hidden'));
-        representativeCommentsTitles.forEach(title => {title.classList.remove('hidden')});
         sizeSelectionWrap.classList.add('hidden');
+        selectPopularity.value = '{{ default_popularity_rule }}';
+        selectRepresentation.value = '{{ default_representation_rule }}';
+        selectDiversity.value = '{{ default_diversity_rule }}';
+        updateAllRepresentativeComments();
       } else {
         advancedControls = true;
         showAdvancedControlsButton.textContent = 'Hide Advanced Controls';
         ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.remove('hidden'));
-        representativeCommentsTitles.forEach(title => {title.classList.add('hidden')});
         sizeSelectionWrap.classList.remove('hidden');
       }
     }

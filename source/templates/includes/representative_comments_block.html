@@ -1,0 +1,26 @@
+<div class="representative-comments-block">
+  <h3 class="representative-comments-block-title">{{ title }}</h3>
+  <div class="rule-selection-wrap">
+    <label for="{{ rule_select_id }}">Selection Method:</label>
+    <select id="{{ rule_select_id }}" class="rule-select">
+      {% for rule in article.representative_comments.keys() %}
+        <option value="{{ rule }}"{% if rule == default_rule %} selected="selected"{% endif %}>{{ rule_name_mapping[rule] }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="representative-comments-analysis">
+    <div class="comment-analysis-measure-block">
+      <div class="comment-analysis-measure-header">Satisfaction</div>
+      <div class="comment-analysis-measure satisfaction-progress">
+        <div class="satisfaction-bar-fill">
+          <span class="current-satisfaction-count"></span><span class="satisfaction-bar-percentage"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-comments-list representative-comments-list" id="{{ comment_list_id }}">
+    <!-- JS will populate this based on selections -->
+  </div>
+</div>
