@@ -1,11 +1,10 @@
 from collections import defaultdict
 
-from abcvoting import abcrules
 from abcvoting.abcrules import Rule
 from abcvoting.preferences import Profile
 
 from article import Article
-
+from source.article import RuleResult
 
 ALL_RULES = [
     "av",
@@ -68,9 +67,10 @@ def compute_rules_for_article(article: Article):
             if algorithm == "brute-force":
                 continue
 
-            # We sort for better comparison, in any cases, this is a set so un-ordered.
+            # We sort for better comparison, in any cases, this is a set so unordered.
             result = abc_rule.compute(profile, committeesize=size, algorithm=algorithm, resolute=True)[0]
-            if rule in article.representative_comments:
-                article.representative_comments[rule][size] = sorted([comment_ids_mapping[c] for c in result], key=lambda x: int(x))
+            result_repr = sorted([comment_ids_mapping[c] for c in result], key=lambda x: int(x))
+            if rule in article.rule_results:
+                article.rule_results[rule][size] = RuleResult(rule, size, result_repr)
             else:
-                article.representative_comments[rule] = {size: sorted([comment_ids_mapping[c] for c in result], key=lambda x: int(x))}
+                article.rule_results[rule] = {size: RuleResult(rule, size, result_repr)}

@@ -9,7 +9,7 @@
     <div id="article-body">{{ article.text | safe }}</div>
     <div id="article-source">{{ article.source | safe }}</div>
 
-    {% if article.representative_comments %}
+    {% if article.rule_results %}
       <section class="article-comments-wrap">
         <h2>Selected Comments</h2>
 
@@ -20,8 +20,7 @@
         <div id="size-selection-wrap">
           <label for="size-select">Number of Representative Comments:</label>
           <select id="size-select">
-            {% set first_rule = article.representative_comments|first %}
-            {% for size in article.representative_comments[first_rule].keys() %}
+            {% for size in article.computed_sizes %}
               <option value="{{ size }}"{% if size == 5 %} selected="selected"{% endif %}>{{ size }}</option>
             {% endfor %}
           </select>
@@ -67,18 +66,17 @@
         });
     });
 
-    const repCommentsData = {{ article.representative_comments | tojson }};
+    const rulesResultsData = {{ article.rule_results_to_json() | safe }};
 
     const ruleSelects = document.querySelectorAll('.rule-select');
     const sizeSelect = document.getElementById('size-select');
-    const maximumSatisfactionCounts = document.querySelectorAll('.maximum-satisfaction-count');
 
     function updateRepresentativeCommentsBlock(ruleSelect) {
         const rule = ruleSelect.value;
         const size = sizeSelect.value;
 
         // Use optional chaining and fallback to empty array
-        const commentIds = repCommentsData?.[rule]?.[size] || [];
+        const commentIds = rulesResultsData?.[rule]?.[size] || [];
 
         // Fetch the div for the comments
         let repCommentBlock = ruleSelect.closest('.representative-comments-block');
@@ -95,60 +93,46 @@
           }
         });
 
-        // Update the satisfaction count
-        updateSatisfactionProgressBar(repCommentBlock);
+        // Update the Analysis Measures
+        updateSatisfaction(repCommentBlock, rule, size);
+        updateCoverage(repCommentBlock, rule, size);
     }
 
-    function computeTotalCommentsSatisfaction (commentList) {
-      const comments = commentList.querySelectorAll('.article-comment');
-      let totalSatisfaction = 0;
-      comments.forEach(function (comment) {
-        totalSatisfaction += Number(comment.dataset.agrees);
-      })
-      return totalSatisfaction;
-    }
+    function updateSatisfaction(repCommentBlock, rule, size) {
+      const match = rulesResultsData.find(r => r.rule_id === rule && r.committee_size === parseInt(size));
+      if (match) {
+        const satisfaction = match.satisfaction;
+        const maxSatisfaction = match.max_satisfaction;
+        const bar = repCommentBlock.querySelector('.satisfaction-bar-fill');
 
-    function computeTotalSatisfactionIds (commentIdsList) {
-      let totalSatisfaction = 0;
-      for (let i = 0; i < commentIdsList.length; i++) {
-        const commentId = commentIdsList[i];
-        const comment = document.querySelector(`.article-comment[data-comment-id="${commentId}"]`);
-        totalSatisfaction += Number(comment.dataset.agrees);
+        if (bar && maxSatisfaction) {
+          const percentage = Math.min((satisfaction / maxSatisfaction) * 100, 100);
+          bar.style.width = `${percentage}%`;
+
+          repCommentBlock.querySelector('.satisfaction-bar-percentage').textContent = `(${Math.round(percentage)}%)`;
+          repCommentBlock.querySelector('.current-satisfaction-count').textContent = `${satisfaction}`;
+        }
+      } else {
+        console.warn("No match found for rule", rule, "size", size);
       }
-      return totalSatisfaction;
     }
 
-    const maxSatisfactionCache = {};
+    function updateCoverage(repCommentBlock, rule, size) {
+      const match = rulesResultsData.find(r => r.rule_id === rule && r.committee_size === parseInt(size));
+      if (match) {
+        const coverage = Math.min(match.coverage, 100);
+        const maxCoverage = match.max_coverage;
+        const bar = repCommentBlock.querySelector('.coverage-bar-fill');
 
-    function maxSatisfaction() {
-      let num_comments = sizeSelect.value;
+        if (bar && maxCoverage) {
+          const percentage = Math.min((coverage / maxCoverage) * 100, 100);
+          bar.style.width = `${percentage}%`;
 
-      // Check if already cached
-      if (maxSatisfactionCache[num_comments] !== undefined) {
-        return maxSatisfactionCache[num_comments];
-      }
-
-      // Compute and store in cache
-      let commentIds = repCommentsData?.["av"]?.[num_comments];
-      let satisfaction = computeTotalSatisfactionIds(commentIds);
-
-      maxSatisfactionCache[num_comments] = satisfaction;
-      return satisfaction;
-    }
-
-    function updateSatisfactionProgressBar(repCommentBlock) {
-      const repCommentList = repCommentBlock.querySelector('.representative-comments-list');
-      const currentSat = computeTotalCommentsSatisfaction(repCommentList);
-      const maxSat = maxSatisfaction();
-
-      const bar = repCommentBlock.querySelector('.satisfaction-bar-fill');
-
-      if (bar && maxSat) {
-        const percentage = Math.min((currentSat / maxSat) * 100, 100);
-        bar.style.width = `${percentage}%`;
-
-        repCommentBlock.querySelector('.satisfaction-bar-percentage').textContent = `(${Math.round(percentage)}%)`;
-        repCommentBlock.querySelector('.current-satisfaction-count').textContent = `${currentSat}`;
+          repCommentBlock.querySelector('.coverage-bar-percentage').textContent = `(${Math.round(percentage)}%)`;
+          repCommentBlock.querySelector('.current-coverage-count').textContent = `${(coverage * 100).toFixed(2)}%`;
+        }
+      } else {
+        console.warn("No match found for rule", rule, "size", size);
       }
     }
 
@@ -173,6 +157,7 @@
     }
 
     const showAdvancedControlsButton = document.getElementById('show-advanced-controls');
+    console.log(showAdvancedControlsButton);
     let advancedControls = true;
     const sizeSelectionWrap = document.getElementById('size-selection-wrap');
     const ruleSelectionWraps = document.querySelectorAll('.rule-selection-wrap');
@@ -198,8 +183,10 @@
       }
     }
 
-    showAdvancedControlsButton.addEventListener('click', toggleAdvancedControlsVisibility);
-    toggleAdvancedControlsVisibility();
+    if (showAdvancedControlsButton) {
+      showAdvancedControlsButton.addEventListener('click', toggleAdvancedControlsVisibility);
+      toggleAdvancedControlsVisibility();
+    }
 });
 </script>
 

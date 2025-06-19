@@ -55,7 +55,7 @@ def generate_site(config: SiteConfig, articles: list[Article]):
     article_template = env.get_template("article.html")
     for article in articles:
         print(f"Writing article {article.title}")
-        article.sanitize_representative_comments()
+        article.sanitize_rule_results()
         article_html = article_template.render(
             article=article,
             all_articles=articles,

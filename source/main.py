@@ -3,7 +3,9 @@ import shutil
 
 from generate import generate_site
 from article import default_config, dump_article_to_json, load_article_from_json
+from rules import compute_rules_for_article
 from polis import read_polis_poll, polis_poll_to_article
+from source.analysis import add_analysis_to_article
 
 
 def all_polis_to_json():
@@ -37,14 +39,24 @@ def generate_all_polis():
     generate_site(config, all_articles)
 
 def compute_and_write_all_rules():
-    from abc_vote import compute_rules_for_article
-
     source_dir_path = os.path.dirname(os.path.realpath(__file__))
     polis_data_dir_path = os.path.join(source_dir_path, 'data', 'polis')
 
     for article_file in os.listdir(polis_data_dir_path):
         article = load_article_from_json(os.path.join(polis_data_dir_path, article_file))
         compute_rules_for_article(article)
+        add_analysis_to_article(article)
+        file_path = os.path.join(polis_data_dir_path, article.slugified_title + ".json")
+        dump_article_to_json(article, file_path)
+        generate_all_polis()
+
+def add_analysis_measures():
+    source_dir_path = os.path.dirname(os.path.realpath(__file__))
+    polis_data_dir_path = os.path.join(source_dir_path, 'data', 'polis')
+
+    for article_file in os.listdir(polis_data_dir_path):
+        article = load_article_from_json(os.path.join(polis_data_dir_path, article_file))
+        add_analysis_to_article(article)
         file_path = os.path.join(polis_data_dir_path, article.slugified_title + ".json")
         dump_article_to_json(article, file_path)
         generate_all_polis()
@@ -52,6 +64,7 @@ def compute_and_write_all_rules():
 def main():
     # all_polis_to_json()
     # compute_and_write_all_rules()
+    # add_analysis_measures()
     generate_all_polis()
 
     # source_dir_path = os.path.dirname(os.path.realpath(__file__))

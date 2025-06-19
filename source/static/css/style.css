@@ -327,6 +327,11 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
+  width: 100%;
+}
+
+.representative-comments-block {
+  width: 100%;
 }
 
 .representative-comments-block-title {
@@ -420,7 +425,7 @@ h1 {
   min-width: 0;
 }
 
-.satisfaction-progress {
+.progress-bar {
   height: 1.1em;
   border-radius: 10px;
   overflow: hidden;
@@ -429,10 +434,9 @@ h1 {
   border: 2px solid var(--color-background-very-very-dark);
 }
 
-.satisfaction-bar-fill {
+.progress-bar-fill {
   height: 100%;
   width: 0%;
-  background-color: var(--color-frame);
   transition: width 0.4s ease;
   position: relative;
   display: flex;
@@ -444,7 +448,15 @@ h1 {
   gap: 5px;
 }
 
-.satisfaction-bar-fill span {
+.satisfaction-bar-fill {
+  background-color: var(--color-frame);
+}
+
+.coverage-bar-fill {
+  background-color: var(--color-success);
+}
+
+.progress-bar-fill span {
   color: white;
   font-size: 0.85rem;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);

@@ -1,5 +1,7 @@
 import json
+from collections import defaultdict
 from collections.abc import Iterable, Collection
+from functools import total_ordering
 
 from source.utils import slugify, strip_non_basic_characters
 
@@ -84,8 +86,76 @@ class Comment:
             not_seen_ids=data["not_seen_ids"],
         )
 
+@total_ordering
+class RuleResult:
+    def __init__(self,
+                 rule_id:str,
+                 committee_size: int,
+                 committee: Iterable[Comment] = None,
+                 satisfaction: int=None,
+                 max_satisfaction: int=None,
+                 coverage: float=None,
+                 max_coverage: float=None,):
+        self.rule_id = rule_id
+        self.committee_size = committee_size
+        if committee is None:
+            committee = []
+        self.committee = committee
+        self.satisfaction = satisfaction
+        self.max_satisfaction = max_satisfaction
+        self.coverage = coverage
+        self.max_coverage = max_coverage
+
+    def to_dict(self):
+        return {
+            "rule_id": self.rule_id,
+            "committee_size": self.committee_size,
+            "committee": self.committee,
+            "max_satisfaction": self.max_satisfaction,
+            "satisfaction": self.satisfaction,
+            "coverage": self.coverage,
+            "max_coverage": self.max_coverage,
+        }
+
+    @classmethod
+    def from_dict(cls, data: dict):
+        return cls(
+            rule_id=data["rule_id"],
+            committee_size=data["committee_size"],
+            committee=data["committee"],
+            max_satisfaction=data["max_satisfaction"],
+            satisfaction=data["satisfaction"],
+            coverage=data["coverage"],
+            max_coverage=data["max_coverage"],
+        )
+
+    def _identifier(self):
+        return self.rule_id, self.committee_size
+
+    def __eq__(self, other):
+        if isinstance(other, RuleResult):
+            return self._identifier() == other._identifier()
+        return NotImplemented
+
+    def __lt__(self, other):
+        if isinstance(other, RuleResult):
+            return self._identifier() < other._identifier()
+        return NotImplemented
+
+    def __hash__(self):
+        return hash(self._identifier())
+
+    def __repr__(self):
+        return f"Res[{self.rule_id}, {self.committee_size}]"
+
 class Article:
-    def __init__(self, title: str, text: str, source: str, comments: Iterable[Comment] = None, participant_ids: Iterable[str] = None, representative_comments: dict[str, dict[int, Iterable[Comment]]] = None):
+    def __init__(self,
+                 title: str,
+                 text: str,
+                 source: str,
+                 comments: Iterable[Comment] = None,
+                 participant_ids: Iterable[str] = None,
+                 rule_results: dict[str, dict[int, RuleResult]] = None,):
         self.title = title
         self.slugified_title = slugify(strip_non_basic_characters(title))
         self.text = text
@@ -96,16 +166,19 @@ class Article:
         if participant_ids is None:
             participant_ids = []
         self.participant_ids = list(participant_ids)
-        if representative_comments is None:
-            representative_comments = dict()
-        self.representative_comments = representative_comments
-        self.computed_rules = []
-        self.computed_sizes = []
-        self.sanitize_representative_comments()
+        if rule_results is None:
+            rule_results = dict()
+        self.rule_results = rule_results
+        self.sanitize_rule_results()
 
     @property
     def num_comments(self):
         return len(self.comments)
+
+    def get_comment(self, comment_id):
+        for c in self.comments:
+            if c.comment_id == comment_id:
+                return c
 
     @property
     def num_participants(self):
@@ -115,27 +188,29 @@ class Article:
     def link(self):
         return self.slugified_title + ".html"
 
-    def sanitize_representative_comments(self):
+    @property
+    def computed_rules(self):
+        return sorted(self.rule_results)
+
+    @property
+    def computed_sizes(self):
+        return sorted(self.rule_results.values().__iter__().__next__())
+
+    def sanitize_rule_results(self):
         # Map each rules to the sizes computed for the rule
-        rules_to_sizes = dict()
-        for rule, rule_dict in self.representative_comments.items():
-            rules_to_sizes[rule] = []
+        rules_to_sizes = defaultdict(set)
+        for rule, rule_dict in self.rule_results.items():
             for size, res in rule_dict.items():
-                rules_to_sizes[rule].append(size)
-                assert len(res) == size
-        # Select the reference set of sizes as the largest set computed for a rule
-        reference_sizes = None
-        for sizes in rules_to_sizes.values():
-            sizes.sort()
-            if reference_sizes is None or len(sizes) > len(reference_sizes):
-                reference_sizes = sizes
-        self.computed_sizes = reference_sizes
-        # Drop all the rules that have not been computed for all sizes
-        for rule, rule_sizes in rules_to_sizes.items():
-            if rule_sizes != reference_sizes:
-                del self.representative_comments[rule]
-            else:
-                self.computed_rules.append(rule)
+                rules_to_sizes[rule].add(size)
+                assert len(res.committee) == size
+        # Reference set of sizes is the intersection of the sizes set of each rule
+        if len(rules_to_sizes) > 0:
+            reference_sizes = set.intersection(*rules_to_sizes.values())
+            # Drop all non-reference sizes
+            for rule, rule_sizes in rules_to_sizes.items():
+                for size in rule_sizes:
+                    if size not in reference_sizes:
+                        del self.rule_results[rule][size]
 
     def to_dict(self):
         return {
@@ -146,18 +221,19 @@ class Article:
             "link": self.link,
             "comments": [comment.to_dict() for comment in self.comments],
             "participant_ids": self.participant_ids,
-            "representative_comments": self.representative_comments,
+            "rule_results": {rule: {s: r.to_dict() for s, r in rule_dict.items()} for rule, rule_dict in self.rule_results.items()},
         }
 
     @classmethod
     def from_dict(cls, data: dict):
         comments = [Comment.from_dict(c) for c in data.get("comments", [])]
 
-        # Size keys are automatically cast as str, we map them back to int
-        raw_rep_comments = data.get("representative_comments", dict())
-        rep_comments = {}
-        for rule, size_dict in raw_rep_comments.items():
-            rep_comments[rule] = {int(size): comment_list for size, comment_list in size_dict.items()}
+        raw_rule_results = data.get("rule_results", dict())
+        rule_results = {}
+        for rule, rule_dict in raw_rule_results.items():
+            rule_results[rule] = dict()
+            for size, res_data in rule_dict.items():
+                rule_results[rule][int(size)] = RuleResult.from_dict(res_data)
 
         return cls(
             title=data["title"],
@@ -165,8 +241,11 @@ class Article:
             source=data["source"],
             comments=comments,
             participant_ids=data.get("participant_ids", []),
-            representative_comments=rep_comments,
+            rule_results=rule_results,
         )
+
+    def rule_results_to_json(self):
+        return json.dumps([r.to_dict() for d in self.rule_results.values() for r in d.values()])
 
 def dump_article_to_json(article: Article, filepath: str):
     with open(filepath, 'w', encoding='utf-8') as f:
