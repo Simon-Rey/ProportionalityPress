@@ -3,7 +3,7 @@ from collections import defaultdict
 from collections.abc import Iterable, Collection
 from functools import total_ordering
 
-from source.utils import slugify, strip_non_basic_characters
+from source.utils import slugify, strip_non_basic_characters, make_url_friendly
 
 
 class SiteConfig:
@@ -151,18 +151,22 @@ class RuleResult:
 class Article:
     def __init__(self,
                  title: str,
+                 category: str,
                  text: str,
-                 source: str,
+                 sources: dict[str, str],
+                 html_include_file: str=None,
                  comments: Iterable[Comment] = None,
                  participant_ids: Iterable[str] = None,
-                 rule_results: dict[str, dict[int, RuleResult]] = None,):
+                 rule_results: dict[str, dict[int, RuleResult]] = None, ):
         self.title = title
-        self.slugified_title = slugify(strip_non_basic_characters(title))
+        self.slugified_title = make_url_friendly(self.title)
+        self.category = category
         self.text = text
         if comments is None:
             comments = []
         self.comments = list(comments)
-        self.source = source
+        self.sources = sources
+        self.html_include_file = html_include_file
         if participant_ids is None:
             participant_ids = []
         self.participant_ids = list(participant_ids)
@@ -196,6 +200,12 @@ class Article:
     def computed_sizes(self):
         return sorted(self.rule_results.values().__iter__().__next__())
 
+    @property
+    def html_include_file_path(self):
+        if self.html_include_file is None:
+            return
+        return f"includes/articles/{self.html_include_file}"
+
     def sanitize_rule_results(self):
         # Map each rules to the sizes computed for the rule
         rules_to_sizes = defaultdict(set)
@@ -216,8 +226,10 @@ class Article:
         return {
             "title": self.title,
             "slugified_title": self.slugified_title,
+            "category": self.category,
             "text": self.text,
-            "source": self.source,
+            "sources": self.sources,
+            "html_include_file": self.html_include_file,
             "link": self.link,
             "comments": [comment.to_dict() for comment in self.comments],
             "participant_ids": self.participant_ids,
@@ -237,8 +249,10 @@ class Article:
 
         return cls(
             title=data["title"],
+            category=data["category"],
             text=data["text"],
-            source=data["source"],
+            html_include_file=data["html_include_file"],
+            sources=data["sources"],
             comments=comments,
             participant_ids=data.get("participant_ids", []),
             rule_results=rule_results,

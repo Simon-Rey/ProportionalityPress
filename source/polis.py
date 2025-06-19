@@ -8,6 +8,7 @@ from datetime import datetime
 import markdown
 
 from article import Article, Comment
+from source.utils import make_url_friendly
 
 
 class PolisComment:
@@ -131,12 +132,12 @@ def polis_poll_to_article(poll: PolisPoll, ignore_not_seen: bool = True) -> Arti
     else:
         article_body = '<p>This article has been automatically fetched from a Polis poll that did not include a description.</p>'
 
-    article_sources = f'<p><strong>Original poll:</strong> <a href="{poll.url}" target="_blank">{poll.url}</a></p>'
+    article_sources = {"Original Polis poll": poll.url}
 
     article = Article(
         title=article_title,
         text=article_body,
-        source=article_sources,
+        sources=article_sources,
         participant_ids=[pp.participant_id for pp in poll.participants],
     )
 
@@ -175,4 +176,38 @@ def polis_poll_to_article(poll: PolisPoll, ignore_not_seen: bool = True) -> Arti
             )
         )
     article.comments.sort(key=lambda c: c.timestamp, reverse=True)
+
+    overwrite_default_content(article)
+
     return article
+
+def overwrite_default_content(article: Article):
+    if article.slugified_title == "taxhivemindwindow":
+        article.title = "Fair enough? How should New Zealanders be taxed?"
+        article.slugified_title = make_url_friendly(article.title)
+        article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1804/S00054/fair-enough-how-should-new-zealanders-be-taxed.htm"
+        article.html_include_file = "new_zealand_tax.html"
+
+    title_to_categories = {
+        "15hour": "Economy",
+        "auniversalbasicincomeforaotearoanz": "Economy",
+        "canadianelectoralreform": "Politics",
+        "cantherebeconsensusonbrexit": "Politics",
+        "concussionsinthenfl": "Sports",
+        "energie": "Environment",
+        "ernhrungundlandnutzung": "Environment",
+        "fairenoughhowshouldnewzealandersbetaxed": "Economy",
+        "hivemind-freshwaterqualityinnz": "Society",
+        "improvingbowlinggreenwarrencounty": "Society",
+        "jointhediscussionbelowlanduseandconservationinthesanjuanislands": "Environment",
+        "mobilitt": "Environment",
+        "operationmarchingorders": "Politics",
+        "produktionundkonsum": "Society",
+        "protectingandrestoringnzsbiodiversity": "Environment",
+        "scoopnzhivemindonaffordablehousing": "Society",
+        "togetherwellbuildthebgof2050": "Society",
+        "uberxvtaiwantw": "Society",
+        "whatisthebestwaytoengagemoreyoungpeopleinlocalscrutinyofpolicing": "Politics",
+        "wohnen": "Society",
+    }
+    article.category = title_to_categories[article.slugified_title]

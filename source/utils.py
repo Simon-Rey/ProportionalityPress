@@ -10,3 +10,6 @@ def strip_non_ascii(s: str):
 
 def strip_non_basic_characters(s: str):
     return re.sub(r'[^a-zA-Z0-9_\-]', '', s)
+
+def make_url_friendly(s: str):
+    return slugify(strip_non_basic_characters(s))

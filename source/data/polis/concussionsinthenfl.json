@@ -1,8 +1,12 @@
 {
   "title": "Concussions in the NFL",
   "slugified_title": "concussionsinthenfl",
+  "category": "Sports",
   "text": "<p><p>Is the concussion crisis and CTE the end of the NFL?</p></p>",
-  "source": "<p><strong>Original poll:</strong> <a href=\"https://pol.is/2arcefpshi\" target=\"_blank\">https://pol.is/2arcefpshi</a></p>",
+  "sources": {
+    "Original Polis poll": "https://pol.is/2arcefpshi"
+  },
+  "html_include_file": null,
   "link": "concussionsinthenfl.html",
   "comments": [
     {

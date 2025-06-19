@@ -1,8 +1,12 @@
 {
   "title": "Ernährung und Landnutzung",
   "slugified_title": "ernhrungundlandnutzung",
+  "category": "Environment",
   "text": "<p><p>Wir, die Bürger:innen des Klimarats, wollen deine Meinungen und Ideen zum Thema ERNÄHRUNG UND LANDNUTZUNG hören, um eine klimafreundliche Zukunft zu erreichen.</p>\n<p>In Abstimmung mit dem Wissenschaftsteam haben wir Hebel in den Handlungsfeldern entwickelt: Reduktion tierischer Produkte, Lebensmittelabfall verringern, Kohlenstoffsenken erhöhen, Produktion verbessern, Erneuerbare Energie bereitstellen</p>\n<p>Die Ideen, die vom Klimarat kommen, sind mit \"Klimarat:\" gekennzeichnet. Wenn nicht Klimarat dabei steht, kommen die Empfehlungen von anderen an der Umfrage Teilnehmenden.</p>\n<p>Schlussphase:\nÜber 1000 Meinungen und Ideen wurden insgesamt eingebracht. Donnerstag 5. Mai bis Sonntag  8. Mai (12 Uhr) bildet die Schlussphase. Stimmt über die vielen Ideen ab - und macht Pausen!</p>\n<p>Willst du auch bei anderen Themen mitmachen?\n<a href=\"https://pol.is/7z7ejpbmv5\">Wohnen</a>, <a href=\"https://pol.is/5twd2jsnfk\">Produktion und Konsum</a>, <a href=\"https://pol.is/2vkxcncppn\">Energie</a>, <a href=\"https://pol.is/5tzfrp5eaa\">Mobilität</a></p></p>",
-  "source": "<p><strong>Original poll:</strong> <a href=\"https://pol.is/9xnndurbfm\" target=\"_blank\">https://pol.is/9xnndurbfm</a></p>",
+  "sources": {
+    "Original Polis poll": "https://pol.is/9xnndurbfm"
+  },
+  "html_include_file": null,
   "link": "ernhrungundlandnutzung.html",
   "comments": [
     {

@@ -1,8 +1,12 @@
 {
   "title": "ScoopNZ Hivemind on affordable housing",
   "slugified_title": "scoopnzhivemindonaffordablehousing",
+  "category": "Society",
   "text": "<p><p>This HiveMind is  <strong><em>closed</em></strong>.</p>\n<p>Thanks to the 381 people who voted and the 57 people who added 125 ideas about cracking affordability for you all to consider.</p>\n<p>If you have queries or comments about this initiative, please email <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#72;&#105;&#118;&#101;&#77;&#105;&#110;&#100;&#64;&#83;&#99;&#111;&#111;&#112;&#46;&#99;&#111;&#46;&#110;&#122;\">&#72;&#105;&#118;&#101;&#77;&#105;&#110;&#100;&#64;&#83;&#99;&#111;&#111;&#112;&#46;&#99;&#111;&#46;&#110;&#122;</a></p></p>",
-  "source": "<p><strong>Original poll:</strong> <a href=\"https://pol.is/4hnmy3zeff\" target=\"_blank\">https://pol.is/4hnmy3zeff</a></p>",
+  "sources": {
+    "Original Polis poll": "https://pol.is/4hnmy3zeff"
+  },
+  "html_include_file": null,
   "link": "scoopnzhivemindonaffordablehousing.html",
   "comments": [
     {

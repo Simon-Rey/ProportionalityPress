@@ -1,8 +1,12 @@
 {
   "title": "HiveMind - Freshwater Quality in NZ",
   "slugified_title": "hivemind-freshwaterqualityinnz",
+  "category": "Society",
   "text": "<p><p>This HiveMind is now closed. Thank you to the 117 participants who voted and submitted statements. </p>\n<p>The graphic visualisation below shows the participants grouped in clusters based on shared opinions.</p></p>",
-  "source": "<p><strong>Original poll:</strong> <a href=\"https://pol.is/5psrv8bm2a\" target=\"_blank\">https://pol.is/5psrv8bm2a</a></p>",
+  "sources": {
+    "Original Polis poll": "https://pol.is/5psrv8bm2a"
+  },
+  "html_include_file": null,
   "link": "hivemind-freshwaterqualityinnz.html",
   "comments": [
     {

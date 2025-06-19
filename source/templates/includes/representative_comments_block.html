@@ -1,5 +1,6 @@
 <div class="representative-comments-block">
   <h3 class="representative-comments-block-title">{{ title }}</h3>
+  <h3 class="representative-comments-block-title alternative-representative-comments-block-title hidden">{{ alt_title }}</h3>
   <div class="rule-selection-wrap">
     <label for="{{ rule_select_id }}">Selection Method:</label>
     <select id="{{ rule_select_id }}" class="rule-select">
@@ -11,19 +12,30 @@
 
   <div class="representative-comments-analysis">
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Satisfaction</div>
-      <div class="comment-analysis-measure progress-bar satisfaction-progress">
-        <div class="progress-bar-fill satisfaction-bar-fill">
-          <span class="current-satisfaction-count"></span><span class="satisfaction-bar-percentage"></span>
+      <div class="comment-analysis-measure-header">Popularity</div>
+      <div class="progress-bar-wrap">
+        <div class="comment-analysis-measure progress-bar satisfaction-progress">
+          <div class="progress-bar-fill satisfaction-bar-fill">
+            <span class="current-satisfaction-count"></span>
+          </div>
+        </div>
+        <div class="progress-bar-details">
+          <span>max. popularity: </span><span class="max-satisfaction"></span>
         </div>
       </div>
     </div>
 
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Coverage</div>
-      <div class="comment-analysis-measure progress-bar coverage-progress">
-        <div class="progress-bar-fill coverage-bar-fill">
-          <span class="current-coverage-count"></span><span class="coverage-bar-percentage"></span>
+      <div class="comment-analysis-measure-header">Inclusion</div>
+      <div class="progress-bar-wrap">
+        <div class="comment-analysis-measure progress-bar coverage-progress">
+          <div class="progress-bar-fill max-coverage-bar-fill"></div>
+          <div class="progress-bar-fill coverage-bar-fill">
+            <span class="current-coverage"></span>
+          </div>
+        </div>
+        <div class="progress-bar-details">
+          <span>max. inclusion: </span><span class="max-coverage"></span>
         </div>
       </div>
     </div>

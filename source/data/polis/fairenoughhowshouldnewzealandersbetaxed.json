@@ -1,9 +1,14 @@
 {
-  "title": "Tax HiveMind Window",
-  "slugified_title": "taxhivemindwindow",
+  "title": "Fair enough? How should New Zealanders be taxed?",
+  "slugified_title": "fairenoughhowshouldnewzealandersbetaxed",
+  "category": "Economy",
   "text": "<p><p>This HiveMind has <em>closed</em> so it's no longer possible to vote on statements or add statements for others to vote on. You can still <em>explore the opinion groups and majority opinions by clicking on the graphic below</em>.</p>\n<p>Email <a href=\"&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#105;&#118;&#101;&#109;&#105;&#110;&#100;&#64;&#115;&#99;&#111;&#111;&#112;&#46;&#99;&#111;&#46;&#110;&#122;\">&#104;&#105;&#118;&#101;&#109;&#105;&#110;&#100;&#64;&#115;&#99;&#111;&#111;&#112;&#46;&#99;&#111;&#46;&#110;&#122;</a> if you have any queries, complaints or need help.</p></p>",
-  "source": "<p><strong>Original poll:</strong> <a href=\"https://pol.is/5sw7wa5dep\" target=\"_blank\">https://pol.is/5sw7wa5dep</a></p>",
-  "link": "taxhivemindwindow.html",
+  "sources": {
+    "Original Polis poll": "https://pol.is/5sw7wa5dep",
+    "Soop article": "https://www.scoop.co.nz/stories/HL1804/S00054/fair-enough-how-should-new-zealanders-be-taxed.htm"
+  },
+  "html_include_file": "new_zealand_tax.html",
+  "link": "fairenoughhowshouldnewzealandersbetaxed.html",
   "comments": [
     {
       "comment_id": "147",

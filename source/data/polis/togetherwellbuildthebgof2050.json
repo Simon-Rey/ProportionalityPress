@@ -1,8 +1,12 @@
 {
   "title": "Together, we'll build the BG of 2050.",
   "slugified_title": "togetherwellbuildthebgof2050",
+  "category": "Society",
   "text": "<p><p>In the next 25 years, our community will nearly double in size.</p>\n<p>What would you want to see in the Bowling Green of the future?</p>\n<p>What's a core value we want to preserve/cultivate as we grow?</p>\n<p><em>Share all your dreams between now and October 2nd.</em></p></p>",
-  "source": "<p><strong>Original poll:</strong> <a href=\"https://pol.is/3nemnipcrc\" target=\"_blank\">https://pol.is/3nemnipcrc</a></p>",
+  "sources": {
+    "Original Polis poll": "https://pol.is/3nemnipcrc"
+  },
+  "html_include_file": null,
   "link": "togetherwellbuildthebgof2050.html",
   "comments": [
     {

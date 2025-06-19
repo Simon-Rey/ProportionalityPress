@@ -12,24 +12,31 @@
 <body>
   <div id="body-content-wrap">
     <header>
-      <a href="index.html">
-      <div class="logo proportionality-press">
-        <span class="logo-main">Proportionality</span>
-        <span class="logo-sub">Press</span>
-      </div></a>
+      <div id="logo-wrap">
+        <a href="index.html">
+          <div class="logo proportionality-press">
+            <span class="logo-main">Proportionality</span>
+            <span class="logo-sub">Press</span>
+          </div>
+        </a>
+      </div>
+      <nav id="main-nav">
+        {% for category, articles in articles_per_category.items() %}
+          <div class="submenu-wrap">
+            <span class="submenu-header">{{ category }}</span>
+            <div class="submenu-entry-wrap">
+              {% for article in articles %}
+                <div class="menu-entry">
+                  <span><a href="{{ article.link }}">{{ article.title }}</a></span>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </nav>
     </header>
 
     <div id="below-header-wrap">
-      <aside id="left-nav">
-        <h3>Read more</h3>
-
-        <ul id="left-nav-links">
-          {% for article in all_articles %}
-            <li><a href="{{ article.link }}">{{ article.title }}</a></li>
-          {% endfor %}
-        </ul>
-      </aside>
-
       <div id="content-wrap">
         <main>
           {% block content %}{% endblock %}
@@ -39,5 +46,24 @@
 
     <footer>Simon Rey 2025</footer>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+        document.body.classList.add("is-touch");
+
+        document.querySelectorAll('.submenu-header').forEach(header => {
+          header.addEventListener('click', function (e) {
+            const wrap = this.closest('.submenu-wrap');
+            // Toggle only this one open, close others
+            document.querySelectorAll('.submenu-wrap').forEach(w => {
+              if (w !== wrap) w.classList.remove('open');
+            });
+            wrap.classList.toggle('open');
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>

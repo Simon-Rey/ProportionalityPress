@@ -1,5 +1,6 @@
 import os
 import shutil
+from collections import defaultdict
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
@@ -40,13 +41,19 @@ def generate_site(config: SiteConfig, articles: list[Article]):
         autoescape=select_autoescape(['html', 'xml'])
     )
 
+    articles_per_category = defaultdict(list)
+    for article in articles:
+        articles_per_category[article.category].append(article)
+
+
     # Write index page
-    highlighted_articles_title = ["$15/hour", "Ernährung und Landnutzung", "Mobilität", "Operation Marching Orders", "Tax HiveMind Window"]
+    highlighted_articles_title = ["15hour", "ernhrungundlandnutzung", "mobilitt", "operationmarchingorders", "fairenoughhowshouldnewzealandersbetaxed"]
     index_template = env.get_template("index.html")
     index_html = index_template.render(
+        articles_per_category=articles_per_category,
         all_articles=articles,
         config=config,
-        highlighted_articles= [a for a in articles if a.title in highlighted_articles_title]
+        highlighted_articles= [a for a in articles if a.slugified_title in highlighted_articles_title]
     )
     with open(os.path.join(output_dir_path, "index.html"), "w", encoding="utf-8") as f:
         f.write(index_html)
@@ -58,6 +65,7 @@ def generate_site(config: SiteConfig, articles: list[Article]):
         article.sanitize_rule_results()
         article_html = article_template.render(
             article=article,
+            articles_per_category=articles_per_category,
             all_articles=articles,
             config=config,
             default_popularity_rule="av",

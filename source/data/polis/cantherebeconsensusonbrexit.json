@@ -1,8 +1,12 @@
 {
   "title": "Can there be consensus on Brexit?",
   "slugified_title": "cantherebeconsensusonbrexit",
+  "category": "Politics",
   "text": "<p><p>An experimental Pol.Is question. The intractable and fuzzy nature of Brexit means many people ostensibly on the same side end up fighting it out. Is there any consensus to be had? Since Pol.Is can apparently find that out, it seems like a good tool to use.</p></p>",
-  "source": "<p><strong>Original poll:</strong> <a href=\"https://pol.is/7wmvbjcjhp\" target=\"_blank\">https://pol.is/7wmvbjcjhp</a></p>",
+  "sources": {
+    "Original Polis poll": "https://pol.is/7wmvbjcjhp"
+  },
+  "html_include_file": null,
   "link": "cantherebeconsensusonbrexit.html",
   "comments": [
     {

@@ -1,8 +1,12 @@
 {
   "title": "A Universal Basic Income for Aotearoa NZ?",
   "slugified_title": "auniversalbasicincomeforaotearoanz",
+  "category": "Economy",
   "text": "<p><p>This HiveMind is  <strong><em>closed</em></strong></p>\n<p>Thankyou to the 234 people who participated. </p>\n<p>The results of this engagement on Universal Basic Income (UBI) are presented below.</p></p>",
-  "source": "<p><strong>Original poll:</strong> <a href=\"https://pol.is/4yy3sh84js\" target=\"_blank\">https://pol.is/4yy3sh84js</a></p>",
+  "sources": {
+    "Original Polis poll": "https://pol.is/4yy3sh84js"
+  },
+  "html_include_file": null,
   "link": "auniversalbasicincomeforaotearoanz.html",
   "comments": [
     {

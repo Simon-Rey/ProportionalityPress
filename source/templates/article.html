@@ -5,13 +5,36 @@
 {% block content %}
   <h1 class="standard-padded-container">{{ article.title }}</h1>
 
-  <div id="article-content-wrap">
-    <div id="article-body">{{ article.text | safe }}</div>
-    <div id="article-source">{{ article.source | safe }}</div>
+  <section>
+
+    <div id="article-content-wrap">
+      <div id="article-body">
+        {% if article.html_include_file %}
+          {% include article.html_include_file_path %}
+        {% else %}
+          {{ article.text | safe }}
+        {% endif %}
+      </div>
+      <div id="article-sources">
+      {% for source_title, source_url in article.sources.items() %}
+        <span>
+          <strong>{{ source_title }}:</strong> <a href="{{ source_url | safe }}" target="_blank">{{ source_url }}</a>
+        </span>
+      {% endfor %}
+      </div>
+  </section>
 
     {% if article.rule_results %}
       <section class="article-comments-wrap">
-        <h2>Selected Comments</h2>
+        <h2>Summary of the Comment Section</h2>
+
+        <p>
+          This section showcases different methods for selecting representative comments from a broader discussion (see
+          <a href="#article-all-comments-section">the comment section below</a>).
+          For each method, the goal is to highlight a small set of comments that best reflect the conversation.
+          They each approach this task from a different standpoint, emphasising different principles, such as popularity,
+          representation or diversity (among others).
+        </p>
 
         <p class="center-align">
           <span id="show-advanced-controls" class="button">Show Advanced Controls</span>
@@ -26,17 +49,17 @@
           </select>
         </div>
 
-        <div id="representative-comments-wrap" class="standard-padded-container">
+        <div id="representative-comments-wrap">
 
-          {% with title="Popularity-Based Selection", rule_select_id="rule-select-popularity", default_rule=default_rule_popularity, comment_list_id="comment-list-popularity" %}
+          {% with title="Popularity-Based Selection", rule_select_id="rule-select-popularity", default_rule=default_rule_popularity, comment_list_id="comment-list-popularity", alt_title="Selection 1" %}
             {% include "includes/representative_comments_block.html" %}
           {% endwith %}
 
-          {% with title="Representation-Based Selection", rule_select_id="rule-select-representation", default_rule=default_rule_representation, comment_list_id="comment-list-representation" %}
+          {% with title="Representation-Based Selection", rule_select_id="rule-select-representation", default_rule=default_rule_representation, comment_list_id="comment-list-representation", alt_title="Selection 2" %}
             {% include "includes/representative_comments_block.html" %}
           {% endwith %}
 
-          {% with title="Diversity-Based Selection", rule_select_id="rule-select-diversity", default_rule=default_rule_diversity, comment_list_id="comment-list-diversity" %}
+          {% with title="Diversity-Based Selection", rule_select_id="rule-select-diversity", default_rule=default_rule_diversity, comment_list_id="comment-list-diversity", alt_title="Selection 3" %}
             {% include "includes/representative_comments_block.html" %}
           {% endwith %}
 
@@ -47,10 +70,21 @@
     <section id="article-all-comments-section" class="article-comments-wrap">
       <h2 class="next-collapsible">See All {{ article.num_comments }} Comments</h2>
 
-      <div class="article-comments-list collapsed-content hidden">
-        {% for c in article.comments %}
+      <div class="collapsed-content hidden">
+        <div class="comment-sorting-controls">
+          <label for="sort-comments">Sort by:</label>
+          <select id="sort-comments">
+            <option value="timestamp-desc">Newest</option>
+            <option value="timestamp-asc">Oldest</option>
+            <option value="agrees-desc">Most Agreed</option>
+            <option value="disagrees-desc">Most Disagreed</option>
+          </select>
+        </div>
+        <div id="all-comments-list" class="article-comments-list">
+          {% for c in article.comments %}
           {% include "includes/article_comment.html" %}
-        {% endfor %}
+          {% endfor %}
+        </div>
       </div>
     </section>
   </div>
@@ -76,7 +110,10 @@
         const size = sizeSelect.value;
 
         // Use optional chaining and fallback to empty array
-        const commentIds = rulesResultsData?.[rule]?.[size] || [];
+
+      const match = rulesResultsData.find(r => r.rule_id === rule && r.committee_size === parseInt(size));
+      if (match) {
+        const commentIds = match.committee;
 
         // Fetch the div for the comments
         let repCommentBlock = ruleSelect.closest('.representative-comments-block');
@@ -96,6 +133,9 @@
         // Update the Analysis Measures
         updateSatisfaction(repCommentBlock, rule, size);
         updateCoverage(repCommentBlock, rule, size);
+      } else {
+        console.warn("No match found for rule", rule, "size", size);
+      }
     }
 
     function updateSatisfaction(repCommentBlock, rule, size) {
@@ -109,7 +149,7 @@
           const percentage = Math.min((satisfaction / maxSatisfaction) * 100, 100);
           bar.style.width = `${percentage}%`;
 
-          repCommentBlock.querySelector('.satisfaction-bar-percentage').textContent = `(${Math.round(percentage)}%)`;
+          repCommentBlock.querySelector('.max-satisfaction').textContent = `${maxSatisfaction}`;
           repCommentBlock.querySelector('.current-satisfaction-count').textContent = `${satisfaction}`;
         }
       } else {
@@ -123,13 +163,14 @@
         const coverage = Math.min(match.coverage, 100);
         const maxCoverage = match.max_coverage;
         const bar = repCommentBlock.querySelector('.coverage-bar-fill');
+        const maxBar = repCommentBlock.querySelector('.max-coverage-bar-fill');
 
-        if (bar && maxCoverage) {
-          const percentage = Math.min((coverage / maxCoverage) * 100, 100);
-          bar.style.width = `${percentage}%`;
+        if (bar && maxBar && maxCoverage) {
+          bar.style.width = `${coverage * 100}%`;
+          maxBar.style.width = `${maxCoverage * 100}%`;
 
-          repCommentBlock.querySelector('.coverage-bar-percentage').textContent = `(${Math.round(percentage)}%)`;
-          repCommentBlock.querySelector('.current-coverage-count').textContent = `${(coverage * 100).toFixed(2)}%`;
+          repCommentBlock.querySelector('.max-coverage').textContent = `${(maxCoverage * 100).toFixed(2)}%`;
+          repCommentBlock.querySelector('.current-coverage').textContent = `${(coverage * 100).toFixed(2)}%`;
         }
       } else {
         console.warn("No match found for rule", rule, "size", size);
@@ -157,29 +198,42 @@
     }
 
     const showAdvancedControlsButton = document.getElementById('show-advanced-controls');
-    console.log(showAdvancedControlsButton);
     let advancedControls = true;
     const sizeSelectionWrap = document.getElementById('size-selection-wrap');
     const ruleSelectionWraps = document.querySelectorAll('.rule-selection-wrap');
     const selectPopularity = document.getElementById('rule-select-popularity');
     const selectRepresentation = document.getElementById('rule-select-representation');
     const selectDiversity = document.getElementById('rule-select-diversity');
+    const repCommentsTitles = document.querySelectorAll('.representative-comments-block-title');
+    const alRepCommentsTitles = document.querySelectorAll('.alternative-representative-comments-block-title');
 
     function toggleAdvancedControlsVisibility() {
       if (advancedControls) {
         advancedControls = false;
-        showAdvancedControlsButton.textContent = 'Show Advanced Controls';
+        showAdvancedControlsButton.textContent = 'Enable Advanced Controls';
         ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.add('hidden'));
         sizeSelectionWrap.classList.add('hidden');
         selectPopularity.value = '{{ default_popularity_rule }}';
         selectRepresentation.value = '{{ default_representation_rule }}';
         selectDiversity.value = '{{ default_diversity_rule }}';
+        repCommentsTitles.forEach(title => {
+          title.classList.remove('hidden');
+        });
+        alRepCommentsTitles.forEach(title => {
+          title.classList.add('hidden');
+        });
         updateAllRepresentativeComments();
       } else {
         advancedControls = true;
-        showAdvancedControlsButton.textContent = 'Hide Advanced Controls';
+        showAdvancedControlsButton.textContent = 'Reset Default Settings';
         ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.remove('hidden'));
         sizeSelectionWrap.classList.remove('hidden');
+        repCommentsTitles.forEach(title => {
+          title.classList.add('hidden');
+        });
+        alRepCommentsTitles.forEach(title => {
+          title.classList.remove('hidden');
+        });
       }
     }
 
@@ -187,6 +241,25 @@
       showAdvancedControlsButton.addEventListener('click', toggleAdvancedControlsVisibility);
       toggleAdvancedControlsVisibility();
     }
+
+    function sortArticleComments(by = "timestamp", ascending = true) {
+      const container = document.getElementById('all-comments-list');
+      const comments = Array.from(container.querySelectorAll('.article-comment'));
+
+      const sorted = comments.sort((a, b) => {
+        const valA = parseFloat(a.dataset[by]);
+        const valB = parseFloat(b.dataset[by]);
+
+        return ascending ? valA - valB : valB - valA;
+      });
+
+      sorted.forEach(el => container.appendChild(el));
+    }
+
+    document.getElementById('sort-comments').addEventListener('change', e => {
+      const [by, direction] = e.target.value.split("-");
+      sortArticleComments(by, direction === "asc");
+    });
 });
 </script>
 

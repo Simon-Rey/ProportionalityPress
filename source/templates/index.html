@@ -5,15 +5,23 @@
 {% block content %}
 <h1 class="standard-padded-container">Welcome to the <span class="proportionality-press">Proportionality Press</span></h1>
 
-<div class="standard-sides-padded-container">
+<section>
   <p>
-    The <strong>Proportionality Press</strong> is a website developed to demonstrate how the principle of proportionality can be applied to improve collective decision-making.
+    The <strong>Proportionality Press</strong> explores how we can improve collective decisions and public conversations
+    using clear, principled approaches. This website showcases practical approaches to selecting content that reflects
+    a broad range of perspectives.
   </p>
+
   <p>
-    One key example showcased here is the selection of <strong>representative comments</strong> from online discussions. By applying voting rules that respect diverse perspectives, we can identify a set of comments that best reflect the views of participants — offering a fairer and more informative summary of the conversation.
+    We focus on the selection of <strong>representative comments</strong> from online
+    discussions, &mdash; a Reddit thread or the comment section beneath a news article for instance.
+    Rather than simply highlighting only the most liked or most recent contributions, we apply voting-based methods to
+    explore different ways of selecting representative comments.
   </p>
+
   <p>
-    Explore the articles to see proportionality in action and learn how computational methods can bring clarity and balance to complex discussions.
+    For each article, we present selections produced by different methods and analyze their practical implications.
+    You can start by reading one of our featured articles, or simply browse through the full list.
   </p>
 
   <p>Highlighted Articles:</p>
@@ -22,5 +30,5 @@
       <li><a href="{{ article.link }}">{{ article.title }}</a></li>
     {% endfor %}
   </ul>
-</div>
+</section>
 {% endblock %}
