@@ -568,3 +568,34 @@ section:nth-child(even) .article-comment {
   font-size: 0.85rem;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
+
+.satisfaction-histogram {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5em;
+  height: 17vh;
+  margin-top: 1em;
+  align-content: center;
+  justify-content: center;
+}
+
+.satisfaction-histogram-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 1.5em;
+  height: 100%;
+}
+
+.satisfaction-histogram-bar-fill {
+  width: 100%;
+  background-color: var(--color-highlight);
+  transition: height 0.3s ease;
+}
+
+.satisfaction-histogram-bar-label,
+.satisfaction-histogram-bar-count {
+  font-size: 0.8em;
+  margin: 0.2em 0;
+}

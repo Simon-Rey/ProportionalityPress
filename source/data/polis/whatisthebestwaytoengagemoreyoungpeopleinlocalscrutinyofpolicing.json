@@ -1212,7 +1212,19 @@
         "max_satisfaction": 61,
         "satisfaction": 61,
         "coverage": 0.8846153846153846,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 0,
+          "30%": 2,
+          "40%": 0,
+          "50%": 0,
+          "60%": 4,
+          "70%": 0,
+          "80%": 0,
+          "90%": 17
+        }
       },
       "5": {
         "rule_id": "av",
@@ -1227,7 +1239,19 @@
         "max_satisfaction": 99,
         "satisfaction": 99,
         "coverage": 0.9230769230769231,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 2,
+          "30%": 0,
+          "40%": 1,
+          "50%": 1,
+          "60%": 0,
+          "70%": 0,
+          "80%": 8,
+          "90%": 12
+        }
       },
       "8": {
         "rule_id": "av",
@@ -1245,7 +1269,19 @@
         "max_satisfaction": 151,
         "satisfaction": 151,
         "coverage": 0.9615384615384616,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 3,
+          "20%": 0,
+          "30%": 1,
+          "40%": 0,
+          "50%": 1,
+          "60%": 1,
+          "70%": 4,
+          "80%": 8,
+          "90%": 7
+        }
       },
       "10": {
         "rule_id": "av",
@@ -1265,7 +1301,19 @@
         "max_satisfaction": 182,
         "satisfaction": 182,
         "coverage": 0.9615384615384616,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 3,
+          "20%": 1,
+          "30%": 0,
+          "40%": 1,
+          "50%": 1,
+          "60%": 2,
+          "70%": 0,
+          "80%": 7,
+          "90%": 10
+        }
       }
     },
     "sav": {
@@ -1280,7 +1328,19 @@
         "max_satisfaction": 61,
         "satisfaction": 58,
         "coverage": 0.9615384615384616,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 0,
+          "30%": 5,
+          "40%": 0,
+          "50%": 0,
+          "60%": 7,
+          "70%": 0,
+          "80%": 0,
+          "90%": 13
+        }
       },
       "5": {
         "rule_id": "sav",
@@ -1295,7 +1355,19 @@
         "max_satisfaction": 99,
         "satisfaction": 97,
         "coverage": 0.9615384615384616,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 3,
+          "30%": 0,
+          "40%": 1,
+          "50%": 2,
+          "60%": 0,
+          "70%": 0,
+          "80%": 9,
+          "90%": 10
+        }
       },
       "8": {
         "rule_id": "sav",
@@ -1313,7 +1385,19 @@
         "max_satisfaction": 151,
         "satisfaction": 147,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 3,
+          "20%": 1,
+          "30%": 0,
+          "40%": 0,
+          "50%": 3,
+          "60%": 1,
+          "70%": 5,
+          "80%": 9,
+          "90%": 4
+        }
       },
       "10": {
         "rule_id": "sav",
@@ -1333,7 +1417,19 @@
         "max_satisfaction": 182,
         "satisfaction": 174,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 2,
+          "20%": 1,
+          "30%": 0,
+          "40%": 2,
+          "50%": 4,
+          "60%": 7,
+          "70%": 0,
+          "80%": 2,
+          "90%": 8
+        }
       }
     },
     "pav": {
@@ -1348,7 +1444,19 @@
         "max_satisfaction": 61,
         "satisfaction": 60,
         "coverage": 0.9230769230769231,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 0,
+          "30%": 4,
+          "40%": 0,
+          "50%": 0,
+          "60%": 4,
+          "70%": 0,
+          "80%": 0,
+          "90%": 16
+        }
       },
       "5": {
         "rule_id": "pav",
@@ -1363,7 +1471,19 @@
         "max_satisfaction": 99,
         "satisfaction": 98,
         "coverage": 0.9615384615384616,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 3,
+          "30%": 0,
+          "40%": 2,
+          "50%": 0,
+          "60%": 0,
+          "70%": 0,
+          "80%": 9,
+          "90%": 11
+        }
       },
       "8": {
         "rule_id": "pav",
@@ -1381,7 +1501,19 @@
         "max_satisfaction": 151,
         "satisfaction": 147,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 3,
+          "20%": 1,
+          "30%": 0,
+          "40%": 0,
+          "50%": 2,
+          "60%": 1,
+          "70%": 7,
+          "80%": 9,
+          "90%": 3
+        }
       },
       "10": {
         "rule_id": "pav",
@@ -1401,7 +1533,19 @@
         "max_satisfaction": 182,
         "satisfaction": 175,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 2,
+          "20%": 1,
+          "30%": 0,
+          "40%": 2,
+          "50%": 5,
+          "60%": 4,
+          "70%": 0,
+          "80%": 4,
+          "90%": 8
+        }
       }
     },
     "cc": {
@@ -1416,7 +1560,19 @@
         "max_satisfaction": 61,
         "satisfaction": 52,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 0,
+          "30%": 7,
+          "40%": 0,
+          "50%": 0,
+          "60%": 12,
+          "70%": 0,
+          "80%": 0,
+          "90%": 7
+        }
       },
       "5": {
         "rule_id": "cc",
@@ -1431,7 +1587,19 @@
         "max_satisfaction": 99,
         "satisfaction": 68,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 5,
+          "30%": 0,
+          "40%": 4,
+          "50%": 13,
+          "60%": 0,
+          "70%": 0,
+          "80%": 4,
+          "90%": 0
+        }
       },
       "8": {
         "rule_id": "cc",
@@ -1449,7 +1617,19 @@
         "max_satisfaction": 151,
         "satisfaction": 86,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 5,
+          "20%": 1,
+          "30%": 5,
+          "40%": 0,
+          "50%": 11,
+          "60%": 4,
+          "70%": 0,
+          "80%": 0,
+          "90%": 0
+        }
       },
       "10": {
         "rule_id": "cc",
@@ -1469,7 +1649,19 @@
         "max_satisfaction": 182,
         "satisfaction": 125,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 4,
+          "20%": 2,
+          "30%": 0,
+          "40%": 2,
+          "50%": 15,
+          "60%": 3,
+          "70%": 0,
+          "80%": 0,
+          "90%": 0
+        }
       }
     },
     "seqpav": {
@@ -1484,7 +1676,19 @@
         "max_satisfaction": 61,
         "satisfaction": 60,
         "coverage": 0.9230769230769231,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 0,
+          "30%": 4,
+          "40%": 0,
+          "50%": 0,
+          "60%": 4,
+          "70%": 0,
+          "80%": 0,
+          "90%": 16
+        }
       },
       "5": {
         "rule_id": "seqpav",
@@ -1499,7 +1703,19 @@
         "max_satisfaction": 99,
         "satisfaction": 98,
         "coverage": 0.9615384615384616,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 3,
+          "30%": 0,
+          "40%": 2,
+          "50%": 0,
+          "60%": 0,
+          "70%": 0,
+          "80%": 9,
+          "90%": 11
+        }
       },
       "8": {
         "rule_id": "seqpav",
@@ -1517,7 +1733,19 @@
         "max_satisfaction": 151,
         "satisfaction": 147,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 3,
+          "20%": 1,
+          "30%": 0,
+          "40%": 0,
+          "50%": 2,
+          "60%": 1,
+          "70%": 7,
+          "80%": 9,
+          "90%": 3
+        }
       },
       "10": {
         "rule_id": "seqpav",
@@ -1537,7 +1765,19 @@
         "max_satisfaction": 182,
         "satisfaction": 175,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 2,
+          "20%": 1,
+          "30%": 0,
+          "40%": 2,
+          "50%": 5,
+          "60%": 4,
+          "70%": 0,
+          "80%": 4,
+          "90%": 8
+        }
       }
     },
     "seqphragmen": {
@@ -1552,7 +1792,19 @@
         "max_satisfaction": 61,
         "satisfaction": 60,
         "coverage": 0.9230769230769231,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 0,
+          "30%": 4,
+          "40%": 0,
+          "50%": 0,
+          "60%": 4,
+          "70%": 0,
+          "80%": 0,
+          "90%": 16
+        }
       },
       "5": {
         "rule_id": "seqphragmen",
@@ -1567,7 +1819,19 @@
         "max_satisfaction": 99,
         "satisfaction": 98,
         "coverage": 0.9615384615384616,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 3,
+          "30%": 0,
+          "40%": 2,
+          "50%": 0,
+          "60%": 0,
+          "70%": 0,
+          "80%": 9,
+          "90%": 11
+        }
       },
       "8": {
         "rule_id": "seqphragmen",
@@ -1585,7 +1849,19 @@
         "max_satisfaction": 151,
         "satisfaction": 147,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 3,
+          "20%": 1,
+          "30%": 0,
+          "40%": 0,
+          "50%": 2,
+          "60%": 1,
+          "70%": 7,
+          "80%": 9,
+          "90%": 3
+        }
       },
       "10": {
         "rule_id": "seqphragmen",
@@ -1605,7 +1881,19 @@
         "max_satisfaction": 182,
         "satisfaction": 178,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 3,
+          "20%": 1,
+          "30%": 0,
+          "40%": 1,
+          "50%": 2,
+          "60%": 5,
+          "70%": 0,
+          "80%": 6,
+          "90%": 8
+        }
       }
     },
     "equal-shares": {
@@ -1620,7 +1908,19 @@
         "max_satisfaction": 61,
         "satisfaction": 59,
         "coverage": 0.9230769230769231,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 0,
+          "30%": 3,
+          "40%": 0,
+          "50%": 0,
+          "60%": 7,
+          "70%": 0,
+          "80%": 0,
+          "90%": 14
+        }
       },
       "5": {
         "rule_id": "equal-shares",
@@ -1635,7 +1935,19 @@
         "max_satisfaction": 99,
         "satisfaction": 99,
         "coverage": 0.9230769230769231,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 2,
+          "30%": 0,
+          "40%": 1,
+          "50%": 1,
+          "60%": 0,
+          "70%": 0,
+          "80%": 8,
+          "90%": 12
+        }
       },
       "8": {
         "rule_id": "equal-shares",
@@ -1653,7 +1965,19 @@
         "max_satisfaction": 151,
         "satisfaction": 147,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 3,
+          "20%": 1,
+          "30%": 0,
+          "40%": 0,
+          "50%": 2,
+          "60%": 1,
+          "70%": 7,
+          "80%": 9,
+          "90%": 3
+        }
       },
       "10": {
         "rule_id": "equal-shares",
@@ -1673,7 +1997,19 @@
         "max_satisfaction": 182,
         "satisfaction": 178,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 3,
+          "20%": 1,
+          "30%": 0,
+          "40%": 1,
+          "50%": 2,
+          "60%": 5,
+          "70%": 0,
+          "80%": 6,
+          "90%": 8
+        }
       }
     },
     "equal-shares-with-av-completion": {
@@ -1688,7 +2024,19 @@
         "max_satisfaction": 61,
         "satisfaction": 61,
         "coverage": 0.8846153846153846,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 0,
+          "30%": 2,
+          "40%": 0,
+          "50%": 0,
+          "60%": 4,
+          "70%": 0,
+          "80%": 0,
+          "90%": 17
+        }
       },
       "5": {
         "rule_id": "equal-shares-with-av-completion",
@@ -1703,7 +2051,19 @@
         "max_satisfaction": 99,
         "satisfaction": 99,
         "coverage": 0.9230769230769231,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 2,
+          "30%": 0,
+          "40%": 1,
+          "50%": 1,
+          "60%": 0,
+          "70%": 0,
+          "80%": 8,
+          "90%": 12
+        }
       },
       "8": {
         "rule_id": "equal-shares-with-av-completion",
@@ -1721,7 +2081,19 @@
         "max_satisfaction": 151,
         "satisfaction": 147,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 3,
+          "20%": 1,
+          "30%": 0,
+          "40%": 0,
+          "50%": 2,
+          "60%": 1,
+          "70%": 7,
+          "80%": 9,
+          "90%": 3
+        }
       },
       "10": {
         "rule_id": "equal-shares-with-av-completion",
@@ -1741,7 +2113,19 @@
         "max_satisfaction": 182,
         "satisfaction": 182,
         "coverage": 0.9615384615384616,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 2,
+          "20%": 1,
+          "30%": 0,
+          "40%": 2,
+          "50%": 1,
+          "60%": 3,
+          "70%": 0,
+          "80%": 6,
+          "90%": 10
+        }
       }
     },
     "equal-shares-with-increment-completion": {
@@ -1756,7 +2140,19 @@
         "max_satisfaction": 61,
         "satisfaction": 61,
         "coverage": 0.8846153846153846,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 0,
+          "30%": 2,
+          "40%": 0,
+          "50%": 0,
+          "60%": 4,
+          "70%": 0,
+          "80%": 0,
+          "90%": 17
+        }
       },
       "5": {
         "rule_id": "equal-shares-with-increment-completion",
@@ -1771,7 +2167,19 @@
         "max_satisfaction": 99,
         "satisfaction": 99,
         "coverage": 0.9230769230769231,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 2,
+          "30%": 0,
+          "40%": 1,
+          "50%": 1,
+          "60%": 0,
+          "70%": 0,
+          "80%": 8,
+          "90%": 12
+        }
       },
       "8": {
         "rule_id": "equal-shares-with-increment-completion",
@@ -1789,7 +2197,19 @@
         "max_satisfaction": 151,
         "satisfaction": 147,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 3,
+          "20%": 1,
+          "30%": 0,
+          "40%": 0,
+          "50%": 2,
+          "60%": 1,
+          "70%": 7,
+          "80%": 9,
+          "90%": 3
+        }
       },
       "10": {
         "rule_id": "equal-shares-with-increment-completion",
@@ -1809,7 +2229,19 @@
         "max_satisfaction": 182,
         "satisfaction": 178,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 3,
+          "20%": 1,
+          "30%": 0,
+          "40%": 1,
+          "50%": 2,
+          "60%": 5,
+          "70%": 0,
+          "80%": 6,
+          "90%": 8
+        }
       }
     },
     "phragmen-enestroem": {
@@ -1824,7 +2256,19 @@
         "max_satisfaction": 61,
         "satisfaction": 60,
         "coverage": 0.9230769230769231,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 0,
+          "30%": 4,
+          "40%": 0,
+          "50%": 0,
+          "60%": 4,
+          "70%": 0,
+          "80%": 0,
+          "90%": 16
+        }
       },
       "5": {
         "rule_id": "phragmen-enestroem",
@@ -1839,7 +2283,19 @@
         "max_satisfaction": 99,
         "satisfaction": 98,
         "coverage": 0.9615384615384616,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 3,
+          "30%": 0,
+          "40%": 2,
+          "50%": 0,
+          "60%": 0,
+          "70%": 0,
+          "80%": 9,
+          "90%": 11
+        }
       },
       "8": {
         "rule_id": "phragmen-enestroem",
@@ -1857,7 +2313,19 @@
         "max_satisfaction": 151,
         "satisfaction": 147,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 3,
+          "20%": 1,
+          "30%": 0,
+          "40%": 0,
+          "50%": 2,
+          "60%": 1,
+          "70%": 7,
+          "80%": 9,
+          "90%": 3
+        }
       },
       "10": {
         "rule_id": "phragmen-enestroem",
@@ -1877,7 +2345,19 @@
         "max_satisfaction": 182,
         "satisfaction": 175,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 2,
+          "20%": 2,
+          "30%": 0,
+          "40%": 1,
+          "50%": 3,
+          "60%": 5,
+          "70%": 0,
+          "80%": 6,
+          "90%": 7
+        }
       }
     },
     "consensus-rule": {
@@ -1892,7 +2372,19 @@
         "max_satisfaction": 61,
         "satisfaction": 59,
         "coverage": 0.9230769230769231,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 0,
+          "30%": 3,
+          "40%": 0,
+          "50%": 0,
+          "60%": 7,
+          "70%": 0,
+          "80%": 0,
+          "90%": 14
+        }
       },
       "5": {
         "rule_id": "consensus-rule",
@@ -1907,7 +2399,19 @@
         "max_satisfaction": 99,
         "satisfaction": 90,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 0,
+          "20%": 4,
+          "30%": 0,
+          "40%": 1,
+          "50%": 4,
+          "60%": 0,
+          "70%": 0,
+          "80%": 13,
+          "90%": 4
+        }
       },
       "8": {
         "rule_id": "consensus-rule",
@@ -1925,7 +2429,19 @@
         "max_satisfaction": 151,
         "satisfaction": 142,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 2,
+          "20%": 1,
+          "30%": 2,
+          "40%": 0,
+          "50%": 1,
+          "60%": 4,
+          "70%": 6,
+          "80%": 8,
+          "90%": 2
+        }
       },
       "10": {
         "rule_id": "consensus-rule",
@@ -1945,7 +2461,19 @@
         "max_satisfaction": 182,
         "satisfaction": 163,
         "coverage": 1.0,
-        "max_coverage": 1.0
+        "max_coverage": 1.0,
+        "sat_distribution": {
+          "0%": 0,
+          "10%": 2,
+          "20%": 1,
+          "30%": 0,
+          "40%": 2,
+          "50%": 6,
+          "60%": 6,
+          "70%": 0,
+          "80%": 8,
+          "90%": 1
+        }
       }
     }
   }

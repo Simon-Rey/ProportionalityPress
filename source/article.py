@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import json
 from collections import defaultdict
 from collections.abc import Iterable, Collection
@@ -95,7 +97,8 @@ class RuleResult:
                  satisfaction: int=None,
                  max_satisfaction: int=None,
                  coverage: float=None,
-                 max_coverage: float=None,):
+                 max_coverage: float=None,
+                 sat_distribution: dict[str, int] = None):
         self.rule_id = rule_id
         self.committee_size = committee_size
         if committee is None:
@@ -105,6 +108,7 @@ class RuleResult:
         self.max_satisfaction = max_satisfaction
         self.coverage = coverage
         self.max_coverage = max_coverage
+        self.sat_distribution = sat_distribution
 
     def to_dict(self):
         return {
@@ -115,6 +119,7 @@ class RuleResult:
             "satisfaction": self.satisfaction,
             "coverage": self.coverage,
             "max_coverage": self.max_coverage,
+            "sat_distribution": self.sat_distribution,
         }
 
     @classmethod
@@ -127,6 +132,7 @@ class RuleResult:
             satisfaction=data["satisfaction"],
             coverage=data["coverage"],
             max_coverage=data["max_coverage"],
+            sat_distribution=data["sat_distribution"],
         )
 
     def _identifier(self):

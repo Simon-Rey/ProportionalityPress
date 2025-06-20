@@ -133,6 +133,7 @@
         // Update the Analysis Measures
         updateSatisfaction(repCommentBlock, rule, size);
         updateCoverage(repCommentBlock, rule, size);
+        updateSatisfactionDistribution(repCommentBlock, rule, size);
       } else {
         console.warn("No match found for rule", rule, "size", size);
       }
@@ -175,6 +176,67 @@
       } else {
         console.warn("No match found for rule", rule, "size", size);
       }
+    }
+
+    function updateSatisfactionDistribution(repCommentBlock, rule, size) {
+      const match = rulesResultsData.find(
+        r => r.rule_id === rule && r.committee_size === parseInt(size)
+      );
+
+      if (!match || !match.sat_distribution) {
+        const fallback = repCommentBlock.querySelector('.satisfaction-histogram');
+        if (fallback) {
+          fallback.innerHTML = "No satisfaction distribution available.";
+        }
+        return;
+      }
+
+      // Remove existing chart/canvas if present
+      const oldCanvas = repCommentBlock.querySelector('canvas.satisfaction-chart');
+      if (oldCanvas) oldCanvas.remove();
+
+      // Create new canvas
+      const canvas = document.createElement('canvas');
+      canvas.className = 'satisfaction-chart';
+      repCommentBlock.querySelector('.satisfaction-histogram').innerHTML = ''; // Clear previous
+      repCommentBlock.querySelector('.satisfaction-histogram').appendChild(canvas);
+
+      const labels = Object.keys(match.sat_distribution);
+      const data = Object.values(match.sat_distribution);
+
+      new Chart(canvas, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [{
+            label: 'Voter Satisfaction',
+            data,
+            backgroundColor: 'rgba(248,134,82,0.7)',
+            borderColor: 'rgb(205,105,31)',
+            borderWidth: 1
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              callbacks: {
+                label: context => `${context.parsed.y} voters`
+              }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: { display: true, text: 'Number of Voters' }
+            },
+            x: {
+              title: { display: true, text: 'Satisfaction Level' }
+            }
+          }
+        }
+      });
     }
 
     function updateAllRepresentativeComments() {
