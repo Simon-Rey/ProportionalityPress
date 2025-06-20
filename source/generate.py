@@ -44,7 +44,7 @@ def generate_site(config: SiteConfig, articles: list[Article]):
     articles_per_category = defaultdict(list)
     for article in articles:
         articles_per_category[article.category].append(article)
-
+    articles_per_category = sorted([(c, a) for c, a in articles_per_category.items()], key=lambda x: x[0])
 
     # Write index page
     highlighted_articles_title = ["15hour", "ernhrungundlandnutzung", "mobilitt", "operationmarchingorders", "fairenoughhowshouldnewzealandersbetaxed"]

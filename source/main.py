@@ -4,7 +4,7 @@ import shutil
 from generate import generate_site
 from article import default_config, dump_article_to_json, load_article_from_json
 from rules import compute_rules_for_article
-from polis import read_polis_poll, polis_poll_to_article
+from polis import read_polis_poll, polis_poll_to_article, overwrite_default_content
 from source.analysis import add_analysis_to_article
 
 
@@ -59,12 +59,24 @@ def add_analysis_measures():
         add_analysis_to_article(article)
         file_path = os.path.join(polis_data_dir_path, article.slugified_title + ".json")
         dump_article_to_json(article, file_path)
-        generate_all_polis()
+    generate_all_polis()
+
+def overwrite_default_content_all():
+    source_dir_path = os.path.dirname(os.path.realpath(__file__))
+    polis_data_dir_path = os.path.join(source_dir_path, 'data', 'polis')
+
+    for article_file in os.listdir(polis_data_dir_path):
+        article = load_article_from_json(os.path.join(polis_data_dir_path, article_file))
+        overwrite_default_content(article)
+        file_path = os.path.join(polis_data_dir_path, article.slugified_title + ".json")
+        dump_article_to_json(article, file_path)
+    generate_all_polis()
 
 def main():
     # all_polis_to_json()
     # compute_and_write_all_rules()
     # add_analysis_measures()
+    overwrite_default_content_all()
     generate_all_polis()
 
     # source_dir_path = os.path.dirname(os.path.realpath(__file__))

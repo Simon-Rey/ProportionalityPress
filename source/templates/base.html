@@ -21,14 +21,16 @@
         </a>
       </div>
       <nav id="main-nav">
-        {% for category, articles in articles_per_category.items() %}
+        {% for category, articles in articles_per_category %}
           <div class="submenu-wrap">
             <span class="submenu-header">{{ category }}</span>
             <div class="submenu-entry-wrap">
               {% for article in articles %}
-                <div class="menu-entry">
-                  <span><a href="{{ article.link }}">{{ article.title }}</a></span>
-                </div>
+                <a href="{{ article.link }}">
+                  <div class="menu-entry">
+                    <span>{{ article.title }}</span>
+                  </div>
+                </a>
               {% endfor %}
             </div>
           </div>

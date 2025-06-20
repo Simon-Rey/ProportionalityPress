@@ -1,13 +1,13 @@
 {
-  "title": "$15/hour",
-  "slugified_title": "15hour",
+  "title": "New Minimum Wage in Seattle: $15/hour",
+  "slugified_title": "newminimumwageinseattle15hour",
   "category": "Economy",
   "text": "<p><p>How do you think the new minimum wage law will affect Seattle? Will it be for the better or for the worse? Why?</p></p>",
   "sources": {
     "Original Polis poll": "https://pol.is/2demo"
   },
   "html_include_file": null,
-  "link": "15hour.html",
+  "link": "newminimumwageinseattle15hour.html",
   "comments": [
     {
       "comment_id": "53",

@@ -191,6 +191,7 @@ header {
   flex-direction: column;
   gap: 0.5vh;
   color: black;
+  text-shadow: 2px 2px var(--color-background);
 }
 
 .logo-main {
@@ -227,11 +228,13 @@ header {
   font-weight: 100;
   font-style: normal;
   font-variant: small-caps;
+  text-shadow: 1px 1px var(--color-background);
 }
 
 .submenu-wrap:hover .submenu-header {
   background-color: var(--color-highlight);
   color: white;
+  text-shadow: 1px 1px var(--color-background-very-very-dark);
 }
 
 .submenu-entry-wrap {
@@ -244,7 +247,6 @@ header {
   border: 1px solid var(--color-background-very-dark);
   border-top: none;
   z-index: 100;
-  padding: 0.5em 0;
   min-width: 12em;
   max-width: 25em;
   white-space: normal;
@@ -253,6 +255,10 @@ header {
 
 .submenu-wrap:hover .submenu-entry-wrap {
   display: block;
+}
+
+.submenu-entry-wrap a {
+  color: black;
 }
 
 .menu-entry {
@@ -265,8 +271,9 @@ header {
   display: block;
 }
 
-.menu-entry a:hover {
-  color: var(--color-frame);
+.menu-entry:hover {
+  background: var(--color-frame);
+  color: white;
 }
 
 /* Desktop: hover behavior */
@@ -349,6 +356,7 @@ h1 {
   font-style: normal;
   background: var(--color-highlight);
   color: white;
+  text-shadow: 1px 1px var(--color-background-very-very-dark);
 }
 
 #article-body {

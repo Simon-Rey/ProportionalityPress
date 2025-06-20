@@ -188,8 +188,39 @@ def overwrite_default_content(article: Article):
         article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1804/S00054/fair-enough-how-should-new-zealanders-be-taxed.htm"
         article.html_include_file = "new_zealand_tax.html"
 
+    if article.slugified_title == "auniversalbasicincomeforaotearoanz":
+        article.title = "A Universal Basic Income for Aotearoa NZ?"
+        article.slugified_title = make_url_friendly(article.title)
+        article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1709/S00031/hivemind-report-a-universal-basic-income-for-aotearoa-nz.htm"
+
+    if article.slugified_title == "protectingandrestoringnzsbiodiversity":
+        article.title = "Protecting and Restoring New Zealand's Biodiversity"
+        article.slugified_title = make_url_friendly(article.title)
+        article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1908/S00014/scoop-hivemind-protecting-and-restoring-biodiversity.htm"
+        article.html_include_file = "new_zealand_biodiversity.html"
+
+    if article.slugified_title == "hivemind-freshwaterqualityinnz":
+        article.title = "Freshwater Quality in New Zealand"
+        article.slugified_title = make_url_friendly(article.title)
+        article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1707/S00042/opening-the-election-hivemind-freshwater-quality.htm"
+        article.html_include_file = "new_zealand_freshwater.html"
+
+    if article.slugified_title == "scoopnzhivemindonaffordablehousing":
+        article.title = "Affordable Housing in New Zealand"
+        article.slugified_title = make_url_friendly(article.title)
+        article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1706/S00034/making-housing-affordable-lets-crack-it.htm"
+        article.html_include_file = "new_zealand_affordable_housing.html"
+
+    if article.slugified_title == "jointhediscussionbelowlanduseandconservationinthesanjuanislands":
+        article.title = "Land use and conservation in the San Juan Islands"
+        article.slugified_title = make_url_friendly(article.title)
+
+    if article.slugified_title == "15hour":
+        article.title = "New minimum wage in Seattle: $15/hour"
+        article.slugified_title = make_url_friendly(article.title)
+
     title_to_categories = {
-        "15hour": "Economy",
+        "newminimumwageinseattle15hour": "Economy",
         "auniversalbasicincomeforaotearoanz": "Economy",
         "canadianelectoralreform": "Politics",
         "cantherebeconsensusonbrexit": "Politics",
@@ -197,14 +228,14 @@ def overwrite_default_content(article: Article):
         "energie": "Environment",
         "ernhrungundlandnutzung": "Environment",
         "fairenoughhowshouldnewzealandersbetaxed": "Economy",
-        "hivemind-freshwaterqualityinnz": "Society",
+        "freshwaterqualityinnewzealand": "Environment",
         "improvingbowlinggreenwarrencounty": "Society",
-        "jointhediscussionbelowlanduseandconservationinthesanjuanislands": "Environment",
+        "landuseandconservationinthesanjuanislands": "Environment",
         "mobilitt": "Environment",
         "operationmarchingorders": "Politics",
         "produktionundkonsum": "Society",
-        "protectingandrestoringnzsbiodiversity": "Environment",
-        "scoopnzhivemindonaffordablehousing": "Society",
+        "protectingandrestoringnewzealandsbiodiversity": "Environment",
+        "affordablehousinginnewzealand": "Society",
         "togetherwellbuildthebgof2050": "Society",
         "uberxvtaiwantw": "Society",
         "whatisthebestwaytoengagemoreyoungpeopleinlocalscrutinyofpolicing": "Politics",

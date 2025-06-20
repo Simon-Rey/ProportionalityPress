@@ -1,13 +1,14 @@
 {
-  "title": "HiveMind - Freshwater Quality in NZ",
-  "slugified_title": "hivemind-freshwaterqualityinnz",
-  "category": "Society",
+  "title": "Freshwater Quality in New Zealand",
+  "slugified_title": "freshwaterqualityinnewzealand",
+  "category": "Environment",
   "text": "<p><p>This HiveMind is now closed. Thank you to the 117 participants who voted and submitted statements. </p>\n<p>The graphic visualisation below shows the participants grouped in clusters based on shared opinions.</p></p>",
   "sources": {
-    "Original Polis poll": "https://pol.is/5psrv8bm2a"
+    "Original Polis poll": "https://pol.is/5psrv8bm2a",
+    "Soop article": "https://www.scoop.co.nz/stories/HL1707/S00042/opening-the-election-hivemind-freshwater-quality.htm"
   },
-  "html_include_file": null,
-  "link": "hivemind-freshwaterqualityinnz.html",
+  "html_include_file": "new_zealand_freshwater.html",
+  "link": "freshwaterqualityinnewzealand.html",
   "comments": [
     {
       "comment_id": "79",
