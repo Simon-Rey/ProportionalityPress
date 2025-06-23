@@ -2,7 +2,7 @@ import os
 import shutil
 from collections import defaultdict
 
-from jinja2 import Environment, FileSystemLoader, select_autoescape
+from jinja2 import Environment, FileSystemLoader, select_autoescape, StrictUndefined
 
 from article import Article, SiteConfig
 
@@ -38,7 +38,8 @@ def generate_site(config: SiteConfig, articles: list[Article]):
     template_dir_path = os.path.join(base_path, config.template_dir)
     env = Environment(
         loader=FileSystemLoader(template_dir_path),
-        autoescape=select_autoescape(['html', 'xml'])
+        autoescape=select_autoescape(['html', 'xml']),
+        undefined=StrictUndefined
     )
 
     articles_per_category = defaultdict(list)
@@ -68,9 +69,9 @@ def generate_site(config: SiteConfig, articles: list[Article]):
             articles_per_category=articles_per_category,
             all_articles=articles,
             config=config,
-            default_popularity_rule="av",
-            default_representation_rule="equal-shares-with-increment-completion",
-            default_diversity_rule="cc",
+            default_rule_popularity="av",
+            default_rule_representation="equal-shares-with-increment-completion",
+            default_rule_diversity="cc",
             rule_name_mapping=RULE_NAME_MAPPING,
         )
 

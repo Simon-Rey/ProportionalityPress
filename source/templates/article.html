@@ -6,7 +6,6 @@
   <h1 class="standard-padded-container">{{ article.title }}</h1>
 
   <section>
-
     <div id="article-content-wrap">
       <div id="article-body">
         {% if article.html_include_file %}
@@ -22,6 +21,7 @@
         </span>
       {% endfor %}
       </div>
+    </div>
   </section>
 
     {% if article.rule_results %}
@@ -106,10 +106,8 @@
     const sizeSelect = document.getElementById('size-select');
 
     function updateRepresentativeCommentsBlock(ruleSelect) {
-        const rule = ruleSelect.value;
-        const size = sizeSelect.value;
-
-        // Use optional chaining and fallback to empty array
+      const rule = ruleSelect.querySelector('.rule-select-option.selected')?.dataset.value
+      const size = sizeSelect.value;
 
       const match = rulesResultsData.find(r => r.rule_id === rule && r.committee_size === parseInt(size));
       if (match) {
@@ -225,6 +223,7 @@
         },
         options: {
           responsive: true,
+          maintainAspectRatio: false,
           plugins: {
             legend: { display: false },
             tooltip: {
@@ -289,9 +288,9 @@
         showAdvancedControlsButton.textContent = 'Enable Advanced Controls';
         ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.add('hidden'));
         sizeSelectionWrap.classList.add('hidden');
-        selectPopularity.value = '{{ default_popularity_rule }}';
-        selectRepresentation.value = '{{ default_representation_rule }}';
-        selectDiversity.value = '{{ default_diversity_rule }}';
+        selectPopularity.value = '{{ default_rule_popularity }}';
+        selectRepresentation.value = '{{ default_rule_representation }}';
+        selectDiversity.value = '{{ default_rule_diversity }}';
         repCommentsTitles.forEach(title => {
           title.classList.remove('hidden');
         });
@@ -335,6 +334,22 @@
     document.getElementById('sort-comments').addEventListener('change', e => {
       const [by, direction] = e.target.value.split("-");
       sortArticleComments(by, direction === "asc");
+    });
+
+    ruleSelects.forEach(ruleSelect => {
+      ruleSelect.querySelectorAll('.rule-select-option').forEach(option => {
+        option.addEventListener('click', () => {
+          // Remove selected from all in this group
+          ruleSelect.querySelectorAll('.rule-select-option').forEach(opt => {
+            opt.classList.remove('selected');
+          });
+
+          // Add to clicked one
+          option.classList.add('selected');
+
+          updateRepresentativeCommentsBlock(ruleSelect);
+        });
+      });
     });
 });
 </script>

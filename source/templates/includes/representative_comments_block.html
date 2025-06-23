@@ -3,11 +3,11 @@
   <h3 class="representative-comments-block-title alternative-representative-comments-block-title hidden">{{ alt_title }}</h3>
   <div class="rule-selection-wrap">
     <label for="{{ rule_select_id }}">Selection Method:</label>
-    <select id="{{ rule_select_id }}" class="rule-select">
+    <div id="{{ rule_select_id }}" class="rule-select">
       {% for rule in article.computed_rules %}
-        <option value="{{ rule }}"{% if rule == default_rule %} selected="selected"{% endif %}>{{ rule_name_mapping[rule] }}</option>
+        <div data-value="{{ rule }}" class="rule-select-option{% if rule == default_rule %} selected{% endif %}"><span>{{ rule_name_mapping[rule] }}</span></div>
       {% endfor %}
-    </select>
+    </div>
   </div>
 
   <div class="representative-comments-analysis">

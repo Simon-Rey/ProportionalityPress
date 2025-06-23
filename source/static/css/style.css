@@ -396,6 +396,25 @@ h1 {
   margin-bottom: 2vh;
 }
 
+.rule-select {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.rule-select-option {
+  background: var(--color-background-light);
+  border: 1px solid var(--color-background-very-very-dark);
+  border-radius: 3px;
+  box-sizing: border-box;
+  padding: 2px 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.rule-select-option.selected {
+  background: var(--color-success);
+}
+
 #representative-comments-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
