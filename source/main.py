@@ -76,7 +76,7 @@ def main():
     # all_polis_to_json()
     # compute_and_write_all_rules()
     # add_analysis_measures()
-    # overwrite_default_content_all()
+    overwrite_default_content_all()
     generate_all_polis()
 
     # source_dir_path = os.path.dirname(os.path.realpath(__file__))

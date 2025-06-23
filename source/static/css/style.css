@@ -14,7 +14,8 @@
     --color-highlight-light: #ef8f6f;
     --color-highlight-very-light: #ea9f86;
 
-	--color-success-light: #a4e8a1;
+    --color-success-very-light: #d0facd;
+    --color-success-light: #a4e8a1;
 	--color-success: #8ace66;
 	--color-success-dark: #468a1a;
 	--color-warning-light: #ffc19c;
@@ -392,27 +393,39 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 2vh;
+  /*border: 2px solid var(--color-background-very-very-dark);*/
+}
+
+.rule-select-header {
+  padding: 1vh 1vw;
 }
 
 .rule-select {
   display: grid;
   grid-template-columns: 1fr;
+  width: 100%;
+  border-left: 1px solid var(--color-background-very-very-dark);
+  border-right: 1px solid var(--color-background-very-very-dark);
 }
 
 .rule-select-option {
   background: var(--color-background-light);
-  border: 1px solid var(--color-background-very-very-dark);
-  border-radius: 3px;
   box-sizing: border-box;
-  padding: 2px 5px;
+  padding: 0.3vh 1vw;
   font-size: 0.8rem;
   cursor: pointer;
+  width: 100%;
+  border-bottom: 1px solid var(--color-background-very-very-dark);
+}
+
+.rule-select-option:first-of-type {
+  border-top: 1px solid var(--color-background-very-very-dark);
 }
 
 .rule-select-option.selected {
-  background: var(--color-success);
+  background: var(--color-highlight-light);
 }
 
 #representative-comments-wrap {
@@ -579,7 +592,7 @@ section:nth-child(even) .article-comment {
 }
 
 .max-coverage-bar-fill {
-  background-color: #d6f1d2;
+  background-color: var(--color-success-very-light);
 }
 
 .progress-bar-fill span {
@@ -589,12 +602,8 @@ section:nth-child(even) .article-comment {
 }
 
 .satisfaction-histogram {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-.satisfaction-histogram canvas {
-  width: 100%;
+  margin: auto;
+  position: relative;
+  width: 20vw;
   height: 17vh;
 }

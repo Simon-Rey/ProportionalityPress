@@ -216,8 +216,8 @@
           datasets: [{
             label: 'Voter Satisfaction',
             data,
-            backgroundColor: 'rgba(248,134,82,0.7)',
-            borderColor: 'rgb(205,105,31)',
+            backgroundColor: '#ef8f6f',
+            borderColor: '#eb7751',
             borderWidth: 1
           }]
         },
@@ -228,7 +228,7 @@
             legend: { display: false },
             tooltip: {
               callbacks: {
-                label: context => `${context.parsed.y} voters`
+                label: context => `${context.parsed.y} participant${context.parsed.y === 1 ? '' : 's'}`
               }
             }
           },
@@ -236,7 +236,7 @@
             y: {
               beginAtZero: true,
               max: globalMaxY,
-              title: { display: true, text: 'Number of Voters' }
+              title: { display: true, text: 'Number of participants' }
             },
             x: {
               title: { display: true, text: 'Number of approved comments in the selection' },
@@ -263,12 +263,6 @@
         updateAllRepresentativeComments();
       });
 
-      ruleSelects.forEach(ruleSelect => {
-        ruleSelect.addEventListener('change', function () {
-          updateRepresentativeCommentsBlock(ruleSelect);
-        });
-      });
-
       updateAllRepresentativeComments();
     }
 
@@ -288,16 +282,15 @@
         showAdvancedControlsButton.textContent = 'Enable Advanced Controls';
         ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.add('hidden'));
         sizeSelectionWrap.classList.add('hidden');
-        selectPopularity.value = '{{ default_rule_popularity }}';
-        selectRepresentation.value = '{{ default_rule_representation }}';
-        selectDiversity.value = '{{ default_rule_diversity }}';
+        selectRuleOptionByValue(selectPopularity, '{{ default_rule_popularity }}');
+        selectRuleOptionByValue(selectRepresentation, '{{ default_rule_representation }}');
+        selectRuleOptionByValue(selectDiversity, '{{ default_rule_diversity }}');
         repCommentsTitles.forEach(title => {
           title.classList.remove('hidden');
         });
         alRepCommentsTitles.forEach(title => {
           title.classList.add('hidden');
         });
-        updateAllRepresentativeComments();
       } else {
         advancedControls = true;
         showAdvancedControlsButton.textContent = 'Reset Default Settings';
@@ -336,18 +329,31 @@
       sortArticleComments(by, direction === "asc");
     });
 
+    function selectRuleSelectOption(ruleSelect, option) {
+      // Remove selected from all in this group
+      ruleSelect.querySelectorAll('.rule-select-option').forEach(opt => {
+        opt.classList.remove('selected');
+      });
+
+      // Add to clicked one
+      option.classList.add('selected');
+
+      updateRepresentativeCommentsBlock(ruleSelect);
+    }
+
+    function selectRuleOptionByValue(ruleSelect, optionValue) {
+      const options = ruleSelect.querySelectorAll('.rule-select-option');
+      options.forEach(option => {
+        if (option.dataset.value === optionValue) {
+          selectRuleSelectOption(ruleSelect, option);
+        }
+      });
+    }
+
     ruleSelects.forEach(ruleSelect => {
       ruleSelect.querySelectorAll('.rule-select-option').forEach(option => {
         option.addEventListener('click', () => {
-          // Remove selected from all in this group
-          ruleSelect.querySelectorAll('.rule-select-option').forEach(opt => {
-            opt.classList.remove('selected');
-          });
-
-          // Add to clicked one
-          option.classList.add('selected');
-
-          updateRepresentativeCommentsBlock(ruleSelect);
+          selectRuleSelectOption(ruleSelect, option);
         });
       });
     });

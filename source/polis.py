@@ -137,6 +137,7 @@ def polis_poll_to_article(poll: PolisPoll, ignore_not_seen: bool = True) -> Arti
     article = Article(
         title=article_title,
         text=article_body,
+        category="",
         sources=article_sources,
         participant_ids=[pp.participant_id for pp in poll.participants],
     )
@@ -182,7 +183,7 @@ def polis_poll_to_article(poll: PolisPoll, ignore_not_seen: bool = True) -> Arti
     return article
 
 def overwrite_default_content(article: Article):
-    if article.slugified_title == "taxhivemindwindow":
+    if article.slugified_title in ["taxhivemindwindow", "fairenoughhowshouldnewzealandersbetaxed"]:
         article.title = "Fair enough? How should New Zealanders be taxed?"
         article.slugified_title = make_url_friendly(article.title)
         article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1804/S00054/fair-enough-how-should-new-zealanders-be-taxed.htm"
@@ -191,7 +192,9 @@ def overwrite_default_content(article: Article):
     if article.slugified_title == "auniversalbasicincomeforaotearoanz":
         article.title = "A Universal Basic Income for Aotearoa NZ?"
         article.slugified_title = make_url_friendly(article.title)
+        article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1708/S00025/hivemind-universal-basic-income-are-we-up-for-it.htm"
         article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1709/S00031/hivemind-report-a-universal-basic-income-for-aotearoa-nz.htm"
+        article.html_include_file = "new_zealand_universal_income.html"
 
     if article.slugified_title == "protectingandrestoringnzsbiodiversity":
         article.title = "Protecting and Restoring New Zealand's Biodiversity"
@@ -199,23 +202,23 @@ def overwrite_default_content(article: Article):
         article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1908/S00014/scoop-hivemind-protecting-and-restoring-biodiversity.htm"
         article.html_include_file = "new_zealand_biodiversity.html"
 
-    if article.slugified_title == "hivemind-freshwaterqualityinnz":
+    if article.slugified_title in ["hivemind-freshwaterqualityinnz", "freshwaterqualityinnewzealand"]:
         article.title = "Freshwater Quality in New Zealand"
         article.slugified_title = make_url_friendly(article.title)
         article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1707/S00042/opening-the-election-hivemind-freshwater-quality.htm"
         article.html_include_file = "new_zealand_freshwater.html"
 
-    if article.slugified_title == "scoopnzhivemindonaffordablehousing":
+    if article.slugified_title in ["scoopnzhivemindonaffordablehousing", "affordablehousinginnewzealand"]:
         article.title = "Affordable Housing in New Zealand"
         article.slugified_title = make_url_friendly(article.title)
         article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1706/S00034/making-housing-affordable-lets-crack-it.htm"
         article.html_include_file = "new_zealand_affordable_housing.html"
 
-    if article.slugified_title == "jointhediscussionbelowlanduseandconservationinthesanjuanislands":
+    if article.slugified_title in ["jointhediscussionbelowlanduseandconservationinthesanjuanislands", "landuseandconservationinthesanjuanislands"]:
         article.title = "Land use and conservation in the San Juan Islands"
         article.slugified_title = make_url_friendly(article.title)
 
-    if article.slugified_title == "15hour":
+    if article.slugified_title in ["15hour", "newminimumwageinseattle15hour"]:
         article.title = "New minimum wage in Seattle: $15/hour"
         article.slugified_title = make_url_friendly(article.title)
 
