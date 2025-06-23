@@ -75,7 +75,7 @@ def overwrite_default_content_all():
 def main():
     # all_polis_to_json()
     # compute_and_write_all_rules()
-    # add_analysis_measures()
+    add_analysis_measures()
     # overwrite_default_content_all()
     generate_all_polis()
 

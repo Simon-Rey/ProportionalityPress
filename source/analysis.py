@@ -5,7 +5,7 @@ import numpy as np
 from source.article import Article, RuleResult
 
 def satisfaction_vector(article, rule_result):
-    sat_vector = defaultdict(int)
+    sat_vector = {p: 0 for p in article.participant_ids}
     for comment_id in rule_result.committee:
         c = article.get_comment(comment_id)
         for voter_id in c.agreeing_ids:
@@ -22,6 +22,14 @@ def analyse_satisfaction_vector(article: Article, rule_result: RuleResult):
 
     # Sat distribution
     num_bins = 10
+    bin_size = 100 / num_bins
+    sat_distribution = {"0%": 0}
+    current_bin_lb = 0
+    for b in range(num_bins):
+        bin_str = f"{int(current_bin_lb) - int(current_bin_lb + bin_size)}%"
+        sat_distribution[bin_str] = 0
+        current_bin_lb += bin_size
+
     rel_sats = np.array([sat / rule_result.committee_size for sat in sat_vector.values()])
     bins = np.linspace(0, 1, num_bins + 1)
     counts, bin_edges = np.histogram(rel_sats, bins=bins, range=(0, 1), density=False)
