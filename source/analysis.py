@@ -18,7 +18,7 @@ def analyse_satisfaction_vector(article: Article, rule_result: RuleResult):
     rule_result.satisfaction = sum(sat_vector.values())
 
     # Coverage
-    rule_result.coverage = len(sat_vector) / article.num_participants
+    rule_result.coverage = sum(1 for s in sat_vector.values() if s > 0) / len(sat_vector)
 
     # Sat distribution
     sat_distribution = [0 for _ in range(rule_result.committee_size + 1)]
