@@ -571,31 +571,11 @@ section:nth-child(even) .article-comment {
 
 .satisfaction-histogram {
   display: flex;
-  align-items: flex-end;
-  gap: 0.5em;
-  height: 17vh;
-  margin-top: 1em;
   align-content: center;
   justify-content: center;
 }
 
-.satisfaction-histogram-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  width: 1.5em;
-  height: 100%;
-}
-
-.satisfaction-histogram-bar-fill {
+.satisfaction-histogram canvas {
   width: 100%;
-  background-color: var(--color-highlight);
-  transition: height 0.3s ease;
-}
-
-.satisfaction-histogram-bar-label,
-.satisfaction-histogram-bar-count {
-  font-size: 0.8em;
-  margin: 0.2em 0;
+  height: 17vh;
 }

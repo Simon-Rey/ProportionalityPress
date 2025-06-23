@@ -1,8 +1,5 @@
 from collections import defaultdict
 
-from abcvoting.abcrules import Rule
-from abcvoting.preferences import Profile
-
 from article import Article
 from source.article import RuleResult
 
@@ -38,7 +35,10 @@ ALL_RULES = [
 
 ALL_COMMITTEE_SIZES = [3, 5, 8, 10]
 
-def article_to_abc_profile(article: Article, comment_ids_mapping: list[str]) -> Profile:
+def article_to_abc_profile(article: Article, comment_ids_mapping: list[str]):
+    from abcvoting.abcrules import Rule
+    from abcvoting.preferences import Profile
+
     profile = Profile(num_cand=article.num_comments)
 
     ballots = defaultdict(set)
@@ -49,6 +49,9 @@ def article_to_abc_profile(article: Article, comment_ids_mapping: list[str]) -> 
     return profile
 
 def compute_rules_for_article(article: Article):
+    from abcvoting.abcrules import Rule
+    from abcvoting.preferences import Profile
+
     print(f"Computing rules for article {article.title} with {article.num_participants} participants and {article.num_comments} comments")
 
     comment_ids_mapping = [c.comment_id for c in article.comments]

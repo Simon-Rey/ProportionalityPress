@@ -204,6 +204,13 @@
       const labels = Object.keys(match.sat_distribution);
       const data = Object.values(match.sat_distribution);
 
+      const globalMaxY = Math.max(
+        ...rulesResultsData.map(r => {
+          const values = Object.values(r.sat_distribution || {});
+          return Math.max(...values, 0);
+        })
+      );
+
       new Chart(canvas, {
         type: 'bar',
         data: {
@@ -229,11 +236,17 @@
           scales: {
             y: {
               beginAtZero: true,
+              max: globalMaxY,
               title: { display: true, text: 'Number of Voters' }
             },
             x: {
-              title: { display: true, text: '% of approved comments in the selection' }
-
+              title: { display: true, text: 'Number of approved comments in the selection' },
+              ticks: {
+                callback: function(value, index, ticks) {
+                  const count = this.chart.data.datasets[0].data[index];
+                  return count > 0 ? this.chart.data.labels[index] : '';
+                }
+              }
             }
           }
         }
