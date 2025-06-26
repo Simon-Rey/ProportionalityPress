@@ -73,6 +73,7 @@ def generate_site(config: SiteConfig, articles: list[Article]):
             default_rule_representation="equal-shares-with-increment-completion",
             default_rule_diversity="cc",
             rule_name_mapping=RULE_NAME_MAPPING,
+            display_thumbs_down=False
         )
 
         with open(os.path.join(output_dir_path, article.link), "w", encoding="utf-8") as f:

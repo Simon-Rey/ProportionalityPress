@@ -10,7 +10,9 @@
       </div>
       <div class="article-agreement-box" style="grid-template-columns: {{ c.num_agrees }}fr {{ c.num_disagrees }}fr;">
         <span class="article-num-agrees">👍{{ c.num_agrees }}</span>
-        <span class="article-num-disagree">👎{{ c.num_disagrees }}</span>
+        {% if display_thumbs_down %}
+          <span class="article-num-disagree">👎{{ c.num_disagrees }}</span>
+        {% endif %}
       </div>
     </div>
   </div>

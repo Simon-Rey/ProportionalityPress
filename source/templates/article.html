@@ -24,69 +24,116 @@
     </div>
   </section>
 
-    {% if article.rule_results %}
-      <section class="article-comments-wrap">
-        <h2>Summary of the Comment Section</h2>
+  {% if article.rule_results %}
+    <section class="article-comments-wrap">
+      <h2>Summary of the Comment Section</h2>
 
-        <p>
-          This section showcases different methods for selecting representative comments from a broader discussion (see
-          <a href="#article-all-comments-section">the comment section below</a>).
-          For each method, the goal is to highlight a small set of comments that best reflect the conversation.
-          They each approach this task from a different standpoint, emphasising different principles, such as popularity,
-          representation or diversity (among others).
-        </p>
+      <p>
+        This section showcases different methods for selecting representative comments from a broader discussion (see
+        <a href="#article-all-comments-section">the comment section below</a>).
+        For each method, the goal is to highlight a small set of comments that best reflect the conversation.
+        They each approach this task from a different standpoint, emphasising different principles, such as popularity,
+        representation or diversity (among others).
+      </p>
 
-        <p class="center-align">
-          <span id="show-advanced-controls" class="button">Show Advanced Controls</span>
-        </p>
+      <p class="center-align">
+        <span id="show-advanced-controls" class="button">Show Advanced Controls</span>
+      </p>
 
-        <div id="size-selection-wrap">
-          <label for="size-select">Number of Representative Comments:</label>
-          <select id="size-select">
-            {% for size in article.computed_sizes %}
-              <option value="{{ size }}"{% if size == 5 %} selected="selected"{% endif %}>{{ size }}</option>
-            {% endfor %}
-          </select>
-        </div>
-
-        <div id="representative-comments-wrap">
-
-          {% with title="Popularity-Based Selection", rule_select_id="rule-select-popularity", default_rule=default_rule_popularity, comment_list_id="comment-list-popularity", alt_title="Selection 1" %}
-            {% include "includes/representative_comments_block.html" %}
-          {% endwith %}
-
-          {% with title="Representation-Based Selection", rule_select_id="rule-select-representation", default_rule=default_rule_representation, comment_list_id="comment-list-representation", alt_title="Selection 2" %}
-            {% include "includes/representative_comments_block.html" %}
-          {% endwith %}
-
-          {% with title="Diversity-Based Selection", rule_select_id="rule-select-diversity", default_rule=default_rule_diversity, comment_list_id="comment-list-diversity", alt_title="Selection 3" %}
-            {% include "includes/representative_comments_block.html" %}
-          {% endwith %}
-
-        </div>
-      </section>
-    {% endif %}
-
-    <section id="article-all-comments-section" class="article-comments-wrap">
-      <h2 class="next-collapsible">See All {{ article.num_comments }} Comments</h2>
-
-      <div class="collapsed-content hidden">
-        <div class="comment-sorting-controls">
-          <label for="sort-comments">Sort by:</label>
-          <select id="sort-comments">
-            <option value="timestamp-desc">Newest</option>
-            <option value="timestamp-asc">Oldest</option>
-            <option value="agrees-desc">Most Agreed</option>
-            <option value="disagrees-desc">Most Disagreed</option>
-          </select>
-        </div>
-        <div id="all-comments-list" class="article-comments-list">
-          {% for c in article.comments %}
-          {% include "includes/article_comment.html" %}
+      <div id="size-selection-wrap">
+        <label for="size-select">Number of Representative Comments:</label>
+        <select id="size-select">
+          {% for size in article.computed_sizes %}
+            <option value="{{ size }}"{% if size == 5 %} selected="selected"{% endif %}>{{ size }}</option>
           {% endfor %}
-        </div>
+        </select>
+      </div>
+
+      <div id="representative-comments-wrap">
+
+        {% with title="Popularity-Based Selection", rule_select_id="rule-select-popularity", default_rule=default_rule_popularity, comment_list_id="comment-list-popularity", alt_title="Selection 1" %}
+          {% include "includes/representative_comments_block.html" %}
+        {% endwith %}
+
+        {% with title="Representation-Based Selection", rule_select_id="rule-select-representation", default_rule=default_rule_representation, comment_list_id="comment-list-representation", alt_title="Selection 2" %}
+          {% include "includes/representative_comments_block.html" %}
+        {% endwith %}
+
+        {% with title="Diversity-Based Selection", rule_select_id="rule-select-diversity", default_rule=default_rule_diversity, comment_list_id="comment-list-diversity", alt_title="Selection 3" %}
+          {% include "includes/representative_comments_block.html" %}
+        {% endwith %}
+
       </div>
     </section>
+  {% endif %}
+
+  <section id="article-all-comments-section" class="article-comments-wrap">
+    <h2 class="next-collapsible">See All {{ article.num_comments }} Comments</h2>
+
+    <div class="collapsed-content hidden">
+      <div class="comment-sorting-controls">
+        <label for="sort-comments">Sort by:</label>
+        <select id="sort-comments">
+          <option value="timestamp-desc">Newest</option>
+          <option value="timestamp-asc">Oldest</option>
+          <option value="agrees-desc">Most Agreed</option>
+          <option value="disagrees-desc">Most Disagreed</option>
+        </select>
+      </div>
+      <div id="all-comments-list" class="article-comments-list">
+        {% for c in article.comments %}
+        {% include "includes/article_comment.html" %}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <div id="science-modal">
+    <div id="science-modal-label">
+      <div>Explanations</div>
+    </div>
+    <div id="science-modal-content">
+      <h3>Analysis</h3>
+
+      <h4>Popularity</h4>
+
+      <p>
+        "Popularity" measures how popular is a set of comments for the participants. It is equal to the total amount of
+        positive votes (thumbs, up or approvals) received by the comments in the selection.
+      </p>
+
+      <h4>Inclusion</h4>
+
+      <p>
+        "Inclusion" measures the percentage of participants included in the selection. That is, the percentage of
+        participants who expressed a positive opinion (thumb up, or approval) about at least one of the selected comments.
+      </p>
+
+      <p>
+        For instance, an inclusion of 60% means that 60% of the participants feel positively about at least one comment
+        of the selection.
+      </p>
+
+      <p>
+        Inclusion can also be expressed in terms of satisfaction: the inclusion is the percentage of participants with
+        non-zero satisfaction.
+      </p>
+
+      <h4>Satisfaction</h4>
+
+      <p>
+        The "satisfaction of a participant" measures the number of selected comments that they expressed a positive
+        opinion (thumb up, or approval) about.
+      </p>
+
+      <p>
+        For instance, a satisfaction of 3 means that the participant feels positively about 3 of the selected comments.
+      </p>
+
+      <h3>Selection Methods</h3>
+
+
+    </div>
   </div>
 
 <script>
