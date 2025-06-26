@@ -2,7 +2,7 @@
   <h3 class="representative-comments-block-title">{{ title }}</h3>
   <h3 class="representative-comments-block-title alternative-representative-comments-block-title hidden">{{ alt_title }}</h3>
   <div class="rule-selection-wrap">
-<!--    <div class="rule-select-header">Selection Method</div>-->
+<!--    <div class="rule-select-header">Selection Method <span class="open-explanation" data-target="explanation-selection-methods" style="cursor:pointer;">❓</span></div>-->
     <div id="{{ rule_select_id }}" class="rule-select">
       {% for rule in article.computed_rules %}
         <div data-value="{{ rule }}" class="rule-select-option{% if rule == default_rule %} selected{% endif %}"><span>{{ rule_name_mapping[rule] }}</span></div>
@@ -12,7 +12,7 @@
 
   <div class="representative-comments-analysis">
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Popularity</div>
+      <div class="comment-analysis-measure-header">Popularity <span class="open-explanation" data-target="explanation-popularity" style="cursor:pointer;">❓</span></div>
       <div class="progress-bar-wrap">
         <div class="comment-analysis-measure progress-bar satisfaction-progress">
           <div class="progress-bar-fill satisfaction-bar-fill">
@@ -26,7 +26,7 @@
     </div>
 
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Inclusion</div>
+      <div class="comment-analysis-measure-header">Inclusion <span class="open-explanation" data-target="explanation-inclusion" style="cursor:pointer;">❓</span></div>
       <div class="progress-bar-wrap">
         <div class="comment-analysis-measure progress-bar coverage-progress">
           <div class="progress-bar-fill max-coverage-bar-fill"></div>
@@ -42,7 +42,7 @@
   </div>
 
   <div class="comment-analysis-measure-block" style="flex-direction: column;">
-    <div class="comment-analysis-measure-header">Satisfaction Distribution</div>
+    <div class="comment-analysis-measure-header">Satisfaction Distribution <span class="open-explanation" data-target="explanation-satisfaction" style="cursor:pointer;">❓</span></div>
     <div class="satisfaction-histogram"></div>
   </div>
 

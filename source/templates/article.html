@@ -93,16 +93,18 @@
       <div>Explanations</div>
     </div>
     <div id="science-modal-content">
-      <h3>Analysis</h3>
+      <button id="close-science-modal">&times;</button>
 
-      <h4>Popularity</h4>
+      <h3 id="explanation-analysis">Analysis</h3>
+
+      <h4 id="explanation-popularity">Popularity</h4>
 
       <p>
         "Popularity" measures how popular is a set of comments for the participants. It is equal to the total amount of
         positive votes (thumbs, up or approvals) received by the comments in the selection.
       </p>
 
-      <h4>Inclusion</h4>
+      <h4 id="explanation-inclusion">Inclusion</h4>
 
       <p>
         "Inclusion" measures the percentage of participants included in the selection. That is, the percentage of
@@ -119,7 +121,7 @@
         non-zero satisfaction.
       </p>
 
-      <h4>Satisfaction</h4>
+      <h4 id="explanation-satisfaction">Satisfaction</h4>
 
       <p>
         The "satisfaction of a participant" measures the number of selected comments that they expressed a positive
@@ -130,7 +132,7 @@
         For instance, a satisfaction of 3 means that the participant feels positively about 3 of the selected comments.
       </p>
 
-      <h3>Selection Methods</h3>
+      <h3 id="explanation-selection-methods">Selection Methods</h3>
 
 
     </div>
@@ -404,6 +406,40 @@
         });
       });
     });
+
+    const modal = document.getElementById('science-modal');
+  const modalLabel = document.getElementById('science-modal-label');
+  const closeModalBtn = document.getElementById('close-science-modal');
+  const modalContent = document.getElementById('science-modal-content');
+
+  function openModal(targetId = null) {
+    modal.classList.add('open');
+    if (targetId) {
+      setTimeout(() => {
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 100);
+    }
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+  }
+
+  modalLabel.addEventListener('click', () => {
+    modal.classList.toggle('open');
+  });
+
+  closeModalBtn.addEventListener('click', closeModal);
+
+  document.querySelectorAll('.open-explanation').forEach(el => {
+    el.addEventListener('click', () => {
+      const target = el.dataset.target;
+      openModal(target);
+    });
+  });
 });
 </script>
 

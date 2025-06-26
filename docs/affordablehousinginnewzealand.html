@@ -248,45 +248,45 @@ one at a time in a random order. </i></p>
     </div>
   </section>
 
-    
-      <section class="article-comments-wrap">
-        <h2>Summary of the Comment Section</h2>
+  
+    <section class="article-comments-wrap">
+      <h2>Summary of the Comment Section</h2>
 
-        <p>
-          This section showcases different methods for selecting representative comments from a broader discussion (see
-          <a href="#article-all-comments-section">the comment section below</a>).
-          For each method, the goal is to highlight a small set of comments that best reflect the conversation.
-          They each approach this task from a different standpoint, emphasising different principles, such as popularity,
-          representation or diversity (among others).
-        </p>
+      <p>
+        This section showcases different methods for selecting representative comments from a broader discussion (see
+        <a href="#article-all-comments-section">the comment section below</a>).
+        For each method, the goal is to highlight a small set of comments that best reflect the conversation.
+        They each approach this task from a different standpoint, emphasising different principles, such as popularity,
+        representation or diversity (among others).
+      </p>
 
-        <p class="center-align">
-          <span id="show-advanced-controls" class="button">Show Advanced Controls</span>
-        </p>
+      <p class="center-align">
+        <span id="show-advanced-controls" class="button">Show Advanced Controls</span>
+      </p>
 
-        <div id="size-selection-wrap">
-          <label for="size-select">Number of Representative Comments:</label>
-          <select id="size-select">
-            
-              <option value="3">3</option>
-            
-              <option value="5" selected="selected">5</option>
-            
-              <option value="8">8</option>
-            
-              <option value="10">10</option>
-            
-          </select>
-        </div>
-
-        <div id="representative-comments-wrap">
-
+      <div id="size-selection-wrap">
+        <label for="size-select">Number of Representative Comments:</label>
+        <select id="size-select">
           
-            <div class="representative-comments-block">
+            <option value="3">3</option>
+          
+            <option value="5" selected="selected">5</option>
+          
+            <option value="8">8</option>
+          
+            <option value="10">10</option>
+          
+        </select>
+      </div>
+
+      <div id="representative-comments-wrap">
+
+        
+          <div class="representative-comments-block">
   <h3 class="representative-comments-block-title">Popularity-Based Selection</h3>
   <h3 class="representative-comments-block-title alternative-representative-comments-block-title hidden">Selection 1</h3>
   <div class="rule-selection-wrap">
-<!--    <div class="rule-select-header">Selection Method</div>-->
+<!--    <div class="rule-select-header">Selection Method <span class="open-explanation" data-target="explanation-selection-methods" style="cursor:pointer;">❓</span></div>-->
     <div id="rule-select-popularity" class="rule-select">
       
         <div data-value="av" class="rule-select-option selected"><span>Approval Voting</span></div>
@@ -316,7 +316,7 @@ one at a time in a random order. </i></p>
 
   <div class="representative-comments-analysis">
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Popularity</div>
+      <div class="comment-analysis-measure-header">Popularity <span class="open-explanation" data-target="explanation-popularity" style="cursor:pointer;">❓</span></div>
       <div class="progress-bar-wrap">
         <div class="comment-analysis-measure progress-bar satisfaction-progress">
           <div class="progress-bar-fill satisfaction-bar-fill">
@@ -330,7 +330,7 @@ one at a time in a random order. </i></p>
     </div>
 
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Inclusion</div>
+      <div class="comment-analysis-measure-header">Inclusion <span class="open-explanation" data-target="explanation-inclusion" style="cursor:pointer;">❓</span></div>
       <div class="progress-bar-wrap">
         <div class="comment-analysis-measure progress-bar coverage-progress">
           <div class="progress-bar-fill max-coverage-bar-fill"></div>
@@ -346,7 +346,7 @@ one at a time in a random order. </i></p>
   </div>
 
   <div class="comment-analysis-measure-block" style="flex-direction: column;">
-    <div class="comment-analysis-measure-header">Satisfaction Distribution</div>
+    <div class="comment-analysis-measure-header">Satisfaction Distribution <span class="open-explanation" data-target="explanation-satisfaction" style="cursor:pointer;">❓</span></div>
     <div class="satisfaction-histogram"></div>
   </div>
 
@@ -354,14 +354,14 @@ one at a time in a random order. </i></p>
     <!-- JS will populate this based on selections -->
   </div>
 </div>
-          
+        
 
-          
-            <div class="representative-comments-block">
+        
+          <div class="representative-comments-block">
   <h3 class="representative-comments-block-title">Representation-Based Selection</h3>
   <h3 class="representative-comments-block-title alternative-representative-comments-block-title hidden">Selection 2</h3>
   <div class="rule-selection-wrap">
-<!--    <div class="rule-select-header">Selection Method</div>-->
+<!--    <div class="rule-select-header">Selection Method <span class="open-explanation" data-target="explanation-selection-methods" style="cursor:pointer;">❓</span></div>-->
     <div id="rule-select-representation" class="rule-select">
       
         <div data-value="av" class="rule-select-option"><span>Approval Voting</span></div>
@@ -391,7 +391,7 @@ one at a time in a random order. </i></p>
 
   <div class="representative-comments-analysis">
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Popularity</div>
+      <div class="comment-analysis-measure-header">Popularity <span class="open-explanation" data-target="explanation-popularity" style="cursor:pointer;">❓</span></div>
       <div class="progress-bar-wrap">
         <div class="comment-analysis-measure progress-bar satisfaction-progress">
           <div class="progress-bar-fill satisfaction-bar-fill">
@@ -405,7 +405,7 @@ one at a time in a random order. </i></p>
     </div>
 
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Inclusion</div>
+      <div class="comment-analysis-measure-header">Inclusion <span class="open-explanation" data-target="explanation-inclusion" style="cursor:pointer;">❓</span></div>
       <div class="progress-bar-wrap">
         <div class="comment-analysis-measure progress-bar coverage-progress">
           <div class="progress-bar-fill max-coverage-bar-fill"></div>
@@ -421,7 +421,7 @@ one at a time in a random order. </i></p>
   </div>
 
   <div class="comment-analysis-measure-block" style="flex-direction: column;">
-    <div class="comment-analysis-measure-header">Satisfaction Distribution</div>
+    <div class="comment-analysis-measure-header">Satisfaction Distribution <span class="open-explanation" data-target="explanation-satisfaction" style="cursor:pointer;">❓</span></div>
     <div class="satisfaction-histogram"></div>
   </div>
 
@@ -429,14 +429,14 @@ one at a time in a random order. </i></p>
     <!-- JS will populate this based on selections -->
   </div>
 </div>
-          
+        
 
-          
-            <div class="representative-comments-block">
+        
+          <div class="representative-comments-block">
   <h3 class="representative-comments-block-title">Diversity-Based Selection</h3>
   <h3 class="representative-comments-block-title alternative-representative-comments-block-title hidden">Selection 3</h3>
   <div class="rule-selection-wrap">
-<!--    <div class="rule-select-header">Selection Method</div>-->
+<!--    <div class="rule-select-header">Selection Method <span class="open-explanation" data-target="explanation-selection-methods" style="cursor:pointer;">❓</span></div>-->
     <div id="rule-select-diversity" class="rule-select">
       
         <div data-value="av" class="rule-select-option"><span>Approval Voting</span></div>
@@ -466,7 +466,7 @@ one at a time in a random order. </i></p>
 
   <div class="representative-comments-analysis">
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Popularity</div>
+      <div class="comment-analysis-measure-header">Popularity <span class="open-explanation" data-target="explanation-popularity" style="cursor:pointer;">❓</span></div>
       <div class="progress-bar-wrap">
         <div class="comment-analysis-measure progress-bar satisfaction-progress">
           <div class="progress-bar-fill satisfaction-bar-fill">
@@ -480,7 +480,7 @@ one at a time in a random order. </i></p>
     </div>
 
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Inclusion</div>
+      <div class="comment-analysis-measure-header">Inclusion <span class="open-explanation" data-target="explanation-inclusion" style="cursor:pointer;">❓</span></div>
       <div class="progress-bar-wrap">
         <div class="comment-analysis-measure progress-bar coverage-progress">
           <div class="progress-bar-fill max-coverage-bar-fill"></div>
@@ -496,7 +496,7 @@ one at a time in a random order. </i></p>
   </div>
 
   <div class="comment-analysis-measure-block" style="flex-direction: column;">
-    <div class="comment-analysis-measure-header">Satisfaction Distribution</div>
+    <div class="comment-analysis-measure-header">Satisfaction Distribution <span class="open-explanation" data-target="explanation-satisfaction" style="cursor:pointer;">❓</span></div>
     <div class="satisfaction-histogram"></div>
   </div>
 
@@ -504,28 +504,28 @@ one at a time in a random order. </i></p>
     <!-- JS will populate this based on selections -->
   </div>
 </div>
-          
+        
 
-        </div>
-      </section>
-    
+      </div>
+    </section>
+  
 
-    <section id="article-all-comments-section" class="article-comments-wrap">
-      <h2 class="next-collapsible">See All 165 Comments</h2>
+  <section id="article-all-comments-section" class="article-comments-wrap">
+    <h2 class="next-collapsible">See All 165 Comments</h2>
 
-      <div class="collapsed-content hidden">
-        <div class="comment-sorting-controls">
-          <label for="sort-comments">Sort by:</label>
-          <select id="sort-comments">
-            <option value="timestamp-desc">Newest</option>
-            <option value="timestamp-asc">Oldest</option>
-            <option value="agrees-desc">Most Agreed</option>
-            <option value="disagrees-desc">Most Disagreed</option>
-          </select>
-        </div>
-        <div id="all-comments-list" class="article-comments-list">
-          
-          <div class="article-comment" data-timestamp="1499329800319" data-agrees="13" data-disagrees="0" data-comment-id="164">
+    <div class="collapsed-content hidden">
+      <div class="comment-sorting-controls">
+        <label for="sort-comments">Sort by:</label>
+        <select id="sort-comments">
+          <option value="timestamp-desc">Newest</option>
+          <option value="timestamp-asc">Oldest</option>
+          <option value="agrees-desc">Most Agreed</option>
+          <option value="disagrees-desc">Most Disagreed</option>
+        </select>
+      </div>
+      <div id="all-comments-list" class="article-comments-list">
+        
+        <div class="article-comment" data-timestamp="1499329800319" data-agrees="13" data-disagrees="0" data-comment-id="164">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 164</span>
@@ -537,13 +537,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 13fr 0fr;">
         <span class="article-num-agrees">👍13</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499326236943" data-agrees="7" data-disagrees="2" data-comment-id="163">
+        
+        <div class="article-comment" data-timestamp="1499326236943" data-agrees="7" data-disagrees="2" data-comment-id="163">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 163</span>
@@ -555,13 +555,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 7fr 2fr;">
         <span class="article-num-agrees">👍7</span>
-        <span class="article-num-disagree">👎2</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499310584107" data-agrees="3" data-disagrees="8" data-comment-id="162">
+        
+        <div class="article-comment" data-timestamp="1499310584107" data-agrees="3" data-disagrees="8" data-comment-id="162">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 162</span>
@@ -573,13 +573,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 3fr 8fr;">
         <span class="article-num-agrees">👍3</span>
-        <span class="article-num-disagree">👎8</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499310486258" data-agrees="1" data-disagrees="0" data-comment-id="161">
+        
+        <div class="article-comment" data-timestamp="1499310486258" data-agrees="1" data-disagrees="0" data-comment-id="161">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 161</span>
@@ -591,13 +591,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499310104601" data-agrees="1" data-disagrees="0" data-comment-id="160">
+        
+        <div class="article-comment" data-timestamp="1499310104601" data-agrees="1" data-disagrees="0" data-comment-id="160">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 160</span>
@@ -609,13 +609,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499309463317" data-agrees="17" data-disagrees="7" data-comment-id="159">
+        
+        <div class="article-comment" data-timestamp="1499309463317" data-agrees="17" data-disagrees="7" data-comment-id="159">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 159</span>
@@ -627,13 +627,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 17fr 7fr;">
         <span class="article-num-agrees">👍17</span>
-        <span class="article-num-disagree">👎7</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499306795368" data-agrees="22" data-disagrees="5" data-comment-id="158">
+        
+        <div class="article-comment" data-timestamp="1499306795368" data-agrees="22" data-disagrees="5" data-comment-id="158">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 158</span>
@@ -645,13 +645,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 22fr 5fr;">
         <span class="article-num-agrees">👍22</span>
-        <span class="article-num-disagree">👎5</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499229474525" data-agrees="18" data-disagrees="6" data-comment-id="157">
+        
+        <div class="article-comment" data-timestamp="1499229474525" data-agrees="18" data-disagrees="6" data-comment-id="157">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 157</span>
@@ -663,13 +663,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 18fr 6fr;">
         <span class="article-num-agrees">👍18</span>
-        <span class="article-num-disagree">👎6</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499229448656" data-agrees="4" data-disagrees="24" data-comment-id="156">
+        
+        <div class="article-comment" data-timestamp="1499229448656" data-agrees="4" data-disagrees="24" data-comment-id="156">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 156</span>
@@ -681,13 +681,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 4fr 24fr;">
         <span class="article-num-agrees">👍4</span>
-        <span class="article-num-disagree">👎24</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499210809438" data-agrees="5" data-disagrees="17" data-comment-id="155">
+        
+        <div class="article-comment" data-timestamp="1499210809438" data-agrees="5" data-disagrees="17" data-comment-id="155">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 155</span>
@@ -699,13 +699,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 5fr 17fr;">
         <span class="article-num-agrees">👍5</span>
-        <span class="article-num-disagree">👎17</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499210185404" data-agrees="8" data-disagrees="11" data-comment-id="154">
+        
+        <div class="article-comment" data-timestamp="1499210185404" data-agrees="8" data-disagrees="11" data-comment-id="154">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 154</span>
@@ -717,13 +717,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 8fr 11fr;">
         <span class="article-num-agrees">👍8</span>
-        <span class="article-num-disagree">👎11</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499210013696" data-agrees="16" data-disagrees="9" data-comment-id="153">
+        
+        <div class="article-comment" data-timestamp="1499210013696" data-agrees="16" data-disagrees="9" data-comment-id="153">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 153</span>
@@ -735,13 +735,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 16fr 9fr;">
         <span class="article-num-agrees">👍16</span>
-        <span class="article-num-disagree">👎9</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499209603755" data-agrees="28" data-disagrees="0" data-comment-id="152">
+        
+        <div class="article-comment" data-timestamp="1499209603755" data-agrees="28" data-disagrees="0" data-comment-id="152">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 152</span>
@@ -753,13 +753,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 28fr 0fr;">
         <span class="article-num-agrees">👍28</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499202740508" data-agrees="22" data-disagrees="2" data-comment-id="151">
+        
+        <div class="article-comment" data-timestamp="1499202740508" data-agrees="22" data-disagrees="2" data-comment-id="151">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 151</span>
@@ -771,13 +771,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 22fr 2fr;">
         <span class="article-num-agrees">👍22</span>
-        <span class="article-num-disagree">👎2</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499141496927" data-agrees="27" data-disagrees="1" data-comment-id="150">
+        
+        <div class="article-comment" data-timestamp="1499141496927" data-agrees="27" data-disagrees="1" data-comment-id="150">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 150</span>
@@ -789,13 +789,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 27fr 1fr;">
         <span class="article-num-agrees">👍27</span>
-        <span class="article-num-disagree">👎1</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499140945589" data-agrees="28" data-disagrees="2" data-comment-id="149">
+        
+        <div class="article-comment" data-timestamp="1499140945589" data-agrees="28" data-disagrees="2" data-comment-id="149">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 149</span>
@@ -807,13 +807,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 28fr 2fr;">
         <span class="article-num-agrees">👍28</span>
-        <span class="article-num-disagree">👎2</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499139839588" data-agrees="18" data-disagrees="4" data-comment-id="148">
+        
+        <div class="article-comment" data-timestamp="1499139839588" data-agrees="18" data-disagrees="4" data-comment-id="148">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 148</span>
@@ -825,13 +825,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 18fr 4fr;">
         <span class="article-num-agrees">👍18</span>
-        <span class="article-num-disagree">👎4</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499062304168" data-agrees="15" data-disagrees="11" data-comment-id="147">
+        
+        <div class="article-comment" data-timestamp="1499062304168" data-agrees="15" data-disagrees="11" data-comment-id="147">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 147</span>
@@ -843,13 +843,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 15fr 11fr;">
         <span class="article-num-agrees">👍15</span>
-        <span class="article-num-disagree">👎11</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499053733363" data-agrees="1" data-disagrees="0" data-comment-id="146">
+        
+        <div class="article-comment" data-timestamp="1499053733363" data-agrees="1" data-disagrees="0" data-comment-id="146">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 146</span>
@@ -861,13 +861,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1499039745290" data-agrees="1" data-disagrees="0" data-comment-id="145">
+        
+        <div class="article-comment" data-timestamp="1499039745290" data-agrees="1" data-disagrees="0" data-comment-id="145">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 145</span>
@@ -879,13 +879,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498980419014" data-agrees="21" data-disagrees="12" data-comment-id="144">
+        
+        <div class="article-comment" data-timestamp="1498980419014" data-agrees="21" data-disagrees="12" data-comment-id="144">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 144</span>
@@ -897,13 +897,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 21fr 12fr;">
         <span class="article-num-agrees">👍21</span>
-        <span class="article-num-disagree">👎12</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498900827208" data-agrees="37" data-disagrees="3" data-comment-id="143">
+        
+        <div class="article-comment" data-timestamp="1498900827208" data-agrees="37" data-disagrees="3" data-comment-id="143">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 143</span>
@@ -915,13 +915,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 37fr 3fr;">
         <span class="article-num-agrees">👍37</span>
-        <span class="article-num-disagree">👎3</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498900657609" data-agrees="21" data-disagrees="19" data-comment-id="142">
+        
+        <div class="article-comment" data-timestamp="1498900657609" data-agrees="21" data-disagrees="19" data-comment-id="142">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 142</span>
@@ -933,13 +933,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 21fr 19fr;">
         <span class="article-num-agrees">👍21</span>
-        <span class="article-num-disagree">👎19</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498900636123" data-agrees="20" data-disagrees="14" data-comment-id="141">
+        
+        <div class="article-comment" data-timestamp="1498900636123" data-agrees="20" data-disagrees="14" data-comment-id="141">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 141</span>
@@ -951,13 +951,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 20fr 14fr;">
         <span class="article-num-agrees">👍20</span>
-        <span class="article-num-disagree">👎14</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498900537522" data-agrees="28" data-disagrees="7" data-comment-id="140">
+        
+        <div class="article-comment" data-timestamp="1498900537522" data-agrees="28" data-disagrees="7" data-comment-id="140">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 140</span>
@@ -969,13 +969,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 28fr 7fr;">
         <span class="article-num-agrees">👍28</span>
-        <span class="article-num-disagree">👎7</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498848670404" data-agrees="1" data-disagrees="0" data-comment-id="139">
+        
+        <div class="article-comment" data-timestamp="1498848670404" data-agrees="1" data-disagrees="0" data-comment-id="139">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 139</span>
@@ -987,13 +987,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498813039423" data-agrees="47" data-disagrees="2" data-comment-id="138">
+        
+        <div class="article-comment" data-timestamp="1498813039423" data-agrees="47" data-disagrees="2" data-comment-id="138">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 138</span>
@@ -1005,13 +1005,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 47fr 2fr;">
         <span class="article-num-agrees">👍47</span>
-        <span class="article-num-disagree">👎2</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498798151030" data-agrees="47" data-disagrees="3" data-comment-id="137">
+        
+        <div class="article-comment" data-timestamp="1498798151030" data-agrees="47" data-disagrees="3" data-comment-id="137">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 137</span>
@@ -1023,13 +1023,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 47fr 3fr;">
         <span class="article-num-agrees">👍47</span>
-        <span class="article-num-disagree">👎3</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498798098567" data-agrees="57" data-disagrees="4" data-comment-id="136">
+        
+        <div class="article-comment" data-timestamp="1498798098567" data-agrees="57" data-disagrees="4" data-comment-id="136">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 136</span>
@@ -1041,13 +1041,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 57fr 4fr;">
         <span class="article-num-agrees">👍57</span>
-        <span class="article-num-disagree">👎4</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498788836937" data-agrees="26" data-disagrees="17" data-comment-id="135">
+        
+        <div class="article-comment" data-timestamp="1498788836937" data-agrees="26" data-disagrees="17" data-comment-id="135">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 135</span>
@@ -1059,13 +1059,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 26fr 17fr;">
         <span class="article-num-agrees">👍26</span>
-        <span class="article-num-disagree">👎17</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498777264616" data-agrees="49" data-disagrees="3" data-comment-id="134">
+        
+        <div class="article-comment" data-timestamp="1498777264616" data-agrees="49" data-disagrees="3" data-comment-id="134">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 134</span>
@@ -1077,13 +1077,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 49fr 3fr;">
         <span class="article-num-agrees">👍49</span>
-        <span class="article-num-disagree">👎3</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498704814676" data-agrees="1" data-disagrees="0" data-comment-id="133">
+        
+        <div class="article-comment" data-timestamp="1498704814676" data-agrees="1" data-disagrees="0" data-comment-id="133">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 133</span>
@@ -1095,13 +1095,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498704727669" data-agrees="1" data-disagrees="0" data-comment-id="132">
+        
+        <div class="article-comment" data-timestamp="1498704727669" data-agrees="1" data-disagrees="0" data-comment-id="132">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 132</span>
@@ -1113,13 +1113,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498704679973" data-agrees="1" data-disagrees="0" data-comment-id="131">
+        
+        <div class="article-comment" data-timestamp="1498704679973" data-agrees="1" data-disagrees="0" data-comment-id="131">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 131</span>
@@ -1131,13 +1131,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498704611079" data-agrees="1" data-disagrees="0" data-comment-id="130">
+        
+        <div class="article-comment" data-timestamp="1498704611079" data-agrees="1" data-disagrees="0" data-comment-id="130">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 130</span>
@@ -1149,13 +1149,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498704539161" data-agrees="25" data-disagrees="27" data-comment-id="129">
+        
+        <div class="article-comment" data-timestamp="1498704539161" data-agrees="25" data-disagrees="27" data-comment-id="129">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 129</span>
@@ -1167,13 +1167,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 25fr 27fr;">
         <span class="article-num-agrees">👍25</span>
-        <span class="article-num-disagree">👎27</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498704455150" data-agrees="44" data-disagrees="16" data-comment-id="128">
+        
+        <div class="article-comment" data-timestamp="1498704455150" data-agrees="44" data-disagrees="16" data-comment-id="128">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 128</span>
@@ -1185,13 +1185,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 44fr 16fr;">
         <span class="article-num-agrees">👍44</span>
-        <span class="article-num-disagree">👎16</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498704385841" data-agrees="36" data-disagrees="20" data-comment-id="127">
+        
+        <div class="article-comment" data-timestamp="1498704385841" data-agrees="36" data-disagrees="20" data-comment-id="127">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 127</span>
@@ -1203,13 +1203,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 36fr 20fr;">
         <span class="article-num-agrees">👍36</span>
-        <span class="article-num-disagree">👎20</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498704328989" data-agrees="41" data-disagrees="11" data-comment-id="126">
+        
+        <div class="article-comment" data-timestamp="1498704328989" data-agrees="41" data-disagrees="11" data-comment-id="126">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 126</span>
@@ -1221,13 +1221,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 41fr 11fr;">
         <span class="article-num-agrees">👍41</span>
-        <span class="article-num-disagree">👎11</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498704285262" data-agrees="36" data-disagrees="19" data-comment-id="125">
+        
+        <div class="article-comment" data-timestamp="1498704285262" data-agrees="36" data-disagrees="19" data-comment-id="125">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 125</span>
@@ -1239,13 +1239,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 36fr 19fr;">
         <span class="article-num-agrees">👍36</span>
-        <span class="article-num-disagree">👎19</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498704233922" data-agrees="50" data-disagrees="1" data-comment-id="124">
+        
+        <div class="article-comment" data-timestamp="1498704233922" data-agrees="50" data-disagrees="1" data-comment-id="124">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 124</span>
@@ -1257,13 +1257,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 50fr 1fr;">
         <span class="article-num-agrees">👍50</span>
-        <span class="article-num-disagree">👎1</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498704177414" data-agrees="1" data-disagrees="0" data-comment-id="123">
+        
+        <div class="article-comment" data-timestamp="1498704177414" data-agrees="1" data-disagrees="0" data-comment-id="123">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 123</span>
@@ -1275,13 +1275,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498704134944" data-agrees="47" data-disagrees="8" data-comment-id="122">
+        
+        <div class="article-comment" data-timestamp="1498704134944" data-agrees="47" data-disagrees="8" data-comment-id="122">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 122</span>
@@ -1293,13 +1293,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 47fr 8fr;">
         <span class="article-num-agrees">👍47</span>
-        <span class="article-num-disagree">👎8</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498704039910" data-agrees="1" data-disagrees="0" data-comment-id="121">
+        
+        <div class="article-comment" data-timestamp="1498704039910" data-agrees="1" data-disagrees="0" data-comment-id="121">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 121</span>
@@ -1311,13 +1311,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498703985994" data-agrees="43" data-disagrees="13" data-comment-id="120">
+        
+        <div class="article-comment" data-timestamp="1498703985994" data-agrees="43" data-disagrees="13" data-comment-id="120">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 120</span>
@@ -1329,13 +1329,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 43fr 13fr;">
         <span class="article-num-agrees">👍43</span>
-        <span class="article-num-disagree">👎13</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498703917079" data-agrees="67" data-disagrees="0" data-comment-id="119">
+        
+        <div class="article-comment" data-timestamp="1498703917079" data-agrees="67" data-disagrees="0" data-comment-id="119">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 119</span>
@@ -1347,13 +1347,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 67fr 0fr;">
         <span class="article-num-agrees">👍67</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498701864380" data-agrees="1" data-disagrees="0" data-comment-id="118">
+        
+        <div class="article-comment" data-timestamp="1498701864380" data-agrees="1" data-disagrees="0" data-comment-id="118">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 118</span>
@@ -1365,13 +1365,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498560431923" data-agrees="41" data-disagrees="15" data-comment-id="117">
+        
+        <div class="article-comment" data-timestamp="1498560431923" data-agrees="41" data-disagrees="15" data-comment-id="117">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 117</span>
@@ -1383,13 +1383,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 41fr 15fr;">
         <span class="article-num-agrees">👍41</span>
-        <span class="article-num-disagree">👎15</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498447830759" data-agrees="51" data-disagrees="5" data-comment-id="116">
+        
+        <div class="article-comment" data-timestamp="1498447830759" data-agrees="51" data-disagrees="5" data-comment-id="116">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 116</span>
@@ -1401,13 +1401,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 51fr 5fr;">
         <span class="article-num-agrees">👍51</span>
-        <span class="article-num-disagree">👎5</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498369851059" data-agrees="1" data-disagrees="2" data-comment-id="115">
+        
+        <div class="article-comment" data-timestamp="1498369851059" data-agrees="1" data-disagrees="2" data-comment-id="115">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 115</span>
@@ -1419,13 +1419,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 2fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎2</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498361564039" data-agrees="38" data-disagrees="21" data-comment-id="114">
+        
+        <div class="article-comment" data-timestamp="1498361564039" data-agrees="38" data-disagrees="21" data-comment-id="114">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 114</span>
@@ -1437,13 +1437,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 38fr 21fr;">
         <span class="article-num-agrees">👍38</span>
-        <span class="article-num-disagree">👎21</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498361295680" data-agrees="35" data-disagrees="16" data-comment-id="113">
+        
+        <div class="article-comment" data-timestamp="1498361295680" data-agrees="35" data-disagrees="16" data-comment-id="113">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 113</span>
@@ -1455,13 +1455,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 35fr 16fr;">
         <span class="article-num-agrees">👍35</span>
-        <span class="article-num-disagree">👎16</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498262567483" data-agrees="28" data-disagrees="15" data-comment-id="112">
+        
+        <div class="article-comment" data-timestamp="1498262567483" data-agrees="28" data-disagrees="15" data-comment-id="112">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 112</span>
@@ -1473,13 +1473,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 28fr 15fr;">
         <span class="article-num-agrees">👍28</span>
-        <span class="article-num-disagree">👎15</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498122484355" data-agrees="72" data-disagrees="3" data-comment-id="111">
+        
+        <div class="article-comment" data-timestamp="1498122484355" data-agrees="72" data-disagrees="3" data-comment-id="111">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 111</span>
@@ -1491,13 +1491,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 72fr 3fr;">
         <span class="article-num-agrees">👍72</span>
-        <span class="article-num-disagree">👎3</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498122391570" data-agrees="65" data-disagrees="11" data-comment-id="110">
+        
+        <div class="article-comment" data-timestamp="1498122391570" data-agrees="65" data-disagrees="11" data-comment-id="110">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 110</span>
@@ -1509,13 +1509,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 65fr 11fr;">
         <span class="article-num-agrees">👍65</span>
-        <span class="article-num-disagree">👎11</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498122235954" data-agrees="86" data-disagrees="1" data-comment-id="109">
+        
+        <div class="article-comment" data-timestamp="1498122235954" data-agrees="86" data-disagrees="1" data-comment-id="109">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 109</span>
@@ -1527,13 +1527,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 86fr 1fr;">
         <span class="article-num-agrees">👍86</span>
-        <span class="article-num-disagree">👎1</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498122030775" data-agrees="63" data-disagrees="2" data-comment-id="108">
+        
+        <div class="article-comment" data-timestamp="1498122030775" data-agrees="63" data-disagrees="2" data-comment-id="108">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 108</span>
@@ -1545,13 +1545,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 63fr 2fr;">
         <span class="article-num-agrees">👍63</span>
-        <span class="article-num-disagree">👎2</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498121951416" data-agrees="70" data-disagrees="3" data-comment-id="107">
+        
+        <div class="article-comment" data-timestamp="1498121951416" data-agrees="70" data-disagrees="3" data-comment-id="107">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 107</span>
@@ -1563,13 +1563,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 70fr 3fr;">
         <span class="article-num-agrees">👍70</span>
-        <span class="article-num-disagree">👎3</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498121659990" data-agrees="60" data-disagrees="8" data-comment-id="106">
+        
+        <div class="article-comment" data-timestamp="1498121659990" data-agrees="60" data-disagrees="8" data-comment-id="106">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 106</span>
@@ -1581,13 +1581,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 60fr 8fr;">
         <span class="article-num-agrees">👍60</span>
-        <span class="article-num-disagree">👎8</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498121580662" data-agrees="87" data-disagrees="0" data-comment-id="105">
+        
+        <div class="article-comment" data-timestamp="1498121580662" data-agrees="87" data-disagrees="0" data-comment-id="105">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 105</span>
@@ -1599,13 +1599,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 87fr 0fr;">
         <span class="article-num-agrees">👍87</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498121456737" data-agrees="93" data-disagrees="2" data-comment-id="104">
+        
+        <div class="article-comment" data-timestamp="1498121456737" data-agrees="93" data-disagrees="2" data-comment-id="104">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 104</span>
@@ -1617,13 +1617,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 93fr 2fr;">
         <span class="article-num-agrees">👍93</span>
-        <span class="article-num-disagree">👎2</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498084329033" data-agrees="73" data-disagrees="7" data-comment-id="103">
+        
+        <div class="article-comment" data-timestamp="1498084329033" data-agrees="73" data-disagrees="7" data-comment-id="103">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 103</span>
@@ -1635,13 +1635,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 73fr 7fr;">
         <span class="article-num-agrees">👍73</span>
-        <span class="article-num-disagree">👎7</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498031795443" data-agrees="1" data-disagrees="0" data-comment-id="102">
+        
+        <div class="article-comment" data-timestamp="1498031795443" data-agrees="1" data-disagrees="0" data-comment-id="102">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 102</span>
@@ -1653,13 +1653,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1498031762508" data-agrees="1" data-disagrees="0" data-comment-id="101">
+        
+        <div class="article-comment" data-timestamp="1498031762508" data-agrees="1" data-disagrees="0" data-comment-id="101">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 101</span>
@@ -1671,13 +1671,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497983489001" data-agrees="46" data-disagrees="21" data-comment-id="100">
+        
+        <div class="article-comment" data-timestamp="1497983489001" data-agrees="46" data-disagrees="21" data-comment-id="100">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 100</span>
@@ -1689,13 +1689,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 46fr 21fr;">
         <span class="article-num-agrees">👍46</span>
-        <span class="article-num-disagree">👎21</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497940768836" data-agrees="29" data-disagrees="43" data-comment-id="99">
+        
+        <div class="article-comment" data-timestamp="1497940768836" data-agrees="29" data-disagrees="43" data-comment-id="99">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 99</span>
@@ -1707,13 +1707,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 29fr 43fr;">
         <span class="article-num-agrees">👍29</span>
-        <span class="article-num-disagree">👎43</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497940724090" data-agrees="1" data-disagrees="0" data-comment-id="98">
+        
+        <div class="article-comment" data-timestamp="1497940724090" data-agrees="1" data-disagrees="0" data-comment-id="98">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 98</span>
@@ -1725,13 +1725,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497932570749" data-agrees="91" data-disagrees="4" data-comment-id="97">
+        
+        <div class="article-comment" data-timestamp="1497932570749" data-agrees="91" data-disagrees="4" data-comment-id="97">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 97</span>
@@ -1743,13 +1743,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 91fr 4fr;">
         <span class="article-num-agrees">👍91</span>
-        <span class="article-num-disagree">👎4</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497932485045" data-agrees="70" data-disagrees="12" data-comment-id="96">
+        
+        <div class="article-comment" data-timestamp="1497932485045" data-agrees="70" data-disagrees="12" data-comment-id="96">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 96</span>
@@ -1761,13 +1761,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 70fr 12fr;">
         <span class="article-num-agrees">👍70</span>
-        <span class="article-num-disagree">👎12</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497869969438" data-agrees="25" data-disagrees="64" data-comment-id="95">
+        
+        <div class="article-comment" data-timestamp="1497869969438" data-agrees="25" data-disagrees="64" data-comment-id="95">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 95</span>
@@ -1779,13 +1779,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 25fr 64fr;">
         <span class="article-num-agrees">👍25</span>
-        <span class="article-num-disagree">👎64</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497860283429" data-agrees="1" data-disagrees="0" data-comment-id="94">
+        
+        <div class="article-comment" data-timestamp="1497860283429" data-agrees="1" data-disagrees="0" data-comment-id="94">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 94</span>
@@ -1797,13 +1797,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497850968249" data-agrees="54" data-disagrees="16" data-comment-id="93">
+        
+        <div class="article-comment" data-timestamp="1497850968249" data-agrees="54" data-disagrees="16" data-comment-id="93">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 93</span>
@@ -1815,13 +1815,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 54fr 16fr;">
         <span class="article-num-agrees">👍54</span>
-        <span class="article-num-disagree">👎16</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497823929854" data-agrees="85" data-disagrees="4" data-comment-id="92">
+        
+        <div class="article-comment" data-timestamp="1497823929854" data-agrees="85" data-disagrees="4" data-comment-id="92">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 92</span>
@@ -1833,13 +1833,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 85fr 4fr;">
         <span class="article-num-agrees">👍85</span>
-        <span class="article-num-disagree">👎4</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497822319228" data-agrees="1" data-disagrees="0" data-comment-id="91">
+        
+        <div class="article-comment" data-timestamp="1497822319228" data-agrees="1" data-disagrees="0" data-comment-id="91">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 91</span>
@@ -1851,13 +1851,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497817726632" data-agrees="1" data-disagrees="0" data-comment-id="90">
+        
+        <div class="article-comment" data-timestamp="1497817726632" data-agrees="1" data-disagrees="0" data-comment-id="90">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 90</span>
@@ -1869,13 +1869,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497792937493" data-agrees="43" data-disagrees="30" data-comment-id="89">
+        
+        <div class="article-comment" data-timestamp="1497792937493" data-agrees="43" data-disagrees="30" data-comment-id="89">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 89</span>
@@ -1887,13 +1887,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 43fr 30fr;">
         <span class="article-num-agrees">👍43</span>
-        <span class="article-num-disagree">👎30</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497792747130" data-agrees="1" data-disagrees="0" data-comment-id="88">
+        
+        <div class="article-comment" data-timestamp="1497792747130" data-agrees="1" data-disagrees="0" data-comment-id="88">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 88</span>
@@ -1905,13 +1905,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497791836976" data-agrees="1" data-disagrees="0" data-comment-id="87">
+        
+        <div class="article-comment" data-timestamp="1497791836976" data-agrees="1" data-disagrees="0" data-comment-id="87">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 87</span>
@@ -1923,13 +1923,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497791585987" data-agrees="47" data-disagrees="30" data-comment-id="86">
+        
+        <div class="article-comment" data-timestamp="1497791585987" data-agrees="47" data-disagrees="30" data-comment-id="86">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 86</span>
@@ -1941,13 +1941,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 47fr 30fr;">
         <span class="article-num-agrees">👍47</span>
-        <span class="article-num-disagree">👎30</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497791575489" data-agrees="1" data-disagrees="0" data-comment-id="85">
+        
+        <div class="article-comment" data-timestamp="1497791575489" data-agrees="1" data-disagrees="0" data-comment-id="85">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 85</span>
@@ -1959,13 +1959,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497791417268" data-agrees="67" data-disagrees="12" data-comment-id="84">
+        
+        <div class="article-comment" data-timestamp="1497791417268" data-agrees="67" data-disagrees="12" data-comment-id="84">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 84</span>
@@ -1977,13 +1977,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 67fr 12fr;">
         <span class="article-num-agrees">👍67</span>
-        <span class="article-num-disagree">👎12</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497791414593" data-agrees="1" data-disagrees="0" data-comment-id="83">
+        
+        <div class="article-comment" data-timestamp="1497791414593" data-agrees="1" data-disagrees="0" data-comment-id="83">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 83</span>
@@ -1995,13 +1995,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497791339493" data-agrees="54" data-disagrees="21" data-comment-id="82">
+        
+        <div class="article-comment" data-timestamp="1497791339493" data-agrees="54" data-disagrees="21" data-comment-id="82">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 82</span>
@@ -2013,13 +2013,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 54fr 21fr;">
         <span class="article-num-agrees">👍54</span>
-        <span class="article-num-disagree">👎21</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497791226301" data-agrees="60" data-disagrees="2" data-comment-id="81">
+        
+        <div class="article-comment" data-timestamp="1497791226301" data-agrees="60" data-disagrees="2" data-comment-id="81">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 81</span>
@@ -2031,13 +2031,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 60fr 2fr;">
         <span class="article-num-agrees">👍60</span>
-        <span class="article-num-disagree">👎2</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497790777572" data-agrees="37" data-disagrees="41" data-comment-id="80">
+        
+        <div class="article-comment" data-timestamp="1497790777572" data-agrees="37" data-disagrees="41" data-comment-id="80">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 80</span>
@@ -2049,13 +2049,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 37fr 41fr;">
         <span class="article-num-agrees">👍37</span>
-        <span class="article-num-disagree">👎41</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497790678196" data-agrees="73" data-disagrees="7" data-comment-id="79">
+        
+        <div class="article-comment" data-timestamp="1497790678196" data-agrees="73" data-disagrees="7" data-comment-id="79">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 79</span>
@@ -2067,13 +2067,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 73fr 7fr;">
         <span class="article-num-agrees">👍73</span>
-        <span class="article-num-disagree">👎7</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497790443666" data-agrees="39" data-disagrees="42" data-comment-id="78">
+        
+        <div class="article-comment" data-timestamp="1497790443666" data-agrees="39" data-disagrees="42" data-comment-id="78">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 78</span>
@@ -2085,13 +2085,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 39fr 42fr;">
         <span class="article-num-agrees">👍39</span>
-        <span class="article-num-disagree">👎42</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497790328849" data-agrees="45" data-disagrees="31" data-comment-id="77">
+        
+        <div class="article-comment" data-timestamp="1497790328849" data-agrees="45" data-disagrees="31" data-comment-id="77">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 77</span>
@@ -2103,13 +2103,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 45fr 31fr;">
         <span class="article-num-agrees">👍45</span>
-        <span class="article-num-disagree">👎31</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497789997199" data-agrees="68" data-disagrees="17" data-comment-id="76">
+        
+        <div class="article-comment" data-timestamp="1497789997199" data-agrees="68" data-disagrees="17" data-comment-id="76">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 76</span>
@@ -2121,13 +2121,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 68fr 17fr;">
         <span class="article-num-agrees">👍68</span>
-        <span class="article-num-disagree">👎17</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497776597342" data-agrees="0" data-disagrees="0" data-comment-id="75">
+        
+        <div class="article-comment" data-timestamp="1497776597342" data-agrees="0" data-disagrees="0" data-comment-id="75">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 75</span>
@@ -2139,13 +2139,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 0fr 0fr;">
         <span class="article-num-agrees">👍0</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497776446876" data-agrees="0" data-disagrees="0" data-comment-id="74">
+        
+        <div class="article-comment" data-timestamp="1497776446876" data-agrees="0" data-disagrees="0" data-comment-id="74">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 74</span>
@@ -2157,13 +2157,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 0fr 0fr;">
         <span class="article-num-agrees">👍0</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497776349874" data-agrees="10" data-disagrees="134" data-comment-id="73">
+        
+        <div class="article-comment" data-timestamp="1497776349874" data-agrees="10" data-disagrees="134" data-comment-id="73">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 73</span>
@@ -2175,13 +2175,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 10fr 134fr;">
         <span class="article-num-agrees">👍10</span>
-        <span class="article-num-disagree">👎134</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497769320716" data-agrees="87" data-disagrees="12" data-comment-id="72">
+        
+        <div class="article-comment" data-timestamp="1497769320716" data-agrees="87" data-disagrees="12" data-comment-id="72">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 72</span>
@@ -2193,13 +2193,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 87fr 12fr;">
         <span class="article-num-agrees">👍87</span>
-        <span class="article-num-disagree">👎12</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497703429777" data-agrees="63" data-disagrees="32" data-comment-id="71">
+        
+        <div class="article-comment" data-timestamp="1497703429777" data-agrees="63" data-disagrees="32" data-comment-id="71">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 71</span>
@@ -2211,13 +2211,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 63fr 32fr;">
         <span class="article-num-agrees">👍63</span>
-        <span class="article-num-disagree">👎32</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497691572576" data-agrees="41" data-disagrees="61" data-comment-id="70">
+        
+        <div class="article-comment" data-timestamp="1497691572576" data-agrees="41" data-disagrees="61" data-comment-id="70">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 70</span>
@@ -2229,13 +2229,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 41fr 61fr;">
         <span class="article-num-agrees">👍41</span>
-        <span class="article-num-disagree">👎61</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497691164405" data-agrees="1" data-disagrees="0" data-comment-id="69">
+        
+        <div class="article-comment" data-timestamp="1497691164405" data-agrees="1" data-disagrees="0" data-comment-id="69">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 69</span>
@@ -2247,13 +2247,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497688077463" data-agrees="1" data-disagrees="0" data-comment-id="68">
+        
+        <div class="article-comment" data-timestamp="1497688077463" data-agrees="1" data-disagrees="0" data-comment-id="68">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 68</span>
@@ -2265,13 +2265,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497687993854" data-agrees="1" data-disagrees="0" data-comment-id="67">
+        
+        <div class="article-comment" data-timestamp="1497687993854" data-agrees="1" data-disagrees="0" data-comment-id="67">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 67</span>
@@ -2283,13 +2283,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497654704686" data-agrees="1" data-disagrees="0" data-comment-id="66">
+        
+        <div class="article-comment" data-timestamp="1497654704686" data-agrees="1" data-disagrees="0" data-comment-id="66">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 66</span>
@@ -2301,13 +2301,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497618049596" data-agrees="82" data-disagrees="15" data-comment-id="65">
+        
+        <div class="article-comment" data-timestamp="1497618049596" data-agrees="82" data-disagrees="15" data-comment-id="65">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 65</span>
@@ -2319,13 +2319,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 82fr 15fr;">
         <span class="article-num-agrees">👍82</span>
-        <span class="article-num-disagree">👎15</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497605835220" data-agrees="114" data-disagrees="4" data-comment-id="64">
+        
+        <div class="article-comment" data-timestamp="1497605835220" data-agrees="114" data-disagrees="4" data-comment-id="64">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 64</span>
@@ -2337,13 +2337,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 114fr 4fr;">
         <span class="article-num-agrees">👍114</span>
-        <span class="article-num-disagree">👎4</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497597968617" data-agrees="109" data-disagrees="39" data-comment-id="63">
+        
+        <div class="article-comment" data-timestamp="1497597968617" data-agrees="109" data-disagrees="39" data-comment-id="63">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 63</span>
@@ -2355,13 +2355,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 109fr 39fr;">
         <span class="article-num-agrees">👍109</span>
-        <span class="article-num-disagree">👎39</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497595554227" data-agrees="1" data-disagrees="0" data-comment-id="62">
+        
+        <div class="article-comment" data-timestamp="1497595554227" data-agrees="1" data-disagrees="0" data-comment-id="62">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 62</span>
@@ -2373,13 +2373,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497590058814" data-agrees="134" data-disagrees="5" data-comment-id="61">
+        
+        <div class="article-comment" data-timestamp="1497590058814" data-agrees="134" data-disagrees="5" data-comment-id="61">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 61</span>
@@ -2391,13 +2391,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 134fr 5fr;">
         <span class="article-num-agrees">👍134</span>
-        <span class="article-num-disagree">👎5</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497587965425" data-agrees="83" data-disagrees="46" data-comment-id="60">
+        
+        <div class="article-comment" data-timestamp="1497587965425" data-agrees="83" data-disagrees="46" data-comment-id="60">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 60</span>
@@ -2409,13 +2409,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 83fr 46fr;">
         <span class="article-num-agrees">👍83</span>
-        <span class="article-num-disagree">👎46</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497564909041" data-agrees="109" data-disagrees="30" data-comment-id="59">
+        
+        <div class="article-comment" data-timestamp="1497564909041" data-agrees="109" data-disagrees="30" data-comment-id="59">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 59</span>
@@ -2427,13 +2427,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 109fr 30fr;">
         <span class="article-num-agrees">👍109</span>
-        <span class="article-num-disagree">👎30</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497559568434" data-agrees="1" data-disagrees="0" data-comment-id="58">
+        
+        <div class="article-comment" data-timestamp="1497559568434" data-agrees="1" data-disagrees="0" data-comment-id="58">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 58</span>
@@ -2445,13 +2445,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497552819412" data-agrees="124" data-disagrees="22" data-comment-id="57">
+        
+        <div class="article-comment" data-timestamp="1497552819412" data-agrees="124" data-disagrees="22" data-comment-id="57">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 57</span>
@@ -2463,13 +2463,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 124fr 22fr;">
         <span class="article-num-agrees">👍124</span>
-        <span class="article-num-disagree">👎22</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497552698150" data-agrees="1" data-disagrees="0" data-comment-id="56">
+        
+        <div class="article-comment" data-timestamp="1497552698150" data-agrees="1" data-disagrees="0" data-comment-id="56">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 56</span>
@@ -2481,13 +2481,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497552510250" data-agrees="1" data-disagrees="0" data-comment-id="55">
+        
+        <div class="article-comment" data-timestamp="1497552510250" data-agrees="1" data-disagrees="0" data-comment-id="55">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 55</span>
@@ -2499,13 +2499,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497525036178" data-agrees="1" data-disagrees="0" data-comment-id="54">
+        
+        <div class="article-comment" data-timestamp="1497525036178" data-agrees="1" data-disagrees="0" data-comment-id="54">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 54</span>
@@ -2517,13 +2517,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497522867374" data-agrees="103" data-disagrees="24" data-comment-id="53">
+        
+        <div class="article-comment" data-timestamp="1497522867374" data-agrees="103" data-disagrees="24" data-comment-id="53">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 53</span>
@@ -2535,13 +2535,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 103fr 24fr;">
         <span class="article-num-agrees">👍103</span>
-        <span class="article-num-disagree">👎24</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497522735254" data-agrees="119" data-disagrees="26" data-comment-id="52">
+        
+        <div class="article-comment" data-timestamp="1497522735254" data-agrees="119" data-disagrees="26" data-comment-id="52">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 52</span>
@@ -2553,13 +2553,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 119fr 26fr;">
         <span class="article-num-agrees">👍119</span>
-        <span class="article-num-disagree">👎26</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497521607860" data-agrees="1" data-disagrees="0" data-comment-id="51">
+        
+        <div class="article-comment" data-timestamp="1497521607860" data-agrees="1" data-disagrees="0" data-comment-id="51">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 51</span>
@@ -2571,13 +2571,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497504246240" data-agrees="1" data-disagrees="0" data-comment-id="50">
+        
+        <div class="article-comment" data-timestamp="1497504246240" data-agrees="1" data-disagrees="0" data-comment-id="50">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 50</span>
@@ -2589,13 +2589,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497501330747" data-agrees="132" data-disagrees="27" data-comment-id="49">
+        
+        <div class="article-comment" data-timestamp="1497501330747" data-agrees="132" data-disagrees="27" data-comment-id="49">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 49</span>
@@ -2607,13 +2607,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 132fr 27fr;">
         <span class="article-num-agrees">👍132</span>
-        <span class="article-num-disagree">👎27</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497501259792" data-agrees="1" data-disagrees="0" data-comment-id="48">
+        
+        <div class="article-comment" data-timestamp="1497501259792" data-agrees="1" data-disagrees="0" data-comment-id="48">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 48</span>
@@ -2625,13 +2625,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497501204855" data-agrees="1" data-disagrees="0" data-comment-id="47">
+        
+        <div class="article-comment" data-timestamp="1497501204855" data-agrees="1" data-disagrees="0" data-comment-id="47">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 47</span>
@@ -2643,13 +2643,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497499512607" data-agrees="1" data-disagrees="0" data-comment-id="46">
+        
+        <div class="article-comment" data-timestamp="1497499512607" data-agrees="1" data-disagrees="0" data-comment-id="46">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 46</span>
@@ -2661,13 +2661,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497496214176" data-agrees="1" data-disagrees="0" data-comment-id="45">
+        
+        <div class="article-comment" data-timestamp="1497496214176" data-agrees="1" data-disagrees="0" data-comment-id="45">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 45</span>
@@ -2679,13 +2679,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497496157933" data-agrees="1" data-disagrees="0" data-comment-id="44">
+        
+        <div class="article-comment" data-timestamp="1497496157933" data-agrees="1" data-disagrees="0" data-comment-id="44">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 44</span>
@@ -2697,13 +2697,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497496107904" data-agrees="1" data-disagrees="0" data-comment-id="43">
+        
+        <div class="article-comment" data-timestamp="1497496107904" data-agrees="1" data-disagrees="0" data-comment-id="43">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 43</span>
@@ -2715,13 +2715,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497496060068" data-agrees="104" data-disagrees="20" data-comment-id="42">
+        
+        <div class="article-comment" data-timestamp="1497496060068" data-agrees="104" data-disagrees="20" data-comment-id="42">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 42</span>
@@ -2733,13 +2733,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 104fr 20fr;">
         <span class="article-num-agrees">👍104</span>
-        <span class="article-num-disagree">👎20</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497484574137" data-agrees="1" data-disagrees="0" data-comment-id="41">
+        
+        <div class="article-comment" data-timestamp="1497484574137" data-agrees="1" data-disagrees="0" data-comment-id="41">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 41</span>
@@ -2751,13 +2751,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420945473" data-agrees="35" data-disagrees="147" data-comment-id="40">
+        
+        <div class="article-comment" data-timestamp="1497420945473" data-agrees="35" data-disagrees="147" data-comment-id="40">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 40</span>
@@ -2770,13 +2770,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 35fr 147fr;">
         <span class="article-num-agrees">👍35</span>
-        <span class="article-num-disagree">👎147</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420926966" data-agrees="81" data-disagrees="103" data-comment-id="39">
+        
+        <div class="article-comment" data-timestamp="1497420926966" data-agrees="81" data-disagrees="103" data-comment-id="39">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 39</span>
@@ -2789,13 +2789,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 81fr 103fr;">
         <span class="article-num-agrees">👍81</span>
-        <span class="article-num-disagree">👎103</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420907501" data-agrees="48" data-disagrees="137" data-comment-id="38">
+        
+        <div class="article-comment" data-timestamp="1497420907501" data-agrees="48" data-disagrees="137" data-comment-id="38">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 38</span>
@@ -2808,13 +2808,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 48fr 137fr;">
         <span class="article-num-agrees">👍48</span>
-        <span class="article-num-disagree">👎137</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420884303" data-agrees="53" data-disagrees="131" data-comment-id="37">
+        
+        <div class="article-comment" data-timestamp="1497420884303" data-agrees="53" data-disagrees="131" data-comment-id="37">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 37</span>
@@ -2827,13 +2827,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 53fr 131fr;">
         <span class="article-num-agrees">👍53</span>
-        <span class="article-num-disagree">👎131</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420871447" data-agrees="94" data-disagrees="95" data-comment-id="36">
+        
+        <div class="article-comment" data-timestamp="1497420871447" data-agrees="94" data-disagrees="95" data-comment-id="36">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 36</span>
@@ -2846,13 +2846,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 94fr 95fr;">
         <span class="article-num-agrees">👍94</span>
-        <span class="article-num-disagree">👎95</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420856171" data-agrees="62" data-disagrees="127" data-comment-id="35">
+        
+        <div class="article-comment" data-timestamp="1497420856171" data-agrees="62" data-disagrees="127" data-comment-id="35">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 35</span>
@@ -2864,13 +2864,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 62fr 127fr;">
         <span class="article-num-agrees">👍62</span>
-        <span class="article-num-disagree">👎127</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420838961" data-agrees="101" data-disagrees="78" data-comment-id="34">
+        
+        <div class="article-comment" data-timestamp="1497420838961" data-agrees="101" data-disagrees="78" data-comment-id="34">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 34</span>
@@ -2883,13 +2883,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 101fr 78fr;">
         <span class="article-num-agrees">👍101</span>
-        <span class="article-num-disagree">👎78</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420815231" data-agrees="26" data-disagrees="171" data-comment-id="33">
+        
+        <div class="article-comment" data-timestamp="1497420815231" data-agrees="26" data-disagrees="171" data-comment-id="33">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 33</span>
@@ -2902,13 +2902,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 26fr 171fr;">
         <span class="article-num-agrees">👍26</span>
-        <span class="article-num-disagree">👎171</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420791416" data-agrees="2" data-disagrees="190" data-comment-id="32">
+        
+        <div class="article-comment" data-timestamp="1497420791416" data-agrees="2" data-disagrees="190" data-comment-id="32">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 32</span>
@@ -2922,13 +2922,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 2fr 190fr;">
         <span class="article-num-agrees">👍2</span>
-        <span class="article-num-disagree">👎190</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420736595" data-agrees="69" data-disagrees="116" data-comment-id="31">
+        
+        <div class="article-comment" data-timestamp="1497420736595" data-agrees="69" data-disagrees="116" data-comment-id="31">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 31</span>
@@ -2941,13 +2941,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 69fr 116fr;">
         <span class="article-num-agrees">👍69</span>
-        <span class="article-num-disagree">👎116</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420719531" data-agrees="82" data-disagrees="99" data-comment-id="30">
+        
+        <div class="article-comment" data-timestamp="1497420719531" data-agrees="82" data-disagrees="99" data-comment-id="30">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 30</span>
@@ -2959,13 +2959,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 82fr 99fr;">
         <span class="article-num-agrees">👍82</span>
-        <span class="article-num-disagree">👎99</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420705143" data-agrees="37" data-disagrees="157" data-comment-id="29">
+        
+        <div class="article-comment" data-timestamp="1497420705143" data-agrees="37" data-disagrees="157" data-comment-id="29">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 29</span>
@@ -2977,13 +2977,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 37fr 157fr;">
         <span class="article-num-agrees">👍37</span>
-        <span class="article-num-disagree">👎157</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420690001" data-agrees="79" data-disagrees="96" data-comment-id="28">
+        
+        <div class="article-comment" data-timestamp="1497420690001" data-agrees="79" data-disagrees="96" data-comment-id="28">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 28</span>
@@ -2996,13 +2996,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 79fr 96fr;">
         <span class="article-num-agrees">👍79</span>
-        <span class="article-num-disagree">👎96</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420671710" data-agrees="26" data-disagrees="158" data-comment-id="27">
+        
+        <div class="article-comment" data-timestamp="1497420671710" data-agrees="26" data-disagrees="158" data-comment-id="27">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 27</span>
@@ -3014,13 +3014,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 26fr 158fr;">
         <span class="article-num-agrees">👍26</span>
-        <span class="article-num-disagree">👎158</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420643142" data-agrees="122" data-disagrees="69" data-comment-id="26">
+        
+        <div class="article-comment" data-timestamp="1497420643142" data-agrees="122" data-disagrees="69" data-comment-id="26">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 26</span>
@@ -3033,13 +3033,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 122fr 69fr;">
         <span class="article-num-agrees">👍122</span>
-        <span class="article-num-disagree">👎69</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420618782" data-agrees="148" data-disagrees="37" data-comment-id="25">
+        
+        <div class="article-comment" data-timestamp="1497420618782" data-agrees="148" data-disagrees="37" data-comment-id="25">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 25</span>
@@ -3052,13 +3052,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 148fr 37fr;">
         <span class="article-num-agrees">👍148</span>
-        <span class="article-num-disagree">👎37</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420559022" data-agrees="109" data-disagrees="24" data-comment-id="24">
+        
+        <div class="article-comment" data-timestamp="1497420559022" data-agrees="109" data-disagrees="24" data-comment-id="24">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 24</span>
@@ -3070,13 +3070,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 109fr 24fr;">
         <span class="article-num-agrees">👍109</span>
-        <span class="article-num-disagree">👎24</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420529402" data-agrees="32" data-disagrees="149" data-comment-id="23">
+        
+        <div class="article-comment" data-timestamp="1497420529402" data-agrees="32" data-disagrees="149" data-comment-id="23">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 23</span>
@@ -3089,13 +3089,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 32fr 149fr;">
         <span class="article-num-agrees">👍32</span>
-        <span class="article-num-disagree">👎149</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420512581" data-agrees="30" data-disagrees="143" data-comment-id="22">
+        
+        <div class="article-comment" data-timestamp="1497420512581" data-agrees="30" data-disagrees="143" data-comment-id="22">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 22</span>
@@ -3107,13 +3107,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 30fr 143fr;">
         <span class="article-num-agrees">👍30</span>
-        <span class="article-num-disagree">👎143</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420492056" data-agrees="66" data-disagrees="106" data-comment-id="21">
+        
+        <div class="article-comment" data-timestamp="1497420492056" data-agrees="66" data-disagrees="106" data-comment-id="21">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 21</span>
@@ -3126,13 +3126,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 66fr 106fr;">
         <span class="article-num-agrees">👍66</span>
-        <span class="article-num-disagree">👎106</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420473251" data-agrees="55" data-disagrees="103" data-comment-id="20">
+        
+        <div class="article-comment" data-timestamp="1497420473251" data-agrees="55" data-disagrees="103" data-comment-id="20">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 20</span>
@@ -3145,13 +3145,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 55fr 103fr;">
         <span class="article-num-agrees">👍55</span>
-        <span class="article-num-disagree">👎103</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420456381" data-agrees="154" data-disagrees="18" data-comment-id="19">
+        
+        <div class="article-comment" data-timestamp="1497420456381" data-agrees="154" data-disagrees="18" data-comment-id="19">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 19</span>
@@ -3163,13 +3163,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 154fr 18fr;">
         <span class="article-num-agrees">👍154</span>
-        <span class="article-num-disagree">👎18</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420328786" data-agrees="75" data-disagrees="68" data-comment-id="18">
+        
+        <div class="article-comment" data-timestamp="1497420328786" data-agrees="75" data-disagrees="68" data-comment-id="18">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 18</span>
@@ -3182,13 +3182,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 75fr 68fr;">
         <span class="article-num-agrees">👍75</span>
-        <span class="article-num-disagree">👎68</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420241131" data-agrees="178" data-disagrees="11" data-comment-id="17">
+        
+        <div class="article-comment" data-timestamp="1497420241131" data-agrees="178" data-disagrees="11" data-comment-id="17">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 17</span>
@@ -3201,13 +3201,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 178fr 11fr;">
         <span class="article-num-agrees">👍178</span>
-        <span class="article-num-disagree">👎11</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420219065" data-agrees="107" data-disagrees="38" data-comment-id="16">
+        
+        <div class="article-comment" data-timestamp="1497420219065" data-agrees="107" data-disagrees="38" data-comment-id="16">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 16</span>
@@ -3219,13 +3219,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 107fr 38fr;">
         <span class="article-num-agrees">👍107</span>
-        <span class="article-num-disagree">👎38</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420194733" data-agrees="56" data-disagrees="71" data-comment-id="15">
+        
+        <div class="article-comment" data-timestamp="1497420194733" data-agrees="56" data-disagrees="71" data-comment-id="15">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 15</span>
@@ -3238,13 +3238,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 56fr 71fr;">
         <span class="article-num-agrees">👍56</span>
-        <span class="article-num-disagree">👎71</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420176807" data-agrees="58" data-disagrees="103" data-comment-id="14">
+        
+        <div class="article-comment" data-timestamp="1497420176807" data-agrees="58" data-disagrees="103" data-comment-id="14">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 14</span>
@@ -3257,13 +3257,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 58fr 103fr;">
         <span class="article-num-agrees">👍58</span>
-        <span class="article-num-disagree">👎103</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420147261" data-agrees="171" data-disagrees="17" data-comment-id="13">
+        
+        <div class="article-comment" data-timestamp="1497420147261" data-agrees="171" data-disagrees="17" data-comment-id="13">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 13</span>
@@ -3276,13 +3276,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 171fr 17fr;">
         <span class="article-num-agrees">👍171</span>
-        <span class="article-num-disagree">👎17</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420125311" data-agrees="168" data-disagrees="17" data-comment-id="12">
+        
+        <div class="article-comment" data-timestamp="1497420125311" data-agrees="168" data-disagrees="17" data-comment-id="12">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 12</span>
@@ -3294,13 +3294,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 168fr 17fr;">
         <span class="article-num-agrees">👍168</span>
-        <span class="article-num-disagree">👎17</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420052164" data-agrees="113" data-disagrees="56" data-comment-id="11">
+        
+        <div class="article-comment" data-timestamp="1497420052164" data-agrees="113" data-disagrees="56" data-comment-id="11">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 11</span>
@@ -3313,13 +3313,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 113fr 56fr;">
         <span class="article-num-agrees">👍113</span>
-        <span class="article-num-disagree">👎56</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420026556" data-agrees="153" data-disagrees="27" data-comment-id="10">
+        
+        <div class="article-comment" data-timestamp="1497420026556" data-agrees="153" data-disagrees="27" data-comment-id="10">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 10</span>
@@ -3332,13 +3332,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 153fr 27fr;">
         <span class="article-num-agrees">👍153</span>
-        <span class="article-num-disagree">👎27</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497420004498" data-agrees="172" data-disagrees="27" data-comment-id="9">
+        
+        <div class="article-comment" data-timestamp="1497420004498" data-agrees="172" data-disagrees="27" data-comment-id="9">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 9</span>
@@ -3351,13 +3351,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 172fr 27fr;">
         <span class="article-num-agrees">👍172</span>
-        <span class="article-num-disagree">👎27</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497419979194" data-agrees="177" data-disagrees="21" data-comment-id="8">
+        
+        <div class="article-comment" data-timestamp="1497419979194" data-agrees="177" data-disagrees="21" data-comment-id="8">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 8</span>
@@ -3369,13 +3369,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 177fr 21fr;">
         <span class="article-num-agrees">👍177</span>
-        <span class="article-num-disagree">👎21</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497419957162" data-agrees="112" data-disagrees="68" data-comment-id="7">
+        
+        <div class="article-comment" data-timestamp="1497419957162" data-agrees="112" data-disagrees="68" data-comment-id="7">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 7</span>
@@ -3388,13 +3388,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 112fr 68fr;">
         <span class="article-num-agrees">👍112</span>
-        <span class="article-num-disagree">👎68</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497419933457" data-agrees="192" data-disagrees="13" data-comment-id="6">
+        
+        <div class="article-comment" data-timestamp="1497419933457" data-agrees="192" data-disagrees="13" data-comment-id="6">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 6</span>
@@ -3407,13 +3407,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 192fr 13fr;">
         <span class="article-num-agrees">👍192</span>
-        <span class="article-num-disagree">👎13</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497419908599" data-agrees="174" data-disagrees="10" data-comment-id="5">
+        
+        <div class="article-comment" data-timestamp="1497419908599" data-agrees="174" data-disagrees="10" data-comment-id="5">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 5</span>
@@ -3426,13 +3426,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 174fr 10fr;">
         <span class="article-num-agrees">👍174</span>
-        <span class="article-num-disagree">👎10</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497419887795" data-agrees="89" data-disagrees="75" data-comment-id="4">
+        
+        <div class="article-comment" data-timestamp="1497419887795" data-agrees="89" data-disagrees="75" data-comment-id="4">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 4</span>
@@ -3445,13 +3445,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 89fr 75fr;">
         <span class="article-num-agrees">👍89</span>
-        <span class="article-num-disagree">👎75</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497419810877" data-agrees="109" data-disagrees="42" data-comment-id="3">
+        
+        <div class="article-comment" data-timestamp="1497419810877" data-agrees="109" data-disagrees="42" data-comment-id="3">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 3</span>
@@ -3464,13 +3464,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 109fr 42fr;">
         <span class="article-num-agrees">👍109</span>
-        <span class="article-num-disagree">👎42</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497419791573" data-agrees="31" data-disagrees="24" data-comment-id="2">
+        
+        <div class="article-comment" data-timestamp="1497419791573" data-agrees="31" data-disagrees="24" data-comment-id="2">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 2</span>
@@ -3482,13 +3482,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 31fr 24fr;">
         <span class="article-num-agrees">👍31</span>
-        <span class="article-num-disagree">👎24</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497419752555" data-agrees="148" data-disagrees="31" data-comment-id="1">
+        
+        <div class="article-comment" data-timestamp="1497419752555" data-agrees="148" data-disagrees="31" data-comment-id="1">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 1</span>
@@ -3501,13 +3501,13 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 148fr 31fr;">
         <span class="article-num-agrees">👍148</span>
-        <span class="article-num-disagree">👎31</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1497419732326" data-agrees="4" data-disagrees="63" data-comment-id="0">
+        
+        <div class="article-comment" data-timestamp="1497419732326" data-agrees="4" data-disagrees="63" data-comment-id="0">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 0</span>
@@ -3519,15 +3519,64 @@ one at a time in a random order. </i></p>
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 4fr 63fr;">
         <span class="article-num-agrees">👍4</span>
-        <span class="article-num-disagree">👎63</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-        </div>
+        
       </div>
-    </section>
+    </div>
+  </section>
+
+  <div id="science-modal">
+    <div id="science-modal-label">
+      <div>Explanations</div>
+    </div>
+    <div id="science-modal-content">
+      <button id="close-science-modal">&times;</button>
+
+      <h3 id="explanation-analysis">Analysis</h3>
+
+      <h4 id="explanation-popularity">Popularity</h4>
+
+      <p>
+        "Popularity" measures how popular is a set of comments for the participants. It is equal to the total amount of
+        positive votes (thumbs, up or approvals) received by the comments in the selection.
+      </p>
+
+      <h4 id="explanation-inclusion">Inclusion</h4>
+
+      <p>
+        "Inclusion" measures the percentage of participants included in the selection. That is, the percentage of
+        participants who expressed a positive opinion (thumb up, or approval) about at least one of the selected comments.
+      </p>
+
+      <p>
+        For instance, an inclusion of 60% means that 60% of the participants feel positively about at least one comment
+        of the selection.
+      </p>
+
+      <p>
+        Inclusion can also be expressed in terms of satisfaction: the inclusion is the percentage of participants with
+        non-zero satisfaction.
+      </p>
+
+      <h4 id="explanation-satisfaction">Satisfaction</h4>
+
+      <p>
+        The "satisfaction of a participant" measures the number of selected comments that they expressed a positive
+        opinion (thumb up, or approval) about.
+      </p>
+
+      <p>
+        For instance, a satisfaction of 3 means that the participant feels positively about 3 of the selected comments.
+      </p>
+
+      <h3 id="explanation-selection-methods">Selection Methods</h3>
+
+
+    </div>
   </div>
 
 <script>
@@ -3798,6 +3847,40 @@ one at a time in a random order. </i></p>
         });
       });
     });
+
+    const modal = document.getElementById('science-modal');
+  const modalLabel = document.getElementById('science-modal-label');
+  const closeModalBtn = document.getElementById('close-science-modal');
+  const modalContent = document.getElementById('science-modal-content');
+
+  function openModal(targetId = null) {
+    modal.classList.add('open');
+    if (targetId) {
+      setTimeout(() => {
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 100);
+    }
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+  }
+
+  modalLabel.addEventListener('click', () => {
+    modal.classList.toggle('open');
+  });
+
+  closeModalBtn.addEventListener('click', closeModal);
+
+  document.querySelectorAll('.open-explanation').forEach(el => {
+    el.addEventListener('click', () => {
+      const target = el.dataset.target;
+      openModal(target);
+    });
+  });
 });
 </script>
 

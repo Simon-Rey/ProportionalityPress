@@ -257,45 +257,45 @@ and potential solutions and to share your own perspectives.
     </div>
   </section>
 
-    
-      <section class="article-comments-wrap">
-        <h2>Summary of the Comment Section</h2>
+  
+    <section class="article-comments-wrap">
+      <h2>Summary of the Comment Section</h2>
 
-        <p>
-          This section showcases different methods for selecting representative comments from a broader discussion (see
-          <a href="#article-all-comments-section">the comment section below</a>).
-          For each method, the goal is to highlight a small set of comments that best reflect the conversation.
-          They each approach this task from a different standpoint, emphasising different principles, such as popularity,
-          representation or diversity (among others).
-        </p>
+      <p>
+        This section showcases different methods for selecting representative comments from a broader discussion (see
+        <a href="#article-all-comments-section">the comment section below</a>).
+        For each method, the goal is to highlight a small set of comments that best reflect the conversation.
+        They each approach this task from a different standpoint, emphasising different principles, such as popularity,
+        representation or diversity (among others).
+      </p>
 
-        <p class="center-align">
-          <span id="show-advanced-controls" class="button">Show Advanced Controls</span>
-        </p>
+      <p class="center-align">
+        <span id="show-advanced-controls" class="button">Show Advanced Controls</span>
+      </p>
 
-        <div id="size-selection-wrap">
-          <label for="size-select">Number of Representative Comments:</label>
-          <select id="size-select">
-            
-              <option value="3">3</option>
-            
-              <option value="5" selected="selected">5</option>
-            
-              <option value="8">8</option>
-            
-              <option value="10">10</option>
-            
-          </select>
-        </div>
-
-        <div id="representative-comments-wrap">
-
+      <div id="size-selection-wrap">
+        <label for="size-select">Number of Representative Comments:</label>
+        <select id="size-select">
           
-            <div class="representative-comments-block">
+            <option value="3">3</option>
+          
+            <option value="5" selected="selected">5</option>
+          
+            <option value="8">8</option>
+          
+            <option value="10">10</option>
+          
+        </select>
+      </div>
+
+      <div id="representative-comments-wrap">
+
+        
+          <div class="representative-comments-block">
   <h3 class="representative-comments-block-title">Popularity-Based Selection</h3>
   <h3 class="representative-comments-block-title alternative-representative-comments-block-title hidden">Selection 1</h3>
   <div class="rule-selection-wrap">
-<!--    <div class="rule-select-header">Selection Method</div>-->
+<!--    <div class="rule-select-header">Selection Method <span class="open-explanation" data-target="explanation-selection-methods" style="cursor:pointer;">❓</span></div>-->
     <div id="rule-select-popularity" class="rule-select">
       
         <div data-value="av" class="rule-select-option selected"><span>Approval Voting</span></div>
@@ -325,7 +325,7 @@ and potential solutions and to share your own perspectives.
 
   <div class="representative-comments-analysis">
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Popularity</div>
+      <div class="comment-analysis-measure-header">Popularity <span class="open-explanation" data-target="explanation-popularity" style="cursor:pointer;">❓</span></div>
       <div class="progress-bar-wrap">
         <div class="comment-analysis-measure progress-bar satisfaction-progress">
           <div class="progress-bar-fill satisfaction-bar-fill">
@@ -339,7 +339,7 @@ and potential solutions and to share your own perspectives.
     </div>
 
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Inclusion</div>
+      <div class="comment-analysis-measure-header">Inclusion <span class="open-explanation" data-target="explanation-inclusion" style="cursor:pointer;">❓</span></div>
       <div class="progress-bar-wrap">
         <div class="comment-analysis-measure progress-bar coverage-progress">
           <div class="progress-bar-fill max-coverage-bar-fill"></div>
@@ -355,7 +355,7 @@ and potential solutions and to share your own perspectives.
   </div>
 
   <div class="comment-analysis-measure-block" style="flex-direction: column;">
-    <div class="comment-analysis-measure-header">Satisfaction Distribution</div>
+    <div class="comment-analysis-measure-header">Satisfaction Distribution <span class="open-explanation" data-target="explanation-satisfaction" style="cursor:pointer;">❓</span></div>
     <div class="satisfaction-histogram"></div>
   </div>
 
@@ -363,14 +363,14 @@ and potential solutions and to share your own perspectives.
     <!-- JS will populate this based on selections -->
   </div>
 </div>
-          
+        
 
-          
-            <div class="representative-comments-block">
+        
+          <div class="representative-comments-block">
   <h3 class="representative-comments-block-title">Representation-Based Selection</h3>
   <h3 class="representative-comments-block-title alternative-representative-comments-block-title hidden">Selection 2</h3>
   <div class="rule-selection-wrap">
-<!--    <div class="rule-select-header">Selection Method</div>-->
+<!--    <div class="rule-select-header">Selection Method <span class="open-explanation" data-target="explanation-selection-methods" style="cursor:pointer;">❓</span></div>-->
     <div id="rule-select-representation" class="rule-select">
       
         <div data-value="av" class="rule-select-option"><span>Approval Voting</span></div>
@@ -400,7 +400,7 @@ and potential solutions and to share your own perspectives.
 
   <div class="representative-comments-analysis">
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Popularity</div>
+      <div class="comment-analysis-measure-header">Popularity <span class="open-explanation" data-target="explanation-popularity" style="cursor:pointer;">❓</span></div>
       <div class="progress-bar-wrap">
         <div class="comment-analysis-measure progress-bar satisfaction-progress">
           <div class="progress-bar-fill satisfaction-bar-fill">
@@ -414,7 +414,7 @@ and potential solutions and to share your own perspectives.
     </div>
 
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Inclusion</div>
+      <div class="comment-analysis-measure-header">Inclusion <span class="open-explanation" data-target="explanation-inclusion" style="cursor:pointer;">❓</span></div>
       <div class="progress-bar-wrap">
         <div class="comment-analysis-measure progress-bar coverage-progress">
           <div class="progress-bar-fill max-coverage-bar-fill"></div>
@@ -430,7 +430,7 @@ and potential solutions and to share your own perspectives.
   </div>
 
   <div class="comment-analysis-measure-block" style="flex-direction: column;">
-    <div class="comment-analysis-measure-header">Satisfaction Distribution</div>
+    <div class="comment-analysis-measure-header">Satisfaction Distribution <span class="open-explanation" data-target="explanation-satisfaction" style="cursor:pointer;">❓</span></div>
     <div class="satisfaction-histogram"></div>
   </div>
 
@@ -438,14 +438,14 @@ and potential solutions and to share your own perspectives.
     <!-- JS will populate this based on selections -->
   </div>
 </div>
-          
+        
 
-          
-            <div class="representative-comments-block">
+        
+          <div class="representative-comments-block">
   <h3 class="representative-comments-block-title">Diversity-Based Selection</h3>
   <h3 class="representative-comments-block-title alternative-representative-comments-block-title hidden">Selection 3</h3>
   <div class="rule-selection-wrap">
-<!--    <div class="rule-select-header">Selection Method</div>-->
+<!--    <div class="rule-select-header">Selection Method <span class="open-explanation" data-target="explanation-selection-methods" style="cursor:pointer;">❓</span></div>-->
     <div id="rule-select-diversity" class="rule-select">
       
         <div data-value="av" class="rule-select-option"><span>Approval Voting</span></div>
@@ -475,7 +475,7 @@ and potential solutions and to share your own perspectives.
 
   <div class="representative-comments-analysis">
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Popularity</div>
+      <div class="comment-analysis-measure-header">Popularity <span class="open-explanation" data-target="explanation-popularity" style="cursor:pointer;">❓</span></div>
       <div class="progress-bar-wrap">
         <div class="comment-analysis-measure progress-bar satisfaction-progress">
           <div class="progress-bar-fill satisfaction-bar-fill">
@@ -489,7 +489,7 @@ and potential solutions and to share your own perspectives.
     </div>
 
     <div class="comment-analysis-measure-block">
-      <div class="comment-analysis-measure-header">Inclusion</div>
+      <div class="comment-analysis-measure-header">Inclusion <span class="open-explanation" data-target="explanation-inclusion" style="cursor:pointer;">❓</span></div>
       <div class="progress-bar-wrap">
         <div class="comment-analysis-measure progress-bar coverage-progress">
           <div class="progress-bar-fill max-coverage-bar-fill"></div>
@@ -505,7 +505,7 @@ and potential solutions and to share your own perspectives.
   </div>
 
   <div class="comment-analysis-measure-block" style="flex-direction: column;">
-    <div class="comment-analysis-measure-header">Satisfaction Distribution</div>
+    <div class="comment-analysis-measure-header">Satisfaction Distribution <span class="open-explanation" data-target="explanation-satisfaction" style="cursor:pointer;">❓</span></div>
     <div class="satisfaction-histogram"></div>
   </div>
 
@@ -513,28 +513,28 @@ and potential solutions and to share your own perspectives.
     <!-- JS will populate this based on selections -->
   </div>
 </div>
-          
+        
 
-        </div>
-      </section>
-    
+      </div>
+    </section>
+  
 
-    <section id="article-all-comments-section" class="article-comments-wrap">
-      <h2 class="next-collapsible">See All 80 Comments</h2>
+  <section id="article-all-comments-section" class="article-comments-wrap">
+    <h2 class="next-collapsible">See All 80 Comments</h2>
 
-      <div class="collapsed-content hidden">
-        <div class="comment-sorting-controls">
-          <label for="sort-comments">Sort by:</label>
-          <select id="sort-comments">
-            <option value="timestamp-desc">Newest</option>
-            <option value="timestamp-asc">Oldest</option>
-            <option value="agrees-desc">Most Agreed</option>
-            <option value="disagrees-desc">Most Disagreed</option>
-          </select>
-        </div>
-        <div id="all-comments-list" class="article-comments-list">
-          
-          <div class="article-comment" data-timestamp="1501665868591" data-agrees="1" data-disagrees="0" data-comment-id="79">
+    <div class="collapsed-content hidden">
+      <div class="comment-sorting-controls">
+        <label for="sort-comments">Sort by:</label>
+        <select id="sort-comments">
+          <option value="timestamp-desc">Newest</option>
+          <option value="timestamp-asc">Oldest</option>
+          <option value="agrees-desc">Most Agreed</option>
+          <option value="disagrees-desc">Most Disagreed</option>
+        </select>
+      </div>
+      <div id="all-comments-list" class="article-comments-list">
+        
+        <div class="article-comment" data-timestamp="1501665868591" data-agrees="1" data-disagrees="0" data-comment-id="79">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 79</span>
@@ -546,13 +546,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501560059392" data-agrees="1" data-disagrees="0" data-comment-id="78">
+        
+        <div class="article-comment" data-timestamp="1501560059392" data-agrees="1" data-disagrees="0" data-comment-id="78">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 78</span>
@@ -564,13 +564,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501547330987" data-agrees="1" data-disagrees="0" data-comment-id="77">
+        
+        <div class="article-comment" data-timestamp="1501547330987" data-agrees="1" data-disagrees="0" data-comment-id="77">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 77</span>
@@ -582,13 +582,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501446824133" data-agrees="26" data-disagrees="0" data-comment-id="76">
+        
+        <div class="article-comment" data-timestamp="1501446824133" data-agrees="26" data-disagrees="0" data-comment-id="76">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 76</span>
@@ -600,13 +600,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 26fr 0fr;">
         <span class="article-num-agrees">👍26</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501394974515" data-agrees="22" data-disagrees="2" data-comment-id="75">
+        
+        <div class="article-comment" data-timestamp="1501394974515" data-agrees="22" data-disagrees="2" data-comment-id="75">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 75</span>
@@ -618,13 +618,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 22fr 2fr;">
         <span class="article-num-agrees">👍22</span>
-        <span class="article-num-disagree">👎2</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501192025192" data-agrees="20" data-disagrees="7" data-comment-id="74">
+        
+        <div class="article-comment" data-timestamp="1501192025192" data-agrees="20" data-disagrees="7" data-comment-id="74">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 74</span>
@@ -636,13 +636,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 20fr 7fr;">
         <span class="article-num-agrees">👍20</span>
-        <span class="article-num-disagree">👎7</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501147880696" data-agrees="1" data-disagrees="0" data-comment-id="73">
+        
+        <div class="article-comment" data-timestamp="1501147880696" data-agrees="1" data-disagrees="0" data-comment-id="73">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 73</span>
@@ -654,13 +654,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501141179410" data-agrees="12" data-disagrees="6" data-comment-id="72">
+        
+        <div class="article-comment" data-timestamp="1501141179410" data-agrees="12" data-disagrees="6" data-comment-id="72">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 72</span>
@@ -672,13 +672,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 12fr 6fr;">
         <span class="article-num-agrees">👍12</span>
-        <span class="article-num-disagree">👎6</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501108722464" data-agrees="1" data-disagrees="0" data-comment-id="71">
+        
+        <div class="article-comment" data-timestamp="1501108722464" data-agrees="1" data-disagrees="0" data-comment-id="71">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 71</span>
@@ -690,13 +690,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501088828232" data-agrees="40" data-disagrees="4" data-comment-id="70">
+        
+        <div class="article-comment" data-timestamp="1501088828232" data-agrees="40" data-disagrees="4" data-comment-id="70">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 70</span>
@@ -708,13 +708,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 40fr 4fr;">
         <span class="article-num-agrees">👍40</span>
-        <span class="article-num-disagree">👎4</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501088623370" data-agrees="0" data-disagrees="0" data-comment-id="69">
+        
+        <div class="article-comment" data-timestamp="1501088623370" data-agrees="0" data-disagrees="0" data-comment-id="69">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 69</span>
@@ -726,13 +726,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 0fr 0fr;">
         <span class="article-num-agrees">👍0</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501088446027" data-agrees="27" data-disagrees="8" data-comment-id="68">
+        
+        <div class="article-comment" data-timestamp="1501088446027" data-agrees="27" data-disagrees="8" data-comment-id="68">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 68</span>
@@ -744,13 +744,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 27fr 8fr;">
         <span class="article-num-agrees">👍27</span>
-        <span class="article-num-disagree">👎8</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501088418351" data-agrees="43" data-disagrees="5" data-comment-id="67">
+        
+        <div class="article-comment" data-timestamp="1501088418351" data-agrees="43" data-disagrees="5" data-comment-id="67">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 67</span>
@@ -762,13 +762,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 43fr 5fr;">
         <span class="article-num-agrees">👍43</span>
-        <span class="article-num-disagree">👎5</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501088399079" data-agrees="39" data-disagrees="6" data-comment-id="66">
+        
+        <div class="article-comment" data-timestamp="1501088399079" data-agrees="39" data-disagrees="6" data-comment-id="66">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 66</span>
@@ -780,13 +780,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 39fr 6fr;">
         <span class="article-num-agrees">👍39</span>
-        <span class="article-num-disagree">👎6</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501088377164" data-agrees="37" data-disagrees="9" data-comment-id="65">
+        
+        <div class="article-comment" data-timestamp="1501088377164" data-agrees="37" data-disagrees="9" data-comment-id="65">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 65</span>
@@ -798,13 +798,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 37fr 9fr;">
         <span class="article-num-agrees">👍37</span>
-        <span class="article-num-disagree">👎9</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501088346295" data-agrees="49" data-disagrees="2" data-comment-id="64">
+        
+        <div class="article-comment" data-timestamp="1501088346295" data-agrees="49" data-disagrees="2" data-comment-id="64">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 64</span>
@@ -817,13 +817,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 49fr 2fr;">
         <span class="article-num-agrees">👍49</span>
-        <span class="article-num-disagree">👎2</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501088208345" data-agrees="43" data-disagrees="4" data-comment-id="63">
+        
+        <div class="article-comment" data-timestamp="1501088208345" data-agrees="43" data-disagrees="4" data-comment-id="63">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 63</span>
@@ -835,13 +835,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 43fr 4fr;">
         <span class="article-num-agrees">👍43</span>
-        <span class="article-num-disagree">👎4</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501088159707" data-agrees="48" data-disagrees="0" data-comment-id="62">
+        
+        <div class="article-comment" data-timestamp="1501088159707" data-agrees="48" data-disagrees="0" data-comment-id="62">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 62</span>
@@ -853,13 +853,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 48fr 0fr;">
         <span class="article-num-agrees">👍48</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501088105080" data-agrees="42" data-disagrees="4" data-comment-id="61">
+        
+        <div class="article-comment" data-timestamp="1501088105080" data-agrees="42" data-disagrees="4" data-comment-id="61">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 61</span>
@@ -871,13 +871,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 42fr 4fr;">
         <span class="article-num-agrees">👍42</span>
-        <span class="article-num-disagree">👎4</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1501088069198" data-agrees="12" data-disagrees="33" data-comment-id="60">
+        
+        <div class="article-comment" data-timestamp="1501088069198" data-agrees="12" data-disagrees="33" data-comment-id="60">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 60</span>
@@ -889,13 +889,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 12fr 33fr;">
         <span class="article-num-agrees">👍12</span>
-        <span class="article-num-disagree">👎33</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500995950575" data-agrees="1" data-disagrees="0" data-comment-id="59">
+        
+        <div class="article-comment" data-timestamp="1500995950575" data-agrees="1" data-disagrees="0" data-comment-id="59">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 59</span>
@@ -907,13 +907,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500961546163" data-agrees="1" data-disagrees="0" data-comment-id="58">
+        
+        <div class="article-comment" data-timestamp="1500961546163" data-agrees="1" data-disagrees="0" data-comment-id="58">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 58</span>
@@ -925,13 +925,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500961472077" data-agrees="1" data-disagrees="0" data-comment-id="57">
+        
+        <div class="article-comment" data-timestamp="1500961472077" data-agrees="1" data-disagrees="0" data-comment-id="57">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 57</span>
@@ -943,13 +943,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500961201179" data-agrees="1" data-disagrees="0" data-comment-id="56">
+        
+        <div class="article-comment" data-timestamp="1500961201179" data-agrees="1" data-disagrees="0" data-comment-id="56">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 56</span>
@@ -961,13 +961,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500929680130" data-agrees="1" data-disagrees="0" data-comment-id="55">
+        
+        <div class="article-comment" data-timestamp="1500929680130" data-agrees="1" data-disagrees="0" data-comment-id="55">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 55</span>
@@ -979,13 +979,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500884324694" data-agrees="1" data-disagrees="0" data-comment-id="54">
+        
+        <div class="article-comment" data-timestamp="1500884324694" data-agrees="1" data-disagrees="0" data-comment-id="54">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 54</span>
@@ -997,13 +997,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500859209328" data-agrees="1" data-disagrees="0" data-comment-id="53">
+        
+        <div class="article-comment" data-timestamp="1500859209328" data-agrees="1" data-disagrees="0" data-comment-id="53">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 53</span>
@@ -1015,13 +1015,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500622854130" data-agrees="1" data-disagrees="0" data-comment-id="52">
+        
+        <div class="article-comment" data-timestamp="1500622854130" data-agrees="1" data-disagrees="0" data-comment-id="52">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 52</span>
@@ -1033,13 +1033,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500622760613" data-agrees="1" data-disagrees="0" data-comment-id="51">
+        
+        <div class="article-comment" data-timestamp="1500622760613" data-agrees="1" data-disagrees="0" data-comment-id="51">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 51</span>
@@ -1051,13 +1051,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500622495871" data-agrees="1" data-disagrees="0" data-comment-id="50">
+        
+        <div class="article-comment" data-timestamp="1500622495871" data-agrees="1" data-disagrees="0" data-comment-id="50">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 50</span>
@@ -1069,13 +1069,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500622432083" data-agrees="1" data-disagrees="0" data-comment-id="49">
+        
+        <div class="article-comment" data-timestamp="1500622432083" data-agrees="1" data-disagrees="0" data-comment-id="49">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 49</span>
@@ -1087,13 +1087,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500622325209" data-agrees="1" data-disagrees="0" data-comment-id="48">
+        
+        <div class="article-comment" data-timestamp="1500622325209" data-agrees="1" data-disagrees="0" data-comment-id="48">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 48</span>
@@ -1105,13 +1105,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500614766457" data-agrees="1" data-disagrees="0" data-comment-id="47">
+        
+        <div class="article-comment" data-timestamp="1500614766457" data-agrees="1" data-disagrees="0" data-comment-id="47">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 47</span>
@@ -1123,13 +1123,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500614654393" data-agrees="1" data-disagrees="0" data-comment-id="46">
+        
+        <div class="article-comment" data-timestamp="1500614654393" data-agrees="1" data-disagrees="0" data-comment-id="46">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 46</span>
@@ -1141,13 +1141,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500478135742" data-agrees="1" data-disagrees="0" data-comment-id="45">
+        
+        <div class="article-comment" data-timestamp="1500478135742" data-agrees="1" data-disagrees="0" data-comment-id="45">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 45</span>
@@ -1159,13 +1159,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500477114020" data-agrees="1" data-disagrees="0" data-comment-id="44">
+        
+        <div class="article-comment" data-timestamp="1500477114020" data-agrees="1" data-disagrees="0" data-comment-id="44">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 44</span>
@@ -1177,13 +1177,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500443303615" data-agrees="1" data-disagrees="0" data-comment-id="43">
+        
+        <div class="article-comment" data-timestamp="1500443303615" data-agrees="1" data-disagrees="0" data-comment-id="43">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 43</span>
@@ -1195,13 +1195,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500432142356" data-agrees="1" data-disagrees="0" data-comment-id="42">
+        
+        <div class="article-comment" data-timestamp="1500432142356" data-agrees="1" data-disagrees="0" data-comment-id="42">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 42</span>
@@ -1213,13 +1213,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 1fr 0fr;">
         <span class="article-num-agrees">👍1</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500425805742" data-agrees="6" data-disagrees="69" data-comment-id="41">
+        
+        <div class="article-comment" data-timestamp="1500425805742" data-agrees="6" data-disagrees="69" data-comment-id="41">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 41</span>
@@ -1232,13 +1232,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 6fr 69fr;">
         <span class="article-num-agrees">👍6</span>
-        <span class="article-num-disagree">👎69</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500425686044" data-agrees="52" data-disagrees="20" data-comment-id="40">
+        
+        <div class="article-comment" data-timestamp="1500425686044" data-agrees="52" data-disagrees="20" data-comment-id="40">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 40</span>
@@ -1251,13 +1251,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 52fr 20fr;">
         <span class="article-num-agrees">👍52</span>
-        <span class="article-num-disagree">👎20</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500425612176" data-agrees="12" data-disagrees="67" data-comment-id="39">
+        
+        <div class="article-comment" data-timestamp="1500425612176" data-agrees="12" data-disagrees="67" data-comment-id="39">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 39</span>
@@ -1269,13 +1269,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 12fr 67fr;">
         <span class="article-num-agrees">👍12</span>
-        <span class="article-num-disagree">👎67</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500425537429" data-agrees="52" data-disagrees="22" data-comment-id="38">
+        
+        <div class="article-comment" data-timestamp="1500425537429" data-agrees="52" data-disagrees="22" data-comment-id="38">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 38</span>
@@ -1288,13 +1288,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 52fr 22fr;">
         <span class="article-num-agrees">👍52</span>
-        <span class="article-num-disagree">👎22</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500425428238" data-agrees="56" data-disagrees="21" data-comment-id="37">
+        
+        <div class="article-comment" data-timestamp="1500425428238" data-agrees="56" data-disagrees="21" data-comment-id="37">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 37</span>
@@ -1307,13 +1307,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 56fr 21fr;">
         <span class="article-num-agrees">👍56</span>
-        <span class="article-num-disagree">👎21</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360746503" data-agrees="55" data-disagrees="30" data-comment-id="36">
+        
+        <div class="article-comment" data-timestamp="1500360746503" data-agrees="55" data-disagrees="30" data-comment-id="36">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 36</span>
@@ -1325,13 +1325,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 55fr 30fr;">
         <span class="article-num-agrees">👍55</span>
-        <span class="article-num-disagree">👎30</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360599205" data-agrees="14" data-disagrees="64" data-comment-id="35">
+        
+        <div class="article-comment" data-timestamp="1500360599205" data-agrees="14" data-disagrees="64" data-comment-id="35">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 35</span>
@@ -1343,13 +1343,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 14fr 64fr;">
         <span class="article-num-agrees">👍14</span>
-        <span class="article-num-disagree">👎64</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360581785" data-agrees="15" data-disagrees="66" data-comment-id="34">
+        
+        <div class="article-comment" data-timestamp="1500360581785" data-agrees="15" data-disagrees="66" data-comment-id="34">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 34</span>
@@ -1361,13 +1361,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 15fr 66fr;">
         <span class="article-num-agrees">👍15</span>
-        <span class="article-num-disagree">👎66</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360560151" data-agrees="6" data-disagrees="76" data-comment-id="33">
+        
+        <div class="article-comment" data-timestamp="1500360560151" data-agrees="6" data-disagrees="76" data-comment-id="33">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 33</span>
@@ -1379,13 +1379,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 6fr 76fr;">
         <span class="article-num-agrees">👍6</span>
-        <span class="article-num-disagree">👎76</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360543722" data-agrees="30" data-disagrees="53" data-comment-id="32">
+        
+        <div class="article-comment" data-timestamp="1500360543722" data-agrees="30" data-disagrees="53" data-comment-id="32">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 32</span>
@@ -1397,13 +1397,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 30fr 53fr;">
         <span class="article-num-agrees">👍30</span>
-        <span class="article-num-disagree">👎53</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360525926" data-agrees="48" data-disagrees="36" data-comment-id="31">
+        
+        <div class="article-comment" data-timestamp="1500360525926" data-agrees="48" data-disagrees="36" data-comment-id="31">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 31</span>
@@ -1416,13 +1416,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 48fr 36fr;">
         <span class="article-num-agrees">👍48</span>
-        <span class="article-num-disagree">👎36</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360509264" data-agrees="9" data-disagrees="76" data-comment-id="30">
+        
+        <div class="article-comment" data-timestamp="1500360509264" data-agrees="9" data-disagrees="76" data-comment-id="30">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 30</span>
@@ -1435,13 +1435,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 9fr 76fr;">
         <span class="article-num-agrees">👍9</span>
-        <span class="article-num-disagree">👎76</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360495953" data-agrees="76" data-disagrees="9" data-comment-id="29">
+        
+        <div class="article-comment" data-timestamp="1500360495953" data-agrees="76" data-disagrees="9" data-comment-id="29">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 29</span>
@@ -1453,13 +1453,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 76fr 9fr;">
         <span class="article-num-agrees">👍76</span>
-        <span class="article-num-disagree">👎9</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360484342" data-agrees="68" data-disagrees="11" data-comment-id="28">
+        
+        <div class="article-comment" data-timestamp="1500360484342" data-agrees="68" data-disagrees="11" data-comment-id="28">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 28</span>
@@ -1471,13 +1471,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 68fr 11fr;">
         <span class="article-num-agrees">👍68</span>
-        <span class="article-num-disagree">👎11</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360457214" data-agrees="83" data-disagrees="3" data-comment-id="27">
+        
+        <div class="article-comment" data-timestamp="1500360457214" data-agrees="83" data-disagrees="3" data-comment-id="27">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 27</span>
@@ -1489,13 +1489,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 83fr 3fr;">
         <span class="article-num-agrees">👍83</span>
-        <span class="article-num-disagree">👎3</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360441610" data-agrees="17" data-disagrees="61" data-comment-id="26">
+        
+        <div class="article-comment" data-timestamp="1500360441610" data-agrees="17" data-disagrees="61" data-comment-id="26">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 26</span>
@@ -1507,13 +1507,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 17fr 61fr;">
         <span class="article-num-agrees">👍17</span>
-        <span class="article-num-disagree">👎61</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360430539" data-agrees="56" data-disagrees="25" data-comment-id="25">
+        
+        <div class="article-comment" data-timestamp="1500360430539" data-agrees="56" data-disagrees="25" data-comment-id="25">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 25</span>
@@ -1525,13 +1525,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 56fr 25fr;">
         <span class="article-num-agrees">👍56</span>
-        <span class="article-num-disagree">👎25</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360418409" data-agrees="65" data-disagrees="19" data-comment-id="24">
+        
+        <div class="article-comment" data-timestamp="1500360418409" data-agrees="65" data-disagrees="19" data-comment-id="24">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 24</span>
@@ -1544,13 +1544,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 65fr 19fr;">
         <span class="article-num-agrees">👍65</span>
-        <span class="article-num-disagree">👎19</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360353133" data-agrees="78" data-disagrees="2" data-comment-id="23">
+        
+        <div class="article-comment" data-timestamp="1500360353133" data-agrees="78" data-disagrees="2" data-comment-id="23">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 23</span>
@@ -1562,13 +1562,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 78fr 2fr;">
         <span class="article-num-agrees">👍78</span>
-        <span class="article-num-disagree">👎2</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360339239" data-agrees="67" data-disagrees="9" data-comment-id="22">
+        
+        <div class="article-comment" data-timestamp="1500360339239" data-agrees="67" data-disagrees="9" data-comment-id="22">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 22</span>
@@ -1581,13 +1581,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 67fr 9fr;">
         <span class="article-num-agrees">👍67</span>
-        <span class="article-num-disagree">👎9</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360325715" data-agrees="57" data-disagrees="12" data-comment-id="21">
+        
+        <div class="article-comment" data-timestamp="1500360325715" data-agrees="57" data-disagrees="12" data-comment-id="21">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 21</span>
@@ -1599,13 +1599,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 57fr 12fr;">
         <span class="article-num-agrees">👍57</span>
-        <span class="article-num-disagree">👎12</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360312235" data-agrees="0" data-disagrees="0" data-comment-id="20">
+        
+        <div class="article-comment" data-timestamp="1500360312235" data-agrees="0" data-disagrees="0" data-comment-id="20">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 20</span>
@@ -1617,13 +1617,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 0fr 0fr;">
         <span class="article-num-agrees">👍0</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360299930" data-agrees="78" data-disagrees="4" data-comment-id="19">
+        
+        <div class="article-comment" data-timestamp="1500360299930" data-agrees="78" data-disagrees="4" data-comment-id="19">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 19</span>
@@ -1636,13 +1636,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 78fr 4fr;">
         <span class="article-num-agrees">👍78</span>
-        <span class="article-num-disagree">👎4</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360283531" data-agrees="83" data-disagrees="2" data-comment-id="18">
+        
+        <div class="article-comment" data-timestamp="1500360283531" data-agrees="83" data-disagrees="2" data-comment-id="18">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 18</span>
@@ -1654,13 +1654,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 83fr 2fr;">
         <span class="article-num-agrees">👍83</span>
-        <span class="article-num-disagree">👎2</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360261634" data-agrees="81" data-disagrees="4" data-comment-id="17">
+        
+        <div class="article-comment" data-timestamp="1500360261634" data-agrees="81" data-disagrees="4" data-comment-id="17">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 17</span>
@@ -1672,13 +1672,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 81fr 4fr;">
         <span class="article-num-agrees">👍81</span>
-        <span class="article-num-disagree">👎4</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360243251" data-agrees="83" data-disagrees="2" data-comment-id="16">
+        
+        <div class="article-comment" data-timestamp="1500360243251" data-agrees="83" data-disagrees="2" data-comment-id="16">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 16</span>
@@ -1690,13 +1690,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 83fr 2fr;">
         <span class="article-num-agrees">👍83</span>
-        <span class="article-num-disagree">👎2</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360224704" data-agrees="75" data-disagrees="5" data-comment-id="15">
+        
+        <div class="article-comment" data-timestamp="1500360224704" data-agrees="75" data-disagrees="5" data-comment-id="15">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 15</span>
@@ -1708,13 +1708,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 75fr 5fr;">
         <span class="article-num-agrees">👍75</span>
-        <span class="article-num-disagree">👎5</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360203506" data-agrees="0" data-disagrees="0" data-comment-id="14">
+        
+        <div class="article-comment" data-timestamp="1500360203506" data-agrees="0" data-disagrees="0" data-comment-id="14">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 14</span>
@@ -1726,13 +1726,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 0fr 0fr;">
         <span class="article-num-agrees">👍0</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360132122" data-agrees="86" data-disagrees="3" data-comment-id="13">
+        
+        <div class="article-comment" data-timestamp="1500360132122" data-agrees="86" data-disagrees="3" data-comment-id="13">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 13</span>
@@ -1744,13 +1744,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 86fr 3fr;">
         <span class="article-num-agrees">👍86</span>
-        <span class="article-num-disagree">👎3</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360120525" data-agrees="0" data-disagrees="0" data-comment-id="12">
+        
+        <div class="article-comment" data-timestamp="1500360120525" data-agrees="0" data-disagrees="0" data-comment-id="12">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 12</span>
@@ -1762,13 +1762,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 0fr 0fr;">
         <span class="article-num-agrees">👍0</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360107825" data-agrees="64" data-disagrees="15" data-comment-id="11">
+        
+        <div class="article-comment" data-timestamp="1500360107825" data-agrees="64" data-disagrees="15" data-comment-id="11">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 11</span>
@@ -1781,13 +1781,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 64fr 15fr;">
         <span class="article-num-agrees">👍64</span>
-        <span class="article-num-disagree">👎15</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360096491" data-agrees="61" data-disagrees="9" data-comment-id="10">
+        
+        <div class="article-comment" data-timestamp="1500360096491" data-agrees="61" data-disagrees="9" data-comment-id="10">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 10</span>
@@ -1800,13 +1800,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 61fr 9fr;">
         <span class="article-num-agrees">👍61</span>
-        <span class="article-num-disagree">👎9</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360065177" data-agrees="72" data-disagrees="6" data-comment-id="9">
+        
+        <div class="article-comment" data-timestamp="1500360065177" data-agrees="72" data-disagrees="6" data-comment-id="9">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 9</span>
@@ -1818,13 +1818,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 72fr 6fr;">
         <span class="article-num-agrees">👍72</span>
-        <span class="article-num-disagree">👎6</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360050183" data-agrees="9" data-disagrees="64" data-comment-id="8">
+        
+        <div class="article-comment" data-timestamp="1500360050183" data-agrees="9" data-disagrees="64" data-comment-id="8">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 8</span>
@@ -1836,13 +1836,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 9fr 64fr;">
         <span class="article-num-agrees">👍9</span>
-        <span class="article-num-disagree">👎64</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500360032603" data-agrees="2" data-disagrees="82" data-comment-id="7">
+        
+        <div class="article-comment" data-timestamp="1500360032603" data-agrees="2" data-disagrees="82" data-comment-id="7">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 7</span>
@@ -1854,13 +1854,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 2fr 82fr;">
         <span class="article-num-agrees">👍2</span>
-        <span class="article-num-disagree">👎82</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500359994113" data-agrees="85" data-disagrees="4" data-comment-id="6">
+        
+        <div class="article-comment" data-timestamp="1500359994113" data-agrees="85" data-disagrees="4" data-comment-id="6">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 6</span>
@@ -1872,13 +1872,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 85fr 4fr;">
         <span class="article-num-agrees">👍85</span>
-        <span class="article-num-disagree">👎4</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500359976344" data-agrees="54" data-disagrees="23" data-comment-id="5">
+        
+        <div class="article-comment" data-timestamp="1500359976344" data-agrees="54" data-disagrees="23" data-comment-id="5">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 5</span>
@@ -1890,13 +1890,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 54fr 23fr;">
         <span class="article-num-agrees">👍54</span>
-        <span class="article-num-disagree">👎23</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500359963871" data-agrees="86" data-disagrees="3" data-comment-id="4">
+        
+        <div class="article-comment" data-timestamp="1500359963871" data-agrees="86" data-disagrees="3" data-comment-id="4">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 4</span>
@@ -1908,13 +1908,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 86fr 3fr;">
         <span class="article-num-agrees">👍86</span>
-        <span class="article-num-disagree">👎3</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500359941806" data-agrees="74" data-disagrees="9" data-comment-id="3">
+        
+        <div class="article-comment" data-timestamp="1500359941806" data-agrees="74" data-disagrees="9" data-comment-id="3">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 3</span>
@@ -1926,13 +1926,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 74fr 9fr;">
         <span class="article-num-agrees">👍74</span>
-        <span class="article-num-disagree">👎9</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500359907564" data-agrees="0" data-disagrees="0" data-comment-id="2">
+        
+        <div class="article-comment" data-timestamp="1500359907564" data-agrees="0" data-disagrees="0" data-comment-id="2">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 2</span>
@@ -1944,13 +1944,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 0fr 0fr;">
         <span class="article-num-agrees">👍0</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500359885658" data-agrees="0" data-disagrees="0" data-comment-id="1">
+        
+        <div class="article-comment" data-timestamp="1500359885658" data-agrees="0" data-disagrees="0" data-comment-id="1">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 1</span>
@@ -1962,13 +1962,13 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 0fr 0fr;">
         <span class="article-num-agrees">👍0</span>
-        <span class="article-num-disagree">👎0</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-          <div class="article-comment" data-timestamp="1500359783787" data-agrees="85" data-disagrees="5" data-comment-id="0">
+        
+        <div class="article-comment" data-timestamp="1500359783787" data-agrees="85" data-disagrees="5" data-comment-id="0">
   <div class="article-comment-content-wrap">
     <div class="article-comment-header">
       <span>User 0</span>
@@ -1980,15 +1980,64 @@ and potential solutions and to share your own perspectives.
       </div>
       <div class="article-agreement-box" style="grid-template-columns: 85fr 5fr;">
         <span class="article-num-agrees">👍85</span>
-        <span class="article-num-disagree">👎5</span>
+        
       </div>
     </div>
   </div>
 </div>
-          
-        </div>
+        
       </div>
-    </section>
+    </div>
+  </section>
+
+  <div id="science-modal">
+    <div id="science-modal-label">
+      <div>Explanations</div>
+    </div>
+    <div id="science-modal-content">
+      <button id="close-science-modal">&times;</button>
+
+      <h3 id="explanation-analysis">Analysis</h3>
+
+      <h4 id="explanation-popularity">Popularity</h4>
+
+      <p>
+        "Popularity" measures how popular is a set of comments for the participants. It is equal to the total amount of
+        positive votes (thumbs, up or approvals) received by the comments in the selection.
+      </p>
+
+      <h4 id="explanation-inclusion">Inclusion</h4>
+
+      <p>
+        "Inclusion" measures the percentage of participants included in the selection. That is, the percentage of
+        participants who expressed a positive opinion (thumb up, or approval) about at least one of the selected comments.
+      </p>
+
+      <p>
+        For instance, an inclusion of 60% means that 60% of the participants feel positively about at least one comment
+        of the selection.
+      </p>
+
+      <p>
+        Inclusion can also be expressed in terms of satisfaction: the inclusion is the percentage of participants with
+        non-zero satisfaction.
+      </p>
+
+      <h4 id="explanation-satisfaction">Satisfaction</h4>
+
+      <p>
+        The "satisfaction of a participant" measures the number of selected comments that they expressed a positive
+        opinion (thumb up, or approval) about.
+      </p>
+
+      <p>
+        For instance, a satisfaction of 3 means that the participant feels positively about 3 of the selected comments.
+      </p>
+
+      <h3 id="explanation-selection-methods">Selection Methods</h3>
+
+
+    </div>
   </div>
 
 <script>
@@ -2259,6 +2308,40 @@ and potential solutions and to share your own perspectives.
         });
       });
     });
+
+    const modal = document.getElementById('science-modal');
+  const modalLabel = document.getElementById('science-modal-label');
+  const closeModalBtn = document.getElementById('close-science-modal');
+  const modalContent = document.getElementById('science-modal-content');
+
+  function openModal(targetId = null) {
+    modal.classList.add('open');
+    if (targetId) {
+      setTimeout(() => {
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 100);
+    }
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+  }
+
+  modalLabel.addEventListener('click', () => {
+    modal.classList.toggle('open');
+  });
+
+  closeModalBtn.addEventListener('click', closeModal);
+
+  document.querySelectorAll('.open-explanation').forEach(el => {
+    el.addEventListener('click', () => {
+      const target = el.dataset.target;
+      openModal(target);
+    });
+  });
 });
 </script>
 
