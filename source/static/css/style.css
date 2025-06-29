@@ -609,63 +609,62 @@ section:nth-child(even) .article-comment {
   height: 17vh;
 }
 
+#science-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 400px;
+  transform: translateX(100%); /* hidden by default */
+  transition: transform 0.3s ease;
+  z-index: 9999;
+  display: flex;
+  flex-direction: row;
+  pointer-events: none; /* prevent interactions when hidden */
+}
 
-  #science-modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 400px;
-    transform: translateX(100%); /* hidden by default */
-    transition: transform 0.3s ease;
-    z-index: 9999;
-    display: flex;
-    flex-direction: row;
-    pointer-events: none; /* prevent interactions when hidden */
-  }
+#science-modal.open {
+  transform: translateX(0%);
+  pointer-events: auto;
+}
 
-  #science-modal.open {
-    transform: translateX(0%);
-    pointer-events: auto;
-  }
+#science-modal-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  background-color: #f88652;
+  color: white;
+  padding: 1em;
+  cursor: pointer;
+  font-weight: bold;
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  box-shadow: -2px 0 4px rgba(0,0,0,0.2);
+}
 
-  #science-modal-label {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-    background-color: #f88652;
-    color: white;
-    padding: 1em;
-    cursor: pointer;
-    font-weight: bold;
-    border-top-left-radius: 0.5em;
-    border-bottom-left-radius: 0.5em;
-    box-shadow: -2px 0 4px rgba(0,0,0,0.2);
-  }
+#science-modal-content {
+  background: white;
+  padding: 2em 1.5em;
+  overflow-y: auto;
+  width: 100%;
+  position: relative;
+}
 
-  #science-modal-content {
-    background: white;
-    padding: 2em 1.5em;
-    overflow-y: auto;
-    width: 100%;
-    position: relative;
-  }
+#close-science-modal {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
 
-  #close-science-modal {
-    position: absolute;
-    top: 0.5em;
-    right: 0.5em;
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-  }
+.open-explanation {
+  cursor: pointer;
+  color: #999;
+  margin-left: 0.25em;
+}
 
-  .open-explanation {
-    cursor: pointer;
-    color: #999;
-    margin-left: 0.25em;
-  }
-
-  .open-explanation:hover {
-    color: #555;
-  }
+.open-explanation:hover {
+  color: #555;
+}
