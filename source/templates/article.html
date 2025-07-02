@@ -3,7 +3,7 @@
 {% block title %}{{ article.title }}{% endblock %}
 
 {% block content %}
-  <h1 class="standard-padded-container">{{ article.title }}</h1>
+  <h1>{{ article.title }}</h1>
 
   <section>
     <div id="article-content-wrap">
@@ -89,11 +89,11 @@
   </section>
 
   <div id="science-modal">
-    <div id="science-modal-label">
-      <div>Explanations</div>
+    <div id="science-modal-label-wrap">
+      <div id="science-modal-label">Explanations</div>
+      <button id="close-science-modal">&times;</button>
     </div>
     <div id="science-modal-content">
-      <button id="close-science-modal">&times;</button>
 
       <h3 id="explanation-analysis">Analysis</h3>
 

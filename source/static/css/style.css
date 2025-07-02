@@ -14,6 +14,8 @@
     --color-highlight-light: #ef8f6f;
     --color-highlight-very-light: #ea9f86;
 
+    --color-text: #181818;
+
     --color-success-very-light: #d0facd;
     --color-success-light: #a4e8a1;
 	--color-success: #8ace66;
@@ -37,6 +39,7 @@ html {
   font-weight: 400;
   font-style: normal;
   box-sizing: border-box;
+  color: var(--color-text);
 }
 
 @media screen and (max-width: 480px) {
@@ -185,7 +188,6 @@ header {
 .logo {
   text-align: center;
   padding: 0.2vh;
-  border-bottom: 2px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -215,27 +217,35 @@ header {
   height: 2rem;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  background: var(--color-frame-light);
 }
 
 .submenu-wrap {
   position: relative;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .submenu-header {
   display: block;
   user-select: none;
   padding: 0.5vh 0.5vw;
+  box-sizing: border-box;
+  height: 2rem;
   font-family: "Anton", sans-serif;
   font-weight: 100;
   font-style: normal;
   font-variant: small-caps;
-  text-shadow: 1px 1px var(--color-background);
+  text-shadow: 1px 1px var(--color-background-very-very-dark);
+  color: white;
+  font-size: 1.1rem;
 }
 
 .submenu-wrap:hover .submenu-header {
-  background-color: var(--color-highlight);
-  color: white;
-  text-shadow: 1px 1px var(--color-background-very-very-dark);
+  background: var(--color-frame);
 }
 
 .submenu-entry-wrap {
@@ -245,7 +255,7 @@ header {
   left: 0;
   top: 100%;
   background: white;
-  border: 1px solid var(--color-background-very-dark);
+  border: 1px solid var(--color-frame);
   border-top: none;
   z-index: 100;
   min-width: 12em;
@@ -298,9 +308,7 @@ body:not(.is-touch) .submenu-wrap:hover .submenu-entry-wrap {
   width: 100%;
 }
 
-main {
-  margin-top: 2vh;
-}
+main {}
 
 section {
   padding: 1.5vh 1vw;
@@ -351,11 +359,12 @@ Articles
 
 h1 {
   margin: 0;
+  padding: 1vh 1vw;
   text-align: center;
   font-family: "Anton", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background: var(--color-highlight);
+  background: var(--color-highlight-light);
   color: white;
   text-shadow: 1px 1px var(--color-background-very-very-dark);
 }
@@ -542,6 +551,8 @@ section:nth-child(even) .article-comment {
   font-weight: bold;
   font-size: 0.9rem;
   white-space: nowrap;
+  display: inline-flex;
+  gap: 4px;
 }
 
 .comment-analysis-measure {
@@ -614,7 +625,7 @@ section:nth-child(even) .article-comment {
   top: 0;
   right: 0;
   height: 100%;
-  width: 400px;
+  width: 25vw;
   transform: translateX(100%); /* hidden by default */
   transition: transform 0.3s ease;
   z-index: 9999;
@@ -628,19 +639,32 @@ section:nth-child(even) .article-comment {
   pointer-events: auto;
 }
 
-#science-modal-label {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  background-color: #f88652;
+#science-modal-label-wrap {
+  background-color: var(--color-highlight-light);
   color: white;
   padding: 1em;
-  cursor: pointer;
-  font-weight: bold;
-  border-top-left-radius: 0.5em;
-  border-bottom-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
   box-shadow: -2px 0 4px rgba(0,0,0,0.2);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
 }
 
+#science-modal-label {
+}
+
+#close-science-modal {
+  font-size: 1.5em;
+  cursor: pointer;
+  border: none;
+  background: inherit;
+  color: white;
+}
 #science-modal-content {
   background: white;
   padding: 2em 1.5em;
@@ -649,22 +673,21 @@ section:nth-child(even) .article-comment {
   position: relative;
 }
 
-#close-science-modal {
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
-  background: none;
-  border: none;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
 .open-explanation {
   cursor: pointer;
-  color: #999;
-  margin-left: 0.25em;
+  color: white;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-background-very-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: sans-serif;
 }
 
 .open-explanation:hover {
-  color: #555;
+  background: var(--color-frame-light);
 }
