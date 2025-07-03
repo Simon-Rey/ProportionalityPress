@@ -27,7 +27,7 @@ ALL_RULES = [
     "equal-shares-with-av-completion",
     "equal-shares-with-increment-completion",
     "phragmen-enestroem",
-    "consensus-rule",
+    # "consensus-rule",
     # "trivial",
     # "rsd",
     # "eph",
