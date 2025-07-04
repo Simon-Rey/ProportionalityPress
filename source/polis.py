@@ -182,6 +182,54 @@ def polis_poll_to_article(poll: PolisPoll, ignore_not_seen: bool = True) -> Arti
 
     return article
 
+def remove_demographic_comments(article):
+    comment_ids_to_remove = None
+    if article.slugified_title == "auniversalbasicincomeforaotearoanz":
+        comment_ids_to_remove = {
+            "32", "33", "34", "35", "36", "39", "40", "38", "42", "41"
+        }
+    elif article.slugified_title == "fairenoughhowshouldnewzealandersbetaxed":
+        comment_ids_to_remove = {
+            "10", "0", "1", "2", "9", "5", "4", "3", "8", "7", "6", "14", "13", "12", "11"
+        }
+    elif article.slugified_title == "freshwaterqualityinnewzealand":
+        comment_ids_to_remove = {
+            "24", "25", "26", "27", "29", "28", "35", "34", "33", "32", "31", "30", "36"
+        }
+    elif article.slugified_title == "landuseandconservationinthesanjuanislands":
+        comment_ids_to_remove = {
+            "53", "192", "54", "55", "67", "66", "65", "64", "69", "68", "70",
+        }
+    elif article.slugified_title == "protectingandrestoringnewzealandsbiodiversity":
+        comment_ids_to_remove = {
+            "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16",
+        }
+    elif article.slugified_title == "canadianelectoralreform":
+        comment_ids_to_remove = {
+            "5", "152", "151", "150", "154", "124", "112", "113", "89", "77",
+        }
+    elif article.slugified_title == "cantherebeconsensusonbrexit":
+        comment_ids_to_remove = {
+            "0", "1", "10", "11", "15"
+        }
+    elif article.slugified_title == "operationmarchingorders":
+        comment_ids_to_remove = {
+            "31", "1715", "1047", "680", "32", "33", "34", "35", "36", "37", "38", "39", "41", "42", "43", "44", "45",
+            "46", "47", "48", "49", "73", "76", "95", "24", "715", "818", "1321", "1322", "228", "1320", "473", "226",
+            "202", "751", "505", "599", "151", "1323", "365", "1047", "95", "549",
+        }
+    elif article.slugified_title == "whatisthebestwaytoengagemoreyoungpeopleinlocalscrutinyofpolicing":
+        comment_ids_to_remove = {
+            "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"
+        }
+    elif article.slugified_title == "affordablehousinginnewzealand":
+        comment_ids_to_remove = {
+            "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40"
+        }
+
+    if comment_ids_to_remove:
+        article.comments = [c for c in article.comments if c.comment_id not in comment_ids_to_remove]
+
 def overwrite_default_content(article: Article):
     if article.slugified_title in ["taxhivemindwindow", "fairenoughhowshouldnewzealandersbetaxed"]:
         article.title = "Fair enough? How should New Zealanders be taxed?"
@@ -221,6 +269,8 @@ def overwrite_default_content(article: Article):
     if article.slugified_title in ["15hour", "newminimumwageinseattle15hour"]:
         article.title = "New minimum wage in Seattle: $15/hour"
         article.slugified_title = make_url_friendly(article.title)
+
+    remove_demographic_comments(article)
 
     title_to_categories = {
         "newminimumwageinseattle15hour": "Economy",
