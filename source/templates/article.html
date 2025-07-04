@@ -298,63 +298,67 @@
       if (oldCanvas) oldCanvas.remove();
 
       // Create new canvas
-      const canvas = document.createElement('canvas');
-      canvas.className = 'satisfaction-chart';
-      repCommentBlock.querySelector('.satisfaction-histogram').innerHTML = ''; // Clear previous
-      repCommentBlock.querySelector('.satisfaction-histogram').appendChild(canvas);
+      if (typeof Chart !== 'undefined') {
+        const canvas = document.createElement('canvas');
+        canvas.className = 'satisfaction-chart';
+        repCommentBlock.querySelector('.satisfaction-histogram').innerHTML = ''; // Clear previous
+        repCommentBlock.querySelector('.satisfaction-histogram').appendChild(canvas);
 
-      const labels = Object.keys(match.sat_distribution);
-      const data = Object.values(match.sat_distribution);
+        const labels = Object.keys(match.sat_distribution);
+        const data = Object.values(match.sat_distribution);
 
-      const globalMaxY = Math.max(
-        ...rulesResultsData.map(r => {
-          const values = Object.values(r.sat_distribution || {});
-          return Math.max(...values, 0);
-        })
-      );
+        const globalMaxY = Math.max(
+          ...rulesResultsData.map(r => {
+            const values = Object.values(r.sat_distribution || {});
+            return Math.max(...values, 0);
+          })
+        );
 
-      new Chart(canvas, {
-        type: 'bar',
-        data: {
-          labels,
-          datasets: [{
-            label: 'Voter Satisfaction',
-            data,
-            backgroundColor: '#ef8f6f',
-            borderColor: '#eb7751',
-            borderWidth: 1
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: { display: false },
-            tooltip: {
-              callbacks: {
-                label: context => `${context.parsed.y} participant${context.parsed.y === 1 ? '' : 's'}`
-              }
-            }
+        new Chart(canvas, {
+          type: 'bar',
+          data: {
+            labels,
+            datasets: [{
+              label: 'Voter Satisfaction',
+              data,
+              backgroundColor: '#ef8f6f',
+              borderColor: '#eb7751',
+              borderWidth: 1
+            }]
           },
-          scales: {
-            y: {
-              beginAtZero: true,
-              max: globalMaxY,
-              title: { display: true, text: 'Number of participants' }
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              tooltip: {
+                callbacks: {
+                  label: context => `${context.parsed.y} participant${context.parsed.y === 1 ? '' : 's'}`
+                }
+              }
             },
-            x: {
-              title: { display: true, text: 'Number of approved comments in the selection' },
-              ticks: {
-                callback: function(value, index, ticks) {
-                  const count = this.chart.data.datasets[0].data[index];
-                  return count > 0 ? this.chart.data.labels[index] : '';
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: globalMaxY,
+                title: { display: true, text: 'Number of participants' }
+              },
+              x: {
+                title: { display: true, text: 'Number of approved comments in the selection' },
+                ticks: {
+                  callback: function(value, index, ticks) {
+                    const count = this.chart.data.datasets[0].data[index];
+                    return count > 0 ? this.chart.data.labels[index] : '';
+                  }
                 }
               }
             }
           }
-        }
-      });
-    }
+        });
+      } else {
+        repCommentBlock.querySelector('.satisfaction-histogram').innerHTML = "<p>ChartJS not available.</p>";
+      }
+     }
 
     function updateAllRepresentativeComments() {
       ruleSelects.forEach(ruleSelect => {

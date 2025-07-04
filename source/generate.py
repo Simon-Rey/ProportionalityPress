@@ -73,6 +73,7 @@ def generate_site(config: SiteConfig, articles: list[Article]):
             default_rule_representation="equal-shares-with-increment-completion",
             default_rule_diversity="cc",
             rule_name_mapping=RULE_NAME_MAPPING,
+            max_comment_approval=max(c.num_agrees for c in article.comments),
             display_thumbs_down=False
         )
 

@@ -8,7 +8,7 @@
       <div class="article-comment-text">
         {{ c.text }}
       </div>
-      <div class="article-agreement-box" style="grid-template-columns: {{ c.num_agrees }}fr {{ c.num_disagrees }}fr;">
+      <div class="article-agreement-box" style="grid-template-columns: {{ c.num_agrees }}fr {% if display_thumbs_down %}{{ c.num_disagrees }}{% else %}{{ max_comment_approval - c.num_agrees }}{% endif %}fr;">
         <span class="article-num-agrees">👍{{ c.num_agrees }}</span>
         {% if display_thumbs_down %}
           <span class="article-num-disagree">👎{{ c.num_disagrees }}</span>
