@@ -101,14 +101,14 @@
 
       <p>
         "Popularity" measures how popular is a set of comments for the participants. It is equal to the total amount of
-        positive votes (thumbs, up or approvals) received by the comments in the selection.
+        positive votes (a.k.a. thumbs-up, or approvals) received by the comments in the selection.
       </p>
 
       <h4 id="explanation-inclusion">Inclusion</h4>
 
       <p>
         "Inclusion" measures the percentage of participants included in the selection. That is, the percentage of
-        participants who expressed a positive opinion (thumb up, or approval) about at least one of the selected comments.
+        participants who expressed a positive opinion (a.k.a. thumb-up, or approval) about at least one of the selected comments.
       </p>
 
       <p>
@@ -125,7 +125,7 @@
 
       <p>
         The "satisfaction of a participant" measures the number of selected comments that they expressed a positive
-        opinion (thumb up, or approval) about.
+        opinion (a.k.a. thumb-up, or approval) about.
       </p>
 
       <p>
@@ -139,18 +139,22 @@
       </p>
 
       <p>
+        The desired number of comments to select is always given up-front.
+      </p>
+
+      <p>
         <strong>Approval Voting:</strong> Selects the comments who have the highest number of votes.
       </p>
 
       <p>
-        <strong>Chamberlin–Courant:</strong> A user is considered represented if at least one of their approved comments
-        is selected; this method chooses comments to maximize the number of represented users.
+        <strong>Chamberlin–Courant:</strong> A participant is considered to be represented if their satisfaction is more than 0.
+        This method selects comments to maximize the number of represented participants.
       </p>
 
       <p>
-        <strong>Method of Equal Shares:</strong> Each user receives an equal amount of virtual currency to spend on approved
-        comments. Comments are considered in round. A comment is selected if its supporters have enough budget left to collectively
-        afford it.
+        <strong>Method of Equal Shares:</strong> Each participant receives an equal amount of virtual currency to spend
+        on comments they feel positively about. Comments are considered in rounds. A comment is selected if its supporters
+        have enough budget left to collectively afford it.
       </p>
 
       <p>
@@ -161,24 +165,26 @@
 
       <p>
         <strong>Method of Equal Shares with Increment Completion:</strong> Calculates the minimum amount of virtual
-        currency needed for the method of equal shares to select the desired number of comments, then applies the method
+        currency needed for the method of equal shares to select the desired number of comments. Then, applies the method
         using that amount.
       </p>
 
       <p>
         <strong>Proportional Approval Voting:</strong> Selects a proportionally representative set of comments by
-        using decreasing weight for the voters. The weight of a voter decreases with the number of approved comment that
-        has been selected.
+        using decreasing weight for the participants. The weight of a participant decreases with the number of supported comment that
+        has been selected. In other words, the higher the satisfaction of a participant, the less the selection method
+        tries to increase their satisfaction.
       </p>
 
       <p>
-        <strong>Sequential Proportional Approval Voting:</strong> Selects comments in rounds, reducing the voting weight
-        of already represented participants to ensure proportionality.
+        <strong>Sequential Proportional Approval Voting:</strong> Sequential variant the proportional approval voting
+        method. Selects the comments one by one, each time selecting the best non-selected comment according to the
+        principles of proportional approval voting.
       </p>
 
       <p>
-        <strong>Eneström–Phragmén:</strong> Distributes representation load evenly among participants to select a proportionally
-        representative set of comments.
+        <strong>Eneström–Phragmén:</strong> Distributes representation load evenly among participants to select a
+        proportionally representative set of comments.
       </p>
 
       <p>
@@ -187,8 +193,9 @@
       </p>
 
       <p>
-        <strong>Satisfaction Approval Voting:</strong> Maximizes the average number of selected approved comments per
-        participant.
+        <strong>Satisfaction Approval Voting:</strong> Selects a set of comments that maximises the total average
+        satisfaction of the participants. The average satisfaction of a participant is defined here as their satisfaction
+        divided by number of supported comments.
       </p>
     </div>
   </div>

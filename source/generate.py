@@ -80,6 +80,18 @@ def generate_site(config: SiteConfig, articles: list[Article]):
         with open(os.path.join(output_dir_path, article.link), "w", encoding="utf-8") as f:
             f.write(article_html)
 
+    # About page
+    about_template = env.get_template("about.html")
+    about_html = about_template.render(
+        articles_per_category=articles_per_category,
+        all_articles=articles,
+        config=config,
+    )
+    with open(os.path.join(output_dir_path, "about.html"), "w", encoding="utf-8") as f:
+        f.write(about_html)
+
     # Copy the static files to the output folder
     static_dir_path = os.path.join(base_path, config.static_dir)
     copy_static(static_dir_path, output_dir_path)
+
+
