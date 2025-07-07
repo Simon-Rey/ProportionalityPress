@@ -166,6 +166,7 @@ body {
     #body-content-wrap {
         width: 100%;
         box-sizing: border-box;
+        border: none;
     }
 }
 
@@ -175,7 +176,7 @@ header {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  height: calc(min(13vh, 13vw) + 2rem);
+  height: calc(min(13vh, 13vw) + 2.2rem);
   background: var(--color-frame-light);
 }
 
@@ -218,7 +219,7 @@ header {
 #main-nav {
   display: flex;
   gap: 2vw;
-  height: 2rem;
+  height: 2.2rem;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -227,7 +228,7 @@ header {
 
 .submenu-wrap {
   position: relative;
-  height: 2rem;
+  height: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,8 +240,8 @@ header {
   justify-content: center;
   user-select: none;
   padding: 0 1vw;
-  height: 2rem;
-  font-size: 1.1rem;
+  height: 2.2rem;
+  font-size: 1.3rem;
   line-height: 1;
   box-sizing: border-box;
   font-family: "Anton", sans-serif;
@@ -314,7 +315,7 @@ body:not(.is-touch) .submenu-wrap:hover .submenu-entry-wrap {
 }
 
 #content-wrap {
-  min-height: calc(87vh - 3.5rem);  /* 100 - 13 - 2rem - (header) - 1.5rem (footer) */
+  min-height: calc(100vh - min(13vh, 13vw) - 2.2rem - 1.5rem);
   overflow-y: scroll;
   overflow-x: hidden;
   width: 100%;
@@ -638,6 +639,12 @@ section:nth-child(even) .article-comment {
   height: 17vh;
 }
 
+@media screen and (max-width: 1000px) {
+  .satisfaction-histogram {
+    width: 28vw;
+  }
+}
+
 #science-modal {
   position: fixed;
   top: 0;
@@ -660,7 +667,7 @@ section:nth-child(even) .article-comment {
 #science-modal-label-wrap {
   background-color: var(--color-highlight-light);
   color: white;
-  padding: 1em;
+  padding: 2vh 0.5vw;
   border-top-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
   box-shadow: -2px 0 4px rgba(0,0,0,0.2);
@@ -683,9 +690,10 @@ section:nth-child(even) .article-comment {
   background: inherit;
   color: white;
 }
+
 #science-modal-content {
   background: white;
-  padding: 2em 1.5em;
+  padding: 2vh 2vw;
   overflow-y: auto;
   width: 100%;
   position: relative;
