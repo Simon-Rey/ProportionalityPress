@@ -175,22 +175,24 @@ header {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  height: calc(13vh + 2rem);
+  height: calc(min(13vh, 13vw) + 2rem);
   background: var(--color-frame-light);
 }
 
 #logo-wrap {
-  height: 13vh;
+  height: min(13vh, 13vw);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 2vw;
+  padding: min(0.5vh, 2vw) 2vw;
   background: white;
+  box-sizing: border-box;
 }
 
 .logo {
+  height: min(13vh, 13vw);
   text-align: center;
-  padding: 0.2vh;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,17 +203,16 @@ header {
 }
 
 .logo-main {
-  font-size: 5vh;
+  font-size: min(5vh, 5vw);
   line-height: 1;
   font-weight: bold;
   color: var(--color-frame-dark);
 }
 
 .logo-sub {
-  font-size: 3vh;
+  font-size: min(3vh, 3vw);
   color: var(--color-highlight);;
   line-height: 1;
-  margin-bottom: 1vh;
 }
 
 #main-nav {
@@ -233,18 +234,21 @@ header {
 }
 
 .submenu-header {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   user-select: none;
-  padding: 0.5vh 0.5vw;
-  box-sizing: border-box;
+  padding: 0 1vw;
   height: 2rem;
+  font-size: 1.1rem;
+  line-height: 1;
+  box-sizing: border-box;
   font-family: "Anton", sans-serif;
   font-weight: 100;
   font-style: normal;
   font-variant: small-caps;
   text-shadow: 1px 1px var(--color-background-very-very-dark);
   color: white;
-  font-size: 1.1rem;
   border: 1px solid var(--color-frame-light);
 }
 
@@ -639,7 +643,7 @@ section:nth-child(even) .article-comment {
   top: 0;
   right: 0;
   height: 100%;
-  width: 25vw;
+  width: max(25vw, 500px);
   transform: translateX(100%); /* hidden by default */
   transition: transform 0.3s ease;
   z-index: 9999;

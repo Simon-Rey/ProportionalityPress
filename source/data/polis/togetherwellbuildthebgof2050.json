@@ -19946,23 +19946,23 @@
           "127",
           "148",
           "184",
-          "237",
-          "259"
+          "216",
+          "306"
         ],
         "max_satisfaction": 582,
-        "satisfaction": 453,
+        "satisfaction": 450,
         "coverage": 0.8809523809523809,
         "max_coverage": 0.8809523809523809,
         "sat_distribution": {
           "0": 15,
-          "1": 32,
-          "2": 20,
-          "3": 7,
-          "4": 8,
-          "5": 9,
-          "6": 5,
-          "7": 6,
-          "8": 10,
+          "1": 33,
+          "2": 19,
+          "3": 6,
+          "4": 12,
+          "5": 7,
+          "6": 4,
+          "7": 5,
+          "8": 11,
           "9": 9,
           "10": 5
         }
@@ -20601,112 +20601,6 @@
           "8": 8,
           "9": 14,
           "10": 14
-        }
-      }
-    },
-    "consensus-rule": {
-      "3": {
-        "rule_id": "consensus-rule",
-        "committee_size": 3,
-        "committee": [
-          "2",
-          "27",
-          "184"
-        ],
-        "max_satisfaction": 185,
-        "satisfaction": 162,
-        "coverage": 0.6746031746031746,
-        "max_coverage": 0.6825396825396826,
-        "sat_distribution": {
-          "0": 41,
-          "1": 35,
-          "2": 23,
-          "3": 27
-        }
-      },
-      "5": {
-        "rule_id": "consensus-rule",
-        "committee_size": 5,
-        "committee": [
-          "0",
-          "2",
-          "27",
-          "73",
-          "184"
-        ],
-        "max_satisfaction": 300,
-        "satisfaction": 281,
-        "coverage": 0.7380952380952381,
-        "max_coverage": 0.7777777777777778,
-        "sat_distribution": {
-          "0": 33,
-          "1": 24,
-          "2": 16,
-          "3": 13,
-          "4": 14,
-          "5": 26
-        }
-      },
-      "8": {
-        "rule_id": "consensus-rule",
-        "committee_size": 8,
-        "committee": [
-          "0",
-          "2",
-          "3",
-          "27",
-          "33",
-          "73",
-          "168",
-          "184"
-        ],
-        "max_satisfaction": 470,
-        "satisfaction": 434,
-        "coverage": 0.8174603174603174,
-        "max_coverage": 0.8492063492063492,
-        "sat_distribution": {
-          "0": 23,
-          "1": 23,
-          "2": 17,
-          "3": 8,
-          "4": 6,
-          "5": 14,
-          "6": 7,
-          "7": 7,
-          "8": 21
-        }
-      },
-      "10": {
-        "rule_id": "consensus-rule",
-        "committee_size": 10,
-        "committee": [
-          "0",
-          "2",
-          "3",
-          "26",
-          "27",
-          "33",
-          "73",
-          "96",
-          "168",
-          "184"
-        ],
-        "max_satisfaction": 582,
-        "satisfaction": 538,
-        "coverage": 0.8492063492063492,
-        "max_coverage": 0.8809523809523809,
-        "sat_distribution": {
-          "0": 19,
-          "1": 22,
-          "2": 15,
-          "3": 13,
-          "4": 4,
-          "5": 6,
-          "6": 10,
-          "7": 3,
-          "8": 7,
-          "9": 6,
-          "10": 21
         }
       }
     }

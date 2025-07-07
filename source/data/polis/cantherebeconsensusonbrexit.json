@@ -5310,104 +5310,104 @@
         "rule_id": "av",
         "committee_size": 3,
         "committee": [
-          "1",
           "14",
+          "16",
           "17"
         ],
-        "max_satisfaction": 460,
-        "satisfaction": 460,
-        "coverage": 0.8725490196078431,
-        "max_coverage": 0.9019607843137255,
+        "max_satisfaction": 448,
+        "satisfaction": 448,
+        "coverage": 0.8627450980392157,
+        "max_coverage": 0.8970588235294118,
         "sat_distribution": {
-          "0": 26,
-          "1": 18,
-          "2": 38,
-          "3": 122
+          "0": 28,
+          "1": 19,
+          "2": 42,
+          "3": 115
         }
       },
       "5": {
         "rule_id": "av",
         "committee_size": 5,
         "committee": [
-          "1",
           "13",
           "14",
           "16",
-          "17"
+          "17",
+          "19"
         ],
-        "max_satisfaction": 735,
-        "satisfaction": 735,
-        "coverage": 0.9068627450980392,
-        "max_coverage": 0.9411764705882353,
+        "max_satisfaction": 702,
+        "satisfaction": 702,
+        "coverage": 0.9215686274509803,
+        "max_coverage": 0.9362745098039216,
         "sat_distribution": {
-          "0": 19,
-          "1": 12,
-          "2": 19,
-          "3": 25,
-          "4": 35,
-          "5": 94
+          "0": 16,
+          "1": 19,
+          "2": 18,
+          "3": 27,
+          "4": 54,
+          "5": 70
         }
       },
       "8": {
         "rule_id": "av",
         "committee_size": 8,
         "committee": [
-          "1",
-          "11",
+          "8",
           "13",
           "14",
-          "16",
-          "17",
-          "18",
-          "19"
-        ],
-        "max_satisfaction": 1061,
-        "satisfaction": 1061,
-        "coverage": 0.9362745098039216,
-        "max_coverage": 0.9607843137254902,
-        "sat_distribution": {
-          "0": 13,
-          "1": 6,
-          "2": 15,
-          "3": 11,
-          "4": 24,
-          "5": 26,
-          "6": 30,
-          "7": 46,
-          "8": 33
-        }
-      },
-      "10": {
-        "rule_id": "av",
-        "committee_size": 10,
-        "committee": [
-          "1",
-          "11",
-          "13",
-          "14",
-          "15",
           "16",
           "17",
           "18",
           "19",
           "25"
         ],
-        "max_satisfaction": 1239,
-        "satisfaction": 1239,
+        "max_satisfaction": 969,
+        "satisfaction": 969,
+        "coverage": 0.9411764705882353,
+        "max_coverage": 0.9607843137254902,
+        "sat_distribution": {
+          "0": 12,
+          "1": 12,
+          "2": 16,
+          "3": 18,
+          "4": 26,
+          "5": 36,
+          "6": 25,
+          "7": 35,
+          "8": 24
+        }
+      },
+      "10": {
+        "rule_id": "av",
+        "committee_size": 10,
+        "committee": [
+          "8",
+          "9",
+          "13",
+          "14",
+          "16",
+          "17",
+          "18",
+          "19",
+          "25",
+          "28"
+        ],
+        "max_satisfaction": 1109,
+        "satisfaction": 1109,
         "coverage": 0.9411764705882353,
         "max_coverage": 0.9705882352941176,
         "sat_distribution": {
           "0": 12,
-          "1": 5,
-          "2": 11,
-          "3": 13,
-          "4": 14,
-          "5": 15,
-          "6": 36,
-          "7": 22,
-          "8": 25,
-          "9": 38,
-          "10": 13
+          "1": 8,
+          "2": 14,
+          "3": 15,
+          "4": 21,
+          "5": 31,
+          "6": 22,
+          "7": 30,
+          "8": 20,
+          "9": 23,
+          "10": 8
         }
       }
     },
@@ -5416,18 +5416,18 @@
         "rule_id": "sav",
         "committee_size": 3,
         "committee": [
-          "1",
           "14",
-          "16"
+          "16",
+          "17"
         ],
-        "max_satisfaction": 460,
-        "satisfaction": 454,
-        "coverage": 0.8823529411764706,
-        "max_coverage": 0.9019607843137255,
+        "max_satisfaction": 448,
+        "satisfaction": 448,
+        "coverage": 0.8627450980392157,
+        "max_coverage": 0.8970588235294118,
         "sat_distribution": {
-          "0": 24,
-          "1": 21,
-          "2": 44,
+          "0": 28,
+          "1": 19,
+          "2": 42,
           "3": 115
         }
       },
@@ -5435,85 +5435,85 @@
         "rule_id": "sav",
         "committee_size": 5,
         "committee": [
-          "1",
           "13",
           "14",
           "16",
-          "17"
+          "17",
+          "19"
         ],
-        "max_satisfaction": 735,
-        "satisfaction": 735,
-        "coverage": 0.9068627450980392,
-        "max_coverage": 0.9411764705882353,
+        "max_satisfaction": 702,
+        "satisfaction": 702,
+        "coverage": 0.9215686274509803,
+        "max_coverage": 0.9362745098039216,
         "sat_distribution": {
-          "0": 19,
-          "1": 12,
-          "2": 19,
-          "3": 25,
-          "4": 35,
-          "5": 94
+          "0": 16,
+          "1": 19,
+          "2": 18,
+          "3": 27,
+          "4": 54,
+          "5": 70
         }
       },
       "8": {
         "rule_id": "sav",
         "committee_size": 8,
         "committee": [
-          "1",
           "8",
-          "11",
           "13",
           "14",
           "16",
           "17",
-          "19"
+          "18",
+          "19",
+          "25"
         ],
-        "max_satisfaction": 1061,
-        "satisfaction": 1053,
-        "coverage": 0.9362745098039216,
+        "max_satisfaction": 969,
+        "satisfaction": 969,
+        "coverage": 0.9411764705882353,
         "max_coverage": 0.9607843137254902,
         "sat_distribution": {
-          "0": 13,
-          "1": 8,
-          "2": 13,
-          "3": 8,
-          "4": 27,
-          "5": 22,
-          "6": 35,
-          "7": 57,
-          "8": 21
+          "0": 12,
+          "1": 12,
+          "2": 16,
+          "3": 18,
+          "4": 26,
+          "5": 36,
+          "6": 25,
+          "7": 35,
+          "8": 24
         }
       },
       "10": {
         "rule_id": "sav",
         "committee_size": 10,
         "committee": [
-          "1",
+          "7",
           "8",
-          "11",
+          "9",
           "13",
           "14",
-          "15",
           "16",
           "17",
           "18",
-          "19"
+          "19",
+          "25"
         ],
-        "max_satisfaction": 1239,
-        "satisfaction": 1232,
-        "coverage": 0.9362745098039216,
+        "max_satisfaction": 1109,
+        "satisfaction": 1101,
+        "coverage": 0.946078431372549,
         "max_coverage": 0.9705882352941176,
         "sat_distribution": {
-          "0": 13,
-          "1": 4,
-          "2": 14,
-          "3": 8,
-          "4": 16,
-          "5": 23,
-          "6": 17,
-          "7": 33,
+          "0": 11,
+          "1": 9,
+          "2": 11,
+          "3": 14,
+          "4": 23,
+          "5": 29,
+          "6": 23,
+          "7": 35,
           "8": 34,
-          "9": 28,
-          "10": 14
+          "9": 14,
+          "10": 1
         }
       }
     },
@@ -5522,80 +5522,49 @@
         "rule_id": "pav",
         "committee_size": 3,
         "committee": [
-          "1",
           "14",
+          "16",
           "17"
         ],
-        "max_satisfaction": 460,
-        "satisfaction": 460,
-        "coverage": 0.8725490196078431,
-        "max_coverage": 0.9019607843137255,
+        "max_satisfaction": 448,
+        "satisfaction": 448,
+        "coverage": 0.8627450980392157,
+        "max_coverage": 0.8970588235294118,
         "sat_distribution": {
-          "0": 26,
-          "1": 18,
-          "2": 38,
-          "3": 122
+          "0": 28,
+          "1": 19,
+          "2": 42,
+          "3": 115
         }
       },
       "5": {
         "rule_id": "pav",
         "committee_size": 5,
         "committee": [
-          "1",
+          "13",
           "14",
           "16",
           "17",
           "19"
         ],
-        "max_satisfaction": 735,
-        "satisfaction": 725,
-        "coverage": 0.9166666666666666,
-        "max_coverage": 0.9411764705882353,
+        "max_satisfaction": 702,
+        "satisfaction": 702,
+        "coverage": 0.9215686274509803,
+        "max_coverage": 0.9362745098039216,
         "sat_distribution": {
-          "0": 17,
-          "1": 10,
-          "2": 22,
-          "3": 24,
-          "4": 56,
-          "5": 75
+          "0": 16,
+          "1": 19,
+          "2": 18,
+          "3": 27,
+          "4": 54,
+          "5": 70
         }
       },
       "8": {
         "rule_id": "pav",
         "committee_size": 8,
         "committee": [
-          "1",
-          "11",
-          "13",
-          "14",
-          "16",
-          "17",
-          "19",
-          "25"
-        ],
-        "max_satisfaction": 1061,
-        "satisfaction": 1060,
-        "coverage": 0.9411764705882353,
-        "max_coverage": 0.9607843137254902,
-        "sat_distribution": {
-          "0": 12,
-          "1": 8,
-          "2": 12,
-          "3": 14,
-          "4": 18,
-          "5": 30,
-          "6": 37,
-          "7": 42,
-          "8": 31
-        }
-      },
-      "10": {
-        "rule_id": "pav",
-        "committee_size": 10,
-        "committee": [
-          "1",
           "8",
-          "11",
           "13",
           "14",
           "16",
@@ -5604,22 +5573,53 @@
           "19",
           "25"
         ],
-        "max_satisfaction": 1239,
-        "satisfaction": 1236,
+        "max_satisfaction": 969,
+        "satisfaction": 969,
         "coverage": 0.9411764705882353,
-        "max_coverage": 0.9705882352941176,
+        "max_coverage": 0.9607843137254902,
         "sat_distribution": {
           "0": 12,
-          "1": 5,
-          "2": 8,
-          "3": 15,
-          "4": 15,
-          "5": 21,
-          "6": 24,
-          "7": 29,
-          "8": 31,
-          "9": 30,
-          "10": 14
+          "1": 12,
+          "2": 16,
+          "3": 18,
+          "4": 26,
+          "5": 36,
+          "6": 25,
+          "7": 35,
+          "8": 24
+        }
+      },
+      "10": {
+        "rule_id": "pav",
+        "committee_size": 10,
+        "committee": [
+          "7",
+          "8",
+          "13",
+          "14",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "25"
+        ],
+        "max_satisfaction": 1109,
+        "satisfaction": 1097,
+        "coverage": 0.9509803921568627,
+        "max_coverage": 0.9705882352941176,
+        "sat_distribution": {
+          "0": 10,
+          "1": 10,
+          "2": 9,
+          "3": 18,
+          "4": 21,
+          "5": 33,
+          "6": 18,
+          "7": 40,
+          "8": 28,
+          "9": 16,
+          "10": 1
         }
       }
     },
@@ -5628,71 +5628,71 @@
         "rule_id": "cc",
         "committee_size": 3,
         "committee": [
-          "1",
           "14",
+          "16",
           "19"
         ],
-        "max_satisfaction": 460,
-        "satisfaction": 433,
-        "coverage": 0.9019607843137255,
-        "max_coverage": 0.9019607843137255,
+        "max_satisfaction": 448,
+        "satisfaction": 421,
+        "coverage": 0.8970588235294118,
+        "max_coverage": 0.8970588235294118,
         "sat_distribution": {
-          "0": 20,
-          "1": 28,
-          "2": 63,
-          "3": 93
+          "0": 21,
+          "1": 34,
+          "2": 60,
+          "3": 89
         }
       },
       "5": {
         "rule_id": "cc",
         "committee_size": 5,
         "committee": [
-          "11",
-          "14",
+          "7",
           "16",
+          "17",
           "19",
           "22"
         ],
-        "max_satisfaction": 735,
-        "satisfaction": 589,
-        "coverage": 0.9411764705882353,
-        "max_coverage": 0.9411764705882353,
+        "max_satisfaction": 702,
+        "satisfaction": 530,
+        "coverage": 0.9362745098039216,
+        "max_coverage": 0.9362745098039216,
         "sat_distribution": {
-          "0": 12,
-          "1": 24,
-          "2": 38,
-          "3": 54,
-          "4": 53,
-          "5": 23
+          "0": 13,
+          "1": 28,
+          "2": 51,
+          "3": 65,
+          "4": 30,
+          "5": 17
         }
       },
       "8": {
         "rule_id": "cc",
         "committee_size": 8,
         "committee": [
-          "1",
-          "12",
+          "7",
+          "8",
+          "14",
           "16",
           "19",
-          "25",
+          "22",
           "29",
-          "32",
-          "33"
+          "34"
         ],
-        "max_satisfaction": 1061,
-        "satisfaction": 717,
+        "max_satisfaction": 969,
+        "satisfaction": 731,
         "coverage": 0.9607843137254902,
         "max_coverage": 0.9607843137254902,
         "sat_distribution": {
           "0": 8,
-          "1": 23,
-          "2": 44,
-          "3": 36,
-          "4": 28,
-          "5": 28,
-          "6": 19,
-          "7": 12,
-          "8": 6
+          "1": 19,
+          "2": 26,
+          "3": 45,
+          "4": 41,
+          "5": 36,
+          "6": 22,
+          "7": 7,
+          "8": 0
         }
       },
       "10": {
@@ -5700,32 +5700,32 @@
         "committee_size": 10,
         "committee": [
           "7",
-          "11",
+          "9",
           "12",
           "13",
           "16",
           "19",
-          "21",
           "22",
           "25",
-          "34"
+          "29",
+          "45"
         ],
-        "max_satisfaction": 1239,
-        "satisfaction": 892,
+        "max_satisfaction": 1109,
+        "satisfaction": 818,
         "coverage": 0.9705882352941176,
         "max_coverage": 0.9705882352941176,
         "sat_distribution": {
           "0": 6,
-          "1": 19,
-          "2": 22,
-          "3": 31,
-          "4": 29,
-          "5": 25,
-          "6": 33,
-          "7": 22,
-          "8": 11,
-          "9": 5,
-          "10": 1
+          "1": 22,
+          "2": 27,
+          "3": 37,
+          "4": 30,
+          "5": 27,
+          "6": 26,
+          "7": 16,
+          "8": 9,
+          "9": 4,
+          "10": 0
         }
       }
     },
@@ -5734,80 +5734,49 @@
         "rule_id": "seqpav",
         "committee_size": 3,
         "committee": [
-          "1",
           "14",
+          "16",
           "17"
         ],
-        "max_satisfaction": 460,
-        "satisfaction": 460,
-        "coverage": 0.8725490196078431,
-        "max_coverage": 0.9019607843137255,
+        "max_satisfaction": 448,
+        "satisfaction": 448,
+        "coverage": 0.8627450980392157,
+        "max_coverage": 0.8970588235294118,
         "sat_distribution": {
-          "0": 26,
-          "1": 18,
-          "2": 38,
-          "3": 122
+          "0": 28,
+          "1": 19,
+          "2": 42,
+          "3": 115
         }
       },
       "5": {
         "rule_id": "seqpav",
         "committee_size": 5,
         "committee": [
-          "1",
+          "13",
           "14",
           "16",
           "17",
           "19"
         ],
-        "max_satisfaction": 735,
-        "satisfaction": 725,
-        "coverage": 0.9166666666666666,
-        "max_coverage": 0.9411764705882353,
+        "max_satisfaction": 702,
+        "satisfaction": 702,
+        "coverage": 0.9215686274509803,
+        "max_coverage": 0.9362745098039216,
         "sat_distribution": {
-          "0": 17,
-          "1": 10,
-          "2": 22,
-          "3": 24,
-          "4": 56,
-          "5": 75
+          "0": 16,
+          "1": 19,
+          "2": 18,
+          "3": 27,
+          "4": 54,
+          "5": 70
         }
       },
       "8": {
         "rule_id": "seqpav",
         "committee_size": 8,
         "committee": [
-          "1",
-          "11",
-          "13",
-          "14",
-          "16",
-          "17",
-          "19",
-          "25"
-        ],
-        "max_satisfaction": 1061,
-        "satisfaction": 1060,
-        "coverage": 0.9411764705882353,
-        "max_coverage": 0.9607843137254902,
-        "sat_distribution": {
-          "0": 12,
-          "1": 8,
-          "2": 12,
-          "3": 14,
-          "4": 18,
-          "5": 30,
-          "6": 37,
-          "7": 42,
-          "8": 31
-        }
-      },
-      "10": {
-        "rule_id": "seqpav",
-        "committee_size": 10,
-        "committee": [
-          "1",
           "8",
-          "11",
           "13",
           "14",
           "16",
@@ -5816,22 +5785,53 @@
           "19",
           "25"
         ],
-        "max_satisfaction": 1239,
-        "satisfaction": 1236,
+        "max_satisfaction": 969,
+        "satisfaction": 969,
         "coverage": 0.9411764705882353,
-        "max_coverage": 0.9705882352941176,
+        "max_coverage": 0.9607843137254902,
         "sat_distribution": {
           "0": 12,
-          "1": 5,
-          "2": 8,
-          "3": 15,
-          "4": 15,
-          "5": 21,
-          "6": 24,
-          "7": 29,
-          "8": 31,
-          "9": 30,
-          "10": 14
+          "1": 12,
+          "2": 16,
+          "3": 18,
+          "4": 26,
+          "5": 36,
+          "6": 25,
+          "7": 35,
+          "8": 24
+        }
+      },
+      "10": {
+        "rule_id": "seqpav",
+        "committee_size": 10,
+        "committee": [
+          "7",
+          "8",
+          "13",
+          "14",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "25"
+        ],
+        "max_satisfaction": 1109,
+        "satisfaction": 1097,
+        "coverage": 0.9509803921568627,
+        "max_coverage": 0.9705882352941176,
+        "sat_distribution": {
+          "0": 10,
+          "1": 10,
+          "2": 9,
+          "3": 18,
+          "4": 21,
+          "5": 33,
+          "6": 18,
+          "7": 40,
+          "8": 28,
+          "9": 16,
+          "10": 1
         }
       }
     },
@@ -5840,50 +5840,50 @@
         "rule_id": "seqphragmen",
         "committee_size": 3,
         "committee": [
-          "1",
           "14",
+          "16",
           "17"
         ],
-        "max_satisfaction": 460,
-        "satisfaction": 460,
-        "coverage": 0.8725490196078431,
-        "max_coverage": 0.9019607843137255,
+        "max_satisfaction": 448,
+        "satisfaction": 448,
+        "coverage": 0.8627450980392157,
+        "max_coverage": 0.8970588235294118,
         "sat_distribution": {
-          "0": 26,
-          "1": 18,
-          "2": 38,
-          "3": 122
+          "0": 28,
+          "1": 19,
+          "2": 42,
+          "3": 115
         }
       },
       "5": {
         "rule_id": "seqphragmen",
         "committee_size": 5,
         "committee": [
-          "1",
+          "13",
           "14",
           "16",
           "17",
           "19"
         ],
-        "max_satisfaction": 735,
-        "satisfaction": 725,
-        "coverage": 0.9166666666666666,
-        "max_coverage": 0.9411764705882353,
+        "max_satisfaction": 702,
+        "satisfaction": 702,
+        "coverage": 0.9215686274509803,
+        "max_coverage": 0.9362745098039216,
         "sat_distribution": {
-          "0": 17,
-          "1": 10,
-          "2": 22,
-          "3": 24,
-          "4": 56,
-          "5": 75
+          "0": 16,
+          "1": 19,
+          "2": 18,
+          "3": 27,
+          "4": 54,
+          "5": 70
         }
       },
       "8": {
         "rule_id": "seqphragmen",
         "committee_size": 8,
         "committee": [
-          "1",
-          "11",
+          "7",
+          "8",
           "13",
           "14",
           "16",
@@ -5891,53 +5891,53 @@
           "19",
           "25"
         ],
-        "max_satisfaction": 1061,
-        "satisfaction": 1060,
+        "max_satisfaction": 969,
+        "satisfaction": 937,
         "coverage": 0.9411764705882353,
         "max_coverage": 0.9607843137254902,
         "sat_distribution": {
           "0": 12,
-          "1": 8,
-          "2": 12,
-          "3": 14,
-          "4": 18,
-          "5": 30,
-          "6": 37,
-          "7": 42,
-          "8": 31
+          "1": 13,
+          "2": 11,
+          "3": 17,
+          "4": 28,
+          "5": 39,
+          "6": 45,
+          "7": 38,
+          "8": 1
         }
       },
       "10": {
         "rule_id": "seqphragmen",
         "committee_size": 10,
         "committee": [
-          "1",
           "7",
           "8",
-          "11",
+          "9",
           "13",
           "14",
           "16",
           "17",
+          "18",
           "19",
           "25"
         ],
-        "max_satisfaction": 1239,
-        "satisfaction": 1204,
+        "max_satisfaction": 1109,
+        "satisfaction": 1101,
         "coverage": 0.946078431372549,
         "max_coverage": 0.9705882352941176,
         "sat_distribution": {
           "0": 11,
-          "1": 7,
-          "2": 10,
-          "3": 9,
-          "4": 11,
-          "5": 24,
-          "6": 27,
-          "7": 41,
-          "8": 39,
-          "9": 25,
-          "10": 0
+          "1": 9,
+          "2": 11,
+          "3": 14,
+          "4": 23,
+          "5": 29,
+          "6": 23,
+          "7": 35,
+          "8": 34,
+          "9": 14,
+          "10": 1
         }
       }
     },
@@ -5946,50 +5946,50 @@
         "rule_id": "equal-shares",
         "committee_size": 3,
         "committee": [
-          "1",
           "14",
+          "16",
           "17"
         ],
-        "max_satisfaction": 460,
-        "satisfaction": 460,
-        "coverage": 0.8725490196078431,
-        "max_coverage": 0.9019607843137255,
+        "max_satisfaction": 448,
+        "satisfaction": 448,
+        "coverage": 0.8627450980392157,
+        "max_coverage": 0.8970588235294118,
         "sat_distribution": {
-          "0": 26,
-          "1": 18,
-          "2": 38,
-          "3": 122
+          "0": 28,
+          "1": 19,
+          "2": 42,
+          "3": 115
         }
       },
       "5": {
         "rule_id": "equal-shares",
         "committee_size": 5,
         "committee": [
-          "1",
+          "13",
           "14",
           "16",
           "17",
           "19"
         ],
-        "max_satisfaction": 735,
-        "satisfaction": 725,
-        "coverage": 0.9166666666666666,
-        "max_coverage": 0.9411764705882353,
+        "max_satisfaction": 702,
+        "satisfaction": 702,
+        "coverage": 0.9215686274509803,
+        "max_coverage": 0.9362745098039216,
         "sat_distribution": {
-          "0": 17,
-          "1": 10,
-          "2": 22,
-          "3": 24,
-          "4": 56,
-          "5": 75
+          "0": 16,
+          "1": 19,
+          "2": 18,
+          "3": 27,
+          "4": 54,
+          "5": 70
         }
       },
       "8": {
         "rule_id": "equal-shares",
         "committee_size": 8,
         "committee": [
-          "1",
-          "11",
+          "7",
+          "8",
           "13",
           "14",
           "16",
@@ -5997,53 +5997,53 @@
           "19",
           "25"
         ],
-        "max_satisfaction": 1061,
-        "satisfaction": 1060,
+        "max_satisfaction": 969,
+        "satisfaction": 937,
         "coverage": 0.9411764705882353,
         "max_coverage": 0.9607843137254902,
         "sat_distribution": {
           "0": 12,
-          "1": 8,
-          "2": 12,
-          "3": 14,
-          "4": 18,
-          "5": 30,
-          "6": 37,
-          "7": 42,
-          "8": 31
+          "1": 13,
+          "2": 11,
+          "3": 17,
+          "4": 28,
+          "5": 39,
+          "6": 45,
+          "7": 38,
+          "8": 1
         }
       },
       "10": {
         "rule_id": "equal-shares",
         "committee_size": 10,
         "committee": [
-          "1",
           "7",
           "8",
-          "11",
           "13",
           "14",
           "16",
           "17",
+          "18",
           "19",
-          "25"
+          "25",
+          "28"
         ],
-        "max_satisfaction": 1239,
-        "satisfaction": 1204,
+        "max_satisfaction": 1109,
+        "satisfaction": 1097,
         "coverage": 0.946078431372549,
         "max_coverage": 0.9705882352941176,
         "sat_distribution": {
           "0": 11,
-          "1": 7,
+          "1": 9,
           "2": 10,
-          "3": 9,
-          "4": 11,
-          "5": 24,
-          "6": 27,
-          "7": 41,
-          "8": 39,
-          "9": 25,
-          "10": 0
+          "3": 19,
+          "4": 16,
+          "5": 42,
+          "6": 18,
+          "7": 28,
+          "8": 27,
+          "9": 23,
+          "10": 1
         }
       }
     },
@@ -6052,104 +6052,104 @@
         "rule_id": "equal-shares-with-av-completion",
         "committee_size": 3,
         "committee": [
-          "1",
           "14",
+          "16",
           "17"
         ],
-        "max_satisfaction": 460,
-        "satisfaction": 460,
-        "coverage": 0.8725490196078431,
-        "max_coverage": 0.9019607843137255,
+        "max_satisfaction": 448,
+        "satisfaction": 448,
+        "coverage": 0.8627450980392157,
+        "max_coverage": 0.8970588235294118,
         "sat_distribution": {
-          "0": 26,
-          "1": 18,
-          "2": 38,
-          "3": 122
+          "0": 28,
+          "1": 19,
+          "2": 42,
+          "3": 115
         }
       },
       "5": {
         "rule_id": "equal-shares-with-av-completion",
         "committee_size": 5,
         "committee": [
-          "1",
           "13",
           "14",
           "16",
-          "17"
+          "17",
+          "19"
         ],
-        "max_satisfaction": 735,
-        "satisfaction": 735,
-        "coverage": 0.9068627450980392,
-        "max_coverage": 0.9411764705882353,
+        "max_satisfaction": 702,
+        "satisfaction": 702,
+        "coverage": 0.9215686274509803,
+        "max_coverage": 0.9362745098039216,
         "sat_distribution": {
-          "0": 19,
-          "1": 12,
-          "2": 19,
-          "3": 25,
-          "4": 35,
-          "5": 94
+          "0": 16,
+          "1": 19,
+          "2": 18,
+          "3": 27,
+          "4": 54,
+          "5": 70
         }
       },
       "8": {
         "rule_id": "equal-shares-with-av-completion",
         "committee_size": 8,
         "committee": [
-          "1",
-          "11",
+          "8",
           "13",
           "14",
-          "16",
-          "17",
-          "18",
-          "19"
-        ],
-        "max_satisfaction": 1061,
-        "satisfaction": 1061,
-        "coverage": 0.9362745098039216,
-        "max_coverage": 0.9607843137254902,
-        "sat_distribution": {
-          "0": 13,
-          "1": 6,
-          "2": 15,
-          "3": 11,
-          "4": 24,
-          "5": 26,
-          "6": 30,
-          "7": 46,
-          "8": 33
-        }
-      },
-      "10": {
-        "rule_id": "equal-shares-with-av-completion",
-        "committee_size": 10,
-        "committee": [
-          "1",
-          "11",
-          "13",
-          "14",
-          "15",
           "16",
           "17",
           "18",
           "19",
           "25"
         ],
-        "max_satisfaction": 1239,
-        "satisfaction": 1239,
+        "max_satisfaction": 969,
+        "satisfaction": 969,
+        "coverage": 0.9411764705882353,
+        "max_coverage": 0.9607843137254902,
+        "sat_distribution": {
+          "0": 12,
+          "1": 12,
+          "2": 16,
+          "3": 18,
+          "4": 26,
+          "5": 36,
+          "6": 25,
+          "7": 35,
+          "8": 24
+        }
+      },
+      "10": {
+        "rule_id": "equal-shares-with-av-completion",
+        "committee_size": 10,
+        "committee": [
+          "8",
+          "9",
+          "13",
+          "14",
+          "16",
+          "17",
+          "18",
+          "19",
+          "25",
+          "28"
+        ],
+        "max_satisfaction": 1109,
+        "satisfaction": 1109,
         "coverage": 0.9411764705882353,
         "max_coverage": 0.9705882352941176,
         "sat_distribution": {
           "0": 12,
-          "1": 5,
-          "2": 11,
-          "3": 13,
-          "4": 14,
-          "5": 15,
-          "6": 36,
-          "7": 22,
-          "8": 25,
-          "9": 38,
-          "10": 13
+          "1": 8,
+          "2": 14,
+          "3": 15,
+          "4": 21,
+          "5": 31,
+          "6": 22,
+          "7": 30,
+          "8": 20,
+          "9": 23,
+          "10": 8
         }
       }
     },
@@ -6158,80 +6158,49 @@
         "rule_id": "equal-shares-with-increment-completion",
         "committee_size": 3,
         "committee": [
-          "1",
           "14",
+          "16",
           "17"
         ],
-        "max_satisfaction": 460,
-        "satisfaction": 460,
-        "coverage": 0.8725490196078431,
-        "max_coverage": 0.9019607843137255,
+        "max_satisfaction": 448,
+        "satisfaction": 448,
+        "coverage": 0.8627450980392157,
+        "max_coverage": 0.8970588235294118,
         "sat_distribution": {
-          "0": 26,
-          "1": 18,
-          "2": 38,
-          "3": 122
+          "0": 28,
+          "1": 19,
+          "2": 42,
+          "3": 115
         }
       },
       "5": {
         "rule_id": "equal-shares-with-increment-completion",
         "committee_size": 5,
         "committee": [
-          "1",
           "13",
           "14",
           "16",
-          "17"
+          "17",
+          "19"
         ],
-        "max_satisfaction": 735,
-        "satisfaction": 735,
-        "coverage": 0.9068627450980392,
-        "max_coverage": 0.9411764705882353,
+        "max_satisfaction": 702,
+        "satisfaction": 702,
+        "coverage": 0.9215686274509803,
+        "max_coverage": 0.9362745098039216,
         "sat_distribution": {
-          "0": 19,
-          "1": 12,
-          "2": 19,
-          "3": 25,
-          "4": 35,
-          "5": 94
+          "0": 16,
+          "1": 19,
+          "2": 18,
+          "3": 27,
+          "4": 54,
+          "5": 70
         }
       },
       "8": {
         "rule_id": "equal-shares-with-increment-completion",
         "committee_size": 8,
         "committee": [
-          "1",
-          "11",
-          "13",
-          "14",
-          "16",
-          "17",
-          "19",
-          "25"
-        ],
-        "max_satisfaction": 1061,
-        "satisfaction": 1060,
-        "coverage": 0.9411764705882353,
-        "max_coverage": 0.9607843137254902,
-        "sat_distribution": {
-          "0": 12,
-          "1": 8,
-          "2": 12,
-          "3": 14,
-          "4": 18,
-          "5": 30,
-          "6": 37,
-          "7": 42,
-          "8": 31
-        }
-      },
-      "10": {
-        "rule_id": "equal-shares-with-increment-completion",
-        "committee_size": 10,
-        "committee": [
-          "1",
           "8",
-          "11",
           "13",
           "14",
           "16",
@@ -6240,22 +6209,53 @@
           "19",
           "25"
         ],
-        "max_satisfaction": 1239,
-        "satisfaction": 1236,
+        "max_satisfaction": 969,
+        "satisfaction": 969,
         "coverage": 0.9411764705882353,
-        "max_coverage": 0.9705882352941176,
+        "max_coverage": 0.9607843137254902,
         "sat_distribution": {
           "0": 12,
-          "1": 5,
-          "2": 8,
+          "1": 12,
+          "2": 16,
+          "3": 18,
+          "4": 26,
+          "5": 36,
+          "6": 25,
+          "7": 35,
+          "8": 24
+        }
+      },
+      "10": {
+        "rule_id": "equal-shares-with-increment-completion",
+        "committee_size": 10,
+        "committee": [
+          "4",
+          "7",
+          "8",
+          "13",
+          "14",
+          "16",
+          "17",
+          "18",
+          "19",
+          "25"
+        ],
+        "max_satisfaction": 1109,
+        "satisfaction": 1089,
+        "coverage": 0.946078431372549,
+        "max_coverage": 0.9705882352941176,
+        "sat_distribution": {
+          "0": 11,
+          "1": 10,
+          "2": 7,
           "3": 15,
-          "4": 15,
-          "5": 21,
-          "6": 24,
-          "7": 29,
-          "8": 31,
-          "9": 30,
-          "10": 14
+          "4": 21,
+          "5": 34,
+          "6": 28,
+          "7": 38,
+          "8": 29,
+          "9": 10,
+          "10": 1
         }
       }
     },
@@ -6264,156 +6264,50 @@
         "rule_id": "phragmen-enestroem",
         "committee_size": 3,
         "committee": [
-          "1",
           "14",
+          "16",
           "17"
         ],
-        "max_satisfaction": 460,
-        "satisfaction": 460,
-        "coverage": 0.8725490196078431,
-        "max_coverage": 0.9019607843137255,
+        "max_satisfaction": 448,
+        "satisfaction": 448,
+        "coverage": 0.8627450980392157,
+        "max_coverage": 0.8970588235294118,
         "sat_distribution": {
-          "0": 26,
-          "1": 18,
-          "2": 38,
-          "3": 122
-        }
-      },
-      "5": {
-        "rule_id": "phragmen-enestroem",
-        "committee_size": 5,
-        "committee": [
-          "1",
-          "14",
-          "16",
-          "17",
-          "19"
-        ],
-        "max_satisfaction": 735,
-        "satisfaction": 725,
-        "coverage": 0.9166666666666666,
-        "max_coverage": 0.9411764705882353,
-        "sat_distribution": {
-          "0": 17,
-          "1": 10,
-          "2": 22,
-          "3": 24,
-          "4": 56,
-          "5": 75
-        }
-      },
-      "8": {
-        "rule_id": "phragmen-enestroem",
-        "committee_size": 8,
-        "committee": [
-          "1",
-          "11",
-          "13",
-          "14",
-          "16",
-          "17",
-          "19",
-          "25"
-        ],
-        "max_satisfaction": 1061,
-        "satisfaction": 1060,
-        "coverage": 0.9411764705882353,
-        "max_coverage": 0.9607843137254902,
-        "sat_distribution": {
-          "0": 12,
-          "1": 8,
-          "2": 12,
-          "3": 14,
-          "4": 18,
-          "5": 30,
-          "6": 37,
-          "7": 42,
-          "8": 31
-        }
-      },
-      "10": {
-        "rule_id": "phragmen-enestroem",
-        "committee_size": 10,
-        "committee": [
-          "1",
-          "7",
-          "8",
-          "11",
-          "13",
-          "14",
-          "16",
-          "17",
-          "19",
-          "25"
-        ],
-        "max_satisfaction": 1239,
-        "satisfaction": 1204,
-        "coverage": 0.946078431372549,
-        "max_coverage": 0.9705882352941176,
-        "sat_distribution": {
-          "0": 11,
-          "1": 7,
-          "2": 10,
-          "3": 9,
-          "4": 11,
-          "5": 24,
-          "6": 27,
-          "7": 41,
-          "8": 39,
-          "9": 25,
-          "10": 0
-        }
-      }
-    },
-    "consensus-rule": {
-      "3": {
-        "rule_id": "consensus-rule",
-        "committee_size": 3,
-        "committee": [
-          "1",
-          "14",
-          "16"
-        ],
-        "max_satisfaction": 460,
-        "satisfaction": 454,
-        "coverage": 0.8823529411764706,
-        "max_coverage": 0.9019607843137255,
-        "sat_distribution": {
-          "0": 24,
-          "1": 21,
-          "2": 44,
+          "0": 28,
+          "1": 19,
+          "2": 42,
           "3": 115
         }
       },
       "5": {
-        "rule_id": "consensus-rule",
+        "rule_id": "phragmen-enestroem",
         "committee_size": 5,
         "committee": [
-          "1",
+          "13",
           "14",
           "16",
           "17",
           "19"
         ],
-        "max_satisfaction": 735,
-        "satisfaction": 725,
-        "coverage": 0.9166666666666666,
-        "max_coverage": 0.9411764705882353,
+        "max_satisfaction": 702,
+        "satisfaction": 702,
+        "coverage": 0.9215686274509803,
+        "max_coverage": 0.9362745098039216,
         "sat_distribution": {
-          "0": 17,
-          "1": 10,
-          "2": 22,
-          "3": 24,
-          "4": 56,
-          "5": 75
+          "0": 16,
+          "1": 19,
+          "2": 18,
+          "3": 27,
+          "4": 54,
+          "5": 70
         }
       },
       "8": {
-        "rule_id": "consensus-rule",
+        "rule_id": "phragmen-enestroem",
         "committee_size": 8,
         "committee": [
-          "1",
-          "11",
+          "7",
+          "8",
           "13",
           "14",
           "16",
@@ -6421,53 +6315,53 @@
           "19",
           "25"
         ],
-        "max_satisfaction": 1061,
-        "satisfaction": 1060,
+        "max_satisfaction": 969,
+        "satisfaction": 937,
         "coverage": 0.9411764705882353,
         "max_coverage": 0.9607843137254902,
         "sat_distribution": {
           "0": 12,
-          "1": 8,
-          "2": 12,
-          "3": 14,
-          "4": 18,
-          "5": 30,
-          "6": 37,
-          "7": 42,
-          "8": 31
+          "1": 13,
+          "2": 11,
+          "3": 17,
+          "4": 28,
+          "5": 39,
+          "6": 45,
+          "7": 38,
+          "8": 1
         }
       },
       "10": {
-        "rule_id": "consensus-rule",
+        "rule_id": "phragmen-enestroem",
         "committee_size": 10,
         "committee": [
-          "1",
           "7",
-          "11",
+          "8",
           "13",
           "14",
           "16",
           "17",
           "18",
           "19",
-          "25"
+          "25",
+          "29"
         ],
-        "max_satisfaction": 1239,
-        "satisfaction": 1212,
-        "coverage": 0.946078431372549,
+        "max_satisfaction": 1109,
+        "satisfaction": 1083,
+        "coverage": 0.9558823529411765,
         "max_coverage": 0.9705882352941176,
         "sat_distribution": {
-          "0": 11,
-          "1": 5,
-          "2": 12,
-          "3": 9,
-          "4": 15,
-          "5": 25,
-          "6": 27,
-          "7": 31,
-          "8": 35,
-          "9": 28,
-          "10": 6
+          "0": 9,
+          "1": 10,
+          "2": 11,
+          "3": 19,
+          "4": 19,
+          "5": 38,
+          "6": 17,
+          "7": 36,
+          "8": 31,
+          "9": 14,
+          "10": 0
         }
       }
     }

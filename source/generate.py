@@ -48,7 +48,7 @@ def generate_site(config: SiteConfig, articles: list[Article]):
     articles_per_category = sorted([(c, a) for c, a in articles_per_category.items()], key=lambda x: x[0])
 
     # Write index page
-    highlighted_articles_title = ["newminimumwageinseattle15hour", "ernhrungundlandnutzung", "mobilitt", "operationmarchingorders", "fairenoughhowshouldnewzealandersbetaxed"]
+    highlighted_articles_title = ["newminimumwageinseattle15hour", "ernhrungundlandnutzung", "mobilitt", "operationmarchingorders", "canadianelectoralreform"]
     index_template = env.get_template("index.html")
     index_html = index_template.render(
         articles_per_category=articles_per_category,
