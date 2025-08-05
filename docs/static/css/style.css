@@ -406,6 +406,10 @@ h1 {
   font-size: 0.8rem;
 }
 
+#article-sources p {
+  margin: 0;
+}
+
 .article-comments-wrap {
 }
 
@@ -716,4 +720,37 @@ section:nth-child(even) .article-comment {
 
 .open-explanation:hover {
   background: var(--color-frame-light);
+}
+
+.highlight-common, .representative-comments-block .article-comments-list .highlight-common {
+  background-color: #e2e2e2;
+}
+
+.highlight-partial, .representative-comments-block .article-comments-list .highlight-partial {
+  background-color: #d0e7ff;
+}
+
+.highlight-unique, .representative-comments-block .article-comments-list .highlight-unique {
+  background-color: #e8ddff;
+}
+
+#highlight-differences-legend {
+  display: flex;
+  margin-top: 0.5em;
+  font-size: 0.8rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.highlight-differences-legend-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.highlight-differences-legend-option-key {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
 }

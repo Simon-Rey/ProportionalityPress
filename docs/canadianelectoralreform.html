@@ -63,15 +63,15 @@
             <span class="submenu-header">Environment</span>
             <div class="submenu-entry-wrap">
               
-                <a href="energie.html">
+                <a href="energiede.html">
                   <div class="menu-entry">
-                    <span>Energie</span>
+                    <span>Energie [DE]</span>
                   </div>
                 </a>
               
-                <a href="ernhrungundlandnutzung.html">
+                <a href="ernhrungundlandnutzungde.html">
                   <div class="menu-entry">
-                    <span>Ernährung und Landnutzung</span>
+                    <span>Ernährung und Landnutzung [DE]</span>
                   </div>
                 </a>
               
@@ -87,9 +87,9 @@
                   </div>
                 </a>
               
-                <a href="mobilitt.html">
+                <a href="mobilittde.html">
                   <div class="menu-entry">
-                    <span>Mobilität</span>
+                    <span>Mobilität [DE]</span>
                   </div>
                 </a>
               
@@ -149,9 +149,9 @@
                   </div>
                 </a>
               
-                <a href="produktionundkonsum.html">
+                <a href="produktionundkonsumde.html">
                   <div class="menu-entry">
-                    <span>Produktion und Konsum</span>
+                    <span>Produktion und Konsum [DE]</span>
                   </div>
                 </a>
               
@@ -161,15 +161,9 @@
                   </div>
                 </a>
               
-                <a href="uberxvtaiwantw.html">
+                <a href="wohnende.html">
                   <div class="menu-entry">
-                    <span>UberX 自用車載客 — vTaiwan.tw</span>
-                  </div>
-                </a>
-              
-                <a href="wohnen.html">
-                  <div class="menu-entry">
-                    <span>Wohnen</span>
+                    <span>Wohnen [DE]</span>
                   </div>
                 </a>
               
@@ -207,9 +201,11 @@
       </div>
       <div id="article-sources">
       
+        <p>
         <span>
           <strong>Original Polis poll:</strong> <a href="https://pol.is/5mnfxu85hx" target="_blank">https://pol.is/5mnfxu85hx</a>
         </span>
+          </p>
       
       </div>
     </div>
@@ -220,12 +216,15 @@
       <h2>Summary of the Comment Section</h2>
 
       <p>
-        This section showcases different methods for selecting representative comments from a broader discussion (see
-        <a href="#article-all-comments-section">the comment section below</a>).
-        For each method, the goal is to highlight a small set of comments that best reflect the conversation.
-        They each approach this task from a different standpoint, emphasising different principles, such as popularity,
-        representation or diversity (among others).
+        This section highlights various methods for selecting a small set of comments that best capture the broader conversation
+        (see <a href="#article-all-comments-section">the comment section below</a>).
       </p>
+
+      <p>
+        Each method focuses on a different perspective, emphasizing principles such as popularity, representation, or diversity.
+        This leads to different voices being represented. Explore the section below to get a sense of the impact these approaches have.
+      </p>
+
 
       <p class="center-align">
         <span id="show-advanced-controls" class="button">Show Advanced Controls</span>
@@ -466,8 +465,29 @@
   </div>
 </div>
         
-
       </div>
+
+      <p class="center-align">
+        <span id="highlight-differences-btn" class="button">Highlight Differences</span>
+      </p>
+
+      <div id="highlight-differences-legend" class="hidden">
+        <div>
+          <div class="highlight-differences-legend-option">
+            <div class="highlight-differences-legend-option-key highlight-common"></div>
+            <span>Comments present in all three selections</span>
+          </div>
+          <div class="highlight-differences-legend-option">
+            <div class="highlight-differences-legend-option-key highlight-partial"></div>
+            <span>Comments present in two different selections</span>
+          </div>
+          <div class="highlight-differences-legend-option">
+            <div class="highlight-differences-legend-option-key highlight-unique"></div>
+            <span>Comments present in a single selection</span>
+          </div>
+        </div>
+      </div>
+
     </section>
   
 
@@ -3491,71 +3511,73 @@
         For instance, a satisfaction of 3 means that the participant feels positively about 3 of the selected comments.
       </p>
 
-      <h3 id="explanation-selection-methods">Selection Methods</h3>
+      <div class="advanced-controls-explanations">
+        <h3 id="explanation-selection-methods">Selection Methods</h3>
 
-      <p>
-        A selection method is a procedure that selects a given number of comments based on the votes submitted by the users.
-      </p>
+        <p>
+          A selection method is a procedure that selects a given number of comments based on the votes submitted by the users.
+        </p>
 
-      <p>
-        The desired number of comments to select is always given up-front.
-      </p>
+        <p>
+          The desired number of comments to select is always given up-front.
+        </p>
 
-      <p>
-        <strong>Approval Voting:</strong> Selects the comments who have the highest number of votes.
-      </p>
+        <p>
+          <strong>Approval Voting:</strong> Selects the comments who have the highest number of votes.
+        </p>
 
-      <p>
-        <strong>Chamberlin–Courant:</strong> A participant is considered to be represented if their satisfaction is more than 0.
-        This method selects comments to maximize the number of represented participants.
-      </p>
+        <p>
+          <strong>Chamberlin–Courant:</strong> A participant is considered to be represented if their satisfaction is more than 0.
+          This method selects comments to maximize the number of represented participants.
+        </p>
 
-      <p>
-        <strong>Method of Equal Shares:</strong> Each participant receives an equal amount of virtual currency to spend
-        on comments they feel positively about. Comments are considered in rounds. A comment is selected if its supporters
-        have enough budget left to collectively afford it.
-      </p>
+        <p>
+          <strong>Method of Equal Shares:</strong> Each participant receives an equal amount of virtual currency to spend
+          on comments they feel positively about. Comments are considered in rounds. A comment is selected if its supporters
+          have enough budget left to collectively afford it.
+        </p>
 
-      <p>
-        <strong>Method of Equal Shares with Approval Voting Completion:</strong> Applies the method of equal shares.
-        If fewer than the desired number of comments are selected, the result is completed by using the approval
-        voting selection method.
-      </p>
+        <p>
+          <strong>Method of Equal Shares with Approval Voting Completion:</strong> Applies the method of equal shares.
+          If fewer than the desired number of comments are selected, the result is completed by using the approval
+          voting selection method.
+        </p>
 
-      <p>
-        <strong>Method of Equal Shares with Increment Completion:</strong> Calculates the minimum amount of virtual
-        currency needed for the method of equal shares to select the desired number of comments. Then, applies the method
-        using that amount.
-      </p>
+        <p>
+          <strong>Method of Equal Shares with Increment Completion:</strong> Calculates the minimum amount of virtual
+          currency needed for the method of equal shares to select the desired number of comments. Then, applies the method
+          using that amount.
+        </p>
 
-      <p>
-        <strong>Proportional Approval Voting:</strong> Selects a proportionally representative set of comments by
-        using decreasing weight for the participants. The weight of a participant decreases with the number of supported comment that
-        has been selected. In other words, the higher the satisfaction of a participant, the less the selection method
-        tries to increase their satisfaction.
-      </p>
+        <p>
+          <strong>Proportional Approval Voting:</strong> Selects a proportionally representative set of comments by
+          using decreasing weight for the participants. The weight of a participant decreases with the number of supported comment that
+          has been selected. In other words, the higher the satisfaction of a participant, the less the selection method
+          tries to increase their satisfaction.
+        </p>
 
-      <p>
-        <strong>Sequential Proportional Approval Voting:</strong> Sequential variant the proportional approval voting
-        method. Selects the comments one by one, each time selecting the best non-selected comment according to the
-        principles of proportional approval voting.
-      </p>
+        <p>
+          <strong>Sequential Proportional Approval Voting:</strong> Sequential variant the proportional approval voting
+          method. Selects the comments one by one, each time selecting the best non-selected comment according to the
+          principles of proportional approval voting.
+        </p>
 
-      <p>
-        <strong>Eneström–Phragmén:</strong> Distributes representation load evenly among participants to select a
-        proportionally representative set of comments.
-      </p>
+        <p>
+          <strong>Eneström–Phragmén:</strong> Distributes representation load evenly among participants to select a
+          proportionally representative set of comments.
+        </p>
 
-      <p>
-        <strong>Phragmén's Sequential Rule:</strong> Sequentially adds comments while balancing the representation load
-        to maintain proportional fairness.
-      </p>
+        <p>
+          <strong>Phragmén's Sequential Rule:</strong> Sequentially adds comments while balancing the representation load
+          to maintain proportional fairness.
+        </p>
 
-      <p>
-        <strong>Satisfaction Approval Voting:</strong> Selects a set of comments that maximises the total average
-        satisfaction of the participants. The average satisfaction of a participant is defined here as their satisfaction
-        divided by number of supported comments.
-      </p>
+        <p>
+          <strong>Satisfaction Approval Voting:</strong> Selects a set of comments that maximises the total average
+          satisfaction of the participants. The average satisfaction of a participant is defined here as their satisfaction
+          divided by number of supported comments.
+        </p>
+      </div>
     </div>
   </div>
 
@@ -3574,6 +3596,10 @@
 
     const ruleSelects = document.querySelectorAll('.rule-select');
     const sizeSelect = document.getElementById('size-select');
+
+    const modal = document.getElementById('science-modal');
+    const modalLabel = document.getElementById('science-modal-label');
+    const closeModalBtn = document.getElementById('close-science-modal');
 
     function updateRepresentativeCommentsBlock(ruleSelect) {
       const rule = ruleSelect.querySelector('.rule-select-option.selected')?.dataset.value
@@ -3749,6 +3775,7 @@
     const selectDiversity = document.getElementById('rule-select-diversity');
     const repCommentsTitles = document.querySelectorAll('.representative-comments-block-title');
     const alRepCommentsTitles = document.querySelectorAll('.alternative-representative-comments-block-title');
+    const advancedControlExplanations = document.querySelectorAll('.advanced-controls-explanations');
 
     function toggleAdvancedControlsVisibility() {
       if (advancedControls) {
@@ -3765,6 +3792,10 @@
         alRepCommentsTitles.forEach(title => {
           title.classList.add('hidden');
         });
+        closeModal();
+        advancedControlExplanations.forEach(explanation => {
+          explanation.classList.add('hidden');
+        })
       } else {
         advancedControls = true;
         showAdvancedControlsButton.textContent = 'Reset Default Settings';
@@ -3776,6 +3807,10 @@
         alRepCommentsTitles.forEach(title => {
           title.classList.remove('hidden');
         });
+        closeModal();
+        advancedControlExplanations.forEach(explanation => {
+          explanation.classList.remove('hidden');
+        })
       }
     }
 
@@ -3832,11 +3867,6 @@
       });
     });
 
-    const modal = document.getElementById('science-modal');
-  const modalLabel = document.getElementById('science-modal-label');
-  const closeModalBtn = document.getElementById('close-science-modal');
-  const modalContent = document.getElementById('science-modal-content');
-
   function openModal(targetId = null) {
     modal.classList.add('open');
     if (targetId) {
@@ -3865,6 +3895,56 @@
       openModal(target);
     });
   });
+
+  document.getElementById('highlight-differences-btn').addEventListener('click', function () {
+    const button = this;
+    const highlighted = button.classList.toggle('active');
+
+    const representativeComments = Array.from(document.querySelectorAll('.representative-comments-block .article-comment'));
+    const commentBlocks = Array.from(document.querySelectorAll('.representative-comments-block'));
+
+    // Map comment ID to number of columns it appears in
+    const commentMap = new Map();
+
+    commentBlocks.forEach((column, colIndex) => {
+      const seen = new Set();
+      column.querySelectorAll('.article-comment').forEach(comment => {
+        const id = comment.dataset.commentId;
+        if (!seen.has(id)) {
+          commentMap.set(id, (commentMap.get(id) || 0) + 1);
+          seen.add(id);
+        }
+      });
+    });
+
+    representativeComments.forEach(comment => {
+      // Clear existing highlight classes
+      comment.classList.remove('highlight-common', 'highlight-partial', 'highlight-unique');
+
+      if (highlighted) {
+        const id = comment.dataset.commentId;
+        const count = commentMap.get(id) || 0;
+
+        if (count === 3) {
+          comment.classList.add('highlight-common');
+        } else if (count === 2) {
+          comment.classList.add('highlight-partial');
+        } else if (count === 1) {
+          comment.classList.add('highlight-unique');
+        }
+      }
+    });
+
+    button.textContent = highlighted ? 'Hide Differences' : 'Highlight Differences';
+
+    const legend = document.getElementById('highlight-differences-legend');
+      if (highlighted) {
+        legend.classList.remove('hidden');
+      } else {
+        legend.classList.add('hidden');
+      }
+  });
+
 });
 </script>
 

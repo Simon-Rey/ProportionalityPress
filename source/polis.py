@@ -270,6 +270,12 @@ def overwrite_default_content(article: Article):
         article.title = "New minimum wage in Seattle: $15/hour"
         article.slugified_title = make_url_friendly(article.title)
 
+    if article.slugified_title in ["energie", "ernhrungundlandnutzung", "mobilitt", "produktionundkonsum", "wohnen"]:
+        article.title += " [DE]"
+
+    if article.slugified_title == "uberxvtaiwantw":
+        article.title += " [ZH]"
+
     remove_demographic_comments(article)
 
     title_to_categories = {
@@ -278,20 +284,20 @@ def overwrite_default_content(article: Article):
         "canadianelectoralreform": "Politics",
         "cantherebeconsensusonbrexit": "Politics",
         "concussionsinthenfl": "Sports",
-        "energie": "Environment",
-        "ernhrungundlandnutzung": "Environment",
+        "energiede": "Environment",
+        "ernhrungundlandnutzungde": "Environment",
         "fairenoughhowshouldnewzealandersbetaxed": "Economy",
         "freshwaterqualityinnewzealand": "Environment",
         "improvingbowlinggreenwarrencounty": "Society",
         "landuseandconservationinthesanjuanislands": "Environment",
-        "mobilitt": "Environment",
+        "mobilittde": "Environment",
         "operationmarchingorders": "Politics",
-        "produktionundkonsum": "Society",
+        "produktionundkonsumde": "Society",
         "protectingandrestoringnewzealandsbiodiversity": "Environment",
         "affordablehousinginnewzealand": "Society",
         "togetherwellbuildthebgof2050": "Society",
         "uberxvtaiwantw": "Society",
         "whatisthebestwaytoengagemoreyoungpeopleinlocalscrutinyofpolicing": "Politics",
-        "wohnen": "Society",
+        "wohnende": "Society",
     }
     article.category = title_to_categories[article.slugified_title]

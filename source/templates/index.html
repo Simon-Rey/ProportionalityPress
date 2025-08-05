@@ -7,24 +7,26 @@
 
 <section>
   <p>
-    The <strong>Proportionality Press</strong> explores how we can improve collective decisions and public conversations
-    using clear, principled approaches. This website showcases practical approaches to selecting content that reflects
-    a broad range of perspectives.
+    What if there was a better way to summarize the comments section of a news article than simply showing the most
+    liked or the newest comments? That’s the question behind the <strong>Proportionality Press</strong>. This website
+    explores practical methods for selecting representative comments that go beyond just sorting by date or number of likes.
   </p>
 
   <p>
-    We focus on the selection of <strong>representative comments</strong> from online
-    discussions, &mdash; a Reddit thread or the comment section beneath a news article for instance.
-    Rather than simply highlighting only the most liked or most recent contributions, we apply voting-based methods to
-    explore different ways of selecting representative comments.
+    At the Proportionality Press, comments are chosen in a proportional way. This means we don’t just highlight the
+    most popular opinions, but also represent significant groups with differing viewpoints. Our goal: a rich and
+    balanced conversation under your next Reddit post.
   </p>
 
   <p>
-    For each article, we present selections produced by different methods and analyze their practical implications.
-    You can start by reading one of our featured articles, or simply browse through the full list.
+    For each article, you can explore different comment selections created by various methods, along with explanations
+    of what these approaches reveal.
   </p>
 
-  <p>Highlighted Articles:</p>
+  <p>
+    Ready to dive in? Check out one of our featured articles or browse the full list from the menu above.
+  </p>
+
   <ul>
     {% for article in highlighted_articles %}
       <li><a href="{{ article.link }}">{{ article.title }}</a></li>
