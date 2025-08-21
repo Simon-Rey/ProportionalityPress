@@ -5,29 +5,30 @@ from collections import defaultdict
 from collections.abc import Iterable, Collection
 from functools import total_ordering
 
-from source.utils import slugify, strip_non_basic_characters, make_url_friendly
+from source.utils import make_url_friendly
 
 
-class SiteConfig:
-    def __init__(self, site_name, base_url, static_url, output_dir, template_dir, static_dir):
-        self.site_name = site_name
-        self.base_url = base_url
-        self.static_url = static_url
-        self.output_dir = output_dir
-        self.template_dir = template_dir
-        self.static_dir = static_dir
-
-def default_config():
-    return SiteConfig(
-        site_name="Proportionality Press",
-        base_url="/",
-        static_url="static/",
-        output_dir="_site",
-        template_dir="templates",
-        static_dir= "static"
-    )
+# =============
+# Comment Class
+# =============
 
 class Comment:
+    """
+    Represents a comment in an article.
+
+    Attributes:
+        comment_id (str): Unique identifier of the comment.
+        text (str): The comment text.
+        timestamp (str): Raw timestamp string (e.g. from source data).
+        beautified_timestamp (str | None): Optional human-readable timestamp
+            (e.g. "Jan 5, 2025") for display purposes.
+        author (str): Identifier or name of the comment's author.
+        agreeing_ids (list[str]): IDs of participants who agreed with this comment.
+        disagreeing_ids (list[str]): IDs of participants who disagreed with this comment.
+        passed_ids (list[str]): IDs of participants who passed on voting.
+        not_seen_ids (list[str]): IDs of participants who did not see this comment.
+    """
+
     def __init__(self, comment_id: str, text: str, timestamp: str, author: str, agreeing_ids: Collection[str] = None, disagreeing_ids: Collection[str] = None, passed_ids: Collection[str] = None, not_seen_ids: Collection[str] = None, beautified_timestamp: str = None):
         self.comment_id = comment_id
         self.text = text
@@ -49,19 +50,26 @@ class Comment:
 
     @property
     def num_agrees(self):
+        """Return the number of agreeing participants."""
         return len(self.agreeing_ids)
 
     @property
     def num_disagrees(self):
+        """Return the number of disagreeing participants."""
         return len(self.disagreeing_ids)
 
     @property
     def render_timestamp(self):
+        """
+        Return the beautified timestamp if available,
+        otherwise fall back to the raw timestamp.
+        """
         if self.beautified_timestamp:
             return self.beautified_timestamp
         return self.timestamp
 
     def to_dict(self):
+        """Convert this Comment to a serializable dictionary."""
         return {
             "comment_id": self.comment_id,
             "text": self.text,
@@ -76,6 +84,7 @@ class Comment:
 
     @classmethod
     def from_dict(cls, data: dict):
+        """Construct a Comment from a dictionary representation."""
         return cls(
             comment_id=data["comment_id"],
             text=data["text"],
@@ -88,8 +97,26 @@ class Comment:
             not_seen_ids=data["not_seen_ids"],
         )
 
+
+# =================
+# Rule Result Class
+# =================
+
 @total_ordering
 class RuleResult:
+    """
+    Represents the output of a rule applied to select a committee of comments.
+
+    Attributes:
+        rule_id (str): Identifier of the rule (e.g., "greedy", "random").
+        committee_size (int): Number of comments in the selected committee.
+        committee (Iterable[Comment]): The selected set of comments.
+        satisfaction (int | None): Satisfaction score for this result.
+        max_satisfaction (int | None): Maximum achievable satisfaction.
+        coverage (float | None): Coverage score for this result.
+        max_coverage (float | None): Maximum achievable coverage.
+        sat_distribution (dict[str, int] | None): Distribution of satisfaction values.
+    """
     def __init__(self,
                  rule_id:str,
                  committee_size: int,
@@ -111,6 +138,7 @@ class RuleResult:
         self.sat_distribution = sat_distribution
 
     def to_dict(self):
+        """Convert this RuleResult into a serializable dictionary."""
         return {
             "rule_id": self.rule_id,
             "committee_size": self.committee_size,
@@ -124,6 +152,7 @@ class RuleResult:
 
     @classmethod
     def from_dict(cls, data: dict):
+        """Construct a RuleResult from a dictionary representation."""
         return cls(
             rule_id=data["rule_id"],
             committee_size=data["committee_size"],
@@ -135,7 +164,7 @@ class RuleResult:
             sat_distribution=data["sat_distribution"],
         )
 
-    def _identifier(self):
+    def _identifier(self) -> tuple[str, int]:
         return self.rule_id, self.committee_size
 
     def __eq__(self, other):
@@ -154,7 +183,27 @@ class RuleResult:
     def __repr__(self):
         return f"Res[{self.rule_id}, {self.committee_size}]"
 
+
+# =============
+# Article Class
+# =============
+
 class Article:
+    """
+    Represents an article on the website, derived from PolisPoll or other sources.
+
+    Attributes:
+        title (str): Title of the article.
+        slugified_title (str): URL-friendly version of the title.
+        category (str): Category of the article (e.g., "Politics").
+        text (str): Main body text of the article.
+        sources (dict[str, str]): Mapping of source names to URLs.
+        html_include_file (str | None): Optional HTML include file for custom snippets.
+        comments (list[Comment]): Comments associated with the article.
+        participant_ids (list[str]): IDs of participants included in this article.
+        rule_results (dict[str, dict[int, RuleResult]]): Nested mapping of
+            {rule_id → {committee_size → RuleResult}}.
+    """
     def __init__(self,
                  title: str,
                  category: str,
@@ -182,37 +231,50 @@ class Article:
         self.sanitize_rule_results()
 
     @property
-    def num_comments(self):
+    def num_comments(self) -> int:
+        """Return the number of comments in this article."""
         return len(self.comments)
 
-    def get_comment(self, comment_id):
-        for c in self.comments:
-            if c.comment_id == comment_id:
-                return c
+    def get_comment(self, comment_id: str) -> Comment | None:
+        """Return a comment by ID, or None if not found."""
+        return next((c for c in self.comments if c.comment_id == comment_id), None)
 
     @property
-    def num_participants(self):
+    def num_participants(self) -> int:
+        """Return the number of participants for this article."""
         return len(self.participant_ids)
 
     @property
-    def link(self):
+    def link(self) -> str:
+        """Return the filename for this article's HTML page."""
         return self.slugified_title + ".html"
 
     @property
-    def computed_rules(self):
+    def computed_rules(self) -> list[str]:
+        """Return a sorted list of rule IDs computed for this article."""
         return sorted(self.rule_results)
 
     @property
-    def computed_sizes(self):
-        return sorted(self.rule_results.values().__iter__().__next__())
+    def computed_sizes(self) -> list[int]:
+        """
+        Return a sorted list of committee sizes computed (using the first rule as reference).
+        """
+        return sorted(next(iter(self.rule_results.values())))
 
     @property
-    def html_include_file_path(self):
+    def html_include_file_path(self) -> str | None:
+        """Return the relative path to the include file if set, otherwise None."""
         if self.html_include_file is None:
-            return
+            return None
         return f"includes/articles/{self.html_include_file}"
 
     def sanitize_rule_results(self):
+        """
+        Ensure all rules only keep committee sizes that are common to all rules.
+
+        This guarantees comparability between rules (i.e. each rule has results
+        for the same set of sizes).
+        """
         # Map each rules to the sizes computed for the rule
         rules_to_sizes = defaultdict(set)
         for rule, rule_dict in self.rule_results.items():
@@ -229,6 +291,7 @@ class Article:
                         del self.rule_results[rule][size]
 
     def to_dict(self):
+        """Convert this Article into a serializable dictionary."""
         return {
             "title": self.title,
             "slugified_title": self.slugified_title,
@@ -244,6 +307,7 @@ class Article:
 
     @classmethod
     def from_dict(cls, data: dict):
+        """Construct an Article from a dictionary representation."""
         comments = [Comment.from_dict(c) for c in data.get("comments", [])]
 
         raw_rule_results = data.get("rule_results", dict())
@@ -267,10 +331,26 @@ class Article:
     def rule_results_to_json(self):
         return json.dumps([r.to_dict() for d in self.rule_results.values() for r in d.values()])
 
-def dump_article_to_json(article: Article, filepath: str):
+def dump_article_to_json(article: Article, filepath: str) -> None:
+    """
+    Save an Article object to a JSON file.
+
+    Args:
+        article (Article): The article to save.
+        filepath (str): Path to the output file.
+    """
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(article.to_dict(), f, ensure_ascii=False, indent=2)
 
-def load_article_from_json(filepath: str):
+def load_article_from_json(filepath: str) -> Article:
+    """
+    Load an Article object from a JSON file.
+
+    Args:
+        filepath (str): Path to the input file.
+
+    Returns:
+        Article: The deserialized article object.
+    """
     with open(filepath, 'r', encoding='utf-8') as f:
         return Article.from_dict(json.load(f))

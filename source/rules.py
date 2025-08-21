@@ -1,44 +1,28 @@
 from collections import defaultdict
 
+from abcvoting.preferences import Profile
+from abcvoting.abcrules import Rule
+
+
 from article import Article
 from source.article import RuleResult
+from source.settings import ALL_RULES, ALL_COMMITTEE_SIZES
 
-ALL_RULES = [
-    "av",
-    "sav",
-    "pav",
-    # "slav",
-    "cc",
-    # "lexcc",
-    # "geom2",
-    "seqpav",
-    # "revseqpav",
-    # "seqslav",
-    # "seqcc",
-    "seqphragmen",
-    # "minimaxphragmen",
-    # "leximaxphragmen",
-    # "maximin-support",
-    # "monroe",
-    # "greedy-monroe",
-    # "minimaxav",
-    # "lexminimaxav",
-    "equal-shares",
-    "equal-shares-with-av-completion",
-    "equal-shares-with-increment-completion",
-    "phragmen-enestroem",
-    # "consensus-rule",
-    # "trivial",
-    # "rsd",
-    # "eph",
-]
 
-ALL_COMMITTEE_SIZES = [3, 5, 8, 10]
+def article_to_abc_profile(article: Article, comment_ids_mapping: list[str]) -> Profile:
+    """
+    Convert an Article object into an abcvoting Profile.
 
-def article_to_abc_profile(article: Article, comment_ids_mapping: list[str]):
-    from abcvoting.abcrules import Rule
-    from abcvoting.preferences import Profile
+    Each participant's ballot is represented as a set of candidate indices
+    (candidates correspond to comments, mapped via `comment_ids_mapping`).
 
+    Args:
+        article (Article): The article containing participants and comments.
+        comment_ids_mapping (list[str]): Ordered list mapping candidate index → comment_id.
+
+    Returns:
+        Profile: abcvoting Profile object representing all participant approvals.
+    """
     profile = Profile(num_cand=article.num_comments)
 
     ballots = defaultdict(set)
@@ -48,10 +32,26 @@ def article_to_abc_profile(article: Article, comment_ids_mapping: list[str]):
     profile.add_voters(ballots.values())
     return profile
 
-def compute_rules_for_article(article: Article):
-    from abcvoting.abcrules import Rule
-    from abcvoting.preferences import Profile
+def compute_rules_for_article(article: Article) -> None:
+    """
+    Compute committee selections for all rules and committee sizes,
+    and store them in the article's `rule_results`.
 
+    Steps:
+        1. Build an abcvoting Profile from the Article.
+        2. For each rule in ALL_RULES and each size in ALL_COMMITTEE_SIZES:
+            - Choose a computation algorithm (skip "gurobi", avoid "brute-force").
+            - Run the rule to get a winning committee.
+            - Convert candidate indices back into comment_ids.
+            - Store results in article.rule_results[rule][size].
+
+    Args:
+        article (Article): The article containing comments and participants.
+
+    Notes:
+        - Skips "gurobi" algorithms (due to solver dependency).
+        - Skips "brute-force" (too slow for realistic data).
+    """
     print(f"Computing rules for article {article.title} with {article.num_participants} participants and {article.num_comments} comments")
 
     comment_ids_mapping = [c.comment_id for c in article.comments]
@@ -70,7 +70,7 @@ def compute_rules_for_article(article: Article):
             if algorithm == "brute-force":
                 continue
 
-            # We sort for better comparison, in any cases, this is a set so unordered.
+            # We sort for better comparison, in any case, this is a set so unordered.
             result = abc_rule.compute(profile, committeesize=size, algorithm=algorithm, resolute=True)[0]
             result_repr = sorted([comment_ids_mapping[c] for c in result], key=lambda x: int(x))
             if rule in article.rule_results:
