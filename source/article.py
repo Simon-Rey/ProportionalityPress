@@ -5,7 +5,7 @@ from collections import defaultdict
 from collections.abc import Iterable, Collection
 from functools import total_ordering
 
-from source.utils import make_url_friendly
+from utils import make_url_friendly
 
 
 # =============
@@ -214,7 +214,6 @@ class Article:
                  participant_ids: Iterable[str] = None,
                  rule_results: dict[str, dict[int, RuleResult]] = None, ):
         self.title = title
-        self.slugified_title = make_url_friendly(self.title)
         self.category = category
         self.text = text
         if comments is None:
@@ -229,6 +228,10 @@ class Article:
             rule_results = dict()
         self.rule_results = rule_results
         self.sanitize_rule_results()
+
+    @property
+    def slugified_title(self) -> str:
+        return make_url_friendly(self.title)
 
     @property
     def num_comments(self) -> int:

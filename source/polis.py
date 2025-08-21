@@ -8,7 +8,6 @@ from datetime import datetime
 import markdown
 
 from article import Article, Comment
-from source.utils import make_url_friendly
 
 
 class PolisComment:
@@ -246,6 +245,16 @@ def read_polis_poll(dir_path: str) -> PolisPoll:
     return poll
 
 def polis_poll_to_article(poll: PolisPoll, ignore_not_seen: bool = True) -> Article:
+    """
+    Converts a PolisPoll object to an Article object.
+
+    Args:
+        poll (PolisPoll): The Polis poll.
+        ignore_not_seen (bool, optional): If ture, comments not seen by the participants are not explicitely stored. This saves space. Defaults to True.
+
+    Returns:
+        Article: An article representing the Polis poll.
+    """
     article_title = poll.name or "Untitled Polis Poll"
     if poll.description:
         article_body = f'<p>{markdown.markdown(poll.description)}</p>'
@@ -298,25 +307,30 @@ def polis_poll_to_article(poll: PolisPoll, ignore_not_seen: bool = True) -> Arti
         )
     article.comments.sort(key=lambda c: c.timestamp, reverse=True)
 
-    overwrite_default_content(article)
-
     return article
 
-def remove_demographic_comments(article):
+def remove_demographic_comments(article: Article) -> None:
+    """
+    For an article object representing a Polis poll, removes the demographic comments that interfere with the analysis.
+    Do so in place.
+
+    Args:
+        article (Article): An article object representing a Polis poll.
+    """
     comment_ids_to_remove = None
     if article.slugified_title == "auniversalbasicincomeforaotearoanz":
         comment_ids_to_remove = {
             "32", "33", "34", "35", "36", "39", "40", "38", "42", "41"
         }
-    elif article.slugified_title == "fairenoughhowshouldnewzealandersbetaxed":
+    elif article.slugified_title == ["taxhivemindwindow", "fairenoughhowshouldnewzealandersbetaxed"]:
         comment_ids_to_remove = {
             "10", "0", "1", "2", "9", "5", "4", "3", "8", "7", "6", "14", "13", "12", "11"
         }
-    elif article.slugified_title == "freshwaterqualityinnewzealand":
+    elif article.slugified_title == ["hivemind-freshwaterqualityinnz", "freshwaterqualityinnewzealand"]:
         comment_ids_to_remove = {
             "24", "25", "26", "27", "29", "28", "35", "34", "33", "32", "31", "30", "36"
         }
-    elif article.slugified_title == "landuseandconservationinthesanjuanislands":
+    elif article.slugified_title == ["jointhediscussionbelowlanduseandconservationinthesanjuanislands", "landuseandconservationinthesanjuanislands"]:
         comment_ids_to_remove = {
             "53", "192", "54", "55", "67", "66", "65", "64", "69", "68", "70",
         }
@@ -342,7 +356,7 @@ def remove_demographic_comments(article):
         comment_ids_to_remove = {
             "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"
         }
-    elif article.slugified_title == "affordablehousinginnewzealand":
+    elif article.slugified_title == ["scoopnzhivemindonaffordablehousing", "affordablehousinginnewzealand"]:
         comment_ids_to_remove = {
             "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40"
         }
@@ -350,45 +364,46 @@ def remove_demographic_comments(article):
     if comment_ids_to_remove:
         article.comments = [c for c in article.comments if c.comment_id not in comment_ids_to_remove]
 
-def overwrite_default_content(article: Article):
+
+def overwrite_default_content(article: Article) -> None:
+    """
+    For an article object representing a Polis poll, overwrites some default content. Used to provide extra information
+    that is not available in the Polis CSV files.
+
+    Args:
+        article (Article): An article object representing a Polis poll.
+    """
     if article.slugified_title in ["taxhivemindwindow", "fairenoughhowshouldnewzealandersbetaxed"]:
         article.title = "Fair enough? How should New Zealanders be taxed?"
-        article.slugified_title = make_url_friendly(article.title)
         article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1804/S00054/fair-enough-how-should-new-zealanders-be-taxed.htm"
         article.html_include_file = "new_zealand_tax.html"
 
     if article.slugified_title == "auniversalbasicincomeforaotearoanz":
         article.title = "A Universal Basic Income for Aotearoa NZ?"
-        article.slugified_title = make_url_friendly(article.title)
         article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1708/S00025/hivemind-universal-basic-income-are-we-up-for-it.htm"
         article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1709/S00031/hivemind-report-a-universal-basic-income-for-aotearoa-nz.htm"
         article.html_include_file = "new_zealand_universal_income.html"
 
     if article.slugified_title == "protectingandrestoringnzsbiodiversity":
         article.title = "Protecting and Restoring New Zealand's Biodiversity"
-        article.slugified_title = make_url_friendly(article.title)
         article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1908/S00014/scoop-hivemind-protecting-and-restoring-biodiversity.htm"
         article.html_include_file = "new_zealand_biodiversity.html"
 
     if article.slugified_title in ["hivemind-freshwaterqualityinnz", "freshwaterqualityinnewzealand"]:
         article.title = "Freshwater Quality in New Zealand"
-        article.slugified_title = make_url_friendly(article.title)
         article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1707/S00042/opening-the-election-hivemind-freshwater-quality.htm"
         article.html_include_file = "new_zealand_freshwater.html"
 
     if article.slugified_title in ["scoopnzhivemindonaffordablehousing", "affordablehousinginnewzealand"]:
         article.title = "Affordable Housing in New Zealand"
-        article.slugified_title = make_url_friendly(article.title)
         article.sources["Soop article"] = "https://www.scoop.co.nz/stories/HL1706/S00034/making-housing-affordable-lets-crack-it.htm"
         article.html_include_file = "new_zealand_affordable_housing.html"
 
     if article.slugified_title in ["jointhediscussionbelowlanduseandconservationinthesanjuanislands", "landuseandconservationinthesanjuanislands"]:
         article.title = "Land use and conservation in the San Juan Islands"
-        article.slugified_title = make_url_friendly(article.title)
 
     if article.slugified_title in ["15hour", "newminimumwageinseattle15hour"]:
         article.title = "New minimum wage in Seattle: $15/hour"
-        article.slugified_title = make_url_friendly(article.title)
 
     if article.slugified_title in ["energie", "ernhrungundlandnutzung", "mobilitt", "produktionundkonsum", "wohnen"]:
         article.title += " [DE]"
@@ -396,14 +411,13 @@ def overwrite_default_content(article: Article):
     if article.slugified_title == "uberxvtaiwantw":
         article.title += " [ZH]"
 
-    remove_demographic_comments(article)
-
     title_to_categories = {
         "newminimumwageinseattle15hour": "Economy",
         "auniversalbasicincomeforaotearoanz": "Economy",
         "canadianelectoralreform": "Politics",
         "cantherebeconsensusonbrexit": "Politics",
         "concussionsinthenfl": "Sports",
+        "energie": "Environment",
         "energiede": "Environment",
         "ernhrungundlandnutzungde": "Environment",
         "fairenoughhowshouldnewzealandersbetaxed": "Economy",
@@ -417,7 +431,29 @@ def overwrite_default_content(article: Article):
         "affordablehousinginnewzealand": "Society",
         "togetherwellbuildthebgof2050": "Society",
         "uberxvtaiwantw": "Society",
+        "uberxvtaiwantwzh": "Society",
         "whatisthebestwaytoengagemoreyoungpeopleinlocalscrutinyofpolicing": "Politics",
         "wohnende": "Society",
     }
     article.category = title_to_categories[article.slugified_title]
+
+
+def read_polis_dir_as_articles(in_dir_path) -> list[Article]:
+    """
+    Reads the content of a directory containing Polis poll raw data. Returns a list of articles corresponding to the
+    polls.
+
+    Args:
+        in_dir_path (str): Path to the directory containing Polis poll raw data.
+
+    Returns:
+        list[Article]: List of articles corresponding to the polls.
+    """
+    res = []
+    for poll_dir in os.listdir(in_dir_path):
+        poll = read_polis_poll(os.path.join(in_dir_path, poll_dir))
+        article = polis_poll_to_article(poll)
+        overwrite_default_content(article)
+        remove_demographic_comments(article)
+        res.append(article)
+    return res

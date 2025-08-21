@@ -1,4 +1,4 @@
-from source.article import Article, RuleResult
+from article import Article, RuleResult
 
 def satisfaction_vector(article: Article, rule_result: RuleResult) -> dict[str, int]:
     """

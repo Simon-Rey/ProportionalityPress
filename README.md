@@ -7,6 +7,8 @@ that best reflect the views of participants — offering a fairer and more infor
 
 ## Development
 
+The `source` directory contains the data and scripts to generate the website.
+
 This project is structured as a data processing pipeline to generate a static website:
 
 1. **Collect raw data** (currently from Polis polls).
@@ -29,7 +31,7 @@ Currently, the only supported source is **Polis polls** taken from the GitHub re
 Command to run this step:
 
 ```bash
-python main.py  # with `all_polis_to_json()` enabled in main()
+python main.py --sources-to-json
 ```
 
 ---
@@ -49,11 +51,10 @@ Workflow:
 3. Add analysis metrics with the tools in `analysis.py`.
 
 
-Typical commands:
+Command to run this step:
 
 ```bash
-python main.py  # with `compute_and_write_all_rules()` enabled
-python main.py  # with `add_analysis_measures()` enabled
+python main.py --compute-rules --add-analysis
 ```
 
 ---
@@ -68,8 +69,14 @@ Once JSON data has been enriched with rule results and analysis, you can build t
 * HTML templates used by the website generator are located in `templates`.
 * Static files (CSS, Javascript etc...) are located in `static`. These are automatically copied into the website directory.
 
-Command:
+
+Command to run this step:
 
 ```bash
-python main.py  # with `generate_all_polis()` enabled
+python main.py --generate
 ```
+
+### 4. Settings
+
+All the settings used to generate the website are described in `settings.py`. Modify this file to adapt the project
+to your own needs.

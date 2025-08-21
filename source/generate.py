@@ -7,7 +7,7 @@ from collections import defaultdict
 from jinja2 import Environment, FileSystemLoader, select_autoescape, StrictUndefined, Template
 
 from article import Article
-from source.settings import RULE_NAME_MAPPING, OUTPUT_DIR, TEMPLATES_DIR, STATIC_DIR, STATIC_URL, SITE_NAME
+from settings import RULE_NAME_MAPPING, OUTPUT_DIR, TEMPLATES_DIR, STATIC_DIR, STATIC_URL, SITE_NAME
 
 
 def render_template(template_obj: Template, **kwargs) -> str:

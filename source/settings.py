@@ -1,11 +1,15 @@
 from __future__ import annotations
 
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+
 
 # Rules that are computed. Slow and irrelevant rules are commented out.
 ALL_RULES = [
     "av",
     "sav",
-    "pav",
+    # "pav",  -> Skipped because of MIP package problems
     # "slav",
     "cc",
     # "lexcc",
@@ -51,12 +55,23 @@ RULE_NAME_MAPPING = {
     "consensus-rule": "Consensus Rule",
 }
 
-
+# General settings for the website generation
 SITE_NAME = "Proportionality Press"
 BASE_URL = "/"
-STATIC_URL = "/static/"
+STATIC_URL = "static/"
 OUTPUT_DIR = "_site"
 TEMPLATES_DIR = "templates"
 STATIC_DIR = "static"
 
-
+# Sources described in here are automatically fetched to generate the website.
+# Each source is a dictionary indicating:
+#   - 'raw_data_dir_path': the input directory, containing all the raw data files
+#   - 'article_data_dir_path': the output directory where the JSON of the articles will be written
+#   - 'raw_data_processor': the function to process the raw data. Takes a directory path as input and returns a list of Article objects
+SOURCES = [
+    {
+        "raw_data_dir_path": BASE_DIR / 'raw_data' / 'polis_data',
+        "article_data_dir_path": BASE_DIR / 'data' / 'polis',
+        "raw_data_processor": "polis.read_polis_dir_as_articles",
+    }
+]

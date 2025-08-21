@@ -4,9 +4,8 @@ from abcvoting.preferences import Profile
 from abcvoting.abcrules import Rule
 
 
-from article import Article
-from source.article import RuleResult
-from source.settings import ALL_RULES, ALL_COMMITTEE_SIZES
+from article import Article, RuleResult
+from settings import ALL_RULES, ALL_COMMITTEE_SIZES
 
 
 def article_to_abc_profile(article: Article, comment_ids_mapping: list[str]) -> Profile:
