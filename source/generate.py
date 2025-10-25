@@ -66,6 +66,7 @@ def generate_site(articles: list[Article]):
             article=article,
             articles_per_category=articles_per_category,
             all_articles=articles,
+            default_size_selection=5,
             default_rule_popularity="av",
             default_rule_representation="equal-shares-with-increment-completion",
             default_rule_diversity="cc",
