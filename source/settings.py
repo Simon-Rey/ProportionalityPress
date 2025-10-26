@@ -3,8 +3,10 @@ from __future__ import annotations
 from enum import Enum
 from pathlib import Path
 
-from rules import (AV, SAV, CC, SeqPAV, SeqPhragmen, EqualShares, EqualSharesWithAVCompletion, EqualSharesWithIncrementCompletion,
-                   PhragmenEnestroem, TriPAVILPKraiczy2025, TriPAVILPHervounin2025, TriPAVILPTalmonPage2021, TriTaxSeqPhrag, TriSeqPhrag, TriTaxMESKPPS2025)
+from rules import (AV, SAV, CC, SeqPAV, SeqPhragmen, EqualShares, EqualSharesWithAVCompletion,
+                   EqualSharesWithIncrementCompletion,
+                   PhragmenEnestroem, TriPAVILPKraiczy2025, TriPAVILPHervounin2025, TriPAVILPTalmonPage2021,
+                   TriTaxSeqPhrag, TriSeqPhrag, TriTaxMESKPPS2025, TriMaxSatisfaction, TriChamberlinCourant)
 
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -52,6 +54,8 @@ ALL_TRICHOTOMOUS_RULES = [
     TriSeqPhrag,
     TriTaxSeqPhrag,
     TriTaxMESKPPS2025,
+    TriMaxSatisfaction,
+    TriChamberlinCourant,
 ]
 
 ALL_RULES = ALL_TRICHOTOMOUS_RULES + ALL_APPROVAL_RULES
