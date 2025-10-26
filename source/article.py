@@ -7,6 +7,10 @@ from functools import total_ordering
 
 from utils import make_url_friendly
 
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from rules import Rule
+
 
 # =============
 # Comment Class
@@ -108,7 +112,7 @@ class RuleResult:
     Represents the output of a rule applied to select a committee of comments.
 
     Attributes:
-        rule_id (str): Identifier of the rule (e.g., "greedy", "random").
+        rule_class (type[Rule]): class representing the details of the rule.
         committee_size (int): Number of comments in the selected committee.
         committee (Iterable[Comment]): The selected set of comments.
         satisfaction (int | None): Satisfaction score for this result.
@@ -118,7 +122,7 @@ class RuleResult:
         sat_distribution (dict[str, int] | None): Distribution of satisfaction values.
     """
     def __init__(self,
-                 rule_id:str,
+                 rule_class: type[Rule],
                  committee_size: int,
                  committee: Iterable[Comment] = None,
                  satisfaction: int=None,
@@ -126,7 +130,7 @@ class RuleResult:
                  coverage: float=None,
                  max_coverage: float=None,
                  sat_distribution: dict[str, int] = None):
-        self.rule_id = rule_id
+        self.rule_class = rule_class
         self.committee_size = committee_size
         if committee is None:
             committee = []
@@ -136,6 +140,10 @@ class RuleResult:
         self.coverage = coverage
         self.max_coverage = max_coverage
         self.sat_distribution = sat_distribution
+
+    @property
+    def rule_id(self):
+        return self.rule_class.short_name
 
     def to_dict(self):
         """Convert this RuleResult into a serializable dictionary."""
@@ -153,8 +161,10 @@ class RuleResult:
     @classmethod
     def from_dict(cls, data: dict):
         """Construct a RuleResult from a dictionary representation."""
+        from settings import get_rule_by_id
+
         return cls(
-            rule_id=data["rule_id"],
+            rule_class=get_rule_by_id(data["rule_id"]),
             committee_size=data["committee_size"],
             committee=data["committee"],
             max_satisfaction=data["max_satisfaction"],
@@ -255,7 +265,7 @@ class Article:
     @property
     def computed_rules(self) -> list[str]:
         """Return a sorted list of rule IDs computed for this article."""
-        return sorted(self.rule_results)
+        return sorted(self.rule_results, key=lambda r: r.rule_class.ordering_priority)
 
     @property
     def computed_sizes(self) -> list[int]:

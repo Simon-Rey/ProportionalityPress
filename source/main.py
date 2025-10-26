@@ -7,6 +7,7 @@ from article import dump_article_to_json, load_article_from_json
 from rules import compute_rules_for_article
 from analysis import add_analysis_to_article
 from settings import SOURCES
+from source.settings import ALL_APPROVAL_RULES, ALL_TRICHOTOMOUS_RULES, ALL_SELECTION_SIZES
 
 
 def sources_to_json() -> None:
@@ -56,7 +57,7 @@ def add_rule_results():
                 file_path = os.path.join(article_dir, article_json_file)
 
                 article = load_article_from_json(file_path)
-                compute_rules_for_article(article)
+                compute_rules_for_article(article, approval_rules=ALL_APPROVAL_RULES, trichotomous_rules=ALL_TRICHOTOMOUS_RULES, sizes=ALL_SELECTION_SIZES)
 
                 dump_article_to_json(article, file_path)
 

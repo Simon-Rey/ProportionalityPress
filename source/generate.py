@@ -7,7 +7,10 @@ from collections import defaultdict
 from jinja2 import Environment, FileSystemLoader, select_autoescape, StrictUndefined, Template
 
 from article import Article
-from settings import RULE_NAME_MAPPING, OUTPUT_DIR, TEMPLATES_DIR, STATIC_DIR, STATIC_URL, SITE_NAME
+from settings import OUTPUT_DIR, TEMPLATES_DIR, STATIC_DIR, STATIC_URL, SITE_NAME, \
+    APPROVAL_DEFAULT_RULE_POPULARITY, APPROVAL_DEFAULT_SELECTION_SIZE, APPROVAL_HIGHLIGHTED_ARTICLE_TITLES, \
+    APPROVAL_DEFAULT_RULE_REPRESENTATION, APPROVAL_DEFAULT_RULE_DIVERSITY, ABCVOTING_NAME_TO_RULE
+from source.settings import ALL_APPROVAL_RULES
 
 
 def render_template(template_obj: Template, **kwargs) -> str:
@@ -45,13 +48,12 @@ def generate_site(articles: list[Article]):
     articles_per_category = sorted([(c, a) for c, a in articles_per_category.items()], key=lambda x: x[0])
 
     # Write index page
-    highlighted_articles_title = ["newminimumwageinseattle15hour", "ernhrungundlandnutzungde", "mobilittde", "operationmarchingorders", "canadianelectoralreform"]
     index_template = env.get_template("index.html")
     index_html = render_template(
         index_template,
         articles_per_category=articles_per_category,
         all_articles=articles,
-        highlighted_articles= [a for a in articles if a.slugified_title in highlighted_articles_title]
+        highlighted_articles= [a for a in articles if a.slugified_title in APPROVAL_HIGHLIGHTED_ARTICLE_TITLES]
     )
     with open(os.path.join(output_dir_path, "index.html"), "w", encoding="utf-8") as f:
         f.write(index_html)
@@ -66,12 +68,13 @@ def generate_site(articles: list[Article]):
             article=article,
             articles_per_category=articles_per_category,
             all_articles=articles,
-            default_size_selection=5,
-            default_rule_popularity="av",
-            default_rule_representation="equal-shares-with-increment-completion",
-            default_rule_diversity="cc",
-            rule_name_mapping=RULE_NAME_MAPPING,
+            default_size_selection=APPROVAL_DEFAULT_SELECTION_SIZE,
+            default_rule_popularity=APPROVAL_DEFAULT_RULE_POPULARITY,
+            default_rule_representation=APPROVAL_DEFAULT_RULE_REPRESENTATION,
+            default_rule_diversity=APPROVAL_DEFAULT_RULE_DIVERSITY,
+            abcvoting_to_rule=ABCVOTING_NAME_TO_RULE,
             max_comment_approval=max(c.num_agrees for c in article.comments),
+            all_rules=ALL_APPROVAL_RULES,
             display_thumbs_down=False
         )
 

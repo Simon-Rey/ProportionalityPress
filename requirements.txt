@@ -3,3 +3,4 @@ markdown
 abcvoting
 ortools
 numpy
+trivoting

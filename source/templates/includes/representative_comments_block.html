@@ -5,7 +5,7 @@
     <div class="rule-select-header comment-analysis-measure-header">Selection Method <span class="open-explanation" data-target="explanation-selection-methods">?</span></div>
     <div id="{{ rule_select_id }}" class="rule-select">
       {% for rule in article.computed_rules %}
-        <div data-value="{{ rule }}" class="rule-select-option{% if rule == default_rule %} selected{% endif %}"><span>{{ rule_name_mapping[rule] }}</span></div>
+        <div data-value="{{ rule }}" class="rule-select-option{% if rule == default_rule.short_name %} selected{% endif %}"><span>{{ abcvoting_to_rule[rule].long_name }}</span></div>
       {% endfor %}
     </div>
   </div>

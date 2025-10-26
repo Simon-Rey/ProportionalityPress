@@ -707,6 +707,12 @@ section:nth-child(even) .article-comment {
   position: relative;
 }
 
+.science-modal-subtitle {
+    background: var(--color-highlight-light);
+    color: white;
+    text-align: center;
+}
+
 .open-explanation {
   cursor: pointer;
   color: white;
