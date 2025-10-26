@@ -38,7 +38,6 @@ class Rule:
         result = abc_rule.compute(profile, committeesize=size, algorithm=algorithm, resolute=True)[0]
         result_repr = sorted([comment_ids_mapping[c] for c in result], key=lambda x: int(x))
         r = RuleResult(cls, size, result_repr)
-        print(r, r.committee)
         return r
 
     @classmethod
@@ -50,7 +49,6 @@ class Rule:
         trivoting_selection = cls._trivoting_wrapper(profile, size)
         selection_repr = sorted([a.name for a in trivoting_selection.selected], key=lambda x: int(x))
         r = RuleResult(cls, size, selection_repr)
-        print(r, r.committee)
         return r
 
 class AV(Rule):
@@ -259,12 +257,17 @@ def compute_approval_rules_for_article(article: Article, rules: Iterable[Rule], 
     profile = article_to_abc_profile(article, comment_ids_mapping)
     for rule in rules:
         for size in sizes:
-            print("\t", rule, size)
-            res = rule.compute_with_abc_voting(profile, size, comment_ids_mapping)
-            if rule.short_name in article.rule_results:
-                article.rule_results[rule.short_name][size] = res
-            else:
-                article.rule_results[rule.short_name] = {size: res}
+            print("\t", rule.short_name, size)
+            try:
+                res = rule.compute_with_abc_voting(profile, size, comment_ids_mapping)
+            except Exception as e:
+                warnings.warn(f"Error computing {rule} for article {article.title}: {e}")
+                res = None
+            if res is not None:
+                if rule.short_name in article.rule_results:
+                    article.rule_results[rule.short_name][size] = res
+                else:
+                    article.rule_results[rule.short_name] = {size: res}
 
 
 class TriPAVILPKraiczy2025(Rule):
@@ -274,7 +277,7 @@ class TriPAVILPKraiczy2025(Rule):
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPKraiczy2025)
+        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPKraiczy2025, max_seconds=2400)
 
 class TriPAVILPTalmonPage2021(Rule):
     short_name = "tri_pav_TP21"
@@ -283,7 +286,7 @@ class TriPAVILPTalmonPage2021(Rule):
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPTalmonPage2021)
+        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPTalmonPage2021, max_seconds=2400)
 
 class TriPAVILPHervounin2025(Rule):
     short_name = "tri_pav_Herv25"
@@ -292,7 +295,7 @@ class TriPAVILPHervounin2025(Rule):
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPHervouin2025)
+        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPHervouin2025, max_seconds=2400)
 
 class TriTaxMESKPPS2025(Rule):
     short_name = "tax_MES_KPPS25"
@@ -371,12 +374,17 @@ def compute_trichotomous_rules_for_article(article: Article, rules: Iterable[Rul
     profile = article_to_trivoting_profile(article, comment_ids_mapping)
     for rule in rules:
         for size in sizes:
-            print("\t", rule, size)
-            res = rule.compute_with_trivoting(profile, size)
-            if rule.short_name in article.rule_results:
-                article.rule_results[rule.short_name][size] = res
-            else:
-                article.rule_results[rule.short_name] = {size: res}
+            print("\t", rule.short_name, size)
+            try:
+                res = rule.compute_with_trivoting(profile, size)
+            except Exception as e:
+                warnings.warn(f"Error computing {rule} for article {article.title}: {e}")
+                res = None
+            if res is not None:
+                if rule.short_name in article.rule_results:
+                    article.rule_results[rule.short_name][size] = res
+                else:
+                    article.rule_results[rule.short_name] = {size: res}
 
 def compute_rules_for_article(article: Article, approval_rules: Iterable[Rule], trichotomous_rules: Iterable[Rule], sizes: Iterable[int]) -> None:
     """

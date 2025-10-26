@@ -81,7 +81,7 @@ def add_rule_results_for_file(file_path: str):
     return file_path
 
 
-def add_rule_results(n_processes=1):
+def add_rule_results(n_processes=None):
     """
     Read all JSON files representing articles (across SOURCES)
     and add the rule results to them in parallel.
