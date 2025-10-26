@@ -262,7 +262,9 @@
       
         <div data-value="av" class="rule-select-option selected"><span>Approval Voting</span></div>
       
-        <div data-value="cc" class="rule-select-option"><span>Chamberlin–Courant</span></div>
+        <div data-value="sav" class="rule-select-option"><span>Satisfaction Approval Voting</span></div>
+      
+        <div data-value="seqpav" class="rule-select-option"><span>Sequential Proportional Approval Voting</span></div>
       
         <div data-value="equal-shares" class="rule-select-option"><span>Method of Equal Shares</span></div>
       
@@ -272,11 +274,9 @@
       
         <div data-value="phragmen-enestroem" class="rule-select-option"><span>Eneström–Phragmén</span></div>
       
-        <div data-value="sav" class="rule-select-option"><span>Satisfaction Approval Voting</span></div>
-      
-        <div data-value="seqpav" class="rule-select-option"><span>Sequential Proportional Approval Voting</span></div>
-      
         <div data-value="seqphragmen" class="rule-select-option"><span>Phragmén&#39;s Sequential Rule</span></div>
+      
+        <div data-value="cc" class="rule-select-option"><span>Chamberlin–Courant</span></div>
       
     </div>
   </div>
@@ -333,7 +333,9 @@
       
         <div data-value="av" class="rule-select-option"><span>Approval Voting</span></div>
       
-        <div data-value="cc" class="rule-select-option"><span>Chamberlin–Courant</span></div>
+        <div data-value="sav" class="rule-select-option"><span>Satisfaction Approval Voting</span></div>
+      
+        <div data-value="seqpav" class="rule-select-option"><span>Sequential Proportional Approval Voting</span></div>
       
         <div data-value="equal-shares" class="rule-select-option"><span>Method of Equal Shares</span></div>
       
@@ -343,11 +345,9 @@
       
         <div data-value="phragmen-enestroem" class="rule-select-option"><span>Eneström–Phragmén</span></div>
       
-        <div data-value="sav" class="rule-select-option"><span>Satisfaction Approval Voting</span></div>
-      
-        <div data-value="seqpav" class="rule-select-option"><span>Sequential Proportional Approval Voting</span></div>
-      
         <div data-value="seqphragmen" class="rule-select-option"><span>Phragmén&#39;s Sequential Rule</span></div>
+      
+        <div data-value="cc" class="rule-select-option"><span>Chamberlin–Courant</span></div>
       
     </div>
   </div>
@@ -404,7 +404,9 @@
       
         <div data-value="av" class="rule-select-option"><span>Approval Voting</span></div>
       
-        <div data-value="cc" class="rule-select-option selected"><span>Chamberlin–Courant</span></div>
+        <div data-value="sav" class="rule-select-option"><span>Satisfaction Approval Voting</span></div>
+      
+        <div data-value="seqpav" class="rule-select-option"><span>Sequential Proportional Approval Voting</span></div>
       
         <div data-value="equal-shares" class="rule-select-option"><span>Method of Equal Shares</span></div>
       
@@ -414,11 +416,9 @@
       
         <div data-value="phragmen-enestroem" class="rule-select-option"><span>Eneström–Phragmén</span></div>
       
-        <div data-value="sav" class="rule-select-option"><span>Satisfaction Approval Voting</span></div>
-      
-        <div data-value="seqpav" class="rule-select-option"><span>Sequential Proportional Approval Voting</span></div>
-      
         <div data-value="seqphragmen" class="rule-select-option"><span>Phragmén&#39;s Sequential Rule</span></div>
+      
+        <div data-value="cc" class="rule-select-option selected"><span>Chamberlin–Courant</span></div>
       
     </div>
   </div>
@@ -16646,19 +16646,15 @@
     </div>
     <div id="science-modal-content">
 
-      <h3 id="explanation-analysis">Analysis</h3>
+      <h3 id="explanation-analysis" class="science-modal-subtitle">Analysis</h3>
 
-      <h4 id="explanation-popularity">Popularity</h4>
-
-      <p>
-        "Popularity" measures how popular is a set of comments for the participants. It is equal to the total amount of
+      <p id="explanation-popularity">
+        <strong class="highlight">Popularity</strong> measures how popular is a set of comments for the participants. It is equal to the total amount of
         positive votes (a.k.a. thumbs-up, or approvals) received by the comments in the selection.
       </p>
 
-      <h4 id="explanation-inclusion">Inclusion</h4>
-
-      <p>
-        "Inclusion" measures the percentage of participants included in the selection. That is, the percentage of
+      <p id="explanation-inclusion">
+        <strong class="highlight">Inclusion</strong> measures the percentage of participants included in the selection. That is, the percentage of
         participants who expressed a positive opinion (a.k.a. thumb-up, or approval) about at least one of the selected comments.
       </p>
 
@@ -16667,24 +16663,24 @@
         of the selection.
       </p>
 
+      <!--
       <p>
         Inclusion can also be expressed in terms of satisfaction: the inclusion is the percentage of participants with
         non-zero satisfaction.
       </p>
 
-      <h4 id="explanation-satisfaction">Satisfaction</h4>
-
-      <p>
-        The "satisfaction of a participant" measures the number of selected comments that they expressed a positive
+      <p id="explanation-satisfaction">
+        <strong class="highlight">The satisfaction of a participant</strong> measures the number of selected comments that they expressed a positive
         opinion (a.k.a. thumb-up, or approval) about.
       </p>
 
       <p>
         For instance, a satisfaction of 3 means that the participant feels positively about 3 of the selected comments.
       </p>
+      -->
 
       <div class="advanced-controls-explanations">
-        <h3 id="explanation-selection-methods">Selection Methods</h3>
+        <h3 id="explanation-selection-methods" class="science-modal-subtitle">Selection Methods</h3>
 
         <p>
           A selection method is a procedure that selects a given number of comments based on the votes submitted by the users.
@@ -16694,54 +16690,43 @@
           The desired number of comments to select is always given up-front.
         </p>
 
-        <p>
-          <strong>Approval Voting:</strong> Selects the comments who have the highest number of votes.
-        </p>
-
-        <p>
-          <strong>Chamberlin–Courant:</strong> A participant is considered to be represented if their satisfaction is more than 0.
-          This method selects comments to maximize the number of represented participants.
-        </p>
-
-        <p>
-          <strong>Method of Equal Shares:</strong> Each participant receives an equal amount of virtual currency to spend
-          on comments they feel positively about. Comments are considered in rounds. A comment is selected if its supporters
-          have enough budget left to collectively afford it.
-        </p>
-
-        <p>
-          <strong>Method of Equal Shares with Approval Voting Completion:</strong> Applies the method of equal shares.
-          If fewer than the desired number of comments are selected, the result is completed by using the approval
-          voting selection method.
-        </p>
-
-        <p>
-          <strong>Method of Equal Shares with Increment Completion:</strong> Calculates the minimum amount of virtual
-          currency needed for the method of equal shares to select the desired number of comments. Then, applies the method
-          using that amount.
-        </p>
-
-        <p>
-          <strong>Sequential Proportional Approval Voting:</strong> Sequential variant the proportional approval voting
-          method. Selects the comments one by one, each time selecting the best non-selected comment according to the
-          principles of proportional approval voting.
-        </p>
-
-        <p>
-          <strong>Eneström–Phragmén:</strong> Distributes representation load evenly among participants to select a
-          proportionally representative set of comments.
-        </p>
-
-        <p>
-          <strong>Phragmén's Sequential Rule:</strong> Sequentially adds comments while balancing the representation load
-          to maintain proportional fairness.
-        </p>
-
-        <p>
-          <strong>Satisfaction Approval Voting:</strong> Selects a set of comments that maximises the total average
-          satisfaction of the participants. The average satisfaction of a participant is defined here as their satisfaction
-          divided by number of supported comments.
-        </p>
+        
+          <p>
+            <strong class="highlight">Approval Voting:</strong> Selects the comments who have the highest number of votes.
+          </p>
+        
+          <p>
+            <strong class="highlight">Satisfaction Approval Voting:</strong> Selects a set of comments that maximises the total average satisfaction of the participants. The average satisfaction of a participant is defined here as their satisfaction divided by number of supported comments.
+          </p>
+        
+          <p>
+            <strong class="highlight">Sequential Proportional Approval Voting:</strong> Sequential variant the proportional approval voting method. Selects the comments one by one, each time selecting the best non-selected comment according to the principles of proportional approval voting.
+          </p>
+        
+          <p>
+            <strong class="highlight">Method of Equal Shares:</strong> Each participant receives an equal amount of virtual currency to spend on comments they feel positively about. Comments are considered in rounds. A comment is selected if its supporters have enough budget left to collectively afford it.
+          </p>
+        
+          <p>
+            <strong class="highlight">Method of Equal Shares with Approval Voting Completion:</strong> Applies the method of equal shares. If fewer than the desired number of comments are selected, the result is completed by using the approval voting selection method.
+          </p>
+        
+          <p>
+            <strong class="highlight">Method of Equal Shares with Increment Completion:</strong> Calculates the minimum amount of virtual currency needed for the method of equal shares to select the desired number of comments. Then, applies the method using that amount.
+          </p>
+        
+          <p>
+            <strong class="highlight">Eneström–Phragmén:</strong> Distributes representation load evenly among participants to select a proportionally representative set of comments.
+          </p>
+        
+          <p>
+            <strong class="highlight">Phragmén&#39;s Sequential Rule:</strong> Sequentially adds comments while balancing the representation load to maintain proportional fairness.
+          </p>
+        
+          <p>
+            <strong class="highlight">Chamberlin–Courant:</strong> A participant is considered to be represented if their satisfaction is more than 0. This method selects comments to maximize the number of represented participants.
+          </p>
+        
       </div>
     </div>
   </div>
@@ -16953,9 +16938,9 @@
         ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.add('hidden'));
         sizeSelectionWrap.classList.add('hidden');
         sizeSelect.value = '5';
-        selectRuleOptionByValue(selectPopularity, 'av');
-        selectRuleOptionByValue(selectRepresentation, 'equal-shares-with-increment-completion');
-        selectRuleOptionByValue(selectDiversity, 'cc');
+        selectRuleOptionByValue(selectPopularity, '&lt;class &#39;settings.AV&#39;&gt;');
+        selectRuleOptionByValue(selectRepresentation, '&lt;class &#39;settings.EqualSharesWithIncrementCompletion&#39;&gt;');
+        selectRuleOptionByValue(selectDiversity, '&lt;class &#39;settings.CC&#39;&gt;');
         repCommentsTitles.forEach(title => {
           title.classList.remove('hidden');
         });
