@@ -35,7 +35,7 @@ class Rule:
         # We sort for better comparison, in any case, this is a set so unordered.
         result = abc_rule.compute(profile, committeesize=size, algorithm=algorithm, resolute=True)[0]
         result_repr = sorted([comment_ids_mapping[c] for c in result], key=lambda x: int(x))
-        return RuleResult(cls.short_name, size, result_repr)
+        return RuleResult(cls, size, result_repr)
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
@@ -45,7 +45,7 @@ class Rule:
     def compute_with_trivoting(cls, profile, size, comment_ids_mapping) -> RuleResult | None:
         trivoting_selection = cls._trivoting_wrapper(profile, size)
         selection_repr = sorted([comment_ids_mapping.index(a.name) for a in trivoting_selection.selected], key=lambda x: int(x))
-        return RuleResult(cls.short_name, size, selection_repr)
+        return RuleResult(cls, size, selection_repr)
 
 class AV(Rule):
     short_name = "av"
