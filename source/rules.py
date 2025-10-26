@@ -9,7 +9,8 @@ from abcvoting.abcrules import Rule as ABCVoting_Rule
 
 from trivoting.election import TrichotomousProfile, TrichotomousBallot, Alternative, Selection
 from trivoting.rules import thiele_method, PAVILPKraiczy2025, PAVILPHervouin2025, PAVILPTalmonPage2021, TaxKraiczy2025, \
-    tax_method_of_equal_shares, sequential_phragmen, tax_sequential_phragmen
+    tax_method_of_equal_shares, sequential_phragmen, tax_sequential_phragmen, MaxNetSatisfactionILPBuilder
+from trivoting.rules.chamberlin_courant import chamberlin_courant_ilp
 
 from article import Article, RuleResult
 
@@ -277,7 +278,7 @@ class TriPAVILPKraiczy2025(Rule):
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPKraiczy2025, max_seconds=2400)
+        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPKraiczy2025, max_seconds=600)
 
 class TriPAVILPTalmonPage2021(Rule):
     short_name = "tri_pav_TP21"
@@ -286,7 +287,7 @@ class TriPAVILPTalmonPage2021(Rule):
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPTalmonPage2021, max_seconds=2400)
+        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPTalmonPage2021, max_seconds=600)
 
 class TriPAVILPHervounin2025(Rule):
     short_name = "tri_pav_Herv25"
@@ -295,7 +296,7 @@ class TriPAVILPHervounin2025(Rule):
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPHervouin2025, max_seconds=2400)
+        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPHervouin2025, max_seconds=600)
 
 class TriTaxMESKPPS2025(Rule):
     short_name = "tax_MES_KPPS25"
@@ -323,6 +324,24 @@ class TriTaxSeqPhrag(Rule):
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
         return tax_sequential_phragmen(profile, max_size_selection=size, tax_function=TaxKraiczy2025)
+
+class TriMaxSatisfaction(Rule):
+    short_name = "tri_max_sat"
+    long_name = "Maximum Satisfaction for trichotomous profiles"
+    is_trichotomous = True
+
+    @classmethod
+    def _trivoting_wrapper(cls, profile, size) -> Selection:
+        return thiele_method(profile, max_size_selection=size, ilp_builder_class=MaxNetSatisfactionILPBuilder, max_seconds=600)
+
+class TriChamberlinCourant(Rule):
+    short_name = "tri_cc"
+    long_name = "Chamberlin-Courant for trichotomous profiles"
+    is_trichotomous = True
+
+    @classmethod
+    def _trivoting_wrapper(cls, profile, size) -> Selection:
+        return chamberlin_courant_ilp(profile, max_size_selection=size, max_seconds=600)
 
 def article_to_trivoting_profile(article: Article, comment_ids_mapping: list[str]) -> TrichotomousProfile:
     """

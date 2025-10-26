@@ -16,11 +16,13 @@ def satisfaction_vector(article: Article, rule_result: RuleResult) -> dict[str, 
         dict[str, int]: Mapping from participant_id → satisfaction score.
     """
     sat_vector = {p: 0 for p in article.participant_ids}
-    print(article, rule_result, rule_result.committee)
     for comment_id in rule_result.committee:
         c = article.get_comment(comment_id)
         for voter_id in c.agreeing_ids:
             sat_vector[voter_id] += 1
+        if rule_result.rule_class.is_trichotomous:
+            for voter_id in c.disagreeing_ids:
+                sat_vector[voter_id] -= 1
     return sat_vector
 
 def analyse_satisfaction_vector(article: Article, rule_result: RuleResult) -> None:
