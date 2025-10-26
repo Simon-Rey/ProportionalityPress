@@ -4,6 +4,7 @@ import csv
 import os
 from collections.abc import Iterable
 from datetime import datetime
+from multiprocessing import Pool
 
 import markdown
 
@@ -438,22 +439,54 @@ def overwrite_default_content(article: Article) -> None:
     article.category = title_to_categories[article.slugified_title]
 
 
-def read_polis_dir_as_articles(in_dir_path) -> list[Article]:
+def _process_polis_poll_dir(poll_dir_path: str):
     """
-    Reads the content of a directory containing Polis poll raw data. Returns a list of articles corresponding to the
-    polls.
-
-    Args:
-        in_dir_path (str): Path to the directory containing Polis poll raw data.
-
-    Returns:
-        list[Article]: List of articles corresponding to the polls.
+    Worker: read and convert a single Polis poll directory to an Article.
     """
-    res = []
-    for poll_dir in os.listdir(in_dir_path):
-        poll = read_polis_poll(os.path.join(in_dir_path, poll_dir))
-        article = polis_poll_to_article(poll)
-        overwrite_default_content(article)
-        remove_demographic_comments(article)
-        res.append(article)
-    return res
+    poll = read_polis_poll(poll_dir_path)
+    article = polis_poll_to_article(poll)
+    overwrite_default_content(article)
+    remove_demographic_comments(article)
+    return article
+
+
+def read_polis_dir_as_articles(in_dir_path: str, n_processes=None) -> list:
+    """
+    Parallel version:
+    Reads all subdirectories in a Polis poll directory and converts each into an Article.
+    """
+    poll_dirs = [
+        os.path.join(in_dir_path, d)
+        for d in os.listdir(in_dir_path)
+        if os.path.isdir(os.path.join(in_dir_path, d))
+    ]
+
+    print(f"Found {len(poll_dirs)} Polis polls to read...")
+
+    articles = []
+    with Pool(processes=n_processes) as pool:
+        for article in pool.imap_unordered(_process_polis_poll_dir, poll_dirs):
+            if article is not None:
+                articles.append(article)
+                print(f"Processed {article.slugified_title}")
+    return articles
+
+# def read_polis_dir_as_articles(in_dir_path) -> list[Article]:
+#     """
+#     Reads the content of a directory containing Polis poll raw data. Returns a list of articles corresponding to the
+#     polls.
+#
+#     Args:
+#         in_dir_path (str): Path to the directory containing Polis poll raw data.
+#
+#     Returns:
+#         list[Article]: List of articles corresponding to the polls.
+#     """
+#     res = []
+#     for poll_dir in os.listdir(in_dir_path):
+#         poll = read_polis_poll(os.path.join(in_dir_path, poll_dir))
+#         article = polis_poll_to_article(poll)
+#         overwrite_default_content(article)
+#         remove_demographic_comments(article)
+#         res.append(article)
+#     return res

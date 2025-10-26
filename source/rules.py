@@ -18,6 +18,8 @@ class Rule:
     long_name = ""
     ordering_priority = 10000  # The lower the better
     approval_explanation = ""
+    is_approval=False
+    is_trichotomous=False
 
     @classmethod
     def compute_with_abc_voting(cls, profile, size, comment_ids_mapping) -> RuleResult | None:
@@ -25,7 +27,7 @@ class Rule:
 
         # We skip Gurobi because it's annoying
         index = 0
-        while ("gurobi" in abc_rule.algorithms[index] or "highs" in abc_rule.algorithms[index]) and index < len(abc_rule.algorithms) - 1:
+        while ("gurobi" in abc_rule.algorithms[index] or "highs" in abc_rule.algorithms[index] or "mip" in abc_rule.algorithms[index]) and index < len(abc_rule.algorithms) - 1:
             index += 1
         algorithm = abc_rule.algorithms[index]
         if algorithm == "brute-force":
@@ -35,145 +37,174 @@ class Rule:
         # We sort for better comparison, in any case, this is a set so unordered.
         result = abc_rule.compute(profile, committeesize=size, algorithm=algorithm, resolute=True)[0]
         result_repr = sorted([comment_ids_mapping[c] for c in result], key=lambda x: int(x))
-        return RuleResult(cls, size, result_repr)
+        r = RuleResult(cls, size, result_repr)
+        print(r, r.committee)
+        return r
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
         pass
 
     @classmethod
-    def compute_with_trivoting(cls, profile, size, comment_ids_mapping) -> RuleResult | None:
+    def compute_with_trivoting(cls, profile, size) -> RuleResult | None:
         trivoting_selection = cls._trivoting_wrapper(profile, size)
-        selection_repr = sorted([comment_ids_mapping.index(a.name) for a in trivoting_selection.selected], key=lambda x: int(x))
-        return RuleResult(cls, size, selection_repr)
+        selection_repr = sorted([a.name for a in trivoting_selection.selected], key=lambda x: int(x))
+        r = RuleResult(cls, size, selection_repr)
+        print(r, r.committee)
+        return r
 
 class AV(Rule):
     short_name = "av"
     long_name = "Approval Voting"
     ordering_priority = 0
     approval_explanation = "Selects the comments who have the highest number of votes."
+    is_approval=True
 
 class SAV(Rule):
     short_name = "sav"
     long_name = "Satisfaction Approval Voting"
     ordering_priority = 1
     approval_explanation = "Selects a set of comments that maximises the total average satisfaction of the participants. The average satisfaction of a participant is defined here as their satisfaction divided by number of supported comments."
+    is_approval=True
 
 class PAV(Rule):
     short_name = "pav"
     long_name = "Proportional Approval Voting"
+    is_approval=True
 
 class SLAV(Rule):
     short_name = "slav"
     long_name = ""
+    is_approval=True
 
 class CC(Rule):
     short_name = "cc"
     long_name = "Chamberlin–Courant"
     ordering_priority = 8
     approval_explanation = "A participant is considered to be represented if their satisfaction is more than 0. This method selects comments to maximize the number of represented participants."
+    is_approval=True
 
 class LexCC(Rule):
     short_name = "lexcc"
     long_name = ""
+    is_approval=True
 
 class Geom2(Rule):
     short_name = "geom2"
     long_name = ""
+    is_approval=True
 
 class SeqPAV(Rule):
     short_name = "seqpav"
     long_name = "Sequential Proportional Approval Voting"
     ordering_priority = 2
     approval_explanation = "Sequential variant the proportional approval voting method. Selects the comments one by one, each time selecting the best non-selected comment according to the principles of proportional approval voting."
+    is_approval=True
 
 class RevSeqPAV(Rule):
     short_name = "revseqpav"
     long_name = ""
+    is_approval=True
 
 class SeqSLAV(Rule):
     short_name = "seqslav"
     long_name = ""
+    is_approval=True
 
 class SeqCC(Rule):
     short_name = "seqcc"
     long_name = ""
+    is_approval=True
 
 class SeqPhragmen(Rule):
     short_name = "seqphragmen"
     long_name = "Phragmén's Sequential Rule"
     ordering_priority = 7
     approval_explanation = "Sequentially adds comments while balancing the representation load to maintain proportional fairness."
+    is_approval=True
 
 class MinimaxPhragmen(Rule):
     short_name = "minimaxphragmen"
     long_name = ""
+    is_approval=True
 
 class LeximaxPhragmen(Rule):
     short_name = "leximaxphragmen"
     long_name = ""
+    is_approval=True
 
 class MaximinSupport(Rule):
     short_name = "maximin-support"
     long_name = ""
+    is_approval=True
 
 class Monroe(Rule):
     short_name = "monroe"
     long_name = ""
+    is_approval=True
 
 class GreedyMonroe(Rule):
     short_name = "greedy-monroe"
     long_name = ""
+    is_approval=True
 
 class MinimaxAV(Rule):
     short_name = "minimaxav"
     long_name = ""
+    is_approval=True
 
 class LexMinimaxAV(Rule):
     short_name = "lexminimaxav"
     long_name = ""
+    is_approval=True
 
 class EqualShares(Rule):
     short_name = "equal-shares"
     long_name = "Method of Equal Shares"
     ordering_priority = 3
     approval_explanation = "Each participant receives an equal amount of virtual currency to spend on comments they feel positively about. Comments are considered in rounds. A comment is selected if its supporters have enough budget left to collectively afford it."
+    is_approval=True
 
 class EqualSharesWithAVCompletion(Rule):
     short_name = "equal-shares-with-av-completion"
     long_name = "Method of Equal Shares with Approval Voting Completion"
     ordering_priority = 4
     approval_explanation = "Applies the method of equal shares. If fewer than the desired number of comments are selected, the result is completed by using the approval voting selection method."
+    is_approval=True
 
 class EqualSharesWithIncrementCompletion(Rule):
     short_name = "equal-shares-with-increment-completion"
     long_name = "Method of Equal Shares with Increment Completion"
     ordering_priority = 5
     approval_explanation = "Calculates the minimum amount of virtual currency needed for the method of equal shares to select the desired number of comments. Then, applies the method using that amount."
+    is_approval=True
 
 class PhragmenEnestroem(Rule):
     short_name = "phragmen-enestroem"
     long_name = "Eneström–Phragmén"
     ordering_priority = 6
     approval_explanation = "Distributes representation load evenly among participants to select a proportionally representative set of comments."
+    is_approval=True
 
 class ConsensusRule(Rule):
     short_name = "consensus-rule"
     long_name = "Consensus Rule"
+    is_approval=True
 
 class Trivial(Rule):
     short_name = "trivial"
     long_name = ""
+    is_approval=True
 
 class RSD(Rule):
     short_name = "rsd"
     long_name = ""
+    is_approval=True
 
 class EPH(Rule):
     short_name = "eph"
     long_name = ""
-
-
+    is_approval=True
 
 
 def article_to_abc_profile(article: Article, comment_ids_mapping: list[str]) -> Profile:
@@ -198,6 +229,97 @@ def article_to_abc_profile(article: Article, comment_ids_mapping: list[str]) -> 
             ballots[agree_id].add(comment_ids_mapping.index(comment.comment_id))
     profile.add_voters(ballots.values())
     return profile
+
+def compute_approval_rules_for_article(article: Article, rules: Iterable[Rule], sizes: Iterable[int]) -> None:
+    """
+    Compute committee selections for all approval rules and committee sizes,
+    and store them in the article's `rule_results`.
+
+    Steps:
+        1. Build an abcvoting Profile from the Article.
+        2. For each rule in ALL_APPROVAL_RULES and each size in ALL_SELECTION_SIZES:
+            - Choose a computation algorithm (skip "gurobi", avoid "brute-force").
+            - Run the rule to get a winning committee.
+            - Convert candidate indices back into comment_ids.
+            - Store results in article.rule_results[rule][size].
+
+    Args:
+        article (Article): The article containing comments and participants.
+        rules (Iterable[Rule]): A collection of rules to be computed
+        sizes (Iterable[int]): A collection of selection sizes for the outcome of the rules
+
+    Notes:
+        - Skips "gurobi" algorithms (due to solver dependency).
+        - Skips "brute-force" (too slow for realistic data).
+    """
+    print(f"Computing approval rules for article {article.title} with {article.num_participants} participants and {article.num_comments} comments")
+
+    comment_ids_mapping = [c.comment_id for c in article.comments]
+
+    profile = article_to_abc_profile(article, comment_ids_mapping)
+    for rule in rules:
+        for size in sizes:
+            print("\t", rule, size)
+            res = rule.compute_with_abc_voting(profile, size, comment_ids_mapping)
+            if rule.short_name in article.rule_results:
+                article.rule_results[rule.short_name][size] = res
+            else:
+                article.rule_results[rule.short_name] = {size: res}
+
+
+class TriPAVILPKraiczy2025(Rule):
+    short_name = "tri_pav_KPPS25"
+    long_name = "Proportional Trichotomous Voting by Kraiczy, Papasotiropoulos, Pierczyński & Skowron, 2025"
+    is_trichotomous = True
+
+    @classmethod
+    def _trivoting_wrapper(cls, profile, size) -> Selection:
+        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPKraiczy2025)
+
+class TriPAVILPTalmonPage2021(Rule):
+    short_name = "tri_pav_TP21"
+    long_name = "Proportional Trichotomous Voting by Talmon and Page, 2021"
+    is_trichotomous = True
+
+    @classmethod
+    def _trivoting_wrapper(cls, profile, size) -> Selection:
+        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPTalmonPage2021)
+
+class TriPAVILPHervounin2025(Rule):
+    short_name = "tri_pav_Herv25"
+    long_name = "Proportional Trichotomous Voting by Hervouin, 2025"
+    is_trichotomous = True
+
+    @classmethod
+    def _trivoting_wrapper(cls, profile, size) -> Selection:
+        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPHervouin2025)
+
+class TriTaxMESKPPS2025(Rule):
+    short_name = "tax_MES_KPPS25"
+    long_name = "Taxed Method of Equal Shares by Kraiczy, Papasotiropoulos, Pierczyński & Skowron, 2025"
+    is_trichotomous = True
+
+    @classmethod
+    def _trivoting_wrapper(cls, profile, size) -> Selection:
+        return tax_method_of_equal_shares(profile, max_size_selection=size, tax_function=TaxKraiczy2025)
+
+class TriSeqPhrag(Rule):
+    short_name = "tri_seq_phragmen"
+    long_name = "Sequential Phragmèn for trichotomous profiles"
+    is_trichotomous = True
+
+    @classmethod
+    def _trivoting_wrapper(cls, profile, size) -> Selection:
+        return sequential_phragmen(profile, max_size_selection=size)
+
+class TriTaxSeqPhrag(Rule):
+    short_name = "tri_tax_seq_phragmen"
+    long_name = "Taxed Sequential Phragmèn for trichotomous profiles"
+    is_trichotomous = True
+
+    @classmethod
+    def _trivoting_wrapper(cls, profile, size) -> Selection:
+        return tax_sequential_phragmen(profile, max_size_selection=size, tax_function=TaxKraiczy2025)
 
 def article_to_trivoting_profile(article: Article, comment_ids_mapping: list[str]) -> TrichotomousProfile:
     """
@@ -225,91 +347,6 @@ def article_to_trivoting_profile(article: Article, comment_ids_mapping: list[str
     profile.add_ballots(ballots.values())
     return profile
 
-def compute_approval_rules_for_article(article: Article, rules: Iterable[Rule], sizes: Iterable[int]) -> None:
-    """
-    Compute committee selections for all approval rules and committee sizes,
-    and store them in the article's `rule_results`.
-
-    Steps:
-        1. Build an abcvoting Profile from the Article.
-        2. For each rule in ALL_APPROVAL_RULES and each size in ALL_SELECTION_SIZES:
-            - Choose a computation algorithm (skip "gurobi", avoid "brute-force").
-            - Run the rule to get a winning committee.
-            - Convert candidate indices back into comment_ids.
-            - Store results in article.rule_results[rule][size].
-
-    Args:
-        article (Article): The article containing comments and participants.
-        rules (Iterable[Rule]): A collection of rules to be computed
-        sizes (Iterable[int]): A collection of selection sizes for the outcome of the rules
-
-    Notes:
-        - Skips "gurobi" algorithms (due to solver dependency).
-        - Skips "brute-force" (too slow for realistic data).
-    """
-    print(f"Computing rules for article {article.title} with {article.num_participants} participants and {article.num_comments} comments")
-
-    comment_ids_mapping = [c.comment_id for c in article.comments]
-
-    profile = article_to_abc_profile(article, comment_ids_mapping)
-    for rule in rules:
-        for size in sizes:
-            print("\t", rule, size)
-            res = rule.compute_with_abc_voting(profile, size, comment_ids_mapping)
-            if rule.short_name in article.rule_results:
-                article.rule_results[rule.short_name][size] = res
-            else:
-                article.rule_results[rule.short_name] = {size: res}
-
-
-class TriPAVILPKraiczy2025(Rule):
-    short_name = "tri_pav_KPPS25"
-    long_name = "Proportional Trichotomous Voting by Kraiczy, Papasotiropoulos, Pierczyński & Skowron, 2025"
-
-    @classmethod
-    def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPKraiczy2025)
-
-class TriPAVILPTalmonPage2021(Rule):
-    short_name = "tri_pav_TP21"
-    long_name = "Proportional Trichotomous Voting by Talmon and Page, 2021"
-
-    @classmethod
-    def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPTalmonPage2021)
-
-class TriPAVILPHervounin2025(Rule):
-    short_name = "tri_pav_Herv25"
-    long_name = "Proportional Trichotomous Voting by Hervouin, 2025"
-
-    @classmethod
-    def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPHervouin2025)
-
-class TriTaxMESKPPS2025(Rule):
-    short_name = "tax_MES_KPPS25"
-    long_name = "Taxed Method of Equal Shares by Kraiczy, Papasotiropoulos, Pierczyński & Skowron, 2025"
-
-    @classmethod
-    def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return tax_method_of_equal_shares(profile, max_size_selection=size, tax_function=TaxKraiczy2025)
-
-class TriSeqPhrag(Rule):
-    short_name = "tri_seq_phragmen"
-    long_name = "Sequential Phragmèn for trichotomous profiles"
-
-    @classmethod
-    def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return sequential_phragmen(profile, max_size_selection=size)
-
-class TriTaxSeqPhrag(Rule):
-    short_name = "tri_tax_seq_phragmen"
-    long_name = "Taxed Sequential Phragmèn for trichotomous profiles"
-
-    @classmethod
-    def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return tax_sequential_phragmen(profile, max_size_selection=size, tax_function=TaxKraiczy2025)
-
 def compute_trichotomous_rules_for_article(article: Article, rules: Iterable[Rule], sizes: Iterable[int]) -> None:
     """
     Compute selections for all trichotomous rules and selection sizes,
@@ -327,7 +364,7 @@ def compute_trichotomous_rules_for_article(article: Article, rules: Iterable[Rul
         rules (Iterable[Rule]): A collection of rules to be computed
         sizes (Iterable[int]): A collection of selection sizes for the outcome of the rules
     """
-    print(f"Computing rules for article {article.title} with {article.num_participants} participants and {article.num_comments} comments")
+    print(f"Computing trichotomous rules for article {article.title} with {article.num_participants} participants and {article.num_comments} comments")
 
     comment_ids_mapping = [c.comment_id for c in article.comments]
 
@@ -335,7 +372,7 @@ def compute_trichotomous_rules_for_article(article: Article, rules: Iterable[Rul
     for rule in rules:
         for size in sizes:
             print("\t", rule, size)
-            res = rule.compute_with_trivoting(profile, size, comment_ids_mapping)
+            res = rule.compute_with_trivoting(profile, size)
             if rule.short_name in article.rule_results:
                 article.rule_results[rule.short_name][size] = res
             else:

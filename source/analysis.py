@@ -16,6 +16,7 @@ def satisfaction_vector(article: Article, rule_result: RuleResult) -> dict[str, 
         dict[str, int]: Mapping from participant_id → satisfaction score.
     """
     sat_vector = {p: 0 for p in article.participant_ids}
+    print(article, rule_result, rule_result.committee)
     for comment_id in rule_result.committee:
         c = article.get_comment(comment_id)
         for voter_id in c.agreeing_ids:

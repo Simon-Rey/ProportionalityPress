@@ -2,6 +2,8 @@ import argparse
 import importlib
 import os
 
+from multiprocessing import Pool
+
 from generate import generate_site
 from article import dump_article_to_json, load_article_from_json
 from rules import compute_rules_for_article
@@ -46,20 +48,66 @@ def generate_website_from_json() -> None:
     generate_site(all_articles)
 
 
-def add_rule_results():
+# def add_rule_results():
+#     """
+#     Read all the JSON files representing articles and add the rule results to them.
+#     """
+#     for source in SOURCES:
+#         article_dir = source["article_data_dir_path"]
+#         for article_json_file in os.listdir(article_dir):
+#             if article_json_file.endswith(".json"):
+#                 file_path = os.path.join(article_dir, article_json_file)
+#
+#                 article = load_article_from_json(file_path)
+#                 compute_rules_for_article(article, approval_rules=ALL_APPROVAL_RULES, trichotomous_rules=ALL_TRICHOTOMOUS_RULES, sizes=ALL_SELECTION_SIZES)
+#
+#                 dump_article_to_json(article, file_path)
+
+
+
+def add_rule_results_for_file(file_path: str):
     """
-    Read all the JSON files representing articles and add the rule results to them.
+    Worker function: process one JSON file (load, compute rules, dump).
+    Returns the file path when done (for logging).
     """
+    article = load_article_from_json(file_path)
+    compute_rules_for_article(
+        article,
+        approval_rules=ALL_APPROVAL_RULES,
+        trichotomous_rules=ALL_TRICHOTOMOUS_RULES,
+        sizes=ALL_SELECTION_SIZES,
+    )
+    dump_article_to_json(article, file_path)
+    return file_path
+
+
+def add_rule_results(n_processes=1):
+    """
+    Read all JSON files representing articles (across SOURCES)
+    and add the rule results to them in parallel.
+    """
+    # Collect all JSON files from all sources
+    all_json_files = []
     for source in SOURCES:
         article_dir = source["article_data_dir_path"]
+        if not os.path.isdir(article_dir):
+            print(f"Skipping non-existent directory: {article_dir}")
+            continue
         for article_json_file in os.listdir(article_dir):
             if article_json_file.endswith(".json"):
-                file_path = os.path.join(article_dir, article_json_file)
+                all_json_files.append(os.path.join(article_dir, article_json_file))
 
-                article = load_article_from_json(file_path)
-                compute_rules_for_article(article, approval_rules=ALL_APPROVAL_RULES, trichotomous_rules=ALL_TRICHOTOMOUS_RULES, sizes=ALL_SELECTION_SIZES)
+    if not all_json_files:
+        print("No JSON files found in any SOURCES.")
+        return
 
-                dump_article_to_json(article, file_path)
+    print(f"Found {len(all_json_files)} JSON files. Starting pool...")
+
+    # Run multiprocessing pool
+    with Pool(processes=n_processes) as pool:
+        for processed_file in pool.imap_unordered(add_rule_results_for_file, all_json_files):
+            if processed_file:
+                print(f"Processed {os.path.basename(processed_file)}")
 
 def add_analysis_measures():
     """

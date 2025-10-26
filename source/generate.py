@@ -72,7 +72,6 @@ def generate_site(articles: list[Article]):
             default_rule_popularity=APPROVAL_DEFAULT_RULE_POPULARITY,
             default_rule_representation=APPROVAL_DEFAULT_RULE_REPRESENTATION,
             default_rule_diversity=APPROVAL_DEFAULT_RULE_DIVERSITY,
-            abcvoting_to_rule=ABCVOTING_NAME_TO_RULE,
             max_comment_approval=max(c.num_agrees for c in article.comments),
             all_rules=ALL_APPROVAL_RULES,
             display_thumbs_down=False

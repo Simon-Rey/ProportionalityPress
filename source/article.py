@@ -148,7 +148,7 @@ class RuleResult:
     def to_dict(self):
         """Convert this RuleResult into a serializable dictionary."""
         return {
-            "rule_id": self.rule_id,
+            "rule_id": self.rule_class.short_name,
             "committee_size": self.committee_size,
             "committee": self.committee,
             "max_satisfaction": self.max_satisfaction,
@@ -175,7 +175,7 @@ class RuleResult:
         )
 
     def _identifier(self) -> tuple[str, int]:
-        return self.rule_id, self.committee_size
+        return self.rule_class.short_name, self.committee_size
 
     def __eq__(self, other):
         if isinstance(other, RuleResult):
@@ -191,7 +191,7 @@ class RuleResult:
         return hash(self._identifier())
 
     def __repr__(self):
-        return f"Res[{self.rule_id}, {self.committee_size}]"
+        return f"Res[{self.rule_class.short_name}, {self.committee_size}]"
 
 
 # =============
@@ -265,7 +265,7 @@ class Article:
     @property
     def computed_rules(self) -> list[str]:
         """Return a sorted list of rule IDs computed for this article."""
-        return sorted(self.rule_results, key=lambda r: r.rule_class.ordering_priority)
+        return sorted(self.rule_results, key=lambda r: r.ordering_priority)
 
     @property
     def computed_sizes(self) -> list[int]:
@@ -293,7 +293,8 @@ class Article:
         for rule, rule_dict in self.rule_results.items():
             for size, res in rule_dict.items():
                 rules_to_sizes[rule].add(size)
-                assert len(res.committee) == size
+                if rule.is_approval:
+                    assert len(res.committee) == size
         # Reference set of sizes is the intersection of the sizes set of each rule
         if len(rules_to_sizes) > 0:
             reference_sizes = set.intersection(*rules_to_sizes.values())
@@ -321,14 +322,14 @@ class Article:
     @classmethod
     def from_dict(cls, data: dict):
         """Construct an Article from a dictionary representation."""
+        from settings import get_rule_by_id
         comments = [Comment.from_dict(c) for c in data.get("comments", [])]
 
         raw_rule_results = data.get("rule_results", dict())
         rule_results = {}
         for rule, rule_dict in raw_rule_results.items():
-            rule_results[rule] = dict()
-            for size, res_data in rule_dict.items():
-                rule_results[rule][int(size)] = RuleResult.from_dict(res_data)
+            rule_class=get_rule_by_id(rule)
+            rule_results[rule_class] = {int(size): RuleResult.from_dict(res_data) for size, res_data in rule_dict.items()}
 
         return cls(
             title=data["title"],
@@ -343,6 +344,9 @@ class Article:
 
     def rule_results_to_json(self):
         return json.dumps([r.to_dict() for d in self.rule_results.values() for r in d.values()])
+
+    def __str__(self):
+        return f"Article[{self.title}]"
 
 def dump_article_to_json(article: Article, filepath: str) -> None:
     """
