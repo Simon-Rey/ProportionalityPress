@@ -124,7 +124,7 @@ OUTPUTS = [
     },
     {
         "output_dir_path": os.path.join("_site", "all"),
-        "ballot_mode": BallotModeEnum.TRICHOTOMOUS_ONLY,
+        "ballot_mode": BallotModeEnum.APPROVAL_AND_TRICHOTOMOUS,
         "highlighted_articles": [
         ],
         "default_selection_size": 5,

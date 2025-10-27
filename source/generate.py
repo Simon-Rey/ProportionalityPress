@@ -7,8 +7,7 @@ from collections import defaultdict
 from jinja2 import Environment, FileSystemLoader, select_autoescape, StrictUndefined, Template
 
 from article import Article
-from settings import TEMPLATES_DIR, INPUT_STATIC_DIR, STATIC_URL
-from source.settings import BallotModeEnum
+from settings import TEMPLATES_DIR, INPUT_STATIC_DIR, STATIC_URL, BallotModeEnum
 
 
 def render_template(template_obj: Template, **kwargs) -> str:
