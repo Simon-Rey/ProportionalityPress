@@ -10,6 +10,7 @@ from article import dump_article_to_json, load_article_from_json
 from rules import compute_rules_for_article
 from analysis import add_analysis_to_article
 from settings import SOURCES
+from source.rules import article_to_trivoting_profile
 from source.settings import ALL_APPROVAL_RULES, ALL_TRICHOTOMOUS_RULES, ALL_SELECTION_SIZES
 
 
@@ -159,4 +160,32 @@ def main():
 
 
 if __name__ == '__main__':
+
+    # article = load_article_from_json(os.path.dirname(__file__) + "/data/polis/whatisthebestwaytoengagemoreyoungpeopleinlocalscrutinyofpolicing.json")
+    #
+    # mapping = [c.comment_id for c in article.comments]
+    # profile = article_to_trivoting_profile(article, mapping)
+    # s = "alts = ["
+    # for a in profile.alternatives:
+    #     s += f"Alternative({mapping.index(a.name)}),"
+    # s = s[:-1] + "]\nprofile=TrichotomousProfile(\n\t[\n"
+    # for b in profile:
+    #     s += "\t\tTrichotomousBallot("
+    #     if b.approved:
+    #         s += "approved=["
+    #         for a in b.approved:
+    #             s += f"alts[{mapping.index(a.name)}],"
+    #         s = s[:-1] + "]"
+    #     if b.disapproved:
+    #         if b.approved:
+    #             s += ","
+    #         s += "disapproved=["
+    #         for a in b.disapproved:
+    #             s += f"alts[{mapping.index(a.name)}],"
+    #         s = s[:-1] + "]"
+    #     s += ")\n"
+    # s += f"\t],\nalternatives=alts,\n\tmax_size_selection={profile.max_size_selection},\n)"
+    # print(s)
+
+
     main()

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import warnings
 from collections import defaultdict
 from collections.abc import Iterable, Collection
 from functools import total_ordering
@@ -305,6 +306,7 @@ class Article:
             for rule, rule_sizes in rules_to_sizes.items():
                 for size in rule_sizes:
                     if size not in reference_sizes:
+                        warnings.warn(f"For {self.title} I'm removing {rule} as {size} is not computed for all rules. ")
                         del self.rule_results[rule][size]
 
     def to_dict(self):

@@ -41,6 +41,7 @@ def analyse_satisfaction_vector(article: Article, rule_result: RuleResult) -> No
         rule_result (RuleResult): The rule result to update.
     """
     sat_vector = satisfaction_vector(article, rule_result)
+
     # Satisfaction
     rule_result.satisfaction = sum(sat_vector.values())
 

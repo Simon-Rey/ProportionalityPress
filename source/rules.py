@@ -9,8 +9,9 @@ from abcvoting.abcrules import Rule as ABCVoting_Rule
 
 from trivoting.election import TrichotomousProfile, TrichotomousBallot, Alternative, Selection
 from trivoting.rules import thiele_method, PAVILPKraiczy2025, PAVILPHervouin2025, PAVILPTalmonPage2021, TaxKraiczy2025, \
-    tax_method_of_equal_shares, sequential_phragmen, tax_sequential_phragmen, MaxNetSatisfactionILPBuilder
-from trivoting.rules.chamberlin_courant import chamberlin_courant_ilp
+    tax_method_of_equal_shares, sequential_phragmen, tax_sequential_phragmen
+from trivoting.rules.chamberlin_courant import chamberlin_courant
+from trivoting.rules.max_satisfaction import max_satisfaction
 
 from article import Article, RuleResult
 
@@ -332,7 +333,7 @@ class TriMaxSatisfaction(Rule):
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return thiele_method(profile, max_size_selection=size, ilp_builder_class=MaxNetSatisfactionILPBuilder, max_seconds=1800)
+        return max_satisfaction(profile, max_size_selection=size)
 
 class TriChamberlinCourant(Rule):
     short_name = "tri_cc"
@@ -341,7 +342,7 @@ class TriChamberlinCourant(Rule):
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return chamberlin_courant_ilp(profile, max_size_selection=size, max_seconds=1800)
+        return chamberlin_courant(profile, max_size_selection=size, max_seconds=1800)
 
 def article_to_trivoting_profile(article: Article, comment_ids_mapping: list[str]) -> TrichotomousProfile:
     """
@@ -365,7 +366,7 @@ def article_to_trivoting_profile(article: Article, comment_ids_mapping: list[str
         for agree_id in comment.agreeing_ids:
             ballots[agree_id].add_approved(alternatives[comment_ids_mapping.index(comment.comment_id)])
         for disagree_id in comment.disagreeing_ids:
-            ballots[disagree_id].add_approved(alternatives[comment_ids_mapping.index(comment.comment_id)])
+            ballots[disagree_id].add_disapproved(alternatives[comment_ids_mapping.index(comment.comment_id)])
     profile.add_ballots(ballots.values())
     return profile
 
