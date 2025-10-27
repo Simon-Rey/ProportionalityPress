@@ -278,7 +278,7 @@ class TriPAVILPKraiczy2025(Rule):
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPKraiczy2025, max_seconds=600)
+        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPKraiczy2025, max_seconds=1800)
 
 class TriPAVILPTalmonPage2021(Rule):
     short_name = "tri_pav_TP21"
@@ -287,7 +287,7 @@ class TriPAVILPTalmonPage2021(Rule):
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPTalmonPage2021, max_seconds=600)
+        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPTalmonPage2021, max_seconds=1800)
 
 class TriPAVILPHervounin2025(Rule):
     short_name = "tri_pav_Herv25"
@@ -296,7 +296,7 @@ class TriPAVILPHervounin2025(Rule):
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPHervouin2025, max_seconds=600)
+        return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPHervouin2025, max_seconds=1800)
 
 class TriTaxMESKPPS2025(Rule):
     short_name = "tax_MES_KPPS25"
@@ -332,7 +332,7 @@ class TriMaxSatisfaction(Rule):
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return thiele_method(profile, max_size_selection=size, ilp_builder_class=MaxNetSatisfactionILPBuilder, max_seconds=600)
+        return thiele_method(profile, max_size_selection=size, ilp_builder_class=MaxNetSatisfactionILPBuilder, max_seconds=1800)
 
 class TriChamberlinCourant(Rule):
     short_name = "tri_cc"
@@ -341,7 +341,7 @@ class TriChamberlinCourant(Rule):
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
-        return chamberlin_courant_ilp(profile, max_size_selection=size, max_seconds=600)
+        return chamberlin_courant_ilp(profile, max_size_selection=size, max_seconds=1800)
 
 def article_to_trivoting_profile(article: Article, comment_ids_mapping: list[str]) -> TrichotomousProfile:
     """

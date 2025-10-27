@@ -104,7 +104,7 @@ def add_rule_results(n_processes=None):
     print(f"Found {len(all_json_files)} JSON files. Starting pool...")
 
     # Run multiprocessing pool
-    with Pool(processes=n_processes) as pool:
+    with Pool(processes=10) as pool:
         for processed_file in pool.imap_unordered(add_rule_results_for_file, all_json_files):
             if processed_file:
                 print(f"Processed {os.path.basename(processed_file)}")
