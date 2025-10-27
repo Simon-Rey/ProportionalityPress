@@ -9,8 +9,7 @@ from generate import generate_site
 from article import dump_article_to_json, load_article_from_json
 from rules import compute_rules_for_article
 from analysis import add_analysis_to_article
-from settings import SOURCES
-from source.rules import article_to_trivoting_profile
+from settings import SOURCES, OUTPUTS
 from source.settings import ALL_APPROVAL_RULES, ALL_TRICHOTOMOUS_RULES, ALL_SELECTION_SIZES
 
 
@@ -47,7 +46,8 @@ def generate_website_from_json() -> None:
                 article = load_article_from_json(os.path.join(article_dir, article_json_file))
                 all_articles.append(article)
 
-    generate_site(all_articles)
+    for output_setting in OUTPUTS:
+        generate_site(all_articles, output_setting)
 
 
 def add_rule_results_for_file(file_path: str):
