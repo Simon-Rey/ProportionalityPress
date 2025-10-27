@@ -74,7 +74,7 @@ def generate_site(articles: list[Article]):
             default_rule_diversity=APPROVAL_DEFAULT_RULE_DIVERSITY,
             max_comment_approval=max(c.num_agrees for c in article.comments),
             all_rules=ALL_APPROVAL_RULES,
-            display_thumbs_down=False
+            display_thumbs_down=True
         )
 
         with open(os.path.join(output_dir_path, article.link), "w", encoding="utf-8") as f:

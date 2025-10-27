@@ -211,7 +211,7 @@ class Article:
         html_include_file (str | None): Optional HTML include file for custom snippets.
         comments (list[Comment]): Comments associated with the article.
         participant_ids (list[str]): IDs of participants included in this article.
-        rule_results (dict[str, dict[int, RuleResult]]): Nested mapping of
+        rule_results (dict[type[Rule], dict[int, RuleResult]]): Nested mapping of
             {rule_id → {committee_size → RuleResult}}.
     """
     def __init__(self,
@@ -265,7 +265,10 @@ class Article:
     @property
     def computed_rules(self) -> list[str]:
         """Return a sorted list of rule IDs computed for this article."""
-        return sorted(self.rule_results, key=lambda r: r.ordering_priority)
+        from settings import get_rule_by_id
+        rules = [get_rule_by_id(r) for r in self.rule_results]
+        rules.sort(key=lambda r: r.ordering_priority)
+        return rules
 
     @property
     def computed_sizes(self) -> list[int]:
@@ -293,7 +296,7 @@ class Article:
         for rule, rule_dict in self.rule_results.items():
             for size, res in rule_dict.items():
                 rules_to_sizes[rule].add(size)
-                if rule.is_approval:
+                if res.rule_class.is_approval:
                     assert len(res.committee) == size
         # Reference set of sizes is the intersection of the sizes set of each rule
         if len(rules_to_sizes) > 0:
@@ -329,7 +332,7 @@ class Article:
         rule_results = {}
         for rule, rule_dict in raw_rule_results.items():
             rule_class=get_rule_by_id(rule)
-            rule_results[rule_class] = {int(size): RuleResult.from_dict(res_data) for size, res_data in rule_dict.items()}
+            rule_results[rule_class.short_name] = {int(size): RuleResult.from_dict(res_data) for size, res_data in rule_dict.items()}
 
         return cls(
             title=data["title"],
