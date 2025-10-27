@@ -53942,5 +53942,1200 @@
     "4363",
     "4378"
   ],
-  "rule_results": {}
+  "rule_results": {
+    "av": {
+      "3": {
+        "rule_id": "av",
+        "committee_size": 3,
+        "committee": [
+          "7",
+          "16",
+          "40"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "av",
+        "committee_size": 5,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "16",
+          "40"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "av",
+        "committee_size": 8,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "9",
+          "14",
+          "16",
+          "40",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "av",
+        "committee_size": 10,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "9",
+          "14",
+          "16",
+          "40",
+          "46",
+          "65",
+          "68"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "sav": {
+      "3": {
+        "rule_id": "sav",
+        "committee_size": 3,
+        "committee": [
+          "7",
+          "8",
+          "16"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "sav",
+        "committee_size": 5,
+        "committee": [
+          "7",
+          "8",
+          "16",
+          "46",
+          "53"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "sav",
+        "committee_size": 8,
+        "committee": [
+          "0",
+          "7",
+          "8",
+          "9",
+          "16",
+          "40",
+          "46",
+          "53"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "sav",
+        "committee_size": 10,
+        "committee": [
+          "0",
+          "7",
+          "8",
+          "9",
+          "12",
+          "16",
+          "40",
+          "46",
+          "53",
+          "64"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "seqpav": {
+      "3": {
+        "rule_id": "seqpav",
+        "committee_size": 3,
+        "committee": [
+          "7",
+          "16",
+          "40"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "seqpav",
+        "committee_size": 5,
+        "committee": [
+          "7",
+          "8",
+          "16",
+          "40",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "seqpav",
+        "committee_size": 8,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "9",
+          "16",
+          "40",
+          "46",
+          "68"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "seqpav",
+        "committee_size": 10,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "9",
+          "16",
+          "40",
+          "46",
+          "59",
+          "64",
+          "68"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "equal-shares": {
+      "3": {
+        "rule_id": "equal-shares",
+        "committee_size": 3,
+        "committee": [
+          "7",
+          "16",
+          "40"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "equal-shares",
+        "committee_size": 5,
+        "committee": [
+          "7",
+          "8",
+          "16",
+          "40",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "equal-shares",
+        "committee_size": 8,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "9",
+          "16",
+          "40",
+          "46",
+          "68"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "equal-shares",
+        "committee_size": 10,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "9",
+          "16",
+          "40",
+          "46",
+          "53",
+          "64",
+          "68"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "equal-shares-with-av-completion": {
+      "3": {
+        "rule_id": "equal-shares-with-av-completion",
+        "committee_size": 3,
+        "committee": [
+          "7",
+          "16",
+          "40"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "equal-shares-with-av-completion",
+        "committee_size": 5,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "16",
+          "40"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "equal-shares-with-av-completion",
+        "committee_size": 8,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "9",
+          "14",
+          "16",
+          "40",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "equal-shares-with-av-completion",
+        "committee_size": 10,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "9",
+          "14",
+          "16",
+          "40",
+          "46",
+          "65",
+          "68"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "equal-shares-with-increment-completion": {
+      "3": {
+        "rule_id": "equal-shares-with-increment-completion",
+        "committee_size": 3,
+        "committee": [
+          "7",
+          "16",
+          "40"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "equal-shares-with-increment-completion",
+        "committee_size": 5,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "16",
+          "40"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "equal-shares-with-increment-completion",
+        "committee_size": 8,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "14",
+          "16",
+          "40",
+          "46",
+          "68"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "equal-shares-with-increment-completion",
+        "committee_size": 10,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "9",
+          "14",
+          "16",
+          "40",
+          "46",
+          "64",
+          "68"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "phragmen-enestroem": {
+      "3": {
+        "rule_id": "phragmen-enestroem",
+        "committee_size": 3,
+        "committee": [
+          "7",
+          "16",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "phragmen-enestroem",
+        "committee_size": 5,
+        "committee": [
+          "7",
+          "8",
+          "16",
+          "40",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "phragmen-enestroem",
+        "committee_size": 8,
+        "committee": [
+          "7",
+          "8",
+          "16",
+          "17",
+          "40",
+          "46",
+          "59",
+          "64"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "phragmen-enestroem",
+        "committee_size": 10,
+        "committee": [
+          "7",
+          "8",
+          "9",
+          "16",
+          "17",
+          "40",
+          "46",
+          "53",
+          "59",
+          "64"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "seqphragmen": {
+      "3": {
+        "rule_id": "seqphragmen",
+        "committee_size": 3,
+        "committee": [
+          "7",
+          "16",
+          "40"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "seqphragmen",
+        "committee_size": 5,
+        "committee": [
+          "7",
+          "8",
+          "16",
+          "40",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "seqphragmen",
+        "committee_size": 8,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "9",
+          "16",
+          "40",
+          "46",
+          "68"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "seqphragmen",
+        "committee_size": 10,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "9",
+          "16",
+          "40",
+          "46",
+          "59",
+          "64",
+          "68"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "cc": {
+      "3": {
+        "rule_id": "cc",
+        "committee_size": 3,
+        "committee": [
+          "7",
+          "8",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "cc",
+        "committee_size": 5,
+        "committee": [
+          "7",
+          "8",
+          "16",
+          "46",
+          "59"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "cc",
+        "committee_size": 8,
+        "committee": [
+          "7",
+          "8",
+          "16",
+          "40",
+          "53",
+          "59",
+          "64",
+          "119"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "cc",
+        "committee_size": 10,
+        "committee": [
+          "7",
+          "8",
+          "16",
+          "40",
+          "53",
+          "59",
+          "64",
+          "65",
+          "77",
+          "119"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "tri_pav_KPPS25": {
+      "3": {
+        "rule_id": "tri_pav_KPPS25",
+        "committee_size": 3,
+        "committee": [
+          "3",
+          "7",
+          "16"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "tri_pav_KPPS25",
+        "committee_size": 5,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "16",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "tri_pav_KPPS25",
+        "committee_size": 8,
+        "committee": [
+          "0",
+          "3",
+          "7",
+          "8",
+          "12",
+          "16",
+          "17",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "tri_pav_KPPS25",
+        "committee_size": 10,
+        "committee": [
+          "0",
+          "3",
+          "7",
+          "8",
+          "12",
+          "16",
+          "17",
+          "20",
+          "46",
+          "64"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "tri_pav_TP21": {
+      "3": {
+        "rule_id": "tri_pav_TP21",
+        "committee_size": 3,
+        "committee": [
+          "3",
+          "7",
+          "16"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "tri_pav_TP21",
+        "committee_size": 5,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "16",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "tri_pav_TP21",
+        "committee_size": 8,
+        "committee": [
+          "0",
+          "3",
+          "7",
+          "8",
+          "12",
+          "16",
+          "17",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "tri_pav_TP21",
+        "committee_size": 10,
+        "committee": [
+          "0",
+          "3",
+          "7",
+          "8",
+          "12",
+          "16",
+          "17",
+          "20",
+          "46",
+          "64"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "tri_pav_Herv25": {
+      "3": {
+        "rule_id": "tri_pav_Herv25",
+        "committee_size": 3,
+        "committee": [
+          "3",
+          "7",
+          "16"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "tri_pav_Herv25",
+        "committee_size": 5,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "16",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "tri_pav_Herv25",
+        "committee_size": 8,
+        "committee": [
+          "0",
+          "3",
+          "7",
+          "8",
+          "12",
+          "16",
+          "17",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "tri_pav_Herv25",
+        "committee_size": 10,
+        "committee": [
+          "0",
+          "3",
+          "7",
+          "8",
+          "12",
+          "16",
+          "17",
+          "20",
+          "46",
+          "64"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "tri_seq_phragmen": {
+      "3": {
+        "rule_id": "tri_seq_phragmen",
+        "committee_size": 3,
+        "committee": [
+          "7",
+          "8",
+          "16"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "tri_seq_phragmen",
+        "committee_size": 5,
+        "committee": [
+          "0",
+          "7",
+          "8",
+          "16",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "tri_seq_phragmen",
+        "committee_size": 8,
+        "committee": [
+          "0",
+          "3",
+          "7",
+          "8",
+          "12",
+          "16",
+          "17",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "tri_seq_phragmen",
+        "committee_size": 10,
+        "committee": [
+          "0",
+          "3",
+          "7",
+          "8",
+          "9",
+          "12",
+          "16",
+          "17",
+          "46",
+          "64"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "tri_tax_seq_phragmen": {
+      "3": {
+        "rule_id": "tri_tax_seq_phragmen",
+        "committee_size": 3,
+        "committee": [
+          "16"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "tri_tax_seq_phragmen",
+        "committee_size": 5,
+        "committee": [
+          "7",
+          "16"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "tri_tax_seq_phragmen",
+        "committee_size": 8,
+        "committee": [
+          "7",
+          "8",
+          "16",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "tri_tax_seq_phragmen",
+        "committee_size": 10,
+        "committee": [
+          "0",
+          "7",
+          "8",
+          "16",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "tax_MES_KPPS25": {
+      "3": {
+        "rule_id": "tax_MES_KPPS25",
+        "committee_size": 3,
+        "committee": [
+          "16"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "tax_MES_KPPS25",
+        "committee_size": 5,
+        "committee": [
+          "7",
+          "16"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "tax_MES_KPPS25",
+        "committee_size": 8,
+        "committee": [
+          "3",
+          "7",
+          "16"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "tax_MES_KPPS25",
+        "committee_size": 10,
+        "committee": [
+          "3",
+          "7",
+          "8",
+          "16"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "tri_max_sat": {
+      "3": {
+        "rule_id": "tri_max_sat",
+        "committee_size": 3,
+        "committee": [
+          "3",
+          "7",
+          "16"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "tri_max_sat",
+        "committee_size": 5,
+        "committee": [
+          "0",
+          "3",
+          "7",
+          "8",
+          "16"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "tri_max_sat",
+        "committee_size": 8,
+        "committee": [
+          "0",
+          "3",
+          "6",
+          "7",
+          "8",
+          "12",
+          "13",
+          "16"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "tri_max_sat",
+        "committee_size": 10,
+        "committee": [
+          "0",
+          "3",
+          "6",
+          "7",
+          "8",
+          "9",
+          "12",
+          "13",
+          "16",
+          "20"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    },
+    "tri_cc": {
+      "3": {
+        "rule_id": "tri_cc",
+        "committee_size": 3,
+        "committee": [
+          "7",
+          "8",
+          "46"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "5": {
+        "rule_id": "tri_cc",
+        "committee_size": 5,
+        "committee": [
+          "7",
+          "8",
+          "46",
+          "64",
+          "119"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "8": {
+        "rule_id": "tri_cc",
+        "committee_size": 8,
+        "committee": [
+          "8",
+          "12",
+          "16",
+          "53",
+          "64",
+          "65",
+          "77",
+          "119"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      },
+      "10": {
+        "rule_id": "tri_cc",
+        "committee_size": 10,
+        "committee": [
+          "8",
+          "9",
+          "12",
+          "16",
+          "40",
+          "53",
+          "59",
+          "64",
+          "77",
+          "119"
+        ],
+        "max_satisfaction": null,
+        "satisfaction": null,
+        "coverage": null,
+        "max_coverage": null,
+        "sat_distribution": null
+      }
+    }
+  }
 }
