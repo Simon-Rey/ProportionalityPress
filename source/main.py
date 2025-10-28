@@ -79,7 +79,7 @@ def add_rule_results(n_processes=None):
             print(f"Skipping non-existent directory: {article_dir}")
             continue
         for article_json_file in os.listdir(article_dir):
-            if article_json_file.endswith(".json"):
+            if article_json_file.endswith(".json") and article_json_file in ["ernhrungundlandnutzungde.json", "mobilittde.json", "operationmarchingorders.json"]:
                 all_json_files.append(os.path.join(article_dir, article_json_file))
 
     if not all_json_files:
@@ -131,7 +131,7 @@ def add_analysis_measures():
     print(f"Found {len(all_json_files)} JSON files. Starting pool...")
 
     # Run multiprocessing pool
-    with Pool(processes=None) as pool:
+    with Pool(processes=1) as pool:
         for processed_file in pool.imap_unordered(add_analysis_measures_for_file, all_json_files):
             if processed_file:
                 print(f"Processed {os.path.basename(processed_file)}")

@@ -1,3 +1,5 @@
+import warnings
+
 from article import Article, RuleResult
 from rules import CC, TriChamberlinCourant, TriMaxSatisfaction, AV
 
@@ -74,6 +76,7 @@ def analyse_max_satisfaction(article: Article, rule_result: RuleResult) -> None:
     else:
         max_sat_res = article.rule_results.get(AV.short_name, dict()).get(rule_result.committee_size)
     if max_sat_res is None or max_sat_res.satisfaction is None:
+        rule_result.max_satisfaction = ""
         raise ValueError("I cannot find the satisfaction of av and thus cannot get the max satisfaction. Ask for "
                          "max satisfaction only after the satisfaction has been computed for all rules and sizes.")
     rule_result.max_satisfaction = max_sat_res.satisfaction
@@ -96,6 +99,7 @@ def analyse_max_coverage(article: Article, rule_result: RuleResult) -> None:
     else:
         max_cov_res = article.rule_results.get(CC.short_name, dict()).get(rule_result.committee_size)
     if max_cov_res is None or max_cov_res.coverage is None:
+        rule_result.max_coverage = ""
         raise ValueError("I cannot find the coverage of cc and thus cannot get the max coverage. Ask for "
                          "max coverage only after the coverage has been computed for all rules and sizes.")
     rule_result.max_coverage = max_cov_res.coverage
@@ -119,5 +123,12 @@ def add_analysis_to_article(article: Article) -> None:
     # Second pass for max satisfaction and max coverage
     for rule_dict in article.rule_results.values():
         for rule_result in rule_dict.values():
-            analyse_max_satisfaction(article, rule_result)
-            analyse_max_coverage(article, rule_result)
+            try:
+                analyse_max_satisfaction(article, rule_result)
+            except ValueError as e:
+                warnings.warn(f"Problem computing max satisfaction for {article.title}: {e}")
+            try:
+                analyse_max_coverage(article, rule_result)
+            except ValueError as e:
+                warnings.warn(f"Problem computing max coverage for {article.title}: {e}")
+

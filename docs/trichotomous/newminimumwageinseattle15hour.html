@@ -1826,6 +1826,11 @@
         updateCoverage(repCommentBlock, rule, size);
         // updateSatisfactionDistribution(repCommentBlock, rule, size);
       } else {
+        let repCommentBlock = ruleSelect.closest('.representative-comments-block');
+        let repCommentList = repCommentBlock.querySelector('.representative-comments-list');
+        updateSatisfaction(repCommentBlock, '', size);
+        updateCoverage(repCommentBlock, '', size);
+        repCommentList.innerHTML = '<p>No selection found, please change the selection rule.</p>';
         console.warn("No match found for rule", rule, "size", size);
       }
     }
@@ -1846,6 +1851,10 @@
         }
       } else {
         console.warn("No match found for rule", rule, "size", size);
+        const bar = repCommentBlock.querySelector('.satisfaction-bar-fill');
+        bar.style.width = '0';
+        repCommentBlock.querySelector('.max-satisfaction').textContent = 'unknown';
+        repCommentBlock.querySelector('.current-satisfaction-count').textContent = 'unknown';
       }
     }
 
@@ -1853,7 +1862,15 @@
       const match = rulesResultsData.find(r => r.rule_id === rule && r.committee_size === parseInt(size));
       if (match) {
         const coverage = Math.min(match.coverage, 100);
-        const maxCoverage = match.max_coverage;
+        var maxCoverage = match.max_coverage;
+
+        const isMaxCoverageKnown = maxCoverage !== "" && maxCoverage != null && !isNaN(maxCoverage);
+        if (!isMaxCoverageKnown) {
+          maxCoverage = 1; // fallback for bar width
+        } else {
+          maxCoverage = parseFloat(maxCoverage);
+        }
+
         const bar = repCommentBlock.querySelector('.coverage-bar-fill');
         const maxBar = repCommentBlock.querySelector('.max-coverage-bar-fill');
 
@@ -1861,11 +1878,17 @@
           bar.style.width = `${coverage * 100}%`;
           maxBar.style.width = `${maxCoverage * 100}%`;
 
-          repCommentBlock.querySelector('.max-coverage').textContent = `${(maxCoverage * 100).toFixed(2)}%`;
+          repCommentBlock.querySelector('.max-coverage').textContent = isMaxCoverageKnown
+          ? `${(maxCoverage * 100).toFixed(2)}%`
+          : 'unknown';
           repCommentBlock.querySelector('.current-coverage').textContent = `${(coverage * 100).toFixed(2)}%`;
         }
       } else {
         console.warn("No match found for rule", rule, "size", size);
+        const bar = repCommentBlock.querySelector('.coverage-bar-fill');
+        bar.style.width = '0';
+        repCommentBlock.querySelector('.max-coverage').textContent = 'unknown';
+        repCommentBlock.querySelector('.current-coverage').textContent = 'unknown';
       }
     }
 
@@ -1982,9 +2005,9 @@
         ruleSelectionWraps.forEach(ruleWrap => ruleWrap.classList.add('hidden'));
         sizeSelectionWrap.classList.add('hidden');
         sizeSelect.value = '5';
-        selectRuleOptionByValue(selectPopularity, '&lt;class &#39;rules.TriMaxSatisfaction&#39;&gt;');
-        selectRuleOptionByValue(selectRepresentation, '&lt;class &#39;rules.TriTaxMESKPPS2025&#39;&gt;');
-        selectRuleOptionByValue(selectDiversity, '&lt;class &#39;rules.TriChamberlinCourant&#39;&gt;');
+        selectRuleOptionByValue(selectPopularity, 'tri_max_sat');
+        selectRuleOptionByValue(selectRepresentation, 'tax_MES_KPPS25');
+        selectRuleOptionByValue(selectDiversity, 'tri_cc');
         repCommentsTitles.forEach(title => {
           title.classList.remove('hidden');
         });
@@ -2051,11 +2074,21 @@
 
     function selectRuleOptionByValue(ruleSelect, optionValue) {
       const options = ruleSelect.querySelectorAll('.rule-select-option');
+      var optionFound = false;
       options.forEach(option => {
         if (option.dataset.value === optionValue) {
           selectRuleSelectOption(ruleSelect, option);
+          optionFound = true;
         }
       });
+      if (!optionFound) {
+        console.warn('Option ', optionValue, ' not found for rule selector ', ruleSelect);
+        // If not found, we remove all the select and update the display.
+        ruleSelect.querySelectorAll('.rule-select-option').forEach(opt => {
+          opt.classList.remove('selected');
+        });
+        updateRepresentativeCommentsBlock(ruleSelect);
+      }
     }
 
     ruleSelects.forEach(ruleSelect => {
