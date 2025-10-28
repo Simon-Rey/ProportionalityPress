@@ -218,6 +218,379 @@
   </section>
 
   
+    <section class="article-comments-wrap">
+      <h2>Summary of the Comment Section</h2>
+
+      <p>
+        This section highlights various methods for selecting a small set of comments that best capture the broader conversation
+        (see <a href="#article-all-comments-section">the comment section below</a>).
+      </p>
+
+      <p>
+        Each method focuses on a different perspective, emphasizing principles such as popularity, representation, or diversity.
+        This leads to different voices being represented. Explore the section below to get a sense of the impact these approaches have.
+      </p>
+
+      <p class="center-align">
+        <span id="show-advanced-controls" class="button">Change Selection Methods</span>
+      </p>
+
+      <div id="size-selection-wrap">
+        <label for="size-select">Number of Representative Comments:</label>
+        <select id="size-select">
+          
+            <option value="3">3</option>
+          
+            <option value="5" selected="selected">5</option>
+          
+            <option value="8">8</option>
+          
+            <option value="10">10</option>
+          
+        </select>
+      </div>
+
+      <div id="representative-comments-wrap">
+
+        
+          <div class="representative-comments-block">
+  <h3 class="representative-comments-block-title">Popularity-Based Selection</h3>
+  <h3 class="representative-comments-block-title alternative-representative-comments-block-title hidden">Selection 1</h3>
+  <div class="rule-selection-wrap">
+    <div class="rule-select-header comment-analysis-measure-header">Selection Method <span class="open-explanation" data-target="explanation-selection-methods">?</span></div>
+    <div id="rule-select-popularity" class="rule-select">
+      
+        
+          <div data-value="av" class="rule-select-option"><span>Approval Voting</span></div>
+        
+      
+        
+          <div data-value="sav" class="rule-select-option"><span>Satisfaction Approval Voting</span></div>
+        
+      
+        
+          <div data-value="seqpav" class="rule-select-option"><span>Sequential Proportional Approval Voting</span></div>
+        
+      
+        
+          <div data-value="equal-shares" class="rule-select-option"><span>Method of Equal Shares</span></div>
+        
+      
+        
+          <div data-value="equal-shares-with-av-completion" class="rule-select-option"><span>Method of Equal Shares with Approval Voting Completion</span></div>
+        
+      
+        
+          <div data-value="equal-shares-with-increment-completion" class="rule-select-option"><span>Method of Equal Shares with Increment Completion</span></div>
+        
+      
+        
+          <div data-value="phragmen-enestroem" class="rule-select-option"><span>Eneström–Phragmén</span></div>
+        
+      
+        
+          <div data-value="seqphragmen" class="rule-select-option"><span>Phragmén&#39;s Sequential Rule</span></div>
+        
+      
+        
+          <div data-value="cc" class="rule-select-option"><span>Chamberlin–Courant</span></div>
+        
+      
+        
+          <div data-value="tri_seq_phragmen" class="rule-select-option"><span>Sequential Phragmèn for trichotomous profiles</span></div>
+        
+      
+        
+          <div data-value="tri_tax_seq_phragmen" class="rule-select-option"><span>Taxed Sequential Phragmèn for trichotomous profiles</span></div>
+        
+      
+        
+          <div data-value="tax_MES_KPPS25" class="rule-select-option"><span>Taxed Method of Equal Shares by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025</span></div>
+        
+      
+        
+          <div data-value="tri_max_sat" class="rule-select-option selected"><span>Maximum Satisfaction for trichotomous profiles</span></div>
+        
+      
+    </div>
+  </div>
+
+  <div class="representative-comments-analysis">
+    <div class="comment-analysis-measure-block">
+      <div class="comment-analysis-measure-header">Popularity <span class="open-explanation" data-target="explanation-popularity">?</span></div>
+      <div class="progress-bar-wrap">
+        <div class="comment-analysis-measure progress-bar satisfaction-progress">
+          <div class="progress-bar-fill satisfaction-bar-fill">
+            <span class="current-satisfaction-count"></span>
+          </div>
+        </div>
+        <div class="progress-bar-details">
+          <span>max. achievable is: </span><span class="max-satisfaction"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="comment-analysis-measure-block">
+      <div class="comment-analysis-measure-header">Inclusion <span class="open-explanation" data-target="explanation-inclusion">?</span></div>
+      <div class="progress-bar-wrap">
+        <div class="comment-analysis-measure progress-bar coverage-progress">
+          <div class="progress-bar-fill max-coverage-bar-fill"></div>
+          <div class="progress-bar-fill coverage-bar-fill">
+            <span class="current-coverage"></span>
+          </div>
+        </div>
+        <div class="progress-bar-details">
+          <span>max. achievable is: </span><span class="max-coverage"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="comment-analysis-measure-block" style="flex-direction: column;">
+    <div class="comment-analysis-measure-header">Satisfaction Distribution <span class="open-explanation" data-target="explanation-satisfaction">?</span></div>
+    <div class="satisfaction-histogram"></div>
+  </div> -->
+
+  <div class="article-comments-list representative-comments-list" id="comment-list-popularity">
+    <!-- JS will populate this based on selections -->
+  </div>
+</div>
+        
+
+        
+          <div class="representative-comments-block">
+  <h3 class="representative-comments-block-title">Representation-Based Selection</h3>
+  <h3 class="representative-comments-block-title alternative-representative-comments-block-title hidden">Selection 2</h3>
+  <div class="rule-selection-wrap">
+    <div class="rule-select-header comment-analysis-measure-header">Selection Method <span class="open-explanation" data-target="explanation-selection-methods">?</span></div>
+    <div id="rule-select-representation" class="rule-select">
+      
+        
+          <div data-value="av" class="rule-select-option"><span>Approval Voting</span></div>
+        
+      
+        
+          <div data-value="sav" class="rule-select-option"><span>Satisfaction Approval Voting</span></div>
+        
+      
+        
+          <div data-value="seqpav" class="rule-select-option"><span>Sequential Proportional Approval Voting</span></div>
+        
+      
+        
+          <div data-value="equal-shares" class="rule-select-option"><span>Method of Equal Shares</span></div>
+        
+      
+        
+          <div data-value="equal-shares-with-av-completion" class="rule-select-option"><span>Method of Equal Shares with Approval Voting Completion</span></div>
+        
+      
+        
+          <div data-value="equal-shares-with-increment-completion" class="rule-select-option"><span>Method of Equal Shares with Increment Completion</span></div>
+        
+      
+        
+          <div data-value="phragmen-enestroem" class="rule-select-option"><span>Eneström–Phragmén</span></div>
+        
+      
+        
+          <div data-value="seqphragmen" class="rule-select-option"><span>Phragmén&#39;s Sequential Rule</span></div>
+        
+      
+        
+          <div data-value="cc" class="rule-select-option"><span>Chamberlin–Courant</span></div>
+        
+      
+        
+          <div data-value="tri_seq_phragmen" class="rule-select-option"><span>Sequential Phragmèn for trichotomous profiles</span></div>
+        
+      
+        
+          <div data-value="tri_tax_seq_phragmen" class="rule-select-option"><span>Taxed Sequential Phragmèn for trichotomous profiles</span></div>
+        
+      
+        
+          <div data-value="tax_MES_KPPS25" class="rule-select-option selected"><span>Taxed Method of Equal Shares by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025</span></div>
+        
+      
+        
+          <div data-value="tri_max_sat" class="rule-select-option"><span>Maximum Satisfaction for trichotomous profiles</span></div>
+        
+      
+    </div>
+  </div>
+
+  <div class="representative-comments-analysis">
+    <div class="comment-analysis-measure-block">
+      <div class="comment-analysis-measure-header">Popularity <span class="open-explanation" data-target="explanation-popularity">?</span></div>
+      <div class="progress-bar-wrap">
+        <div class="comment-analysis-measure progress-bar satisfaction-progress">
+          <div class="progress-bar-fill satisfaction-bar-fill">
+            <span class="current-satisfaction-count"></span>
+          </div>
+        </div>
+        <div class="progress-bar-details">
+          <span>max. achievable is: </span><span class="max-satisfaction"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="comment-analysis-measure-block">
+      <div class="comment-analysis-measure-header">Inclusion <span class="open-explanation" data-target="explanation-inclusion">?</span></div>
+      <div class="progress-bar-wrap">
+        <div class="comment-analysis-measure progress-bar coverage-progress">
+          <div class="progress-bar-fill max-coverage-bar-fill"></div>
+          <div class="progress-bar-fill coverage-bar-fill">
+            <span class="current-coverage"></span>
+          </div>
+        </div>
+        <div class="progress-bar-details">
+          <span>max. achievable is: </span><span class="max-coverage"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="comment-analysis-measure-block" style="flex-direction: column;">
+    <div class="comment-analysis-measure-header">Satisfaction Distribution <span class="open-explanation" data-target="explanation-satisfaction">?</span></div>
+    <div class="satisfaction-histogram"></div>
+  </div> -->
+
+  <div class="article-comments-list representative-comments-list" id="comment-list-representation">
+    <!-- JS will populate this based on selections -->
+  </div>
+</div>
+        
+
+        
+          <div class="representative-comments-block">
+  <h3 class="representative-comments-block-title">Inclusion-Based Selection</h3>
+  <h3 class="representative-comments-block-title alternative-representative-comments-block-title hidden">Selection 3</h3>
+  <div class="rule-selection-wrap">
+    <div class="rule-select-header comment-analysis-measure-header">Selection Method <span class="open-explanation" data-target="explanation-selection-methods">?</span></div>
+    <div id="rule-select-diversity" class="rule-select">
+      
+        
+          <div data-value="av" class="rule-select-option"><span>Approval Voting</span></div>
+        
+      
+        
+          <div data-value="sav" class="rule-select-option"><span>Satisfaction Approval Voting</span></div>
+        
+      
+        
+          <div data-value="seqpav" class="rule-select-option"><span>Sequential Proportional Approval Voting</span></div>
+        
+      
+        
+          <div data-value="equal-shares" class="rule-select-option"><span>Method of Equal Shares</span></div>
+        
+      
+        
+          <div data-value="equal-shares-with-av-completion" class="rule-select-option"><span>Method of Equal Shares with Approval Voting Completion</span></div>
+        
+      
+        
+          <div data-value="equal-shares-with-increment-completion" class="rule-select-option"><span>Method of Equal Shares with Increment Completion</span></div>
+        
+      
+        
+          <div data-value="phragmen-enestroem" class="rule-select-option"><span>Eneström–Phragmén</span></div>
+        
+      
+        
+          <div data-value="seqphragmen" class="rule-select-option"><span>Phragmén&#39;s Sequential Rule</span></div>
+        
+      
+        
+          <div data-value="cc" class="rule-select-option"><span>Chamberlin–Courant</span></div>
+        
+      
+        
+          <div data-value="tri_seq_phragmen" class="rule-select-option"><span>Sequential Phragmèn for trichotomous profiles</span></div>
+        
+      
+        
+          <div data-value="tri_tax_seq_phragmen" class="rule-select-option"><span>Taxed Sequential Phragmèn for trichotomous profiles</span></div>
+        
+      
+        
+          <div data-value="tax_MES_KPPS25" class="rule-select-option"><span>Taxed Method of Equal Shares by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025</span></div>
+        
+      
+        
+          <div data-value="tri_max_sat" class="rule-select-option"><span>Maximum Satisfaction for trichotomous profiles</span></div>
+        
+      
+    </div>
+  </div>
+
+  <div class="representative-comments-analysis">
+    <div class="comment-analysis-measure-block">
+      <div class="comment-analysis-measure-header">Popularity <span class="open-explanation" data-target="explanation-popularity">?</span></div>
+      <div class="progress-bar-wrap">
+        <div class="comment-analysis-measure progress-bar satisfaction-progress">
+          <div class="progress-bar-fill satisfaction-bar-fill">
+            <span class="current-satisfaction-count"></span>
+          </div>
+        </div>
+        <div class="progress-bar-details">
+          <span>max. achievable is: </span><span class="max-satisfaction"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="comment-analysis-measure-block">
+      <div class="comment-analysis-measure-header">Inclusion <span class="open-explanation" data-target="explanation-inclusion">?</span></div>
+      <div class="progress-bar-wrap">
+        <div class="comment-analysis-measure progress-bar coverage-progress">
+          <div class="progress-bar-fill max-coverage-bar-fill"></div>
+          <div class="progress-bar-fill coverage-bar-fill">
+            <span class="current-coverage"></span>
+          </div>
+        </div>
+        <div class="progress-bar-details">
+          <span>max. achievable is: </span><span class="max-coverage"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="comment-analysis-measure-block" style="flex-direction: column;">
+    <div class="comment-analysis-measure-header">Satisfaction Distribution <span class="open-explanation" data-target="explanation-satisfaction">?</span></div>
+    <div class="satisfaction-histogram"></div>
+  </div> -->
+
+  <div class="article-comments-list representative-comments-list" id="comment-list-diversity">
+    <!-- JS will populate this based on selections -->
+  </div>
+</div>
+        
+      </div>
+
+      <p class="center-align">
+        <span id="highlight-differences-btn" class="button">Highlight Differences</span>
+      </p>
+
+      <div id="highlight-differences-legend" class="hidden">
+        <div>
+          <div class="highlight-differences-legend-option">
+            <div class="highlight-differences-legend-option-key highlight-common"></div>
+            <span>Comments present in all three selections</span>
+          </div>
+          <div class="highlight-differences-legend-option">
+            <div class="highlight-differences-legend-option-key highlight-partial"></div>
+            <span>Comments present in two different selections</span>
+          </div>
+          <div class="highlight-differences-legend-option">
+            <div class="highlight-differences-legend-option-key highlight-unique"></div>
+            <span>Comments present in a single selection</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  
 
   <section id="article-all-comments-section" class="article-comments-wrap">
     <h2 class="next-collapsible">See All 2121 Comments</h2>
@@ -42799,7 +43172,7 @@ I will not stop fighting until every woman in this country has access to
         });
     });
 
-    const rulesResultsData = [];
+    const rulesResultsData = [{"rule_id": "av", "committee_size": 3, "committee": ["1", "3", "29"], "max_satisfaction": 10210, "satisfaction": 10210, "coverage": 0.6186993162664971, "max_coverage": 0.733184926061377, "sat_distribution": {"0": 2398, "1": 541, "2": 381, "3": 2969}}, {"rule_id": "av", "committee_size": 5, "committee": ["1", "3", "25", "27", "29"], "max_satisfaction": 16855, "satisfaction": 16855, "coverage": 0.6597233264429957, "max_coverage": 0.7901097153760535, "sat_distribution": {"0": 2140, "1": 533, "2": 304, "3": 245, "4": 356, "5": 2711}}, {"rule_id": "av", "committee_size": 8, "committee": ["1", "3", "7", "10", "25", "27", "28", "29"], "max_satisfaction": 26749, "satisfaction": 26749, "coverage": 0.701065352202258, "max_coverage": 0.813324852917793, "sat_distribution": {"0": 1880, "1": 478, "2": 306, "3": 233, "4": 168, "5": 160, "6": 207, "7": 610, "8": 2247}}, {"rule_id": "av", "committee_size": 10, "committee": ["1", "2", "3", "7", "10", "25", "27", "28", "29", "50"], "max_satisfaction": 33285, "satisfaction": 33285, "coverage": 0.7120368898076006, "max_coverage": 0.8196851645730641, "sat_distribution": {"0": 1811, "1": 440, "2": 285, "3": 234, "4": 174, "5": 137, "6": 106, "7": 124, "8": 238, "9": 616, "10": 2124}}, {"rule_id": "sav", "committee_size": 3, "committee": ["11", "12", "20"], "max_satisfaction": 10210, "satisfaction": 8289, "coverage": 0.7040865002385117, "max_coverage": 0.733184926061377, "sat_distribution": {"0": 1861, "1": 1542, "2": 1911, "3": 975}}, {"rule_id": "sav", "committee_size": 5, "committee": ["11", "12", "20", "40", "286"], "max_satisfaction": 16855, "satisfaction": 12364, "coverage": 0.781841310224201, "max_coverage": 0.7901097153760535, "sat_distribution": {"0": 1372, "1": 1052, "2": 1448, "3": 1457, "4": 755, "5": 205}}, {"rule_id": "sav", "committee_size": 8, "committee": ["1", "10", "11", "12", "20", "25", "40", "286"], "max_satisfaction": 26749, "satisfaction": 22405, "coverage": 0.8095086659246303, "max_coverage": 0.813324852917793, "sat_distribution": {"0": 1198, "1": 515, "2": 514, "3": 553, "4": 804, "5": 1041, "6": 1009, "7": 512, "8": 143}}, {"rule_id": "sav", "committee_size": 10, "committee": ["1", "4", "10", "11", "12", "20", "25", "28", "40", "286"], "max_satisfaction": 33285, "satisfaction": 28930, "coverage": 0.8150739386229925, "max_coverage": 0.8196851645730641, "sat_distribution": {"0": 1163, "1": 495, "2": 412, "3": 359, "4": 400, "5": 461, "6": 604, "7": 892, "8": 898, "9": 473, "10": 132}}, {"rule_id": "seqpav", "committee_size": 3, "committee": ["1", "11", "12"], "max_satisfaction": 10210, "satisfaction": 9583, "coverage": 0.7091747495627285, "max_coverage": 0.733184926061377, "sat_distribution": {"0": 1829, "1": 1046, "2": 1705, "3": 1709}}, {"rule_id": "seqpav", "committee_size": 5, "committee": ["1", "3", "10", "11", "12"], "max_satisfaction": 16855, "satisfaction": 16283, "coverage": 0.7330259182699952, "max_coverage": 0.7901097153760535, "sat_distribution": {"0": 1679, "1": 590, "2": 566, "3": 711, "4": 1287, "5": 1456}}, {"rule_id": "seqpav", "committee_size": 8, "committee": ["1", "3", "10", "11", "12", "28", "29", "286"], "max_satisfaction": 26749, "satisfaction": 24998, "coverage": 0.7812052790586739, "max_coverage": 0.813324852917793, "sat_distribution": {"0": 1376, "1": 549, "2": 433, "3": 347, "4": 376, "5": 515, "6": 915, "7": 1251, "8": 527}}, {"rule_id": "seqpav", "committee_size": 10, "committee": ["1", "3", "10", "11", "12", "20", "25", "28", "29", "286"], "max_satisfaction": 33285, "satisfaction": 30452, "coverage": 0.8020352997296868, "max_coverage": 0.8196851645730641, "sat_distribution": {"0": 1245, "1": 490, "2": 405, "3": 336, "4": 298, "5": 324, "6": 416, "7": 688, "8": 1006, "9": 838, "10": 243}}, {"rule_id": "equal-shares", "committee_size": 3, "committee": ["1", "3", "12"], "max_satisfaction": 10210, "satisfaction": 10006, "coverage": 0.6713308952138655, "max_coverage": 0.733184926061377, "sat_distribution": {"0": 2067, "1": 738, "2": 1184, "3": 2300}}, {"rule_id": "equal-shares", "committee_size": 5, "committee": ["1", "3", "11", "12", "29"], "max_satisfaction": 16855, "satisfaction": 16365, "coverage": 0.7276196533630148, "max_coverage": 0.7901097153760535, "sat_distribution": {"0": 1713, "1": 621, "2": 466, "3": 651, "4": 1331, "5": 1507}}, {"rule_id": "equal-shares", "committee_size": 8, "committee": ["1", "3", "10", "11", "12", "27", "29", "286"], "max_satisfaction": 26749, "satisfaction": 25028, "coverage": 0.7800922245190014, "max_coverage": 0.813324852917793, "sat_distribution": {"0": 1383, "1": 543, "2": 438, "3": 348, "4": 355, "5": 516, "6": 920, "7": 1243, "8": 543}}, {"rule_id": "equal-shares", "committee_size": 10, "committee": ["1", "3", "7", "10", "11", "12", "25", "27", "29", "286"], "max_satisfaction": 33285, "satisfaction": 31654, "coverage": 0.7848624582604548, "max_coverage": 0.8196851645730641, "sat_distribution": {"0": 1353, "1": 500, "2": 383, "3": 313, "4": 240, "5": 243, "6": 285, "7": 431, "8": 843, "9": 1177, "10": 521}}, {"rule_id": "equal-shares-with-av-completion", "committee_size": 3, "committee": ["1", "3", "29"], "max_satisfaction": 10210, "satisfaction": 10210, "coverage": 0.6186993162664971, "max_coverage": 0.733184926061377, "sat_distribution": {"0": 2398, "1": 541, "2": 381, "3": 2969}}, {"rule_id": "equal-shares-with-av-completion", "committee_size": 5, "committee": ["1", "3", "25", "27", "29"], "max_satisfaction": 16855, "satisfaction": 16855, "coverage": 0.6597233264429957, "max_coverage": 0.7901097153760535, "sat_distribution": {"0": 2140, "1": 533, "2": 304, "3": 245, "4": 356, "5": 2711}}, {"rule_id": "equal-shares-with-av-completion", "committee_size": 8, "committee": ["1", "3", "7", "12", "25", "27", "28", "29"], "max_satisfaction": 26749, "satisfaction": 26627, "coverage": 0.7222133884560343, "max_coverage": 0.813324852917793, "sat_distribution": {"0": 1747, "1": 548, "2": 320, "3": 252, "4": 204, "5": 179, "6": 241, "7": 858, "8": 1940}}, {"rule_id": "equal-shares-with-av-completion", "committee_size": 10, "committee": ["1", "3", "7", "10", "11", "25", "27", "28", "29", "50"], "max_satisfaction": 33285, "satisfaction": 33008, "coverage": 0.740340276673557, "max_coverage": 0.8196851645730641, "sat_distribution": {"0": 1633, "1": 482, "2": 300, "3": 266, "4": 220, "5": 156, "6": 129, "7": 182, "8": 390, "9": 1010, "10": 1521}}, {"rule_id": "equal-shares-with-increment-completion", "committee_size": 3, "committee": ["1", "3", "29"], "max_satisfaction": 10210, "satisfaction": 10210, "coverage": 0.6186993162664971, "max_coverage": 0.733184926061377, "sat_distribution": {"0": 2398, "1": 541, "2": 381, "3": 2969}}, {"rule_id": "equal-shares-with-increment-completion", "committee_size": 5, "committee": ["1", "3", "11", "27", "29"], "max_satisfaction": 16855, "satisfaction": 16519, "coverage": 0.7056765781523294, "max_coverage": 0.7901097153760535, "sat_distribution": {"0": 1851, "1": 667, "2": 384, "3": 348, "4": 1155, "5": 1884}}, {"rule_id": "equal-shares-with-increment-completion", "committee_size": 8, "committee": ["1", "3", "7", "11", "25", "27", "29", "286"], "max_satisfaction": 26749, "satisfaction": 25190, "coverage": 0.7668945778343139, "max_coverage": 0.813324852917793, "sat_distribution": {"0": 1466, "1": 630, "2": 402, "3": 350, "4": 242, "5": 279, "6": 801, "7": 1415, "8": 704}}, {"rule_id": "equal-shares-with-increment-completion", "committee_size": 10, "committee": ["1", "3", "7", "11", "12", "25", "27", "28", "29", "286"], "max_satisfaction": 33285, "satisfaction": 31656, "coverage": 0.7845444426776912, "max_coverage": 0.8196851645730641, "sat_distribution": {"0": 1355, "1": 527, "2": 390, "3": 296, "4": 280, "5": 203, "6": 239, "7": 396, "8": 845, "9": 1220, "10": 538}}, {"rule_id": "phragmen-enestroem", "committee_size": 3, "committee": ["1", "12", "286"], "max_satisfaction": 10210, "satisfaction": 8644, "coverage": 0.728891715694069, "max_coverage": 0.733184926061377, "sat_distribution": {"0": 1705, "1": 1471, "2": 2166, "3": 947}}, {"rule_id": "phragmen-enestroem", "committee_size": 5, "committee": ["1", "3", "11", "12", "286"], "max_satisfaction": 16855, "satisfaction": 15035, "coverage": 0.766099538877405, "max_coverage": 0.7901097153760535, "sat_distribution": {"0": 1471, "1": 678, "2": 798, "3": 1215, "4": 1519, "5": 608}}, {"rule_id": "phragmen-enestroem", "committee_size": 8, "committee": ["1", "3", "10", "11", "12", "20", "29", "286"], "max_satisfaction": 26749, "satisfaction": 23837, "coverage": 0.7971060581968517, "max_coverage": 0.813324852917793, "sat_distribution": {"0": 1276, "1": 531, "2": 461, "3": 453, "4": 487, "5": 812, "6": 1122, "7": 891, "8": 256}}, {"rule_id": "phragmen-enestroem", "committee_size": 10, "committee": ["1", "3", "7", "10", "11", "12", "20", "29", "40", "286"], "max_satisfaction": 33285, "satisfaction": 29173, "coverage": 0.8134838607091748, "max_coverage": 0.8196851645730641, "sat_distribution": {"0": 1173, "1": 492, "2": 411, "3": 351, "4": 366, "5": 400, "6": 626, "7": 934, "8": 914, "9": 484, "10": 138}}, {"rule_id": "seqphragmen", "committee_size": 3, "committee": ["1", "3", "12"], "max_satisfaction": 10210, "satisfaction": 10006, "coverage": 0.6713308952138655, "max_coverage": 0.733184926061377, "sat_distribution": {"0": 2067, "1": 738, "2": 1184, "3": 2300}}, {"rule_id": "seqphragmen", "committee_size": 5, "committee": ["1", "3", "11", "12", "29"], "max_satisfaction": 16855, "satisfaction": 16365, "coverage": 0.7276196533630148, "max_coverage": 0.7901097153760535, "sat_distribution": {"0": 1713, "1": 621, "2": 466, "3": 651, "4": 1331, "5": 1507}}, {"rule_id": "seqphragmen", "committee_size": 8, "committee": ["1", "3", "7", "10", "11", "12", "29", "286"], "max_satisfaction": 26749, "satisfaction": 25009, "coverage": 0.7802512323103832, "max_coverage": 0.813324852917793, "sat_distribution": {"0": 1382, "1": 552, "2": 434, "3": 341, "4": 356, "5": 525, "6": 913, "7": 1249, "8": 537}}, {"rule_id": "seqphragmen", "committee_size": 10, "committee": ["1", "3", "7", "10", "11", "12", "20", "28", "29", "286"], "max_satisfaction": 33285, "satisfaction": 30438, "coverage": 0.8028303386865956, "max_coverage": 0.8196851645730641, "sat_distribution": {"0": 1240, "1": 507, "2": 413, "3": 334, "4": 276, "5": 307, "6": 427, "7": 705, "8": 997, "9": 839, "10": 244}}, {"rule_id": "cc", "committee_size": 3, "committee": ["1", "11", "286"], "max_satisfaction": 10210, "satisfaction": 8457, "coverage": 0.733184926061377, "max_coverage": 0.733184926061377, "sat_distribution": {"0": 1678, "1": 1633, "2": 2110, "3": 868}}, {"rule_id": "cc", "committee_size": 5, "committee": ["3", "11", "20", "40", "286"], "max_satisfaction": 16855, "satisfaction": 12600, "coverage": 0.7901097153760535, "max_coverage": 0.7901097153760535, "sat_distribution": {"0": 1320, "1": 1015, "2": 1443, "3": 1553, "4": 750, "5": 208}}, {"rule_id": "cc", "committee_size": 8, "committee": ["1", "6", "11", "12", "20", "40", "66", "286"], "max_satisfaction": 26749, "satisfaction": 20209, "coverage": 0.813324852917793, "max_coverage": 0.813324852917793, "sat_distribution": {"0": 1174, "1": 582, "2": 610, "3": 779, "4": 1050, "5": 1093, "6": 663, "7": 277, "8": 61}}, {"rule_id": "cc", "committee_size": 10, "committee": ["1", "6", "7", "11", "12", "19", "20", "40", "66", "286"], "max_satisfaction": 33285, "satisfaction": 24459, "coverage": 0.8196851645730641, "max_coverage": 0.8196851645730641, "sat_distribution": {"0": 1134, "1": 519, "2": 441, "3": 532, "4": 663, "5": 925, "6": 944, "7": 686, "8": 306, "9": 119, "10": 20}}, {"rule_id": "tri_seq_phragmen", "committee_size": 3, "committee": ["1", "3", "12"], "max_satisfaction": 10155, "satisfaction": 9315, "coverage": 0.6584512641119414, "max_coverage": "", "sat_distribution": {"0": 2010, "1": 1122, "2": 726, "3": 2431}}, {"rule_id": "tri_seq_phragmen", "committee_size": 5, "committee": ["1", "3", "11", "12", "29"], "max_satisfaction": 16744, "satisfaction": 14721, "coverage": 0.6993162664970584, "max_coverage": "", "sat_distribution": {"0": 1733, "1": 698, "2": 520, "3": 1054, "4": 651, "5": 1633}}, {"rule_id": "tri_seq_phragmen", "committee_size": 8, "committee": ["1", "3", "10", "11", "12", "27", "29", "286"], "max_satisfaction": 26478, "satisfaction": 22351, "coverage": 0.747495627285737, "max_coverage": "", "sat_distribution": {"0": 1409, "1": 582, "2": 442, "3": 419, "4": 499, "5": 622, "6": 762, "7": 871, "8": 683}}, {"rule_id": "tri_seq_phragmen", "committee_size": 10, "committee": ["1", "3", "4", "10", "11", "12", "20", "27", "29", "286"], "max_satisfaction": 32931, "satisfaction": 26027, "coverage": 0.7579901415169343, "max_coverage": "", "sat_distribution": {"0": 1297, "1": 548, "2": 409, "3": 375, "4": 376, "5": 452, "6": 555, "7": 647, "8": 674, "9": 564, "10": 392}}, {"rule_id": "tri_tax_seq_phragmen", "committee_size": 3, "committee": ["1"], "max_satisfaction": 10155, "satisfaction": 3413, "coverage": 0.5450787088567339, "max_coverage": "", "sat_distribution": {"0": 2846, "1": 3428, "2": 0, "3": 15}}, {"rule_id": "tri_tax_seq_phragmen", "committee_size": 5, "committee": ["1", "3", "10"], "max_satisfaction": 16744, "satisfaction": 9904, "coverage": 0.6363491811098744, "max_coverage": "", "sat_distribution": {"0": 2261, "1": 761, "2": 542, "3": 2704, "4": 2, "5": 19}}, {"rule_id": "tri_tax_seq_phragmen", "committee_size": 8, "committee": ["1", "3", "10", "25", "29"], "max_satisfaction": 26478, "satisfaction": 16519, "coverage": 0.6687867705517571, "max_coverage": "", "sat_distribution": {"0": 2060, "1": 558, "2": 310, "3": 431, "4": 443, "5": 2469, "6": 2, "7": 2, "8": 14}}, {"rule_id": "tri_tax_seq_phragmen", "committee_size": 10, "committee": ["1", "3", "10", "12", "25", "29"], "max_satisfaction": 32931, "satisfaction": 19035, "coverage": 0.7013833677850214, "max_coverage": "", "sat_distribution": {"0": 1786, "1": 557, "2": 416, "3": 338, "4": 676, "5": 487, "6": 1942, "7": 2, "8": 1, "9": 9, "10": 75}}, {"rule_id": "tax_MES_KPPS25", "committee_size": 3, "committee": ["1"], "max_satisfaction": 10155, "satisfaction": 3413, "coverage": 0.5450787088567339, "max_coverage": "", "sat_distribution": {"0": 2846, "1": 3428, "2": 0, "3": 15}}, {"rule_id": "tax_MES_KPPS25", "committee_size": 5, "committee": ["1", "3", "29"], "max_satisfaction": 16744, "satisfaction": 10155, "coverage": 0.6171092383526793, "max_coverage": "", "sat_distribution": {"0": 2398, "1": 557, "2": 355, "3": 2973, "4": 1, "5": 5}}, {"rule_id": "tax_MES_KPPS25", "committee_size": 8, "committee": ["1", "3", "10", "27", "29"], "max_satisfaction": 26478, "satisfaction": 16560, "coverage": 0.6662426458896485, "max_coverage": "", "sat_distribution": {"0": 2080, "1": 540, "2": 332, "3": 392, "4": 418, "5": 2512, "6": 0, "7": 1, "8": 14}}, {"rule_id": "tax_MES_KPPS25", "committee_size": 10, "committee": ["1", "3", "7", "10", "27", "29"], "max_satisfaction": 32931, "satisfaction": 19849, "coverage": 0.6772141834949913, "max_coverage": "", "sat_distribution": {"0": 2011, "1": 524, "2": 308, "3": 237, "4": 351, "5": 403, "6": 2439, "7": 1, "8": 0, "9": 3, "10": 12}}, {"rule_id": "tri_max_sat", "committee_size": 3, "committee": ["1", "3", "29"], "max_satisfaction": 10155, "satisfaction": 10155, "coverage": 0.6171092383526793, "max_coverage": "", "sat_distribution": {"0": 2398, "1": 561, "2": 356, "3": 2974}}, {"rule_id": "tri_max_sat", "committee_size": 5, "committee": ["1", "3", "7", "27", "29"], "max_satisfaction": 16744, "satisfaction": 16744, "coverage": 0.6536810303704882, "max_coverage": "", "sat_distribution": {"0": 2165, "1": 525, "2": 310, "3": 248, "4": 272, "5": 2769}}, {"rule_id": "tri_max_sat", "committee_size": 8, "committee": ["1", "3", "7", "22", "25", "27", "28", "29"], "max_satisfaction": 26478, "satisfaction": 26478, "coverage": 0.6915248847193513, "max_coverage": "", "sat_distribution": {"0": 1927, "1": 495, "2": 309, "3": 204, "4": 183, "5": 144, "6": 213, "7": 372, "8": 2442}}, {"rule_id": "tri_max_sat", "committee_size": 10, "committee": ["1", "2", "3", "7", "22", "25", "27", "28", "29", "50"], "max_satisfaction": 32931, "satisfaction": 32931, "coverage": 0.7037684846557481, "max_coverage": "", "sat_distribution": {"0": 1851, "1": 449, "2": 302, "3": 220, "4": 154, "5": 142, "6": 109, "7": 113, "8": 257, "9": 397, "10": 2295}}];
 
     const ruleSelects = document.querySelectorAll('.rule-select');
     const sizeSelect = document.getElementById('size-select');
