@@ -6014,41 +6014,75 @@
         </p>
 
         
-          <p>
-            <strong class="highlight">Approval Voting:</strong> Selects the comments who have the highest number of votes.
-          </p>
+          
+            <p>
+              <strong class="highlight">Approval Voting:</strong> Selects the comments who have the highest number of votes.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Satisfaction Approval Voting:</strong> Selects a set of comments that maximises the total average satisfaction of the participants. The average satisfaction of a participant is defined here as their satisfaction divided by number of supported comments.
-          </p>
+          
+            <p>
+              <strong class="highlight">Satisfaction Approval Voting:</strong> Selects a set of comments that maximises the total average satisfaction of the participants. The average satisfaction of a participant is defined here as their satisfaction divided by number of supported comments.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Sequential Proportional Approval Voting:</strong> Sequential variant the proportional approval voting method. Selects the comments one by one, each time selecting the best non-selected comment according to the principles of proportional approval voting.
-          </p>
+          
+            <p>
+              <strong class="highlight">Sequential Proportional Approval Voting:</strong> Sequential variant the proportional approval voting method. Selects the comments one by one, each time selecting the best non-selected comment according to the principles of proportional approval voting.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Method of Equal Shares:</strong> Each participant receives an equal amount of virtual currency to spend on comments they feel positively about. Comments are considered in rounds. A comment is selected if its supporters have enough budget left to collectively afford it.
-          </p>
+          
+            <p>
+              <strong class="highlight">Method of Equal Shares:</strong> Each participant receives an equal amount of virtual currency to spend on comments they feel positively about. Comments are considered in rounds. A comment is selected if its supporters have enough budget left to collectively afford it.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Method of Equal Shares with Approval Voting Completion:</strong> Applies the method of equal shares. If fewer than the desired number of comments are selected, the result is completed by using the approval voting selection method.
-          </p>
+          
+            <p>
+              <strong class="highlight">Method of Equal Shares with Approval Voting Completion:</strong> Applies the method of equal shares. If fewer than the desired number of comments are selected, the result is completed by using the approval voting selection method.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Method of Equal Shares with Increment Completion:</strong> Calculates the minimum amount of virtual currency needed for the method of equal shares to select the desired number of comments. Then, applies the method using that amount.
-          </p>
+          
+            <p>
+              <strong class="highlight">Method of Equal Shares with Increment Completion:</strong> Calculates the minimum amount of virtual currency needed for the method of equal shares to select the desired number of comments. Then, applies the method using that amount.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Eneström–Phragmén:</strong> Distributes representation load evenly among participants to select a proportionally representative set of comments.
-          </p>
+          
+            <p>
+              <strong class="highlight">Eneström–Phragmén:</strong> Distributes representation load evenly among participants to select a proportionally representative set of comments.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Phragmén&#39;s Sequential Rule:</strong> Sequentially adds comments while balancing the representation load to maintain proportional fairness.
-          </p>
+          
+            <p>
+              <strong class="highlight">Phragmén&#39;s Sequential Rule:</strong> Sequentially adds comments while balancing the representation load to maintain proportional fairness.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Chamberlin–Courant:</strong> A participant is considered to be represented if their satisfaction is more than 0. This method selects comments to maximize the number of represented participants.
-          </p>
+          
+            <p>
+              <strong class="highlight">Chamberlin–Courant:</strong> A participant is considered to be represented if their satisfaction is more than 0. This method selects comments to maximise the number of represented participants.
+            </p>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
         
       </div>
     </div>
@@ -6092,13 +6126,17 @@
         // Clear current list
         repCommentList.innerHTML = '';
 
-        commentIds.forEach(cid => {
-          const original = document.querySelector(`.article-comment[data-comment-id="${cid}"]`);
-          if (original) {
-            const clone = original.cloneNode(true);
-            repCommentList.appendChild(clone);
-          }
-        });
+        if (commentIds && commentIds.length > 0) {
+          commentIds.forEach(cid => {
+            const original = document.querySelector(`.article-comment[data-comment-id="${cid}"]`);
+            if (original) {
+              const clone = original.cloneNode(true);
+              repCommentList.appendChild(clone);
+            }
+          });
+        } else {
+          repCommentList.innerHTML = '<p>The selection computed for this selection is empty. This is not very useful but it is a valid outcome.</p>'
+        }
 
         // Update the Analysis Measures
         updateSatisfaction(repCommentBlock, rule, size);

@@ -424,7 +424,7 @@
         
       
         
-          <div data-value="tri_pav_KPPS25" class="rule-select-option"><span>Proportional Trichotomous Voting by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025</span></div>
+          <div data-value="tri_pav_KPPS25" class="rule-select-option selected"><span>Proportional Trichotomous Voting by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025</span></div>
         
       
         
@@ -444,7 +444,7 @@
         
       
         
-          <div data-value="tax_MES_KPPS25" class="rule-select-option selected"><span>Taxed Method of Equal Shares by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025</span></div>
+          <div data-value="tax_MES_KPPS25" class="rule-select-option"><span>Taxed Method of Equal Shares by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025</span></div>
         
       
         
@@ -11159,73 +11159,107 @@
         </p>
 
         
-          <p>
-            <strong class="highlight">Proportional Trichotomous Voting by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025:</strong> 
-          </p>
+          
+            <p>
+              <strong class="highlight">Approval Voting:</strong> Selects the comments who have the highest number of votes.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Proportional Trichotomous Voting by Talmon and Page, 2021:</strong> 
-          </p>
+          
+            <p>
+              <strong class="highlight">Satisfaction Approval Voting:</strong> Selects a set of comments that maximises the total average satisfaction of the participants. The average satisfaction of a participant is defined here as their satisfaction divided by number of supported comments.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Proportional Trichotomous Voting by Hervouin, 2025:</strong> 
-          </p>
+          
+            <p>
+              <strong class="highlight">Sequential Proportional Approval Voting:</strong> Sequential variant the proportional approval voting method. Selects the comments one by one, each time selecting the best non-selected comment according to the principles of proportional approval voting.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Sequential Phragmèn for trichotomous profiles:</strong> 
-          </p>
+          
+            <p>
+              <strong class="highlight">Method of Equal Shares:</strong> Each participant receives an equal amount of virtual currency to spend on comments they feel positively about. Comments are considered in rounds. A comment is selected if its supporters have enough budget left to collectively afford it.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Taxed Sequential Phragmèn for trichotomous profiles:</strong> 
-          </p>
+          
+            <p>
+              <strong class="highlight">Method of Equal Shares with Approval Voting Completion:</strong> Applies the method of equal shares. If fewer than the desired number of comments are selected, the result is completed by using the approval voting selection method.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Taxed Method of Equal Shares by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025:</strong> 
-          </p>
+          
+            <p>
+              <strong class="highlight">Method of Equal Shares with Increment Completion:</strong> Calculates the minimum amount of virtual currency needed for the method of equal shares to select the desired number of comments. Then, applies the method using that amount.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Maximum Satisfaction for trichotomous profiles:</strong> 
-          </p>
+          
+            <p>
+              <strong class="highlight">Eneström–Phragmén:</strong> Distributes representation load evenly among participants to select a proportionally representative set of comments.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Chamberlin-Courant for trichotomous profiles:</strong> 
-          </p>
+          
+            <p>
+              <strong class="highlight">Phragmén&#39;s Sequential Rule:</strong> Sequentially adds comments while balancing the representation load to maintain proportional fairness.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Approval Voting:</strong> Selects the comments who have the highest number of votes.
-          </p>
+          
+            <p>
+              <strong class="highlight">Chamberlin–Courant:</strong> A participant is considered to be represented if their satisfaction is more than 0. This method selects comments to maximise the number of represented participants.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Satisfaction Approval Voting:</strong> Selects a set of comments that maximises the total average satisfaction of the participants. The average satisfaction of a participant is defined here as their satisfaction divided by number of supported comments.
-          </p>
+          
+            <p>
+              <strong class="highlight">Proportional Trichotomous Voting by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025:</strong> A trichotomous extension of the PAV rule in which both approved and selected alternatives, as well as disapproved and not selected alternatives, contribute positively to the score.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Sequential Proportional Approval Voting:</strong> Sequential variant the proportional approval voting method. Selects the comments one by one, each time selecting the best non-selected comment according to the principles of proportional approval voting.
-          </p>
+          
+            <p>
+              <strong class="highlight">Proportional Trichotomous Voting by Talmon and Page, 2021:</strong> Maximizes the difference between (1) the PAV score based on approved and selected alternatives, and (2) the PAV score based on disapproved but selected alternatives.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Method of Equal Shares:</strong> Each participant receives an equal amount of virtual currency to spend on comments they feel positively about. Comments are considered in rounds. A comment is selected if its supporters have enough budget left to collectively afford it.
-          </p>
+          
+            <p>
+              <strong class="highlight">Proportional Trichotomous Voting by Hervouin, 2025:</strong> Maximizes the sum of (1) the PAV score for approved and selected alternatives, and (2) the PAV score for maximum number of comments to select minus the number of disapproved but selected alternatives.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Method of Equal Shares with Approval Voting Completion:</strong> Applies the method of equal shares. If fewer than the desired number of comments are selected, the result is completed by using the approval voting selection method.
-          </p>
+          
+            <p>
+              <strong class="highlight">Sequential Phragmèn for trichotomous profiles:</strong> Sequential Phragmén adapted for trichotomous ballots.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Method of Equal Shares with Increment Completion:</strong> Calculates the minimum amount of virtual currency needed for the method of equal shares to select the desired number of comments. Then, applies the method using that amount.
-          </p>
+          
+            <p>
+              <strong class="highlight">Taxed Sequential Phragmèn for trichotomous profiles:</strong> Runs Phragmén’s sequential rule on a participatory budgeting instance where each project&#39;s cost equals a tax for selecting it. The cost of a project is equal to its approval score divided by its support (the number of approvals minus the number of disapprovals).
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Eneström–Phragmén:</strong> Distributes representation load evenly among participants to select a proportionally representative set of comments.
-          </p>
+          
+            <p>
+              <strong class="highlight">Taxed Method of Equal Shares by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025:</strong> Applies the Method of Equal Shares (MES) to a participatory budgeting instance where each project&#39;s cost equals a tax for selecting it. The cost of a project is equal to its approval score divided by its support (the number of approvals minus the number of disapprovals).
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Phragmén&#39;s Sequential Rule:</strong> Sequentially adds comments while balancing the representation load to maintain proportional fairness.
-          </p>
+          
+            <p>
+              <strong class="highlight">Maximum Satisfaction for trichotomous profiles:</strong> Selects the comments so to maximise the total satisfaction of voters. Each voter&#39;s satisfaction equals the number of approved and selected alternatives minus the number of disapproved but selected alternatives.
+            </p>
+          
         
-          <p>
-            <strong class="highlight">Chamberlin–Courant:</strong> A participant is considered to be represented if their satisfaction is more than 0. This method selects comments to maximize the number of represented participants.
-          </p>
+          
+            <p>
+              <strong class="highlight">Chamberlin-Courant for trichotomous profiles:</strong> Selects the comments so to maximise the number of voters with positive satisfaction.
+            </p>
+          
         
       </div>
     </div>
@@ -11269,13 +11303,17 @@
         // Clear current list
         repCommentList.innerHTML = '';
 
-        commentIds.forEach(cid => {
-          const original = document.querySelector(`.article-comment[data-comment-id="${cid}"]`);
-          if (original) {
-            const clone = original.cloneNode(true);
-            repCommentList.appendChild(clone);
-          }
-        });
+        if (commentIds && commentIds.length > 0) {
+          commentIds.forEach(cid => {
+            const original = document.querySelector(`.article-comment[data-comment-id="${cid}"]`);
+            if (original) {
+              const clone = original.cloneNode(true);
+              repCommentList.appendChild(clone);
+            }
+          });
+        } else {
+          repCommentList.innerHTML = '<p>The selection computed for this selection is empty. This is not very useful but it is a valid outcome.</p>'
+        }
 
         // Update the Analysis Measures
         updateSatisfaction(repCommentBlock, rule, size);
@@ -11462,7 +11500,7 @@
         sizeSelectionWrap.classList.add('hidden');
         sizeSelect.value = '5';
         selectRuleOptionByValue(selectPopularity, 'tri_max_sat');
-        selectRuleOptionByValue(selectRepresentation, 'tax_MES_KPPS25');
+        selectRuleOptionByValue(selectRepresentation, 'tri_pav_KPPS25');
         selectRuleOptionByValue(selectDiversity, 'tri_cc');
         repCommentsTitles.forEach(title => {
           title.classList.remove('hidden');

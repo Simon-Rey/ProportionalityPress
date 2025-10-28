@@ -374,7 +374,7 @@
         
       
         
-          <div data-value="tax_MES_KPPS25" class="rule-select-option selected"><span>Taxed Method of Equal Shares by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025</span></div>
+          <div data-value="tax_MES_KPPS25" class="rule-select-option"><span>Taxed Method of Equal Shares by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025</span></div>
         
       
         
@@ -43035,37 +43035,47 @@ I will not stop fighting until every woman in this country has access to
         </p>
 
         
-          <p>
-            <strong class="highlight">Proportional Trichotomous Voting by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025:</strong> 
-          </p>
+          
         
-          <p>
-            <strong class="highlight">Proportional Trichotomous Voting by Talmon and Page, 2021:</strong> 
-          </p>
+          
         
-          <p>
-            <strong class="highlight">Proportional Trichotomous Voting by Hervouin, 2025:</strong> 
-          </p>
+          
         
-          <p>
-            <strong class="highlight">Sequential Phragmèn for trichotomous profiles:</strong> 
-          </p>
+          
         
-          <p>
-            <strong class="highlight">Taxed Sequential Phragmèn for trichotomous profiles:</strong> 
-          </p>
+          
         
-          <p>
-            <strong class="highlight">Taxed Method of Equal Shares by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025:</strong> 
-          </p>
+          
         
-          <p>
-            <strong class="highlight">Maximum Satisfaction for trichotomous profiles:</strong> 
-          </p>
+          
         
-          <p>
-            <strong class="highlight">Chamberlin-Courant for trichotomous profiles:</strong> 
-          </p>
+          
+        
+          
+        
+          
+            <p>
+              <strong class="highlight">Sequential Phragmèn for trichotomous profiles:</strong> Sequential Phragmén adapted for trichotomous ballots.
+            </p>
+          
+        
+          
+            <p>
+              <strong class="highlight">Taxed Sequential Phragmèn for trichotomous profiles:</strong> Runs Phragmén’s sequential rule on a participatory budgeting instance where each project&#39;s cost equals a tax for selecting it. The cost of a project is equal to its approval score divided by its support (the number of approvals minus the number of disapprovals).
+            </p>
+          
+        
+          
+            <p>
+              <strong class="highlight">Taxed Method of Equal Shares by Kraiczy, Papasotiropoulos, Pierczyński &amp; Skowron, 2025:</strong> Applies the Method of Equal Shares (MES) to a participatory budgeting instance where each project&#39;s cost equals a tax for selecting it. The cost of a project is equal to its approval score divided by its support (the number of approvals minus the number of disapprovals).
+            </p>
+          
+        
+          
+            <p>
+              <strong class="highlight">Maximum Satisfaction for trichotomous profiles:</strong> Selects the comments so to maximise the total satisfaction of voters. Each voter&#39;s satisfaction equals the number of approved and selected alternatives minus the number of disapproved but selected alternatives.
+            </p>
+          
         
       </div>
     </div>
@@ -43109,13 +43119,17 @@ I will not stop fighting until every woman in this country has access to
         // Clear current list
         repCommentList.innerHTML = '';
 
-        commentIds.forEach(cid => {
-          const original = document.querySelector(`.article-comment[data-comment-id="${cid}"]`);
-          if (original) {
-            const clone = original.cloneNode(true);
-            repCommentList.appendChild(clone);
-          }
-        });
+        if (commentIds && commentIds.length > 0) {
+          commentIds.forEach(cid => {
+            const original = document.querySelector(`.article-comment[data-comment-id="${cid}"]`);
+            if (original) {
+              const clone = original.cloneNode(true);
+              repCommentList.appendChild(clone);
+            }
+          });
+        } else {
+          repCommentList.innerHTML = '<p>The selection computed for this selection is empty. This is not very useful but it is a valid outcome.</p>'
+        }
 
         // Update the Analysis Measures
         updateSatisfaction(repCommentBlock, rule, size);
@@ -43302,7 +43316,7 @@ I will not stop fighting until every woman in this country has access to
         sizeSelectionWrap.classList.add('hidden');
         sizeSelect.value = '5';
         selectRuleOptionByValue(selectPopularity, 'tri_max_sat');
-        selectRuleOptionByValue(selectRepresentation, 'tax_MES_KPPS25');
+        selectRuleOptionByValue(selectRepresentation, 'tri_pav_KPPS25');
         selectRuleOptionByValue(selectDiversity, 'tri_cc');
         repCommentsTitles.forEach(title => {
           title.classList.remove('hidden');

@@ -166,10 +166,12 @@
           The desired number of comments to select is always given up-front.
         </p>
 
-        {% for rule in all_rules %}
-          <p>
-            <strong class="highlight">{{ rule.long_name }}:</strong> {{ rule.approval_explanation }}
-          </p>
+        {% for rule in article.computed_rules %}
+          {% if rule in all_rules %}
+            <p>
+              <strong class="highlight">{{ rule.long_name }}:</strong> {{ rule.description }}
+            </p>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
@@ -213,13 +215,17 @@
         // Clear current list
         repCommentList.innerHTML = '';
 
-        commentIds.forEach(cid => {
-          const original = document.querySelector(`.article-comment[data-comment-id="${cid}"]`);
-          if (original) {
-            const clone = original.cloneNode(true);
-            repCommentList.appendChild(clone);
-          }
-        });
+        if (commentIds && commentIds.length > 0) {
+          commentIds.forEach(cid => {
+            const original = document.querySelector(`.article-comment[data-comment-id="${cid}"]`);
+            if (original) {
+              const clone = original.cloneNode(true);
+              repCommentList.appendChild(clone);
+            }
+          });
+        } else {
+          repCommentList.innerHTML = '<p>The selection computed for this selection is empty. This is not very useful but it is a valid outcome.</p>'
+        }
 
         // Update the Analysis Measures
         updateSatisfaction(repCommentBlock, rule, size);

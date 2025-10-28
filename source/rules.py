@@ -19,7 +19,7 @@ class Rule:
     short_name = ""
     long_name = ""
     ordering_priority = 10000  # The lower the better
-    approval_explanation = ""
+    description = ""
     is_approval=False
     is_trichotomous=False
 
@@ -57,14 +57,14 @@ class AV(Rule):
     short_name = "av"
     long_name = "Approval Voting"
     ordering_priority = 0
-    approval_explanation = "Selects the comments who have the highest number of votes."
+    description = "Selects the comments who have the highest number of votes."
     is_approval=True
 
 class SAV(Rule):
     short_name = "sav"
     long_name = "Satisfaction Approval Voting"
     ordering_priority = 1
-    approval_explanation = "Selects a set of comments that maximises the total average satisfaction of the participants. The average satisfaction of a participant is defined here as their satisfaction divided by number of supported comments."
+    description = "Selects a set of comments that maximises the total average satisfaction of the participants. The average satisfaction of a participant is defined here as their satisfaction divided by number of supported comments."
     is_approval=True
 
 class PAV(Rule):
@@ -81,7 +81,7 @@ class CC(Rule):
     short_name = "cc"
     long_name = "Chamberlin–Courant"
     ordering_priority = 8
-    approval_explanation = "A participant is considered to be represented if their satisfaction is more than 0. This method selects comments to maximize the number of represented participants."
+    description = "A participant is considered to be represented if their satisfaction is more than 0. This method selects comments to maximise the number of represented participants."
     is_approval=True
 
 class LexCC(Rule):
@@ -98,7 +98,7 @@ class SeqPAV(Rule):
     short_name = "seqpav"
     long_name = "Sequential Proportional Approval Voting"
     ordering_priority = 2
-    approval_explanation = "Sequential variant the proportional approval voting method. Selects the comments one by one, each time selecting the best non-selected comment according to the principles of proportional approval voting."
+    description = "Sequential variant the proportional approval voting method. Selects the comments one by one, each time selecting the best non-selected comment according to the principles of proportional approval voting."
     is_approval=True
 
 class RevSeqPAV(Rule):
@@ -120,7 +120,7 @@ class SeqPhragmen(Rule):
     short_name = "seqphragmen"
     long_name = "Phragmén's Sequential Rule"
     ordering_priority = 7
-    approval_explanation = "Sequentially adds comments while balancing the representation load to maintain proportional fairness."
+    description = "Sequentially adds comments while balancing the representation load to maintain proportional fairness."
     is_approval=True
 
 class MinimaxPhragmen(Rule):
@@ -162,28 +162,28 @@ class EqualShares(Rule):
     short_name = "equal-shares"
     long_name = "Method of Equal Shares"
     ordering_priority = 3
-    approval_explanation = "Each participant receives an equal amount of virtual currency to spend on comments they feel positively about. Comments are considered in rounds. A comment is selected if its supporters have enough budget left to collectively afford it."
+    description = "Each participant receives an equal amount of virtual currency to spend on comments they feel positively about. Comments are considered in rounds. A comment is selected if its supporters have enough budget left to collectively afford it."
     is_approval=True
 
 class EqualSharesWithAVCompletion(Rule):
     short_name = "equal-shares-with-av-completion"
     long_name = "Method of Equal Shares with Approval Voting Completion"
     ordering_priority = 4
-    approval_explanation = "Applies the method of equal shares. If fewer than the desired number of comments are selected, the result is completed by using the approval voting selection method."
+    description = "Applies the method of equal shares. If fewer than the desired number of comments are selected, the result is completed by using the approval voting selection method."
     is_approval=True
 
 class EqualSharesWithIncrementCompletion(Rule):
     short_name = "equal-shares-with-increment-completion"
     long_name = "Method of Equal Shares with Increment Completion"
     ordering_priority = 5
-    approval_explanation = "Calculates the minimum amount of virtual currency needed for the method of equal shares to select the desired number of comments. Then, applies the method using that amount."
+    description = "Calculates the minimum amount of virtual currency needed for the method of equal shares to select the desired number of comments. Then, applies the method using that amount."
     is_approval=True
 
 class PhragmenEnestroem(Rule):
     short_name = "phragmen-enestroem"
     long_name = "Eneström–Phragmén"
     ordering_priority = 6
-    approval_explanation = "Distributes representation load evenly among participants to select a proportionally representative set of comments."
+    description = "Distributes representation load evenly among participants to select a proportionally representative set of comments."
     is_approval=True
 
 class ConsensusRule(Rule):
@@ -276,6 +276,10 @@ class TriPAVILPKraiczy2025(Rule):
     short_name = "tri_pav_KPPS25"
     long_name = "Proportional Trichotomous Voting by Kraiczy, Papasotiropoulos, Pierczyński & Skowron, 2025"
     is_trichotomous = True
+    description = (
+        "A trichotomous extension of the PAV rule in which both approved and selected "
+        "alternatives, as well as disapproved and not selected alternatives, contribute positively to the score."
+    )
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
@@ -285,7 +289,10 @@ class TriPAVILPTalmonPage2021(Rule):
     short_name = "tri_pav_TP21"
     long_name = "Proportional Trichotomous Voting by Talmon and Page, 2021"
     is_trichotomous = True
-
+    description = (
+        "Maximizes the difference between (1) the PAV score based on approved and selected alternatives, "
+        "and (2) the PAV score based on disapproved but selected alternatives."
+    )
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
         return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPTalmonPage2021, max_seconds=10)
@@ -294,7 +301,10 @@ class TriPAVILPHervounin2025(Rule):
     short_name = "tri_pav_Herv25"
     long_name = "Proportional Trichotomous Voting by Hervouin, 2025"
     is_trichotomous = True
-
+    description = (
+        "Maximizes the sum of (1) the PAV score for approved and selected alternatives, and "
+        "(2) the PAV score for maximum number of comments to select minus the number of disapproved but selected alternatives."
+    )
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
         return thiele_method(profile, max_size_selection=size, ilp_builder_class=PAVILPHervouin2025, max_seconds=10)
@@ -303,7 +313,11 @@ class TriTaxMESKPPS2025(Rule):
     short_name = "tax_MES_KPPS25"
     long_name = "Taxed Method of Equal Shares by Kraiczy, Papasotiropoulos, Pierczyński & Skowron, 2025"
     is_trichotomous = True
-
+    description = (
+        "Applies the Method of Equal Shares (MES) to a participatory budgeting instance "
+        "where each project's cost equals a tax for selecting it. The cost of a project is equal to its approval score "
+        "divided by its support (the number of approvals minus the number of disapprovals)."
+    )
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
         return tax_method_of_equal_shares(profile, max_size_selection=size, tax_function=TaxKraiczy2025)
@@ -312,6 +326,7 @@ class TriSeqPhrag(Rule):
     short_name = "tri_seq_phragmen"
     long_name = "Sequential Phragmèn for trichotomous profiles"
     is_trichotomous = True
+    description = "Sequential Phragmén adapted for trichotomous ballots."
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
@@ -321,7 +336,11 @@ class TriTaxSeqPhrag(Rule):
     short_name = "tri_tax_seq_phragmen"
     long_name = "Taxed Sequential Phragmèn for trichotomous profiles"
     is_trichotomous = True
-
+    description = (
+        "Runs Phragmén’s sequential rule on a participatory budgeting instance "
+        "where each project's cost equals a tax for selecting it. The cost of a project is equal to its approval score "
+        "divided by its support (the number of approvals minus the number of disapprovals)."
+    )
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
         return tax_sequential_phragmen(profile, max_size_selection=size, tax_function=TaxKraiczy2025)
@@ -330,7 +349,11 @@ class TriMaxSatisfaction(Rule):
     short_name = "tri_max_sat"
     long_name = "Maximum Satisfaction for trichotomous profiles"
     is_trichotomous = True
-
+    description = (
+        "Selects the comments so to maximise the total satisfaction of voters. "
+        "Each voter's satisfaction equals the number of approved and selected alternatives "
+        "minus the number of disapproved but selected alternatives."
+    )
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:
         return max_satisfaction(profile, max_size_selection=size)
@@ -339,6 +362,7 @@ class TriChamberlinCourant(Rule):
     short_name = "tri_cc"
     long_name = "Chamberlin-Courant for trichotomous profiles"
     is_trichotomous = True
+    description = "Selects the comments so to maximise the number of voters with positive satisfaction."
 
     @classmethod
     def _trivoting_wrapper(cls, profile, size) -> Selection:

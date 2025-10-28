@@ -115,10 +115,13 @@ OUTPUTS = [
         "output_dir_path": os.path.join("_site", "trichotomous"),
         "ballot_mode": BallotModeEnum.TRICHOTOMOUS_ONLY,
         "highlighted_articles": [
+            "fairenoughhowshouldnewzealandersbetaxed",
+            "improvingbowlinggreenwarrencounty",
+            "togetherwellbuildthebgof2050"
         ],
         "default_selection_size": 5,
         "default_popularity_rule": TriMaxSatisfaction,
-        "default_representation_rule": TriTaxMESKPPS2025,
+        "default_representation_rule": TriPAVILPKraiczy2025,
         "default_diversity_rule": TriChamberlinCourant,
         "rule_set": ALL_TRICHOTOMOUS_RULES,
     },
@@ -126,10 +129,13 @@ OUTPUTS = [
         "output_dir_path": os.path.join("_site", "all"),
         "ballot_mode": BallotModeEnum.APPROVAL_AND_TRICHOTOMOUS,
         "highlighted_articles": [
+            "fairenoughhowshouldnewzealandersbetaxed",
+            "improvingbowlinggreenwarrencounty",
+            "togetherwellbuildthebgof2050"
         ],
         "default_selection_size": 5,
         "default_popularity_rule": TriMaxSatisfaction,
-        "default_representation_rule": TriTaxMESKPPS2025,
+        "default_representation_rule": TriPAVILPKraiczy2025,
         "default_diversity_rule": TriChamberlinCourant,
         "rule_set": ALL_RULES,
     },
