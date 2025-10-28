@@ -4,57 +4,73 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proportionality Press Links</title>
+  <link rel="stylesheet" href="all/static/css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Anton&family=Germania+One&family=Gloock&family=IM+Fell+English+SC&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'">
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Anton&family=Germania+One&family=Gloock&family=IM+Fell+English+SC&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet">
+  </noscript>
+
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background-color: #f9fafb;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-    h1 {
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-      color: #111827;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin: 0.75rem 0;
-    }
-    a {
-      text-decoration: none;
-      color: #2563eb;
-      font-weight: 500;
-      border: 1px solid #2563eb;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      transition: all 0.2s ease-in-out;
-    }
-    a:hover {
-      background-color: #2563eb;
+    .nav-button {
+      background: var(--color-highlight-light);
       color: white;
+      display: inline-block;
+      padding: 2vh 3vw;
+    }
+    .nav-button a {
+      color: white;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <h1>Proportionality Press</h1>
-  <ul>
-    <li><a href="https://simon-rey.github.io/ProportionalityPress/approval">
-      Proportionality Press with Approval Ballots
-    </a></li>
-    <li><a href="https://simon-rey.github.io/ProportionalityPress/trichotomous">
-      Proportionality Press with Trichotomous Ballots
-    </a></li>
-    <li><a href="https://simon-rey.github.io/ProportionalityPress/all">
-      Proportionality Press with Both Ballot Formats
-    </a></li>
-  </ul>
-</body>
+  <div id="body-content-wrap">
+    <header>
+      <div id="logo-wrap">
+        <a href="index.html">
+          <div class="logo proportionality-press">
+            <span class="logo-main">Proportionality</span>
+            <span class="logo-sub">Press</span>
+          </div>
+        </a>
+      </div>
+    </header>
+
+    <div id="below-header-wrap">
+      <div id="content-wrap">
+        <main>
+          <nav style="margin-top: 5vh; display: flex; flex-direction: column; gap: 5vh; justify-content: center; align-items: center;">
+            <div class="nav-button">
+              <a href="approval/">
+              Proportionality Press with Approval Ballots
+              </a>
+            </div>
+            <div class="nav-button">
+              <a href="trichotomous/">
+                Proportionality Press with Trichotomous Ballots
+              </a>
+            </div>
+            <div class="nav-button">
+              <a href="all/">
+              Proportionality Press with Approval and Trichotomous Ballots
+              </a>
+            </div>
+          </nav>
+        </main>
+      </div>
+    </div>
+
+    <footer></footer>
+  </div>
+<body>
 </html>
